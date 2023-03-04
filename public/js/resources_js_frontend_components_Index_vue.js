@@ -1194,7 +1194,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".header-actions__menu[data-v-31cefecd] {\n  position: absolute;\n  top: 100%;\n  right: 0;\n  padding-top: 5px;\n  opacity: 0;\n  pointer-events: none;\n  visibility: hidden;\n  transition: all .3s;\n}\n.header-actions__inner[data-v-31cefecd] {\n  background-color: #fff;\n  border-radius: 16px;\n  box-shadow: 0 0 10px 0 rgb(0 0 0 / 7%);\n  border: 1px solid #d9d9d9;\n}\n.mini-cart[data-v-31cefecd] {\n  padding: 1rem;\n  width: 400px;\n}\n.mini-cart__header[data-v-31cefecd]{\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  margin-bottom: 1rem;\n}\n.mini-cart__item[data-v-31cefecd]{\n  display: flex;\n  align-items: center;\n  flex-wrap: wrap;\n  cursor: pointer;\n  font-size: .8rem;\n}\n.mini-cart__item-thumbnail[data-v-31cefecd]{\n  margin-right: 1rem;\n}\n.mini-cart__item-content[data-v-31cefecd]{\n  flex: 1;\n  height: 100%;\n  position: relative;\n  padding-right: 20px;\n}\n.mini-cart__remove[data-v-31cefecd]{\n  position: absolute;\n  top: 0;\n  right: 0;\n}\n.mini-cart__item-title[data-v-31cefecd]{\n  font-weight: bold;\n  transition: .2s all;\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".header-actions__menu[data-v-31cefecd] {\n  position: absolute;\n  top: 100%;\n  right: 0;\n  padding-top: 5px;\n  opacity: 0;\n  pointer-events: none;\n  visibility: hidden;\n  transition: all .3s;\n}\n.header-actions__inner[data-v-31cefecd] {\n  background-color: #fff;\n  border-radius: 16px;\n  box-shadow: 0 0 10px 0 rgb(0 0 0 / 7%);\n  border: 1px solid #d9d9d9;\n}\n.mini-cart[data-v-31cefecd] {\n  padding: 1rem;\n  width: 400px;\n}\n.mini-cart__header[data-v-31cefecd]{\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  margin-bottom: 1rem;\n}\n.mini-cart__item[data-v-31cefecd]{\n  display: flex;\n  align-items: center;\n  flex-wrap: wrap;\n  cursor: pointer;\n  font-size: .8rem;\n}\n.mini-cart__item-thumbnail[data-v-31cefecd]{\n  margin-right: 1rem;\n}\n.mini-cart__item-content[data-v-31cefecd]{\n  flex: 1;\n  height: 100%;\n  position: relative;\n  padding-right: 20px;\n}\n.mini-cart__remove[data-v-31cefecd]{\n  position: absolute;\n  top: 0;\n  right: 0;\n}\n.mini-cart__item-title[data-v-31cefecd]{\n  font-weight: bold;\n  transition: .2s all;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -13321,7 +13321,7 @@ var render = function () {
                   attrs: {
                     placement: "bottom-end",
                     trigger: "hover",
-                    width: "400",
+                    width: "430",
                   },
                 },
                 [

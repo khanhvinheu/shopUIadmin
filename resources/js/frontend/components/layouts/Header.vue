@@ -628,7 +628,7 @@
                         <el-popover
                             placement="bottom-end"
                             trigger="hover"
-                            width="400"
+                            width="430"
                           >
                             <div class="mini-cart">
                                 <div  class="mini-cart__wrapper">
