@@ -184,7 +184,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
   },
   data: function data() {
     return {
-      total: 1,
+      totalItem: 1,
       dataProductDetail: '',
       loading: false,
       settings: {
@@ -212,7 +212,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       colorSelect: '',
       sizeSelect: '',
       listColorProduct: '',
-      price: ''
+      dataCheck: ''
     };
   },
   mounted: function mounted() {
@@ -228,9 +228,9 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     colorSelect: function colorSelect(color) {
       var _this = this;
 
-      this.price = this.dataProductDetail['options_product'].find(function (e) {
+      this.dataCheck = this.dataProductDetail['options_product'].find(function (e) {
         return e.size.id == _this.sizeSelect.id && e.color.id == color.id;
-      }).price;
+      });
     }
   },
   methods: {
@@ -266,7 +266,11 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       });
     },
     addCart: function addCart(item) {
-      this.$store.dispatch("shoppingCart/addToCart", item);
+      var data = item;
+      data['payment'] = _objectSpread(_objectSpread({}, this.dataCheck), {}, {
+        total: this.totalItem
+      });
+      this.$store.dispatch("shoppingCart/addToCart", data);
       this.$notify({
         title: 'Success',
         message: 'Thêm sản phẩm vào giỏ hàng thành công',
@@ -11924,22 +11928,26 @@ var render = function () {
                     ),
                   ]),
                   _vm._v(" "),
-                  _c("div", { staticClass: "price--product" }, [
-                    _c(
-                      "span",
-                      {
-                        staticStyle: {
-                          "font-size": "18px",
-                          "font-weight": "bold",
-                        },
-                      },
-                      [
-                        _vm._v(
-                          _vm._s(_vm._f("toThousandFilter")(_vm.price)) + " đ"
+                  _vm.dataCheck
+                    ? _c("div", { staticClass: "price--product" }, [
+                        _c(
+                          "span",
+                          {
+                            staticStyle: {
+                              "font-size": "18px",
+                              "font-weight": "bold",
+                            },
+                          },
+                          [
+                            _vm._v(
+                              _vm._s(
+                                _vm._f("toThousandFilter")(_vm.dataCheck.price)
+                              ) + " đ"
+                            ),
+                          ]
                         ),
-                      ]
-                    ),
-                  ]),
+                      ])
+                    : _vm._e(),
                   _vm._v(" "),
                   _c("div", { staticClass: "color--product" }, [
                     _c("span", [
@@ -12063,11 +12071,11 @@ var render = function () {
                       _c("el-input-number", {
                         attrs: { min: 1, max: 10 },
                         model: {
-                          value: _vm.total,
+                          value: _vm.totalItem,
                           callback: function ($$v) {
-                            _vm.total = $$v
+                            _vm.totalItem = $$v
                           },
-                          expression: "total",
+                          expression: "totalItem",
                         },
                       }),
                       _vm._v(" "),

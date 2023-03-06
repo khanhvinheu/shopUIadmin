@@ -144,7 +144,8 @@
                     <input type="hidden" id="gclid_field" name="gclid_field" value="">
                     <div class="cart-section">
                         <button class="checkout-btn">
-                            Thanh toán <span>329k</span> <span>(COD)</span></button>
+                            Thanh toán <span>{{TotalPrice |toThousandFilter }}</span> <span>(COD)</span></button>
+<!--                            Thanh toán <span>{{TotalPrice |numberFormatter }}</span> <span>(COD)</span></button>-->
                     </div>
                 </div>
                 <div class="grid__column five-twelfths mobile--one-whole">
@@ -180,53 +181,53 @@
                                     <div class="cart__column cart__column-left">
                                         <div class="cart-item__thumbnail-block">
                                             <img
-                                            src="https://media.coolmate.me/cdn-cgi/image/width=320,height=362,quality=80/image/January2023/sQuan_Jogger_Nam_tui_hop_Cargo_Outdoor_-_Xam_5.jpg"
-                                            alt="Quần Jogger nam túi hộp Cargo Outdoor"
+                                            :src="item.images_product[0]['path']"
+                                            :alt="item.name"
                                             class="cart-item__thumbnail">
                                         </div>
                                     </div>
                                     <div class="cart__column cart__column-right">
                                         <div class="cart-item__block">
                                             <div class="cart-item__info"><a
-                                                href="/product/quan-jogger-nam-tui-hop-cargo-outdoor"
                                                 target="_blank" class="cart-item__title">
-                                                Quần Jogger nam túi hộp Cargo Outdoor
+                                                {{item.name}}
                                             </a>
                                                 <div class="cart-item__variant">
-                                                    Xám / M
+                                                   {{item.payment.color.title}} / {{item.payment.size.title}}
                                                 </div>
                                             </div>
                                             <div class="cart-item__actions">
                                                 <div style="display: flex">
                                                     <div style="padding-right: 5px; padding-bottom: 5px"
                                                          class="v-select vue-select cart-item__select vs--single vs--unsearchable">
-                                                        <el-select size="small" v-model="value" placeholder="Select">
-                                                            <el-option
-                                                                v-for="item in options"
-                                                                :key="item.value"
-                                                                :label="item.label"
-                                                                :value="item.value">
-                                                            </el-option>
-                                                        </el-select>
+                                                           {{item.payment.price}} x {{item.payment.total}}
+<!--                                                        <el-select size="small" v-model="value" placeholder="Select">-->
+<!--                                                            <el-option-->
+<!--                                                                v-for="item in options"-->
+<!--                                                                :key="item.value"-->
+<!--                                                                :label="item.label"-->
+<!--                                                                :value="item.value">-->
+<!--                                                            </el-option>-->
+<!--                                                        </el-select>-->
                                                     </div>
-                                                    <div dir="auto"
-                                                         class="v-select vue-select cart-item__select vs--single vs--unsearchable">
-                                                        <el-select size="small" v-model="value" placeholder="Select">
-                                                            <el-option
-                                                                v-for="item in options"
-                                                                :key="item.value"
-                                                                :label="item.label"
-                                                                :value="item.value">
-                                                            </el-option>
-                                                        </el-select>
-                                                    </div>
+<!--                                                    <div dir="auto"-->
+<!--                                                         class="v-select vue-select cart-item__select vs&#45;&#45;single vs&#45;&#45;unsearchable">-->
+<!--                                                        <el-select size="small" v-model="value" placeholder="Select">-->
+<!--                                                            <el-option-->
+<!--                                                                v-for="item in options"-->
+<!--                                                                :key="item.value"-->
+<!--                                                                :label="item.label"-->
+<!--                                                                :value="item.value">-->
+<!--                                                            </el-option>-->
+<!--                                                        </el-select>-->
+<!--                                                    </div>-->
                                                 </div>
                                                 <div class="cart-item__actions-bottom">
                                                     <div class="quantity-box">
-                                                        <el-input-number size="small" v-model="num" :min="1" :max="10"></el-input-number>
+                                                        <el-input-number size="small" :value="item.payment.total" :min="1" :max="10"></el-input-number>
                                                     </div>
                                                     <div class="flex flex--column"><span>
-                                                            329.000đ
+                                                            {{item.payment.price * item.payment.total | toThousandFilter}}đ
                                                         </span> </div>
                                                 </div>
                                             </div>
@@ -242,7 +243,7 @@
                     <div class="pricing-info">
                         <div class="pricing-info__item">
                             <p>Tạm tính</p>
-                            <p class="pricing-info__sub"><span>329.000đ</span>
+                            <p class="pricing-info__sub"><span>{{tempTotalPrice | toThousandFilter}}đ</span>
 
                             </p>
                         </div>
@@ -259,7 +260,7 @@
                         <div class="pricing-info__item pricing-info__total">
                             <p>
                                 Tổng</p>
-                            <p class=""><span>329.000đ</span> </p>
+                            <p class=""><span>{{TotalPrice | toThousandFilter}}đ</span> </p>
                         </div>
                     </div>
                 </div>
@@ -284,7 +285,23 @@ export default {
         ...mapGetters([
             "cartSize",
             "cartTotalAmount"
-        ])
+        ]),
+        tempTotalPrice(){
+            let total=0
+            this.$store.getters.shoppingCart.cart.map(e=>{
+                total+= e.payment.total*e.payment.price
+            })
+            return total
+
+        },
+        TotalPrice(){
+            let total=0
+            this.$store.getters.shoppingCart.cart.map(e=>{
+                total+= e.payment.total*e.payment.price
+            })
+            return total
+
+        }
     },
 }
 </script>

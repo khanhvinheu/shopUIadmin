@@ -288,6 +288,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "ShoppingCart",
@@ -296,7 +297,22 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       num: 1
     };
   },
-  computed: _objectSpread(_objectSpread({}, (0,vuex__WEBPACK_IMPORTED_MODULE_0__.mapState)(["cart"])), (0,vuex__WEBPACK_IMPORTED_MODULE_0__.mapGetters)(["cartSize", "cartTotalAmount"]))
+  computed: _objectSpread(_objectSpread(_objectSpread({}, (0,vuex__WEBPACK_IMPORTED_MODULE_0__.mapState)(["cart"])), (0,vuex__WEBPACK_IMPORTED_MODULE_0__.mapGetters)(["cartSize", "cartTotalAmount"])), {}, {
+    tempTotalPrice: function tempTotalPrice() {
+      var total = 0;
+      this.$store.getters.shoppingCart.cart.map(function (e) {
+        total += e.payment.total * e.payment.price;
+      });
+      return total;
+    },
+    TotalPrice: function TotalPrice() {
+      var total = 0;
+      this.$store.getters.shoppingCart.cart.map(function (e) {
+        total += e.payment.total * e.payment.price;
+      });
+      return total;
+    }
+  })
 });
 
 /***/ }),
@@ -689,7 +705,16 @@ var render = function () {
               },
             }),
             _vm._v(" "),
-            _vm._m(2),
+            _c("div", { staticClass: "cart-section" }, [
+              _c("button", { staticClass: "checkout-btn" }, [
+                _vm._v("\n                            Thanh toán "),
+                _c("span", [
+                  _vm._v(_vm._s(_vm._f("toThousandFilter")(_vm.TotalPrice))),
+                ]),
+                _vm._v(" "),
+                _c("span", [_vm._v("(COD)")]),
+              ]),
+            ]),
           ]
         ),
         _vm._v(" "),
@@ -700,12 +725,12 @@ var render = function () {
             _c("div", { staticClass: "cart-section" }, [
               _c("div", { staticClass: "title" }, [
                 _vm._v(
-                  "\n                        Giỏ hàng\n                    "
+                  "\n                            Giỏ hàng\n                        "
                 ),
               ]),
               _vm._v(" "),
               _c("div", [
-                _vm._m(3),
+                _vm._m(2),
                 _vm._v(" "),
                 _c(
                   "div",
@@ -722,14 +747,61 @@ var render = function () {
                           _vm._v("✕"),
                         ]),
                         _vm._v(" "),
-                        _vm._m(4, true),
+                        _c(
+                          "div",
+                          { staticClass: "cart__column cart__column-left" },
+                          [
+                            _c(
+                              "div",
+                              { staticClass: "cart-item__thumbnail-block" },
+                              [
+                                _c("img", {
+                                  staticClass: "cart-item__thumbnail",
+                                  attrs: {
+                                    src: item.images_product[0]["path"],
+                                    alt: item.name,
+                                  },
+                                }),
+                              ]
+                            ),
+                          ]
+                        ),
                         _vm._v(" "),
                         _c(
                           "div",
                           { staticClass: "cart__column cart__column-right" },
                           [
                             _c("div", { staticClass: "cart-item__block" }, [
-                              _vm._m(5, true),
+                              _c("div", { staticClass: "cart-item__info" }, [
+                                _c(
+                                  "a",
+                                  {
+                                    staticClass: "cart-item__title",
+                                    attrs: { target: "_blank" },
+                                  },
+                                  [
+                                    _vm._v(
+                                      "\n                                                " +
+                                        _vm._s(item.name) +
+                                        "\n                                            "
+                                    ),
+                                  ]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  { staticClass: "cart-item__variant" },
+                                  [
+                                    _vm._v(
+                                      "\n                                                   " +
+                                        _vm._s(item.payment.color.title) +
+                                        " / " +
+                                        _vm._s(item.payment.size.title) +
+                                        "\n                                                "
+                                    ),
+                                  ]
+                                ),
+                              ]),
                               _vm._v(" "),
                               _c("div", { staticClass: "cart-item__actions" }, [
                                 _c(
@@ -747,72 +819,12 @@ var render = function () {
                                         },
                                       },
                                       [
-                                        _c(
-                                          "el-select",
-                                          {
-                                            attrs: {
-                                              size: "small",
-                                              placeholder: "Select",
-                                            },
-                                            model: {
-                                              value: _vm.value,
-                                              callback: function ($$v) {
-                                                _vm.value = $$v
-                                              },
-                                              expression: "value",
-                                            },
-                                          },
-                                          _vm._l(_vm.options, function (item) {
-                                            return _c("el-option", {
-                                              key: item.value,
-                                              attrs: {
-                                                label: item.label,
-                                                value: item.value,
-                                              },
-                                            })
-                                          }),
-                                          1
+                                        _vm._v(
+                                          "\n                                                            x " +
+                                            _vm._s(item.payment.total) +
+                                            "\n"
                                         ),
-                                      ],
-                                      1
-                                    ),
-                                    _vm._v(" "),
-                                    _c(
-                                      "div",
-                                      {
-                                        staticClass:
-                                          "v-select vue-select cart-item__select vs--single vs--unsearchable",
-                                        attrs: { dir: "auto" },
-                                      },
-                                      [
-                                        _c(
-                                          "el-select",
-                                          {
-                                            attrs: {
-                                              size: "small",
-                                              placeholder: "Select",
-                                            },
-                                            model: {
-                                              value: _vm.value,
-                                              callback: function ($$v) {
-                                                _vm.value = $$v
-                                              },
-                                              expression: "value",
-                                            },
-                                          },
-                                          _vm._l(_vm.options, function (item) {
-                                            return _c("el-option", {
-                                              key: item.value,
-                                              attrs: {
-                                                label: item.label,
-                                                value: item.value,
-                                              },
-                                            })
-                                          }),
-                                          1
-                                        ),
-                                      ],
-                                      1
+                                      ]
                                     ),
                                   ]
                                 ),
@@ -828,22 +840,33 @@ var render = function () {
                                         _c("el-input-number", {
                                           attrs: {
                                             size: "small",
+                                            value: item.payment.total,
                                             min: 1,
                                             max: 10,
-                                          },
-                                          model: {
-                                            value: _vm.num,
-                                            callback: function ($$v) {
-                                              _vm.num = $$v
-                                            },
-                                            expression: "num",
                                           },
                                         }),
                                       ],
                                       1
                                     ),
                                     _vm._v(" "),
-                                    _vm._m(6, true),
+                                    _c(
+                                      "div",
+                                      { staticClass: "flex flex--column" },
+                                      [
+                                        _c("span", [
+                                          _vm._v(
+                                            "\n                                                            " +
+                                              _vm._s(
+                                                _vm._f("toThousandFilter")(
+                                                  item.payment.price *
+                                                    item.payment.total
+                                                )
+                                              ) +
+                                              "đ\n                                                        "
+                                          ),
+                                        ]),
+                                      ]
+                                    ),
                                   ]
                                 ),
                               ]),
@@ -864,15 +887,41 @@ var render = function () {
               "div",
               { staticClass: "pricing-info" },
               [
-                _vm._m(7),
+                _c("div", { staticClass: "pricing-info__item" }, [
+                  _c("p", [_vm._v("Tạm tính")]),
+                  _vm._v(" "),
+                  _c("p", { staticClass: "pricing-info__sub" }, [
+                    _c("span", [
+                      _vm._v(
+                        _vm._s(_vm._f("toThousandFilter")(_vm.tempTotalPrice)) +
+                          "đ"
+                      ),
+                    ]),
+                  ]),
+                ]),
                 _vm._v(" "),
-                _vm._m(8),
+                _vm._m(3),
                 _vm._v(" "),
-                _vm._m(9),
+                _vm._m(4),
                 _vm._v(" "),
                 _c("el-divider"),
                 _vm._v(" "),
-                _vm._m(10),
+                _c(
+                  "div",
+                  { staticClass: "pricing-info__item pricing-info__total" },
+                  [
+                    _c("p", [_vm._v("\n                                Tổng")]),
+                    _vm._v(" "),
+                    _c("p", {}, [
+                      _c("span", [
+                        _vm._v(
+                          _vm._s(_vm._f("toThousandFilter")(_vm.TotalPrice)) +
+                            "đ"
+                        ),
+                      ]),
+                    ]),
+                  ]
+                ),
               ],
               1
             ),
@@ -891,7 +940,7 @@ var staticRenderFns = [
     return _c("div", { staticClass: "title-with-actions" }, [
       _c("div", { staticClass: "title" }, [
         _vm._v(
-          "\n                            Thông tin vận chuyển\n                        "
+          "\n                                Thông tin vận chuyển\n                            "
         ),
       ]),
     ])
@@ -903,7 +952,7 @@ var staticRenderFns = [
     return _c("div", { staticClass: "cart-section" }, [
       _c("div", { staticClass: "title" }, [
         _vm._v(
-          "\n                        Hình thức thanh toán\n                    "
+          "\n                            Hình thức thanh toán\n                        "
         ),
       ]),
       _vm._v(" "),
@@ -950,7 +999,7 @@ var staticRenderFns = [
                 _vm._v("COD "),
                 _c("br"),
                 _vm._v(
-                  "Thanh toán khi nhận\n                                    hàng"
+                  "Thanh toán khi nhận\n                                        hàng"
                 ),
               ]),
             ]
@@ -1081,7 +1130,7 @@ var staticRenderFns = [
                 _c("br"),
                 _c("i", [
                   _vm._v(
-                    "Giảm thêm 50k cho khách\n                                        hàng lần đầu mở ví và thanh toán bằng ShopeePay"
+                    "Giảm thêm 50k cho khách\n                                            hàng lần đầu mở ví và thanh toán bằng ShopeePay"
                   ),
                 ]),
               ]),
@@ -1128,7 +1177,7 @@ var staticRenderFns = [
                 _vm._v("Thẻ ATM / Internet Banking"),
                 _c("br"),
                 _vm._v(
-                  "Thẻ tín dụng\n                                    (Credit card) / Thẻ ghi nợ (Debit card)"
+                  "Thẻ tín dụng\n                                        (Credit card) / Thẻ ghi nợ (Debit card)"
                 ),
                 _c("br"),
                 _vm._v("VNPay QR"),
@@ -1182,25 +1231,12 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("p", { staticClass: "cart-return-text" }, [
         _vm._v(
-          "\n                        Nếu bạn không hài lòng với sản phẩm của chúng tôi? Bạn hoàn toàn có thể trả lại sản phẩm.\n                        Tìm hiểu thêm "
+          "\n                            Nếu bạn không hài lòng với sản phẩm của chúng tôi? Bạn hoàn toàn có thể trả lại sản phẩm.\n                            Tìm hiểu thêm "
         ),
         _c("a", { attrs: { href: "#", target: "_blank" } }, [
           _c("b", [_vm._v("tại đây")]),
         ]),
-        _vm._v(".\n                    "),
-      ]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "cart-section" }, [
-      _c("button", { staticClass: "checkout-btn" }, [
-        _vm._v("\n                        Thanh toán "),
-        _c("span", [_vm._v("329k")]),
-        _vm._v(" "),
-        _c("span", [_vm._v("(COD)")]),
+        _vm._v(".\n                        "),
       ]),
     ])
   },
@@ -1244,74 +1280,6 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "cart__column cart__column-left" }, [
-      _c("div", { staticClass: "cart-item__thumbnail-block" }, [
-        _c("img", {
-          staticClass: "cart-item__thumbnail",
-          attrs: {
-            src: "https://media.coolmate.me/cdn-cgi/image/width=320,height=362,quality=80/image/January2023/sQuan_Jogger_Nam_tui_hop_Cargo_Outdoor_-_Xam_5.jpg",
-            alt: "Quần Jogger nam túi hộp Cargo Outdoor",
-          },
-        }),
-      ]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "cart-item__info" }, [
-      _c(
-        "a",
-        {
-          staticClass: "cart-item__title",
-          attrs: {
-            href: "/product/quan-jogger-nam-tui-hop-cargo-outdoor",
-            target: "_blank",
-          },
-        },
-        [
-          _vm._v(
-            "\n                                            Quần Jogger nam túi hộp Cargo Outdoor\n                                        "
-          ),
-        ]
-      ),
-      _vm._v(" "),
-      _c("div", { staticClass: "cart-item__variant" }, [
-        _vm._v(
-          "\n                                                Xám / M\n                                            "
-        ),
-      ]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "flex flex--column" }, [
-      _c("span", [
-        _vm._v(
-          "\n                                                        329.000đ\n                                                    "
-        ),
-      ]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "pricing-info__item" }, [
-      _c("p", [_vm._v("Tạm tính")]),
-      _vm._v(" "),
-      _c("p", { staticClass: "pricing-info__sub" }, [
-        _c("span", [_vm._v("329.000đ")]),
-      ]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
     return _c("div", { staticClass: "pricing-info__item" }, [
       _c("p", [_vm._v("Giảm giá")]),
       _vm._v(" "),
@@ -1327,20 +1295,6 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("p", {}, [_c("span", [_vm._v("Miễn phí")])]),
     ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      { staticClass: "pricing-info__item pricing-info__total" },
-      [
-        _c("p", [_vm._v("\n                            Tổng")]),
-        _vm._v(" "),
-        _c("p", {}, [_c("span", [_vm._v("329.000đ")])]),
-      ]
-    )
   },
 ]
 render._withStripped = true

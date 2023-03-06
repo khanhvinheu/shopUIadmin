@@ -42,8 +42,8 @@
                 <div class="name--product">
                     <span style="font-size: 18px; font-weight: bold">{{dataProductDetail.name}}</span>
                 </div>
-                <div class="price--product">
-                    <span style="font-size: 18px; font-weight: bold">{{price | toThousandFilter}} đ</span>
+                <div class="price--product" v-if="dataCheck">
+                    <span style="font-size: 18px; font-weight: bold">{{dataCheck.price | toThousandFilter}} đ</span>
                 </div>
                 <div class="color--product">
                     <span>Màu sắc: {{colorSelect.title}}</span>
@@ -77,7 +77,7 @@
                 </div>
 
                 <div style="padding-top: 10px">
-                    <el-input-number :min="1" :max="10" v-model="total"></el-input-number>
+                    <el-input-number :min="1" :max="10" v-model="totalItem"></el-input-number>
                     <el-button :disabled="!colorSelect" @click="colorSelect && addCart(dataProductDetail)" style="width: calc(100% - 200px); background-color: #B22D29; color:#fff;">{{colorSelect?'Mua ngay':'Chọn màu'}}</el-button>
                 </div>
 
@@ -158,7 +158,7 @@ import {mapState, mapGetters} from 'vuex'
         components: { VueSlickCarousel },
         data(){
             return  {
-                total:1,
+                totalItem:1,
                 dataProductDetail:'',
                 loading:false,
                 settings:{
@@ -186,7 +186,7 @@ import {mapState, mapGetters} from 'vuex'
                 colorSelect:'',
                 sizeSelect:'',
                 listColorProduct:'',
-                price:''
+                dataCheck:''
 
             }
         },
@@ -200,7 +200,7 @@ import {mapState, mapGetters} from 'vuex'
                 this.colorSelect=''
             },
             colorSelect(color){
-                this.price=this.dataProductDetail['options_product'].find(e=>(e.size.id==this.sizeSelect.id && e.color.id==color.id)).price
+                this.dataCheck=this.dataProductDetail['options_product'].find(e=>(e.size.id==this.sizeSelect.id && e.color.id==color.id))
             }
 
         },
@@ -233,7 +233,10 @@ import {mapState, mapGetters} from 'vuex'
                 })
             },
             addCart(item){
-                this.$store.dispatch("shoppingCart/addToCart", item);
+                let data = item
+                data['payment']={...this.dataCheck,total:this.totalItem}
+
+                this.$store.dispatch("shoppingCart/addToCart", data);
                 this.$notify({
                     title: 'Success',
                     message: 'Thêm sản phẩm vào giỏ hàng thành công',

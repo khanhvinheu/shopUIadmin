@@ -630,43 +630,7 @@
                             trigger="hover"
                             width="430"
                           >
-                            <div class="mini-cart">
-                                <div  class="mini-cart__wrapper">
-                                    <div  class="mini-cart__header"><span >
-                                            {{$store.getters.shoppingCart.cart.length}} sản phẩm
-                                        </span> <router-link :to="{name:'shopping-cart'}">
-                                            Xem tất cả
-                                        </router-link></div> <!---->
-                                    <div  v-for="item in $store.getters.shoppingCart.cart" style="margin-bottom: 5px" class="mini-cart__item">
-                                        <div class="mini-cart__item-thumbnail">
-                                            <img style="width: 100px"
-                                                :src="item['images_product'][0]['path']"
-                                                alt="Áo Polo thể thao nam Recycle Active V2">
-                                        </div>
-                                        <div  class="mini-cart__item-content">
-                                            <span class="mini-cart__remove">✕
-                                            </span>
-                                                <div class="mini-cart__item-title"><a
-                                                    href="/product/ao-polo-the-thao-nam-recycle-active-v2" target="_blank">
-                                                    {{item.name}}
-                                                </a>
-                                                </div>
-                                                <div class="mini-cart__item-variant-info">
-                                                    Xanh ngọc / S
-                                                </div>
-                                                <div ><span  class="mini-cart__item-price">
-                                                    249.000đ
-                                                </span> <!----></div>
-                                                <div ><span class="mini-cart__item-quantity">
-                                                    x{{item.quantity}}
-                                                </span>
-                                                </div>
-                                            </div>
-
-                                    </div>
-
-                                </div>
-                            </div>
+                            <mini-cart/>
 
                             <el-badge slot="reference" :value="$store.getters.shoppingCart.cart.length" class="item">
                                 <i class="el-icon-sell" style="font-size: 25px"></i>
@@ -703,9 +667,10 @@
 </template>
 <script>
     import ApiService from "../../../backend/common/api.service";
-    import {mapState, mapGetters} from 'vuex'
+    import MiniCart from "./MiniCart";
     export default {
         name: 'AppHeader',
+        components:{MiniCart},
         data() {
            return {
                 showMenuMobile:true,
@@ -724,15 +689,7 @@
                 })
             },
         },
-        computed: {
-            ...mapState([
-                "cart"
-            ]),
-            ...mapGetters([
-                "cartSize",
-                "cartTotalAmount"
-            ])
-        },
+
     }
 </script>
 <style scoped>
@@ -751,41 +708,5 @@
     border-radius: 16px;
     box-shadow: 0 0 10px 0 rgb(0 0 0 / 7%);
     border: 1px solid #d9d9d9;
-}
-.mini-cart {
-    padding: 1rem;
-    width: 400px;
-}
-.mini-cart__header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 1rem;
-}
-.mini-cart__item{
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    cursor: pointer;
-    font-size: .8rem;
-}
-.mini-cart__item-thumbnail{
-    margin-right: 1rem;
-}
-.mini-cart__item-content{
-    flex: 1;
-    height: 100%;
-    position: relative;
-    padding-right: 20px;
-}
-.mini-cart__remove{
-    position: absolute;
-    top: 0;
-    right: 0;
-}
-
-.mini-cart__item-title{
-    font-weight: bold;
-    transition: .2s all;
 }
 </style>

@@ -1,3 +1,4 @@
+import product from "../../api/admin/product";
 const state = {
     cart: [],
     toast: {
@@ -8,28 +9,30 @@ const state = {
 const mutations = {
     setUpProducts: (state, productsPayload) => {
         //sets the state's  products property to the products array recieved as payload
-        // state.products = productsPayload;
+        state.products = productsPayload;
     },
     addToCart: (state, product) => {
-
-        // find the product in the products list
-        // let product = state.products.find((product) => product.id === productId);
         // //find the product in the cart list
         let cartProduct = state.cart.find((productel) => productel.id === product.id);
-        //
+
         if (cartProduct) {
-            //product already present in the cart. so increase the quantity
-            cartProduct.quantity++;
+            let findIndexOption = state.cart.findIndex((productel) => (productel.id === product.id && productel['payment']['id']==product['payment']['id']))
+            if(findIndexOption !=-1){
+                state.cart[findIndexOption]['payment']['total']+=product['payment']['total']
+            }else{
+                state.cart.push({
+                    // product newly added to cart
+                    ...product,
+                });
+            }
+
         } else {
             state.cart.push({
                 // product newly added to cart
                 ...product,
-                stock: product.quantity,
-                quantity: 1,
             });
         }
-        //reduce the quantity in products list by 1
-        product.quantity--;
+
     },
     removeFromCart: (state, productId) => {
         // //find the product in the products list
@@ -42,14 +45,10 @@ const mutations = {
         // product.quantity++;
     },
     deleteFromCart: (state, productId) => {
-        // //find the product in the products list
-        // let product = state.products.find((product) => product.id === productId);
-        // //find the product index in the cart list
-        // let cartProductIndex = state.cart.findIndex((product) => product.id === productId);
-        // //srt back the quantity of the product to intial quantity
-        // product.quantity = state.cart[cartProductIndex].stock;
-        // // remove the product from the cart
-        // state.cart.splice(cartProductIndex, 1);
+        //find the product index in the cart list
+        let cartProductIndex = state.cart.findIndex((product) => product.id === productId);
+        // remove the product from the cart
+        state.cart.splice(cartProductIndex, 1);
     },
     showToast: (state, toastText) => {
         state.toast.show = true;
@@ -62,6 +61,14 @@ const mutations = {
 };
 
 const actions = {
+    fetchProducts: ({ commit }) => {
+        //simulating a fake ajax request to fetch products from database
+        ProductResource.getProduct().then((products) => {
+            //passing the products recieved from response as a payload to the mutation
+            commit("setUpProducts", products);
+            commit("showToast", "products loaded");
+        });
+    },
     addToCart: ({ commit }, productId) => {
         // myApi.products("add", productId).then((productId) => {
             commit("addToCart", productId);
