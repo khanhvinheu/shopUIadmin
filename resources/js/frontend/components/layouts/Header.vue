@@ -29,8 +29,9 @@
                                     </label>
                                     <div class="header-search__filter">
                                         <button class="header-search__submit">
-                                            <img src="https://www.coolmate.me/images/header/icon-search.svg"
-                                                alt="Icon Search">
+<!--                                            <img src="https://www.coolmate.me/images/header/icon-search.svg"-->
+<!--                                                alt="Icon Search">-->
+                                            <i class="el-icon-search" style="font-size: 15px"></i>
                                         </button>
                                     </div>
                                     <a href="#" class="header-search__close"
@@ -617,11 +618,11 @@
 
                 </div>
                 <div class="header__actions">
-                    <div class="header-actions__button mobile--hidden">
-                        <a href="#" rel-script="header-search">
-                            <img src="https://www.coolmate.me/images/header/icon-search.svg" alt="Icon Search">
-                        </a>
-                    </div>
+<!--                    <div class="header-actions__button mobile&#45;&#45;hidden">-->
+<!--                        <a href="#" rel-script="header-search">-->
+<!--                            <img src="https://www.coolmate.me/images/header/icon-search.svg" alt="Icon Search">-->
+<!--                        </a>-->
+<!--                    </div>-->
                     <!-- <header-user-icon></header-user-icon> -->
 
                     <div class="header-actions__button">

@@ -14,220 +14,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _HomePageBanner_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./HomePageBanner.vue */ "./resources/js/frontend/components/content/HomePageBanner.vue");
 /* harmony import */ var _HomePageProduct_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./HomePageProduct.vue */ "./resources/js/frontend/components/content/HomePageProduct.vue");
 /* harmony import */ var _backend_common_api_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../backend/common/api.service */ "./resources/js/backend/common/api.service.js");
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 
@@ -248,7 +34,6 @@ __webpack_require__.r(__webpack_exports__);
   methods: {
     getList: function getList() {
       var _this = this;
-
       _backend_common_api_service__WEBPACK_IMPORTED_MODULE_2__["default"].query('/api/admin/categorys', {
         params: {
           type: 'treeData'
@@ -279,32 +64,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue_slick_carousel__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(vue_slick_carousel__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var vue_slick_carousel_dist_vue_slick_carousel_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vue-slick-carousel/dist/vue-slick-carousel.css */ "./node_modules/vue-slick-carousel/dist/vue-slick-carousel.css");
 /* harmony import */ var vue_slick_carousel_dist_vue_slick_carousel_theme_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! vue-slick-carousel/dist/vue-slick-carousel-theme.css */ "./node_modules/vue-slick-carousel/dist/vue-slick-carousel-theme.css");
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 
@@ -333,10 +92,8 @@ __webpack_require__.r(__webpack_exports__);
   methods: {
     getBanner: function getBanner() {
       var _this = this;
-
       _backend_common_api_service__WEBPACK_IMPORTED_MODULE_0__["default"].query('/api/admin/banners').then(function (_ref) {
         var data = _ref.data;
-
         if (data['success']) {
           _this.SlideData = data['data'].filter(function (e) {
             return e.hidden == 1;
@@ -365,59 +122,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue_slick_carousel_dist_vue_slick_carousel_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue-slick-carousel/dist/vue-slick-carousel.css */ "./node_modules/vue-slick-carousel/dist/vue-slick-carousel.css");
 /* harmony import */ var vue_slick_carousel_dist_vue_slick_carousel_theme_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vue-slick-carousel/dist/vue-slick-carousel-theme.css */ "./node_modules/vue-slick-carousel/dist/vue-slick-carousel-theme.css");
 /* harmony import */ var _backend_common_api_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../backend/common/api.service */ "./resources/js/backend/common/api.service.js");
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
- //   optional style for arrows & dots
 
- //   optional style for arrows & dots
+//   optional style for arrows & dots
 
+//   optional style for arrows & dots
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -475,13 +183,11 @@ __webpack_require__.r(__webpack_exports__);
   methods: {
     getDataProduct: function getDataProduct() {
       var _this = this;
-
       _backend_common_api_service__WEBPACK_IMPORTED_MODULE_3__["default"].query('/api/admin/products', {
         page: 1,
         limit: 10
       }).then(function (_ref) {
         var data = _ref.data;
-
         if (data['success']) {
           _this.dataProduct = data['data'];
         }
@@ -489,6 +195,575 @@ __webpack_require__.r(__webpack_exports__);
     }
   }
 });
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/frontend/components/content/HomePage.vue?vue&type=template&id=136a29de&":
+/*!*******************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/frontend/components/content/HomePage.vue?vue&type=template&id=136a29de& ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function render() {
+  var _vm = this,
+    _c = _vm._self._c;
+  return _c("main", {
+    staticClass: "site-homepage"
+  }, [_c("HomePageBannerVue"), _vm._v(" "), _vm._m(0), _vm._v(" "), _c("HomePageProduct"), _vm._v(" "), _vm._m(1), _vm._v(" "), _vm._m(2), _vm._v(" "), _vm._m(3), _vm._v(" "), _c("section", {
+    staticClass: "homepage-collections"
+  }, [_c("div", {
+    staticClass: "container container--full"
+  }, [_c("div", {
+    staticClass: "grid"
+  }, _vm._l(_vm.data, function (item, i) {
+    return _c("div", {
+      directives: [{
+        name: "show",
+        rawName: "v-show",
+        value: i < 4,
+        expression: "i<4"
+      }],
+      staticClass: "grid__column three-twelfths mobile--one-half"
+    }, [_c("a", {
+      staticClass: "collection-grid",
+      attrs: {
+        href: "/"
+      }
+    }, [_c("div", {
+      staticClass: "collection-grid__thumbnail"
+    }, [_c("img", {
+      attrs: {
+        src: item.img,
+        alt: "Đồ mặc trong"
+      }
+    })]), _vm._v(" "), _c("span", {
+      staticClass: "collection-grid__title"
+    }, [i < 3 ? _c("span", [_vm._v(_vm._s(item.title))]) : _vm._e(), _vm._v(" "), i == 3 ? _c("span", [_vm._v("Tất cả")]) : _vm._e()])])]);
+  }), 0)])]), _vm._v(" "), _vm._m(4), _vm._v(" "), _c("section", {
+    staticClass: "homepage-more"
+  }, [_c("div", {
+    staticClass: "container"
+  }, [_c("div", {
+    staticClass: "homepage-more__captions"
+  }, [_c("marquee", [_c("p", [_c("b", [_vm._v("CoolClub")]), _vm._v(" - Ưu đãi "), _c("b", [_vm._v("nhiều hơn")]), _vm._v(", mua sắm vui hơn. Nhận ngay "), _c("b", [_vm._v("ưu đãi\n                        7%")]), _vm._v(" cho\n                        lần mua sắm tiếp theo")])]), _vm._v(" "), _c("a", {
+    staticClass: "homepage-more__button",
+    attrs: {
+      href: "/page/coolclub-chuong-trinh-khach-hang-than-thiet-cua-coolmate?itm_source=home"
+    }
+  }, [_vm._v("\n                    Gia nhập ngay\n                ")])], 1), _vm._v(" "), _vm._m(5)])])], 1);
+};
+var staticRenderFns = [function () {
+  var _vm = this,
+    _c = _vm._self._c;
+  return _c("section", {
+    staticClass: "homepage-search"
+  }, [_c("div", {
+    staticClass: "container container--medium"
+  }, [_c("div", {
+    staticClass: "homepage-search__wrapper"
+  }, [_c("h2", {
+    staticClass: "homepage-search__heading"
+  }, [_vm._v("Bạn tìm gì hôm nay?")]), _vm._v(" "), _c("div", {
+    staticClass: "homepage-search__inner"
+  }, [_c("form", {
+    attrs: {
+      action: "/spotlight",
+      method: "GET"
+    }
+  }, [_c("input", {
+    staticClass: "homepage-search__control",
+    attrs: {
+      type: "text",
+      name: "keyword",
+      placeholder: 'Hãy thử bắt đầu với "Quần đen" xem sao',
+      "rel-script": "spotlight-search-control-home"
+    }
+  })]), _vm._v(" "), _c("div", {
+    staticClass: "homepage-search__spotlight"
+  }, [_c("div", {
+    staticClass: "homepage-search__spotlight-content",
+    attrs: {
+      "rel-script": "spotlight-search-home"
+    }
+  }, [_c("img", {
+    staticClass: "loading",
+    attrs: {
+      src: "https://www.coolmate.me/images/icons/loading.svg"
+    }
+  })]), _vm._v(" "), _c("a", {
+    staticClass: "homepage-search__more",
+    attrs: {
+      href: "#"
+    }
+  }, [_vm._v("Xem toàn bộ kết quả")])])]), _vm._v(" "), _c("div", {
+    staticClass: "homepage-search__content"
+  }, [_c("p", {
+    staticClass: "homepage-search__description"
+  }, [_vm._v("Hãy thử tìm bất kỳ từ khoá nào nhé. Coolmate gợi\n                        ý nè:")]), _vm._v(" "), _c("div", {
+    staticClass: "homepage-search__buttons"
+  }, [_c("a", {
+    staticClass: "homepage-search__button",
+    attrs: {
+      href: "#",
+      "rel-script": "homepage-search-button"
+    }
+  }, [_vm._v("áo thun")]), _vm._v(" "), _c("a", {
+    staticClass: "homepage-search__button",
+    attrs: {
+      href: "#",
+      "rel-script": "homepage-search-button"
+    }
+  }, [_vm._v("\n                        hoodie")]), _vm._v(" "), _c("a", {
+    staticClass: "homepage-search__button",
+    attrs: {
+      href: "#",
+      "rel-script": "homepage-search-button"
+    }
+  }, [_vm._v("\n                            oversize")]), _vm._v(" "), _c("a", {
+    staticClass: "homepage-search__button",
+    attrs: {
+      href: "#",
+      "rel-script": "homepage-search-button"
+    }
+  }, [_vm._v(" cm24")]), _vm._v(" "), _c("a", {
+    staticClass: "homepage-search__button",
+    attrs: {
+      href: "#",
+      "rel-script": "homepage-search-button"
+    }
+  }, [_vm._v("\n                            promax")])])])])])]);
+}, function () {
+  var _vm = this,
+    _c = _vm._self._c;
+  return _c("div", {
+    staticClass: "container container--full mgt--20"
+  }, [_c("div", {
+    staticClass: "home-collection__banner"
+  }, [_c("a", {
+    attrs: {
+      href: "/cm24?itm_source=homepage-section"
+    }
+  }, [_c("picture", {
+    staticStyle: {
+      width: "100%"
+    }
+  }, [_c("source", {
+    attrs: {
+      media: "(max-width:768px)",
+      srcset: "https://mcdn.coolmate.me/image/February2023/mceclip1_28.jpg"
+    }
+  }), _vm._v(" "), _c("img", {
+    attrs: {
+      src: "https://mcdn.coolmate.me/image/February2023/mceclip0_88.jpg",
+      alt: "Image",
+      width: "100%"
+    }
+  })])])])]);
+}, function () {
+  var _vm = this,
+    _c = _vm._self._c;
+  return _c("section", {
+    staticClass: "homepage-excool"
+  }, [_c("div", {
+    staticClass: "container"
+  }, [_c("div", {
+    staticClass: "about-card"
+  }, [_c("div", {
+    staticClass: "about-card__content"
+  }, [_c("h2", {
+    staticClass: "about-card__heading"
+  }, [_vm._v("\n                        Dòng sản phẩm công nghệ EXCOOL\n                    ")]), _vm._v(" "), _c("div", {
+    staticClass: "about-card__description"
+  }, [_c("p", [_vm._v("\n                            Công nghệ Việt cho người Việt."), _c("br"), _vm._v("\n                            Với hơn "), _c("b", [_vm._v("100.000")]), _vm._v(" sản phẩm đã được gửi đến tay khách hàng sử dụng và hài\n                            lòng\n                        ")])]), _vm._v(" "), _c("div", {
+    staticClass: "about-card__button"
+  }, [_c("a", {
+    staticClass: "btn btn--white",
+    attrs: {
+      href: "/lp/dong-san-pham-excool?itm_source=home"
+    }
+  }, [_vm._v("\n                        Tìm hiểu thêm\n                    ")])])]), _vm._v(" "), _c("div", {
+    staticClass: "about-card__image"
+  }, [_c("picture", [_c("source", {
+    attrs: {
+      media: "(min-width:768px)",
+      srcset: "https://mcdn.coolmate.me/uploads/January2022/ao_(1)_1_(1)_(1).jpg"
+    }
+  }), _vm._v(" "), _c("img", {
+    attrs: {
+      src: "https://mcdn.coolmate.me/uploads/February2022/ao_1_(1).jpg",
+      alt: "Image"
+    }
+  })])])])])]);
+}, function () {
+  var _vm = this,
+    _c = _vm._self._c;
+  return _c("section", {
+    staticClass: "homepage-coolclub animations-active"
+  }, [_c("div", {
+    staticClass: "container container--medium"
+  }, [_c("div", {
+    staticClass: "coolclub-abouts"
+  }, [_c("h2", {
+    staticClass: "coolclub-abouts__heading"
+  }, [_vm._v("\n                    Coolmate Basics\n                ")]), _vm._v(" "), _c("div", {
+    staticClass: "coolclub-abouts__wrapper"
+  }, [_c("div", {
+    staticClass: "coolclub-abouts__content"
+  }, [_c("div", {
+    staticClass: "coolclub-abouts__box"
+  }, [_c("a", {
+    attrs: {
+      href: "/product/ao-thun-nam-cotton-coolmate-basics-200gsm?color=mau-den&itm_source=home_basics"
+    }
+  }, [_c("img", {
+    attrs: {
+      src: "https://mcdn.coolmate.me/image/January2023/mceclip9_22.png",
+      alt: "Coolmate Basics 1"
+    }
+  })])]), _vm._v(" "), _c("div", {
+    staticClass: "coolclub-abouts__box"
+  }, [_c("a", {
+    attrs: {
+      href: "/product/ao-ba-lo-cotton-100-coolmate-basics-v2?color=trang&itm_source=home_basics"
+    }
+  }, [_c("img", {
+    attrs: {
+      src: "https://mcdn.coolmate.me/image/September2022/mceclip1_11.png",
+      alt: "Coolmate Basics 2"
+    }
+  })])]), _vm._v(" "), _c("div", {
+    staticClass: "coolclub-abouts__box"
+  }, [_c("a", {
+    attrs: {
+      href: "/product/ao-the-thao-nam-promax-recycle-basics1?itm_source=home_basics"
+    }
+  }, [_c("img", {
+    attrs: {
+      src: "https://mcdn.coolmate.me/uploads/January2022/CoolmateBasic3.png",
+      alt: "Coolmate Basics 3"
+    }
+  })])]), _vm._v(" "), _c("div", {
+    staticClass: "coolclub-abouts__box"
+  }, [_c("a", {
+    attrs: {
+      href: "/product/quan-short-mac-nha-coolmate-basics?itm_source=home_basics"
+    }
+  }, [_c("img", {
+    attrs: {
+      src: "https://mcdn.coolmate.me/uploads/February2022/Mask_Group_(2).png",
+      alt: "Coolmate Basics 4"
+    }
+  })])]), _vm._v(" "), _c("div", {
+    staticClass: "coolclub-abouts__box coolclub-abouts__box--last"
+  }, [_c("a", {
+    attrs: {
+      href: "/product/quan-lot-nam-brief-coolmate-basics?itm_source=home_basics&color=xanh-navy"
+    }
+  }, [_c("img", {
+    attrs: {
+      src: "https://mcdn.coolmate.me/uploads/January2022/CoolmateBasic4.png",
+      alt: "Coolmate Basics 5"
+    }
+  })])])]), _vm._v(" "), _c("a", {
+    staticClass: "coolclub-abouts__scroll",
+    attrs: {
+      href: "#",
+      "rel-script": "coolclub-abouts-scroll"
+    }
+  }, [_c("img", {
+    attrs: {
+      src: "https://www.coolmate.me/images/arrow-right.svg",
+      alt: "Arrow rigth"
+    }
+  })])]), _vm._v(" "), _c("p", {
+    staticClass: "text--center",
+    staticStyle: {
+      "letter-spacing": "0.03em"
+    }
+  }, [_vm._v("Dòng sản phẩm mặc cơ bản "), _c("span", {
+    staticStyle: {
+      color: "rgb(47, 90, 207)"
+    }
+  }, [_vm._v("chất lượng tốt")]), _vm._v(" và "), _c("span", {
+    staticStyle: {
+      color: "rgb(47, 90, 207)"
+    }
+  }, [_vm._v("giá tốt")]), _vm._v("\n                    của Coolmate")]), _vm._v(" "), _c("div", {
+    staticClass: "coolclub-abouts__button"
+  }, [_c("a", {
+    staticClass: "btn btn--primary",
+    attrs: {
+      href: "/collection/coolmate-basics?itm_source=home"
+    }
+  }, [_vm._v("\n                    Trải nghiệm\n                ")])])])])]);
+}, function () {
+  var _vm = this,
+    _c = _vm._self._c;
+  return _c("section", {
+    staticClass: "homepage-about"
+  }, [_c("div", {
+    staticClass: "container"
+  }, [_c("div", {
+    staticClass: "about-card"
+  }, [_c("div", {
+    staticClass: "about-card__image",
+    staticStyle: {
+      position: "relative",
+      "z-index": "1"
+    }
+  }, [_c("picture", [_c("source", {
+    attrs: {
+      media: "(max-width:768px)",
+      srcset: "https://mcdn.coolmate.me/image/June2022/mceclip2_87.png"
+    }
+  }), _vm._v(" "), _c("img", {
+    attrs: {
+      src: "https://mcdn.coolmate.me/image/June2022/mceclip2_87.png",
+      alt: "Dịch vụ xuất sắc"
+    }
+  })])]), _vm._v(" "), _c("div", {
+    staticClass: "about-card__content"
+  }, [_c("h2", {
+    staticClass: "about-card__heading"
+  }, [_vm._v("\n                        Trải nghiệm mua sắm hài lòng với\n                        #Coolmate\n                    ")]), _vm._v(" "), _c("div", {
+    staticClass: "about-card__description"
+  }, [_c("p", [_vm._v("\n                            Giá cả hợp lý"), _c("br"), _vm._v("\n                            Dịch vụ 100% hài lòng"), _c("br"), _vm._v("\n                            60 ngày đổi trả"), _c("br"), _vm._v("\n                            Tự hào sản xuất tại Việt Nam\n                        ")])]), _vm._v(" "), _c("div", {
+    staticClass: "about-card__button"
+  }, [_c("a", {
+    staticClass: "btn btn--white",
+    attrs: {
+      href: "/page/11-dich-vu-tai-coolmate-co-the-ban-chua-biet?itm_source=home"
+    }
+  }, [_vm._v("\n                        Tìm hiểu thêm\n                    ")])])])])])]);
+}, function () {
+  var _vm = this,
+    _c = _vm._self._c;
+  return _c("div", {
+    staticClass: "grid"
+  }, [_c("div", {
+    staticClass: "grid__column one-half mobile--one-whole",
+    staticStyle: {
+      position: "relative"
+    }
+  }, [_c("div", {
+    staticClass: "infomation-card"
+  }, [_c("div", {
+    staticClass: "infomation-card__thumbnail"
+  }, [_c("a", {
+    attrs: {
+      href: "/page/coolmate-story?itm_source=home"
+    }
+  }, [_c("img", {
+    attrs: {
+      src: "https://mcdn.coolmate.me/image/January2023/mceclip3_94.jpg",
+      alt: "Dịch vụ xuất sắc"
+    }
+  })])])])]), _vm._v(" "), _c("div", {
+    staticClass: "grid__column one-half mobile--one-whole"
+  }, [_c("div", {
+    staticClass: "infomation-card"
+  }, [_c("div", {
+    staticClass: "infomation-card__thumbnail"
+  }, [_c("a", {
+    attrs: {
+      href: "/page/11-dich-vu-tai-coolmate-co-the-ban-chua-biet?itm_source=home"
+    }
+  }, [_c("img", {
+    attrs: {
+      src: "https://mcdn.coolmate.me/image/January2023/mceclip2_30.jpg",
+      alt: "Dịch vụ xuất sắc"
+    }
+  })])])])])]);
+}];
+render._withStripped = true;
+
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/frontend/components/content/HomePageBanner.vue?vue&type=template&id=8255faac&":
+/*!*************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/frontend/components/content/HomePageBanner.vue?vue&type=template&id=8255faac& ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function render() {
+  var _vm = this,
+    _c = _vm._self._c;
+  return _c("section", {
+    directives: [{
+      name: "loading",
+      rawName: "v-loading",
+      value: !_vm.SlideData.length,
+      expression: "!SlideData.length"
+    }],
+    staticClass: "homepage-banner"
+  }, [_c("el-carousel", {
+    attrs: {
+      "indicator-position": "outside",
+      height: "750px"
+    }
+  }, _vm._l(_vm.SlideData, function (item, i) {
+    return _c("el-carousel-item", {
+      key: i,
+      staticStyle: {
+        "background-repeat": "repeat",
+        "background-position": "center",
+        "background-size": "cover"
+      },
+      style: {
+        "background-image": "url(" + item.path + ")"
+      }
+    }, [_c("div", {
+      staticStyle: {
+        width: "100%"
+      }
+    }), _vm._v(" "), _c("div", {
+      staticClass: "banner-policy"
+    }, [_c("div", {
+      staticClass: "banner-policy__wrapper"
+    }, [_c("a", {
+      staticClass: "banner-policy__item",
+      staticStyle: {
+        "background-color": "rgb(0,0,0,0.1)"
+      },
+      attrs: {
+        href: "#"
+      }
+    }, [_vm._v("\n                        Miễn phí vận chuyển cho"), _c("br"), _vm._v("\n                        đơn hàng trên 200K\n                    ")]), _vm._v(" "), _c("a", {
+      staticClass: "banner-policy__item",
+      staticStyle: {
+        "background-color": "rgb(0,0,0,0.1)"
+      },
+      attrs: {
+        href: "#"
+      }
+    }, [_vm._v("\n                    60 ngày đổi trả vì"), _c("br"), _vm._v("\n                    bất kì lý do gì\n                ")]), _vm._v(" "), _c("a", {
+      staticClass: "banner-policy__item",
+      staticStyle: {
+        "background-color": "rgb(0,0,0,0.1)"
+      },
+      attrs: {
+        href: "#"
+      }
+    }, [_vm._v("\n                    Đến tận nơi nhận hàng trả,"), _c("br"), _vm._v("\n                    hoàn tiền trong 24h\n                ")])])])]);
+  }), 1)], 1);
+};
+var staticRenderFns = [];
+render._withStripped = true;
+
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/frontend/components/content/HomePageProduct.vue?vue&type=template&id=372b05e1&":
+/*!**************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/frontend/components/content/HomePageProduct.vue?vue&type=template&id=372b05e1& ***!
+  \**************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function render() {
+  var _vm = this,
+    _c = _vm._self._c;
+  return _c("div", {
+    staticClass: "content__product"
+  }, [_vm.dataProduct.length > 0 ? _c("VueSlickCarousel", _vm._b({}, "VueSlickCarousel", _vm.setting, false), _vm._l(_vm.dataProduct, function (item, i) {
+    return _c("div", [_c("div", {
+      staticClass: "home__page-product",
+      on: {
+        click: function click($event) {
+          return _vm.$router.push({
+            name: "product-detail",
+            params: {
+              id: item.id
+            }
+          });
+        }
+      }
+    }, [_c("div", {
+      staticClass: "product__item",
+      on: {
+        mouseover: function mouseover($event) {
+          _vm.hoverIndex = i;
+        },
+        mouseleave: function mouseleave($event) {
+          _vm.hoverIndex = -1;
+        }
+      }
+    }, [_c("el-image", {
+      staticClass: "product--image",
+      attrs: {
+        fit: "cover",
+        src: item.images_product[i == _vm.hoverIndex ? item.images_product[1] ? 1 : 0 : 0].path
+      }
+    }), _vm._v(" "), _c("div", {
+      staticClass: "product-list__size"
+    }, _vm._l(item["options_product"].filter(function (a, i) {
+      return item["options_product"].findIndex(function (s) {
+        return a.id_size === s.id_size;
+      }) === i;
+    }), function (itemSize) {
+      return _c("div", {
+        staticClass: "product-size__item"
+      }, [_vm._v("\n                            " + _vm._s(itemSize["size"]["title"]) + "\n                        ")]);
+    }), 0)], 1), _vm._v(" "), _c("div", {
+      staticClass: "product-grid__content"
+    }, [_c("div", {
+      staticClass: "product-grid__options"
+    }, [_c("div", {
+      staticClass: "options-color"
+    }, _vm._l(item["options_product"].filter(function (a, i) {
+      return item["options_product"].findIndex(function (s) {
+        return a.id_color === s.id_color;
+      }) === i;
+    }), function (itemColor) {
+      return _c("div", {
+        staticClass: "option-color__item"
+      }, [_c("div", {
+        staticClass: "product-color__item",
+        style: {
+          "background-color": itemColor["color"]["value"]
+        }
+      })]);
+    }), 0)]), _vm._v(" "), _c("h3", {
+      staticClass: "product-grid__title"
+    }, [_c("a", [_vm._v("\n                            " + _vm._s(item.name) + "\n                        ")])]), _vm._v(" "), _c("div", {
+      staticClass: "product-grid__prices"
+    }, [_c("div", {
+      staticClass: "product-prices",
+      attrs: {
+        "rel-script": "product-price",
+        "data-price": "299000",
+        "data-compare-price": "299000",
+        "data-sale": "1"
+      }
+    }, [_c("span", {
+      staticStyle: {
+        color: "red",
+        "margin-left": "10px"
+      }
+    }, [_vm._v(_vm._s(item.disksCount))]), _vm._v(" "), _c("del", [_vm._v(_vm._s(_vm._f("toThousandFilter")(item["options_product"][0].price)) + " đ")]), _vm._v(" "), _c("ins", [_vm._v(_vm._s(_vm._f("toThousandFilter")(item["options_product"][0].price)) + " đ")])])])])])]);
+  }), 0) : _vm._e()], 1);
+};
+var staticRenderFns = [];
+render._withStripped = true;
+
 
 /***/ }),
 
@@ -511,11 +786,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_2__);
 
 
- // import { API_URL } from "./config";
+
+// import { API_URL } from "./config";
 // import AuthService from '@/common/auth.service';
 // import store from "@/store";
 
- // $(document).ajaxError(function( event, jqxhr, settings, thrownError ) {
+
+// $(document).ajaxError(function( event, jqxhr, settings, thrownError ) {
 //     switch (jqxhr.status) {
 //         case 401:
 //             ApiService.sessionExpire();
@@ -530,11 +807,9 @@ var ApiService = {
   },
   setHeader: function setHeader() {
     var token = AuthService.getToken();
-
     if (token) {
       vue__WEBPACK_IMPORTED_MODULE_3__["default"].axios.defaults.headers.common.Authorization = "Bearer ".concat(token);
     }
-
     jquery__WEBPACK_IMPORTED_MODULE_2___default().ajaxSetup({
       headers: {
         'X-CSRF-TOKEN': jquery__WEBPACK_IMPORTED_MODULE_2___default()('meta[name="csrf-token"]').attr('content'),
@@ -554,7 +829,6 @@ var ApiService = {
       if (error && error.response && error.response.status === 401) {
         ApiService.sessionExpire();
       }
-
       throw new Error("[RWV] ApiService ".concat(error));
     });
   },
@@ -564,7 +838,6 @@ var ApiService = {
       if (error && error.response && error.response.status === 401) {
         ApiService.sessionExpire();
       }
-
       throw new Error("[RWV] ApiService ".concat(error));
     });
   },
@@ -573,7 +846,6 @@ var ApiService = {
       if (error && error.response && error.response.status === 401) {
         ApiService.sessionExpire();
       }
-
       throw new Error("[RWV] ApiService ".concat(error));
     });
   },
@@ -582,7 +854,6 @@ var ApiService = {
       if (error && error.response && error.response.status === 401) {
         ApiService.sessionExpire();
       }
-
       throw new Error("[RWV] ApiService ".concat(error));
     });
   },
@@ -591,7 +862,6 @@ var ApiService = {
       if (error && error.response && error.response.status === 401) {
         ApiService.sessionExpire();
       }
-
       throw new Error("[RWV] ApiService ".concat(error));
     });
   },
@@ -600,12 +870,13 @@ var ApiService = {
       if (error && error.response && error.response.status === 401) {
         ApiService.sessionExpire();
       }
-
       throw new Error("[RWV] ApiService ".concat(error));
     });
   }
 };
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ApiService); // export const checkAuth = {
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ApiService);
+
+// export const checkAuth = {
 //     getUser() {
 //         $.ajax({
 //             url: '/api/admin/auth/session',
@@ -620,8 +891,10 @@ var ApiService = {
 //             }
 //         })
 //         return true
+
 //     }
 // }
+
 // export const RemoteSensingDataService = {
 //     fetch(params) {
 //         return ApiService.query("/api/remote-sensing-data", { params: params });
@@ -698,7 +971,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".slick-track[data-v-e4caeaf8]{\n  position:relative;\n  top:0;\n  left:0;\n  display:block;\n  transform:translateZ(0)\n}\n\n.slick-track.slick-center[data-v-e4caeaf8]{\n  margin-left:auto;\n  margin-right:auto\n}\n\n.slick-track[data-v-e4caeaf8]:after,.slick-track[data-v-e4caeaf8]:before{\n  display:table;\n  content:\"\"\n}\n\n.slick-track[data-v-e4caeaf8]:after{\n  clear:both\n}\n\n.slick-loading .slick-track[data-v-e4caeaf8]{\n  visibility:hidden\n}\n\n.slick-slide[data-v-e4caeaf8]{\n  display:none;\n  float:left;\n  height:100%;\n  min-height:1px\n}\n\n[dir=rtl] .slick-slide[data-v-e4caeaf8]{\n  float:right\n}\n\n.slick-slide img[data-v-e4caeaf8]{\n  display:block\n}\n\n.slick-slide.slick-loading img[data-v-e4caeaf8]{\n  display:none\n}\n\n.slick-slide.dragging img[data-v-e4caeaf8]{\n  pointer-events:none\n}\n\n.slick-initialized .slick-slide[data-v-e4caeaf8]{\n  display:block\n}\n\n.slick-loading .slick-slide[data-v-e4caeaf8]{\n  visibility:hidden\n}\n\n.slick-vertical .slick-slide[data-v-e4caeaf8]{\n  display:block;\n  height:auto;\n  border:1px solid transparent\n}\n\n.slick-arrow.slick-hidden[data-v-21137603]{\n  display:none\n}\n\n.slick-slider[data-v-3d1a4f76]{\n  position:relative;\n  display:block;\n  box-sizing:border-box;\n  -webkit-user-select:none;\n  -moz-user-select:none;\n  -ms-user-select:none;\n  user-select:none;\n  -webkit-touch-callout:none;\n  -khtml-user-select:none;\n  touch-action:pan-y;\n  -webkit-tap-highlight-color:transparent\n}\n\n.slick-list[data-v-3d1a4f76]{\n  position:relative;\n  display:block;\n  overflow:hidden;\n  margin:0;\n  padding:0;\n  transform:translateZ(0)\n}\n\n.slick-list[data-v-3d1a4f76]:focus{\n  outline:none\n}\n\n.slick-list.dragging[data-v-3d1a4f76]{\n  cursor:pointer;\n  cursor:hand\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".slick-track[data-v-e4caeaf8]{\n  position:relative;\n  top:0;\n  left:0;\n  display:block;\n  transform:translateZ(0)\n}\n\n.slick-track.slick-center[data-v-e4caeaf8]{\n  margin-left:auto;\n  margin-right:auto\n}\n\n.slick-track[data-v-e4caeaf8]:after,.slick-track[data-v-e4caeaf8]:before{\n  display:table;\n  content:\"\"\n}\n\n.slick-track[data-v-e4caeaf8]:after{\n  clear:both\n}\n\n.slick-loading .slick-track[data-v-e4caeaf8]{\n  visibility:hidden\n}\n\n.slick-slide[data-v-e4caeaf8]{\n  display:none;\n  float:left;\n  height:100%;\n  min-height:1px\n}\n\n[dir=rtl] .slick-slide[data-v-e4caeaf8]{\n  float:right\n}\n\n.slick-slide img[data-v-e4caeaf8]{\n  display:block\n}\n\n.slick-slide.slick-loading img[data-v-e4caeaf8]{\n  display:none\n}\n\n.slick-slide.dragging img[data-v-e4caeaf8]{\n  pointer-events:none\n}\n\n.slick-initialized .slick-slide[data-v-e4caeaf8]{\n  display:block\n}\n\n.slick-loading .slick-slide[data-v-e4caeaf8]{\n  visibility:hidden\n}\n\n.slick-vertical .slick-slide[data-v-e4caeaf8]{\n  display:block;\n  height:auto;\n  border:1px solid transparent\n}\n\n.slick-arrow.slick-hidden[data-v-21137603]{\n  display:none\n}\n\n.slick-slider[data-v-3d1a4f76]{\n  position:relative;\n  display:block;\n  box-sizing:border-box;\n  -webkit-user-select:none;\n  -moz-user-select:none;\n  user-select:none;\n  -webkit-touch-callout:none;\n  -khtml-user-select:none;\n  touch-action:pan-y;\n  -webkit-tap-highlight-color:transparent\n}\n\n.slick-list[data-v-3d1a4f76]{\n  position:relative;\n  display:block;\n  overflow:hidden;\n  margin:0;\n  padding:0;\n  transform:translateZ(0)\n}\n\n.slick-list[data-v-3d1a4f76]:focus{\n  outline:none\n}\n\n.slick-list.dragging[data-v-3d1a4f76]{\n  cursor:pointer;\n  cursor:hand\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -12046,6 +12319,57 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/frontend/components/content/HomePage.vue?vue&type=template&id=136a29de&":
+/*!**********************************************************************************************!*\
+  !*** ./resources/js/frontend/components/content/HomePage.vue?vue&type=template&id=136a29de& ***!
+  \**********************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_lib_loaders_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_lib_index_js_vue_loader_options_HomePage_vue_vue_type_template_id_136a29de___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_lib_loaders_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_lib_index_js_vue_loader_options_HomePage_vue_vue_type_template_id_136a29de___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_lib_loaders_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_lib_index_js_vue_loader_options_HomePage_vue_vue_type_template_id_136a29de___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./HomePage.vue?vue&type=template&id=136a29de& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/frontend/components/content/HomePage.vue?vue&type=template&id=136a29de&");
+
+
+/***/ }),
+
+/***/ "./resources/js/frontend/components/content/HomePageBanner.vue?vue&type=template&id=8255faac&":
+/*!****************************************************************************************************!*\
+  !*** ./resources/js/frontend/components/content/HomePageBanner.vue?vue&type=template&id=8255faac& ***!
+  \****************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_lib_loaders_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_lib_index_js_vue_loader_options_HomePageBanner_vue_vue_type_template_id_8255faac___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_lib_loaders_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_lib_index_js_vue_loader_options_HomePageBanner_vue_vue_type_template_id_8255faac___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_lib_loaders_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_lib_index_js_vue_loader_options_HomePageBanner_vue_vue_type_template_id_8255faac___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./HomePageBanner.vue?vue&type=template&id=8255faac& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/frontend/components/content/HomePageBanner.vue?vue&type=template&id=8255faac&");
+
+
+/***/ }),
+
+/***/ "./resources/js/frontend/components/content/HomePageProduct.vue?vue&type=template&id=372b05e1&":
+/*!*****************************************************************************************************!*\
+  !*** ./resources/js/frontend/components/content/HomePageProduct.vue?vue&type=template&id=372b05e1& ***!
+  \*****************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_lib_loaders_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_lib_index_js_vue_loader_options_HomePageProduct_vue_vue_type_template_id_372b05e1___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_lib_loaders_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_lib_index_js_vue_loader_options_HomePageProduct_vue_vue_type_template_id_372b05e1___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_lib_loaders_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_lib_index_js_vue_loader_options_HomePageProduct_vue_vue_type_template_id_372b05e1___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./HomePageProduct.vue?vue&type=template&id=372b05e1& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/frontend/components/content/HomePageProduct.vue?vue&type=template&id=372b05e1&");
+
+
+/***/ }),
+
 /***/ "./resources/js/frontend/components/content/HomePageBanner.vue?vue&type=style&index=0&id=8255faac&lang=css&":
 /*!******************************************************************************************************************!*\
   !*** ./resources/js/frontend/components/content/HomePageBanner.vue?vue&type=style&index=0&id=8255faac&lang=css& ***!
@@ -12068,1017 +12392,6 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_style_loader_dist_cjs_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_HomePageProduct_vue_vue_type_style_index_0_id_372b05e1_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/style-loader/dist/cjs.js!../../../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!../../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./HomePageProduct.vue?vue&type=style&index=0&id=372b05e1&lang=css& */ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/frontend/components/content/HomePageProduct.vue?vue&type=style&index=0&id=372b05e1&lang=css&");
-
-
-/***/ }),
-
-/***/ "./resources/js/frontend/components/content/HomePage.vue?vue&type=template&id=136a29de&":
-/*!**********************************************************************************************!*\
-  !*** ./resources/js/frontend/components/content/HomePage.vue?vue&type=template&id=136a29de& ***!
-  \**********************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_HomePage_vue_vue_type_template_id_136a29de___WEBPACK_IMPORTED_MODULE_0__.render),
-/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_HomePage_vue_vue_type_template_id_136a29de___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
-/* harmony export */ });
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_HomePage_vue_vue_type_template_id_136a29de___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./HomePage.vue?vue&type=template&id=136a29de& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/frontend/components/content/HomePage.vue?vue&type=template&id=136a29de&");
-
-
-/***/ }),
-
-/***/ "./resources/js/frontend/components/content/HomePageBanner.vue?vue&type=template&id=8255faac&":
-/*!****************************************************************************************************!*\
-  !*** ./resources/js/frontend/components/content/HomePageBanner.vue?vue&type=template&id=8255faac& ***!
-  \****************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_HomePageBanner_vue_vue_type_template_id_8255faac___WEBPACK_IMPORTED_MODULE_0__.render),
-/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_HomePageBanner_vue_vue_type_template_id_8255faac___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
-/* harmony export */ });
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_HomePageBanner_vue_vue_type_template_id_8255faac___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./HomePageBanner.vue?vue&type=template&id=8255faac& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/frontend/components/content/HomePageBanner.vue?vue&type=template&id=8255faac&");
-
-
-/***/ }),
-
-/***/ "./resources/js/frontend/components/content/HomePageProduct.vue?vue&type=template&id=372b05e1&":
-/*!*****************************************************************************************************!*\
-  !*** ./resources/js/frontend/components/content/HomePageProduct.vue?vue&type=template&id=372b05e1& ***!
-  \*****************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_HomePageProduct_vue_vue_type_template_id_372b05e1___WEBPACK_IMPORTED_MODULE_0__.render),
-/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_HomePageProduct_vue_vue_type_template_id_372b05e1___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
-/* harmony export */ });
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_HomePageProduct_vue_vue_type_template_id_372b05e1___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./HomePageProduct.vue?vue&type=template&id=372b05e1& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/frontend/components/content/HomePageProduct.vue?vue&type=template&id=372b05e1&");
-
-
-/***/ }),
-
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/frontend/components/content/HomePage.vue?vue&type=template&id=136a29de&":
-/*!*************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/frontend/components/content/HomePage.vue?vue&type=template&id=136a29de& ***!
-  \*************************************************************************************************************************************************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "render": () => (/* binding */ render),
-/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
-/* harmony export */ });
-var render = function () {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c(
-    "main",
-    { staticClass: "site-homepage" },
-    [
-      _c("HomePageBannerVue"),
-      _vm._v(" "),
-      _vm._m(0),
-      _vm._v(" "),
-      _c("HomePageProduct"),
-      _vm._v(" "),
-      _vm._m(1),
-      _vm._v(" "),
-      _vm._m(2),
-      _vm._v(" "),
-      _vm._m(3),
-      _vm._v(" "),
-      _c("section", { staticClass: "homepage-collections" }, [
-        _c("div", { staticClass: "container container--full" }, [
-          _c(
-            "div",
-            { staticClass: "grid" },
-            _vm._l(_vm.data, function (item, i) {
-              return _c(
-                "div",
-                {
-                  directives: [
-                    {
-                      name: "show",
-                      rawName: "v-show",
-                      value: i < 4,
-                      expression: "i<4",
-                    },
-                  ],
-                  staticClass: "grid__column three-twelfths mobile--one-half",
-                },
-                [
-                  _c(
-                    "a",
-                    { staticClass: "collection-grid", attrs: { href: "/" } },
-                    [
-                      _c("div", { staticClass: "collection-grid__thumbnail" }, [
-                        _c("img", {
-                          attrs: { src: item.img, alt: "Đồ mặc trong" },
-                        }),
-                      ]),
-                      _vm._v(" "),
-                      _c("span", { staticClass: "collection-grid__title" }, [
-                        i < 3
-                          ? _c("span", [_vm._v(_vm._s(item.title))])
-                          : _vm._e(),
-                        _vm._v(" "),
-                        i == 3 ? _c("span", [_vm._v("Tất cả")]) : _vm._e(),
-                      ]),
-                    ]
-                  ),
-                ]
-              )
-            }),
-            0
-          ),
-        ]),
-      ]),
-      _vm._v(" "),
-      _vm._m(4),
-      _vm._v(" "),
-      _c("section", { staticClass: "homepage-more" }, [
-        _c("div", { staticClass: "container" }, [
-          _c(
-            "div",
-            { staticClass: "homepage-more__captions" },
-            [
-              _c("marquee", [
-                _c("p", [
-                  _c("b", [_vm._v("CoolClub")]),
-                  _vm._v(" - Ưu đãi "),
-                  _c("b", [_vm._v("nhiều hơn")]),
-                  _vm._v(", mua sắm vui hơn. Nhận ngay "),
-                  _c("b", [_vm._v("ưu đãi\n                        7%")]),
-                  _vm._v(" cho\n                        lần mua sắm tiếp theo"),
-                ]),
-              ]),
-              _vm._v(" "),
-              _c(
-                "a",
-                {
-                  staticClass: "homepage-more__button",
-                  attrs: {
-                    href: "/page/coolclub-chuong-trinh-khach-hang-than-thiet-cua-coolmate?itm_source=home",
-                  },
-                },
-                [
-                  _vm._v(
-                    "\n                    Gia nhập ngay\n                "
-                  ),
-                ]
-              ),
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _vm._m(5),
-        ]),
-      ]),
-    ],
-    1
-  )
-}
-var staticRenderFns = [
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("section", { staticClass: "homepage-search" }, [
-      _c("div", { staticClass: "container container--medium" }, [
-        _c("div", { staticClass: "homepage-search__wrapper" }, [
-          _c("h2", { staticClass: "homepage-search__heading" }, [
-            _vm._v("Bạn tìm gì hôm nay?"),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "homepage-search__inner" }, [
-            _c("form", { attrs: { action: "/spotlight", method: "GET" } }, [
-              _c("input", {
-                staticClass: "homepage-search__control",
-                attrs: {
-                  type: "text",
-                  name: "keyword",
-                  placeholder: 'Hãy thử bắt đầu với "Quần đen" xem sao',
-                  "rel-script": "spotlight-search-control-home",
-                },
-              }),
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "homepage-search__spotlight" }, [
-              _c(
-                "div",
-                {
-                  staticClass: "homepage-search__spotlight-content",
-                  attrs: { "rel-script": "spotlight-search-home" },
-                },
-                [
-                  _c("img", {
-                    staticClass: "loading",
-                    attrs: {
-                      src: "https://www.coolmate.me/images/icons/loading.svg",
-                    },
-                  }),
-                ]
-              ),
-              _vm._v(" "),
-              _c(
-                "a",
-                { staticClass: "homepage-search__more", attrs: { href: "#" } },
-                [_vm._v("Xem toàn bộ kết quả")]
-              ),
-            ]),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "homepage-search__content" }, [
-            _c("p", { staticClass: "homepage-search__description" }, [
-              _vm._v(
-                "Hãy thử tìm bất kỳ từ khoá nào nhé. Coolmate gợi\n                        ý nè:"
-              ),
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "homepage-search__buttons" }, [
-              _c(
-                "a",
-                {
-                  staticClass: "homepage-search__button",
-                  attrs: { href: "#", "rel-script": "homepage-search-button" },
-                },
-                [_vm._v("áo thun")]
-              ),
-              _vm._v(" "),
-              _c(
-                "a",
-                {
-                  staticClass: "homepage-search__button",
-                  attrs: { href: "#", "rel-script": "homepage-search-button" },
-                },
-                [_vm._v("\n                        hoodie")]
-              ),
-              _vm._v(" "),
-              _c(
-                "a",
-                {
-                  staticClass: "homepage-search__button",
-                  attrs: { href: "#", "rel-script": "homepage-search-button" },
-                },
-                [_vm._v("\n                            oversize")]
-              ),
-              _vm._v(" "),
-              _c(
-                "a",
-                {
-                  staticClass: "homepage-search__button",
-                  attrs: { href: "#", "rel-script": "homepage-search-button" },
-                },
-                [_vm._v(" cm24")]
-              ),
-              _vm._v(" "),
-              _c(
-                "a",
-                {
-                  staticClass: "homepage-search__button",
-                  attrs: { href: "#", "rel-script": "homepage-search-button" },
-                },
-                [_vm._v("\n                            promax")]
-              ),
-            ]),
-          ]),
-        ]),
-      ]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container container--full mgt--20" }, [
-      _c("div", { staticClass: "home-collection__banner" }, [
-        _c("a", { attrs: { href: "/cm24?itm_source=homepage-section" } }, [
-          _c("picture", { staticStyle: { width: "100%" } }, [
-            _c("source", {
-              attrs: {
-                media: "(max-width:768px)",
-                srcset:
-                  "https://mcdn.coolmate.me/image/February2023/mceclip1_28.jpg",
-              },
-            }),
-            _vm._v(" "),
-            _c("img", {
-              attrs: {
-                src: "https://mcdn.coolmate.me/image/February2023/mceclip0_88.jpg",
-                alt: "Image",
-                width: "100%",
-              },
-            }),
-          ]),
-        ]),
-      ]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("section", { staticClass: "homepage-excool" }, [
-      _c("div", { staticClass: "container" }, [
-        _c("div", { staticClass: "about-card" }, [
-          _c("div", { staticClass: "about-card__content" }, [
-            _c("h2", { staticClass: "about-card__heading" }, [
-              _vm._v(
-                "\n                        Dòng sản phẩm công nghệ EXCOOL\n                    "
-              ),
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "about-card__description" }, [
-              _c("p", [
-                _vm._v(
-                  "\n                            Công nghệ Việt cho người Việt."
-                ),
-                _c("br"),
-                _vm._v("\n                            Với hơn "),
-                _c("b", [_vm._v("100.000")]),
-                _vm._v(
-                  " sản phẩm đã được gửi đến tay khách hàng sử dụng và hài\n                            lòng\n                        "
-                ),
-              ]),
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "about-card__button" }, [
-              _c(
-                "a",
-                {
-                  staticClass: "btn btn--white",
-                  attrs: { href: "/lp/dong-san-pham-excool?itm_source=home" },
-                },
-                [
-                  _vm._v(
-                    "\n                        Tìm hiểu thêm\n                    "
-                  ),
-                ]
-              ),
-            ]),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "about-card__image" }, [
-            _c("picture", [
-              _c("source", {
-                attrs: {
-                  media: "(min-width:768px)",
-                  srcset:
-                    "https://mcdn.coolmate.me/uploads/January2022/ao_(1)_1_(1)_(1).jpg",
-                },
-              }),
-              _vm._v(" "),
-              _c("img", {
-                attrs: {
-                  src: "https://mcdn.coolmate.me/uploads/February2022/ao_1_(1).jpg",
-                  alt: "Image",
-                },
-              }),
-            ]),
-          ]),
-        ]),
-      ]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "section",
-      { staticClass: "homepage-coolclub animations-active" },
-      [
-        _c("div", { staticClass: "container container--medium" }, [
-          _c("div", { staticClass: "coolclub-abouts" }, [
-            _c("h2", { staticClass: "coolclub-abouts__heading" }, [
-              _vm._v("\n                    Coolmate Basics\n                "),
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "coolclub-abouts__wrapper" }, [
-              _c("div", { staticClass: "coolclub-abouts__content" }, [
-                _c("div", { staticClass: "coolclub-abouts__box" }, [
-                  _c(
-                    "a",
-                    {
-                      attrs: {
-                        href: "/product/ao-thun-nam-cotton-coolmate-basics-200gsm?color=mau-den&itm_source=home_basics",
-                      },
-                    },
-                    [
-                      _c("img", {
-                        attrs: {
-                          src: "https://mcdn.coolmate.me/image/January2023/mceclip9_22.png",
-                          alt: "Coolmate Basics 1",
-                        },
-                      }),
-                    ]
-                  ),
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "coolclub-abouts__box" }, [
-                  _c(
-                    "a",
-                    {
-                      attrs: {
-                        href: "/product/ao-ba-lo-cotton-100-coolmate-basics-v2?color=trang&itm_source=home_basics",
-                      },
-                    },
-                    [
-                      _c("img", {
-                        attrs: {
-                          src: "https://mcdn.coolmate.me/image/September2022/mceclip1_11.png",
-                          alt: "Coolmate Basics 2",
-                        },
-                      }),
-                    ]
-                  ),
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "coolclub-abouts__box" }, [
-                  _c(
-                    "a",
-                    {
-                      attrs: {
-                        href: "/product/ao-the-thao-nam-promax-recycle-basics1?itm_source=home_basics",
-                      },
-                    },
-                    [
-                      _c("img", {
-                        attrs: {
-                          src: "https://mcdn.coolmate.me/uploads/January2022/CoolmateBasic3.png",
-                          alt: "Coolmate Basics 3",
-                        },
-                      }),
-                    ]
-                  ),
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "coolclub-abouts__box" }, [
-                  _c(
-                    "a",
-                    {
-                      attrs: {
-                        href: "/product/quan-short-mac-nha-coolmate-basics?itm_source=home_basics",
-                      },
-                    },
-                    [
-                      _c("img", {
-                        attrs: {
-                          src: "https://mcdn.coolmate.me/uploads/February2022/Mask_Group_(2).png",
-                          alt: "Coolmate Basics 4",
-                        },
-                      }),
-                    ]
-                  ),
-                ]),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  {
-                    staticClass:
-                      "coolclub-abouts__box coolclub-abouts__box--last",
-                  },
-                  [
-                    _c(
-                      "a",
-                      {
-                        attrs: {
-                          href: "/product/quan-lot-nam-brief-coolmate-basics?itm_source=home_basics&color=xanh-navy",
-                        },
-                      },
-                      [
-                        _c("img", {
-                          attrs: {
-                            src: "https://mcdn.coolmate.me/uploads/January2022/CoolmateBasic4.png",
-                            alt: "Coolmate Basics 5",
-                          },
-                        }),
-                      ]
-                    ),
-                  ]
-                ),
-              ]),
-              _vm._v(" "),
-              _c(
-                "a",
-                {
-                  staticClass: "coolclub-abouts__scroll",
-                  attrs: { href: "#", "rel-script": "coolclub-abouts-scroll" },
-                },
-                [
-                  _c("img", {
-                    attrs: {
-                      src: "https://www.coolmate.me/images/arrow-right.svg",
-                      alt: "Arrow rigth",
-                    },
-                  }),
-                ]
-              ),
-            ]),
-            _vm._v(" "),
-            _c(
-              "p",
-              {
-                staticClass: "text--center",
-                staticStyle: { "letter-spacing": "0.03em" },
-              },
-              [
-                _vm._v("Dòng sản phẩm mặc cơ bản "),
-                _c("span", { staticStyle: { color: "rgb(47, 90, 207)" } }, [
-                  _vm._v("chất lượng tốt"),
-                ]),
-                _vm._v(" và "),
-                _c("span", { staticStyle: { color: "rgb(47, 90, 207)" } }, [
-                  _vm._v("giá tốt"),
-                ]),
-                _vm._v("\n                    của Coolmate"),
-              ]
-            ),
-            _vm._v(" "),
-            _c("div", { staticClass: "coolclub-abouts__button" }, [
-              _c(
-                "a",
-                {
-                  staticClass: "btn btn--primary",
-                  attrs: {
-                    href: "/collection/coolmate-basics?itm_source=home",
-                  },
-                },
-                [_vm._v("\n                    Trải nghiệm\n                ")]
-              ),
-            ]),
-          ]),
-        ]),
-      ]
-    )
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("section", { staticClass: "homepage-about" }, [
-      _c("div", { staticClass: "container" }, [
-        _c("div", { staticClass: "about-card" }, [
-          _c(
-            "div",
-            {
-              staticClass: "about-card__image",
-              staticStyle: { position: "relative", "z-index": "1" },
-            },
-            [
-              _c("picture", [
-                _c("source", {
-                  attrs: {
-                    media: "(max-width:768px)",
-                    srcset:
-                      "https://mcdn.coolmate.me/image/June2022/mceclip2_87.png",
-                  },
-                }),
-                _vm._v(" "),
-                _c("img", {
-                  attrs: {
-                    src: "https://mcdn.coolmate.me/image/June2022/mceclip2_87.png",
-                    alt: "Dịch vụ xuất sắc",
-                  },
-                }),
-              ]),
-            ]
-          ),
-          _vm._v(" "),
-          _c("div", { staticClass: "about-card__content" }, [
-            _c("h2", { staticClass: "about-card__heading" }, [
-              _vm._v(
-                "\n                        Trải nghiệm mua sắm hài lòng với\n                        #Coolmate\n                    "
-              ),
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "about-card__description" }, [
-              _c("p", [
-                _vm._v("\n                            Giá cả hợp lý"),
-                _c("br"),
-                _vm._v("\n                            Dịch vụ 100% hài lòng"),
-                _c("br"),
-                _vm._v("\n                            60 ngày đổi trả"),
-                _c("br"),
-                _vm._v(
-                  "\n                            Tự hào sản xuất tại Việt Nam\n                        "
-                ),
-              ]),
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "about-card__button" }, [
-              _c(
-                "a",
-                {
-                  staticClass: "btn btn--white",
-                  attrs: {
-                    href: "/page/11-dich-vu-tai-coolmate-co-the-ban-chua-biet?itm_source=home",
-                  },
-                },
-                [
-                  _vm._v(
-                    "\n                        Tìm hiểu thêm\n                    "
-                  ),
-                ]
-              ),
-            ]),
-          ]),
-        ]),
-      ]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "grid" }, [
-      _c(
-        "div",
-        {
-          staticClass: "grid__column one-half mobile--one-whole",
-          staticStyle: { position: "relative" },
-        },
-        [
-          _c("div", { staticClass: "infomation-card" }, [
-            _c("div", { staticClass: "infomation-card__thumbnail" }, [
-              _c(
-                "a",
-                { attrs: { href: "/page/coolmate-story?itm_source=home" } },
-                [
-                  _c("img", {
-                    attrs: {
-                      src: "https://mcdn.coolmate.me/image/January2023/mceclip3_94.jpg",
-                      alt: "Dịch vụ xuất sắc",
-                    },
-                  }),
-                ]
-              ),
-            ]),
-          ]),
-        ]
-      ),
-      _vm._v(" "),
-      _c("div", { staticClass: "grid__column one-half mobile--one-whole" }, [
-        _c("div", { staticClass: "infomation-card" }, [
-          _c("div", { staticClass: "infomation-card__thumbnail" }, [
-            _c(
-              "a",
-              {
-                attrs: {
-                  href: "/page/11-dich-vu-tai-coolmate-co-the-ban-chua-biet?itm_source=home",
-                },
-              },
-              [
-                _c("img", {
-                  attrs: {
-                    src: "https://mcdn.coolmate.me/image/January2023/mceclip2_30.jpg",
-                    alt: "Dịch vụ xuất sắc",
-                  },
-                }),
-              ]
-            ),
-          ]),
-        ]),
-      ]),
-    ])
-  },
-]
-render._withStripped = true
-
-
-
-/***/ }),
-
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/frontend/components/content/HomePageBanner.vue?vue&type=template&id=8255faac&":
-/*!*******************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/frontend/components/content/HomePageBanner.vue?vue&type=template&id=8255faac& ***!
-  \*******************************************************************************************************************************************************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "render": () => (/* binding */ render),
-/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
-/* harmony export */ });
-var render = function () {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c(
-    "section",
-    {
-      directives: [
-        {
-          name: "loading",
-          rawName: "v-loading",
-          value: !_vm.SlideData.length,
-          expression: "!SlideData.length",
-        },
-      ],
-      staticClass: "homepage-banner",
-    },
-    [
-      _c(
-        "el-carousel",
-        { attrs: { "indicator-position": "outside", height: "750px" } },
-        _vm._l(_vm.SlideData, function (item, i) {
-          return _c(
-            "el-carousel-item",
-            {
-              key: i,
-              staticStyle: {
-                "background-repeat": "repeat",
-                "background-position": "center",
-                "background-size": "cover",
-              },
-              style: { "background-image": "url(" + item.path + ")" },
-            },
-            [
-              _c("div", { staticStyle: { width: "100%" } }),
-              _vm._v(" "),
-              _c("div", { staticClass: "banner-policy" }, [
-                _c("div", { staticClass: "banner-policy__wrapper" }, [
-                  _c(
-                    "a",
-                    {
-                      staticClass: "banner-policy__item",
-                      staticStyle: { "background-color": "rgb(0,0,0,0.1)" },
-                      attrs: { href: "#" },
-                    },
-                    [
-                      _vm._v(
-                        "\n                        Miễn phí vận chuyển cho"
-                      ),
-                      _c("br"),
-                      _vm._v(
-                        "\n                        đơn hàng trên 200K\n                    "
-                      ),
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "a",
-                    {
-                      staticClass: "banner-policy__item",
-                      staticStyle: { "background-color": "rgb(0,0,0,0.1)" },
-                      attrs: { href: "#" },
-                    },
-                    [
-                      _vm._v("\n                    60 ngày đổi trả vì"),
-                      _c("br"),
-                      _vm._v(
-                        "\n                    bất kì lý do gì\n                "
-                      ),
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "a",
-                    {
-                      staticClass: "banner-policy__item",
-                      staticStyle: { "background-color": "rgb(0,0,0,0.1)" },
-                      attrs: { href: "#" },
-                    },
-                    [
-                      _vm._v(
-                        "\n                    Đến tận nơi nhận hàng trả,"
-                      ),
-                      _c("br"),
-                      _vm._v(
-                        "\n                    hoàn tiền trong 24h\n                "
-                      ),
-                    ]
-                  ),
-                ]),
-              ]),
-            ]
-          )
-        }),
-        1
-      ),
-    ],
-    1
-  )
-}
-var staticRenderFns = []
-render._withStripped = true
-
-
-
-/***/ }),
-
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/frontend/components/content/HomePageProduct.vue?vue&type=template&id=372b05e1&":
-/*!********************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/frontend/components/content/HomePageProduct.vue?vue&type=template&id=372b05e1& ***!
-  \********************************************************************************************************************************************************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "render": () => (/* binding */ render),
-/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
-/* harmony export */ });
-var render = function () {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    { staticClass: "content__product" },
-    [
-      _vm.dataProduct.length > 0
-        ? _c(
-            "VueSlickCarousel",
-            _vm._b({}, "VueSlickCarousel", _vm.setting, false),
-            _vm._l(_vm.dataProduct, function (item, i) {
-              return _c("div", [
-                _c(
-                  "div",
-                  {
-                    staticClass: "home__page-product",
-                    on: {
-                      click: function ($event) {
-                        return _vm.$router.push({
-                          name: "product-detail",
-                          params: { id: item.id },
-                        })
-                      },
-                    },
-                  },
-                  [
-                    _c(
-                      "div",
-                      {
-                        staticClass: "product__item",
-                        on: {
-                          mouseover: function ($event) {
-                            _vm.hoverIndex = i
-                          },
-                          mouseleave: function ($event) {
-                            _vm.hoverIndex = -1
-                          },
-                        },
-                      },
-                      [
-                        _c("el-image", {
-                          staticClass: "product--image",
-                          attrs: {
-                            fit: "cover",
-                            src: item.images_product[
-                              i == _vm.hoverIndex
-                                ? item.images_product[1]
-                                  ? 1
-                                  : 0
-                                : 0
-                            ].path,
-                          },
-                        }),
-                        _vm._v(" "),
-                        _c(
-                          "div",
-                          { staticClass: "product-list__size" },
-                          _vm._l(
-                            item["options_product"].filter(function (a, i) {
-                              return (
-                                item["options_product"].findIndex(function (s) {
-                                  return a.id_size === s.id_size
-                                }) === i
-                              )
-                            }),
-                            function (itemSize) {
-                              return _c(
-                                "div",
-                                { staticClass: "product-size__item" },
-                                [
-                                  _vm._v(
-                                    "\n                            " +
-                                      _vm._s(itemSize["size"]["title"]) +
-                                      "\n                        "
-                                  ),
-                                ]
-                              )
-                            }
-                          ),
-                          0
-                        ),
-                      ],
-                      1
-                    ),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "product-grid__content" }, [
-                      _c("div", { staticClass: "product-grid__options" }, [
-                        _c(
-                          "div",
-                          { staticClass: "options-color" },
-                          _vm._l(
-                            item["options_product"].filter(function (a, i) {
-                              return (
-                                item["options_product"].findIndex(function (s) {
-                                  return a.id_color === s.id_color
-                                }) === i
-                              )
-                            }),
-                            function (itemColor) {
-                              return _c(
-                                "div",
-                                { staticClass: "option-color__item" },
-                                [
-                                  _c("div", {
-                                    staticClass: "product-color__item",
-                                    style: {
-                                      "background-color":
-                                        itemColor["color"]["value"],
-                                    },
-                                  }),
-                                ]
-                              )
-                            }
-                          ),
-                          0
-                        ),
-                      ]),
-                      _vm._v(" "),
-                      _c("h3", { staticClass: "product-grid__title" }, [
-                        _c("a", [
-                          _vm._v(
-                            "\n                            " +
-                              _vm._s(item.name) +
-                              "\n                        "
-                          ),
-                        ]),
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "product-grid__prices" }, [
-                        _c(
-                          "div",
-                          {
-                            staticClass: "product-prices",
-                            attrs: {
-                              "rel-script": "product-price",
-                              "data-price": "299000",
-                              "data-compare-price": "299000",
-                              "data-sale": "1",
-                            },
-                          },
-                          [
-                            _c(
-                              "span",
-                              {
-                                staticStyle: {
-                                  color: "red",
-                                  "margin-left": "10px",
-                                },
-                              },
-                              [_vm._v(_vm._s(item.disksCount))]
-                            ),
-                            _vm._v(" "),
-                            _c("del", [
-                              _vm._v(
-                                _vm._s(
-                                  _vm._f("toThousandFilter")(
-                                    item["options_product"][0].price
-                                  )
-                                ) + " đ"
-                              ),
-                            ]),
-                            _vm._v(" "),
-                            _c("ins", [
-                              _vm._v(
-                                _vm._s(
-                                  _vm._f("toThousandFilter")(
-                                    item["options_product"][0].price
-                                  )
-                                ) + " đ"
-                              ),
-                            ]),
-                          ]
-                        ),
-                      ]),
-                    ]),
-                  ]
-                ),
-              ])
-            }),
-            0
-          )
-        : _vm._e(),
-    ],
-    1
-  )
-}
-var staticRenderFns = []
-render._withStripped = true
-
 
 
 /***/ }),

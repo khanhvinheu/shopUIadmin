@@ -28,47 +28,47 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="grid">
-                                <div class="grid__column four-twelfths mobile--one-whole">
-                                    <div dir="auto" class="v-select vue-select vs--single vs--searchable"
-                                         name="nhanh_city">
-                                        <el-select style="width: 100%" v-model="value" placeholder="Chọn Tỉnh/ Thành Phố">
-                                            <el-option
-                                                v-for="item in options"
-                                                :key="item.value"
-                                                :label="item.label"
-                                                :value="item.value">
-                                            </el-option>
-                                        </el-select>
-                                    </div>
-                                </div>
-                                <div class="grid__column four-twelfths mobile--one-whole">
-                                    <div dir="auto" class="v-select vue-select vs--single vs--searchable"
-                                         name="nhanh_district">
-                                        <el-select style="width: 100%" v-model="value" placeholder="Chọn Quận / Huyện">
-                                            <el-option
-                                                v-for="item in options"
-                                                :key="item.value"
-                                                :label="item.label"
-                                                :value="item.value">
-                                            </el-option>
-                                        </el-select>
-                                    </div>
-                                </div>
-                                <div class="grid__column four-twelfths mobile--one-whole">
-                                    <div dir="auto" class="v-select vue-select vs--single vs--searchable"
-                                         name="nhanh_ward" id="nhanh_ward">
-                                        <el-select style="width: 100%;"  v-model="value" placeholder="Chọn Phường/ Xã">
-                                            <el-option
-                                                v-for="item in options"
-                                                :key="item.value"
-                                                :label="item.label"
-                                                :value="item.value">
-                                            </el-option>
-                                        </el-select>
-                                    </div>
-                                </div>
-                            </div>
+<!--                            <div class="grid">-->
+<!--                                <div class="grid__column four-twelfths mobile&#45;&#45;one-whole">-->
+<!--                                    <div dir="auto" class="v-select vue-select vs&#45;&#45;single vs&#45;&#45;searchable"-->
+<!--                                         name="nhanh_city">-->
+<!--                                        <el-select style="width: 100%" placeholder="Chọn Tỉnh/ Thành Phố">-->
+<!--                                            <el-option-->
+<!--                                                v-for="item in 10"-->
+<!--                                                :key="item"-->
+<!--                                                :label="item"-->
+<!--                                                :value="item">-->
+<!--                                            </el-option>-->
+<!--                                        </el-select>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                                <div class="grid__column four-twelfths mobile&#45;&#45;one-whole">-->
+<!--                                    <div dir="auto" class="v-select vue-select vs&#45;&#45;single vs&#45;&#45;searchable"-->
+<!--                                         name="nhanh_district">-->
+<!--                                        <el-select style="width: 100%" placeholder="Chọn Quận / Huyện">-->
+<!--                                            <el-option-->
+<!--                                                v-for="item in 10"-->
+<!--                                                :key="item"-->
+<!--                                                :label="item"-->
+<!--                                                :value="item">-->
+<!--                                            </el-option>-->
+<!--                                        </el-select>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                                <div class="grid__column four-twelfths mobile&#45;&#45;one-whole">-->
+<!--                                    <div dir="auto" class="v-select vue-select vs&#45;&#45;single vs&#45;&#45;searchable"-->
+<!--                                         name="nhanh_ward" id="nhanh_ward">-->
+<!--                                        <el-select style="width: 100%;"  placeholder="Chọn Phường/ Xã">-->
+<!--                                            <el-option-->
+<!--                                                v-for="item in 10"-->
+<!--                                                :key="item"-->
+<!--                                                :label="item"-->
+<!--                                                :value="item">-->
+<!--                                            </el-option>-->
+<!--                                        </el-select>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
                             <div class="grid">
                                 <div class="grid__column">
                                     <el-input placeholder="Ghi chú thêm (Ví dụ: Giao hàng giờ hành chính)"></el-input>
@@ -79,60 +79,28 @@
 
                     </div>
                     <div class="cart-section">
-                        <div class="title">
-                            Hình thức thanh toán
-                        </div>
+                        <div class="title"> Hình thức thanh toán</div>
                         <div>
                             <form>
                                 <label for="payment-COD" class="payment-method__item active">
                                     <span class="payment-method__item-custom-checkbox custom-radio">
-                                        <input type="radio" id="payment-COD" name="payment-method" autocomplete="off"
-                                               value="COD"> <span class="checkmark"></span></span> <span
-                                    class="payment-method__item-icon-wrapper"><img src="/img/COD.svg"
-                                                                                   alt="COD <br>Thanh toán khi nhận hàng"></span>
-                                    <span class="payment-method__item-name">COD <br>Thanh toán khi nhận
-                                        hàng</span></label><label for="payment-momo" class="payment-method__item"><span
-                                class="payment-method__item-custom-checkbox custom-radio"><input type="radio"
-                                                                                                 id="payment-momo" name="payment-method" autocomplete="off" value="momo">
-                                        <span class="checkmark"></span></span> <span
-                                class="payment-method__item-icon-wrapper"><img
-                                src="https://www.coolmate.me/images/momo-icon.png"
-                                alt="Thanh Toán MoMo"></span>
-                                <span class="payment-method__item-name">Thanh Toán MoMo</span></label><label
-                                for="payment-zalopay" class="payment-method__item"><span
-                                class="payment-method__item-custom-checkbox custom-radio"><input type="radio"
-                                                                                                 id="payment-zalopay" name="payment-method" autocomplete="off"
-                                                                                                 value="zalopay"> <span class="checkmark"></span></span> <span
-                                class="payment-method__item-icon-wrapper"><img
-                                src="https://www.coolmate.me/images/logo-zalopay.svg"
-                                alt="Ví điện tử ZaloPay"></span>
-                                <span class="payment-method__item-name">Ví điện tử ZaloPay</span></label><label
-                                for="payment-shopeepay" class="payment-method__item"><span
-                                class="payment-method__item-custom-checkbox custom-radio"><input type="radio"
-                                                                                                 id="payment-shopeepay" name="payment-method" autocomplete="off"
-                                                                                                 value="shopeepay"> <span class="checkmark"></span></span>
-                                <span class="payment-method__item-icon-wrapper"><img
-                                    src="https://mcdn.coolmate.me/image/September2021/195dbf69c0ac36f26fbd_(1).png"
-                                    alt="Ví ShopeePay <br><i>Giảm thêm 50k cho khách hàng lần đầu mở ví và thanh toán bằng ShopeePay</i>"></span>
-                                <span class="payment-method__item-name">Ví ShopeePay <br><i>Giảm thêm 50k cho khách
-                                            hàng lần đầu mở ví và thanh toán bằng ShopeePay</i></span></label><label
-                                for="payment-vnpay" class="payment-method__item"><span
-                                class="payment-method__item-custom-checkbox custom-radio"><input type="radio"
-                                                                                                 id="payment-vnpay" name="payment-method" autocomplete="off" value="vnpay">
-                                        <span class="checkmark"></span></span> <span
-                                class="payment-method__item-icon-wrapper"><img
-                                src="https://www.coolmate.me/images/vnpay.png"
-                                alt="Thẻ ATM / Internet Banking<br>Thẻ tín dụng (Credit card) / Thẻ ghi nợ (Debit card)<br>VNPay QR"></span>
-                                <span class="payment-method__item-name">Thẻ ATM / Internet Banking<br>Thẻ tín dụng
-                                        (Credit card) / Thẻ ghi nợ (Debit card)<br>VNPay QR</span></label><label
-                                for="payment-9pay" class="payment-method__item"><span
-                                class="payment-method__item-custom-checkbox custom-radio"><input type="radio"
-                                                                                                 id="payment-9pay" name="payment-method" autocomplete="off" value="9pay">
-                                        <span class="checkmark"></span></span> <span
-                                class="payment-method__item-icon-wrapper"><img
-                                src="https://mcdn.coolmate.me/uploads/May2022/9pay.svg"
-                                alt="Ví điện tử 9Pay"></span>
-                                <span class="payment-method__item-name">Ví điện tử 9Pay</span></label>
+                                        <input type="radio" id="payment-COD" name="payment-method" autocomplete="off" value="COD">
+                                        <span class="checkmark"> </span>
+                                    </span>
+                                    <span class="payment-method__item-icon-wrapper">
+                                        <img src="/img/COD.svg" alt="COD <br>Thanh toán khi nhận hàng">
+                                    </span>
+                                    <span class="payment-method__item-name">COD <br>Thanh toán khi nhận hàng</span>
+                                </label>
+                                <label for="payment-momo" class="payment-method__item">
+                                    <span class="payment-method__item-custom-checkbox custom-radio"><input type="radio" id="payment-momo" name="payment-method" autocomplete="off" value="momo">
+                                        <span class="checkmark"></span>
+                                    </span>
+                                    <span class="payment-method__item-icon-wrapper">
+                                        <img src="https://www.coolmate.me/images/momo-icon.png" alt="Thanh Toán MoMo">
+                                    </span>
+                                    <span class="payment-method__item-name">Thanh Toán MoMo</span>
+                                </label>
                             </form>
                         </div>
 
@@ -145,7 +113,6 @@
                     <div class="cart-section">
                         <button class="checkout-btn">
                             Thanh toán <span>{{TotalPrice |toThousandFilter }}</span> <span>(COD)</span></button>
-<!--                            Thanh toán <span>{{TotalPrice |numberFormatter }}</span> <span>(COD)</span></button>-->
                     </div>
                 </div>
                 <div class="grid__column five-twelfths mobile--one-whole">
@@ -154,33 +121,12 @@
                             Giỏ hàng
                         </div>
                         <div>
-                            <div class="dummy-cart-items" style="display: none;">
-                                <div class="grid dummy-cart-item">
-                                    <div class="grid__column four-twelfths flex">
-                                        <div class="dummy-cart-item__thumbnail-block">
-                                            <div class="dummy-cart-item__thumbnail"></div>
-                                            <span class="dummy-cart-item__thumbnail-quantity"></span>
-                                        </div>
-                                    </div>
-                                    <div class="grid__column eight-twelfths">
-                                        <div class="dummy-cart-item__block">
-                                            <div class="dummy-cart-item__info">
-                                                <div class="dummy-cart-item__title"></div>
-                                                <div class="dummy-cart-item__variant"></div>
-                                            </div>
-                                            <div class="dummy-cart-item__actions">
-                                                <div class="dummy-cart-item__price"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                             <div class="cart-items">
                                 <div class="cart-item" v-for="item in $store.getters.shoppingCart.cart" style="margin-bottom: 10px">
-                                    <span class="cart-item__remove">✕</span>
+                                    <span class="cart-item__remove" @click="deleteItemCart(item.id)">✕</span>
                                     <div class="cart__column cart__column-left">
                                         <div class="cart-item__thumbnail-block">
-                                            <img
+                                            <img style="width: 120px; height: 140px; object-fit: cover"
                                             :src="item.images_product[0]['path']"
                                             :alt="item.name"
                                             class="cart-item__thumbnail">
@@ -200,35 +146,23 @@
                                                 <div style="display: flex">
                                                     <div style="padding-right: 5px; padding-bottom: 5px"
                                                          class="v-select vue-select cart-item__select vs--single vs--unsearchable">
-                                                           {{item.payment.price}} x {{item.payment.total}}
-<!--                                                        <el-select size="small" v-model="value" placeholder="Select">-->
-<!--                                                            <el-option-->
-<!--                                                                v-for="item in options"-->
-<!--                                                                :key="item.value"-->
-<!--                                                                :label="item.label"-->
-<!--                                                                :value="item.value">-->
-<!--                                                            </el-option>-->
-<!--                                                        </el-select>-->
+                                                           {{item.payment.price| toThousandFilter}} x{{item.payment.total}}
                                                     </div>
-<!--                                                    <div dir="auto"-->
-<!--                                                         class="v-select vue-select cart-item__select vs&#45;&#45;single vs&#45;&#45;unsearchable">-->
-<!--                                                        <el-select size="small" v-model="value" placeholder="Select">-->
-<!--                                                            <el-option-->
-<!--                                                                v-for="item in options"-->
-<!--                                                                :key="item.value"-->
-<!--                                                                :label="item.label"-->
-<!--                                                                :value="item.value">-->
-<!--                                                            </el-option>-->
-<!--                                                        </el-select>-->
-<!--                                                    </div>-->
                                                 </div>
                                                 <div class="cart-item__actions-bottom">
-                                                    <div class="quantity-box">
-                                                        <el-input-number size="small" :value="item.payment.total" :min="1" :max="10"></el-input-number>
+                                                    <div class="quantity-box" style="display: flex">
+                                                        <el-input :value="item.payment.total">
+                                                            <template v-slot:append>
+                                                                <el-button :disabled="item.payment.total>=10" @click="addItem(item)">+</el-button>
+                                                            </template>
+                                                            <template v-slot:prepend>
+                                                                <el-button :disabled="item.payment.total<=1" @click="removeItem(item)">-</el-button>
+                                                            </template>
+                                                        </el-input>
                                                     </div>
                                                     <div class="flex flex--column"><span>
                                                             {{item.payment.price * item.payment.total | toThousandFilter}}đ
-                                                        </span> </div>
+                                                     </span> </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -237,30 +171,25 @@
                             </div>
                         </div>
                     </div>
-
-
                     <el-divider></el-divider>
                     <div class="pricing-info">
                         <div class="pricing-info__item">
                             <p>Tạm tính</p>
-                            <p class="pricing-info__sub"><span>{{tempTotalPrice | toThousandFilter}}đ</span>
-
-                            </p>
+                            <p class="pricing-info__sub"><span>{{tempTotalPrice | toThousandFilter}}đ</span></p>
                         </div>
                         <div class="pricing-info__item">
                             <p>Giảm giá</p>
-                            <p class=""><span>0đ</span> </p>
+                            <p><span>0đ</span></p>
                         </div>
 
                         <div class="pricing-info__item">
                             <p>Phí giao hàng</p>
-                            <p class=""><span>Miễn phí</span></p>
+                            <p><span>Miễn phí</span></p>
                         </div>
                         <el-divider></el-divider>
                         <div class="pricing-info__item pricing-info__total">
-                            <p>
-                                Tổng</p>
-                            <p class=""><span>{{TotalPrice | toThousandFilter}}đ</span> </p>
+                            <p>Tổng</p>
+                            <p><span>{{TotalPrice | toThousandFilter}}đ</span> </p>
                         </div>
                     </div>
                 </div>
@@ -276,6 +205,17 @@ export default {
     data(){
         return{
             num:1
+        }
+    },
+    methods:{
+        addItem(item){
+            this.$store.dispatch("shoppingCart/pushItem", item);
+        },
+        removeItem(item){
+            this.$store.dispatch("shoppingCart/removeItem", item);
+        },
+        deleteItemCart(item){
+            this.$store.dispatch("shoppingCart/deleteFromCart", item);
         }
     },
     computed: {

@@ -13,18 +13,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _layouts_Header__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./layouts/Header */ "./resources/js/frontend/components/layouts/Header.vue");
 /* harmony import */ var _layouts_Footer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./layouts/Footer */ "./resources/js/frontend/components/layouts/Footer.vue");
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -48,178 +36,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: 'AppFooter',
   data: function data() {
@@ -243,673 +59,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _backend_common_api_service__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../backend/common/api.service */ "./resources/js/backend/common/api.service.js");
 /* harmony import */ var _MiniCart__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./MiniCart */ "./resources/js/frontend/components/layouts/MiniCart.vue");
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -930,7 +79,6 @@ __webpack_require__.r(__webpack_exports__);
   methods: {
     getList: function getList() {
       var _this = this;
-
       _backend_common_api_service__WEBPACK_IMPORTED_MODULE_0__["default"].query('/api/admin/categorys', {
         params: {
           type: 'treeData'
@@ -957,52 +105,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
-
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+function _defineProperty(obj, key, value) { key = _toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
+function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "MiniCart",
@@ -1018,6 +126,1256 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
   },
   computed: _objectSpread(_objectSpread({}, (0,vuex__WEBPACK_IMPORTED_MODULE_0__.mapState)(["cart"])), (0,vuex__WEBPACK_IMPORTED_MODULE_0__.mapGetters)(["cartSize", "cartTotalAmount"]))
 });
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/frontend/components/Index.vue?vue&type=template&id=d6bae970&scoped=true&":
+/*!********************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/frontend/components/Index.vue?vue&type=template&id=d6bae970&scoped=true& ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function render() {
+  var _vm = this,
+    _c = _vm._self._c;
+  return _c("div", [_c("app-header"), _vm._v(" "), _c("main", {
+    staticClass: "site-homepage",
+    staticStyle: {
+      "padding-top": "50px"
+    }
+  }, [_c("transition", {
+    attrs: {
+      name: "slide-fade"
+    }
+  }, [_c("router-view")], 1)], 1), _vm._v(" "), _c("app-footer")], 1);
+};
+var staticRenderFns = [];
+render._withStripped = true;
+
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/frontend/components/layouts/Footer.vue?vue&type=template&id=109c9adb&scoped=true&":
+/*!*****************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/frontend/components/layouts/Footer.vue?vue&type=template&id=109c9adb&scoped=true& ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function render() {
+  var _vm = this,
+    _c = _vm._self._c;
+  return _vm._m(0);
+};
+var staticRenderFns = [function () {
+  var _vm = this,
+    _c = _vm._self._c;
+  return _c("footer", {
+    staticClass: "site-footer"
+  }, [_c("div", {
+    staticClass: "container"
+  }, [_c("div", {
+    staticClass: "site-footer__inner"
+  }, [_c("div", {
+    staticClass: "site-footer__menu"
+  }, [_c("div", {
+    staticClass: "footer-menu"
+  }, [_c("div", {
+    staticClass: "footer-menu__item"
+  }, [_c("h4", {
+    staticClass: "footer-menu__title"
+  }, [_vm._v("Khám phá ")]), _vm._v(" "), _c("ul", [_c("li", [_c("a", {
+    attrs: {
+      href: "/collection/ao-polo-nam"
+    }
+  }, [_vm._v("Áo Polo")])]), _vm._v(" "), _c("li", [_c("a", {
+    attrs: {
+      href: "/collection/ao-thun-nam-gioi"
+    }
+  }, [_vm._v("Áo T-shirt")])]), _vm._v(" "), _c("li", [_c("a", {
+    attrs: {
+      href: "/collection/ao-so-mi-nam"
+    }
+  }, [_vm._v("Áo Sơ mi")])]), _vm._v(" "), _c("li", [_c("a", {
+    attrs: {
+      href: "/collection/quan-short-nam"
+    }
+  }, [_vm._v("Quần")])]), _vm._v(" "), _c("li", [_c("a", {
+    attrs: {
+      href: "/collection/quan-lot-nam"
+    }
+  }, [_vm._v("Quần Lót")])]), _vm._v(" "), _c("li", [_c("a", {
+    attrs: {
+      href: "/collection/tat-nam"
+    }
+  }, [_vm._v("Tất (Vớ)")])]), _vm._v(" "), _c("li", [_c("a", {
+    attrs: {
+      href: "/collection/mu-luoi-trai"
+    }
+  }, [_vm._v("Mũ (Nón)")])]), _vm._v(" "), _c("li", [_c("a", {
+    attrs: {
+      href: "/collection/phu-kien"
+    }
+  }, [_vm._v("Phụ Kiện Khác")])])])]), _vm._v(" "), _c("div", {
+    staticClass: "footer-menu__item"
+  }, [_c("h4", {
+    staticClass: "footer-menu__title"
+  }, [_vm._v("Dịch vụ khách hàng")]), _vm._v(" "), _c("ul", [_c("li", [_c("a", {
+    attrs: {
+      href: "/page/faqs"
+    }
+  }, [_vm._v("Hỏi đáp - FAQs")])]), _vm._v(" "), _c("li", [_c("a", {
+    attrs: {
+      href: "/page/dich-vu-60-ngay-doi-tra"
+    }
+  }, [_vm._v("Chính sách đổi trả 60 ngày")])]), _vm._v(" "), _c("li", [_c("a", {
+    attrs: {
+      href: "/page/lien-he-voi-coolmate"
+    }
+  }, [_vm._v("Liên hệ")])]), _vm._v(" "), _c("li", [_c("a", {
+    attrs: {
+      href: "/page/coolclub-chuong-trinh-khach-hang-than-thiet-cua-coolmate"
+    }
+  }, [_vm._v("Thành\r\n                                        viên Coolclub")])]), _vm._v(" "), _c("li", [_c("a", {
+    attrs: {
+      href: "/page/11-dich-vu-tai-coolmate-co-the-ban-chua-biet"
+    }
+  }, [_vm._v("Khách hàng hài\r\n                                        lòng 100%")])]), _vm._v(" "), _c("li", [_c("a", {
+    attrs: {
+      href: "/page/chuong-trinh-va-chinh-sach-khuyen-mai-tai-coolmate"
+    }
+  }, [_vm._v("Chính\r\n                                        sách khuyến mãi")])]), _vm._v(" "), _c("li", [_c("a", {
+    attrs: {
+      href: "/page/dich-vu-giao-hang-coolmate"
+    }
+  }, [_vm._v("Chính sách giao hàng")])]), _vm._v(" "), _c("li", [_c("a", {
+    attrs: {
+      href: "/page/chinh-sach-bao-mat-thong-tin-ca-nhan"
+    }
+  }, [_vm._v("Chính sách bảo mật")])])]), _vm._v(" "), _c("h4", {
+    staticClass: "footer-menu__title"
+  }, [_vm._v("Kiến thức mặc đẹp")]), _vm._v(" "), _c("ul", [_c("li", [_c("a", {
+    attrs: {
+      href: "/size-chart"
+    }
+  }, [_vm._v("Hướng dẫn chọn size")])]), _vm._v(" "), _c("li", [_c("a", {
+    attrs: {
+      href: "/blog"
+    }
+  }, [_vm._v("Blog")])]), _vm._v(" "), _c("li", [_c("a", {
+    attrs: {
+      href: "https://www.facebook.com/groups/2103080403316797",
+      target: "_blank"
+    }
+  }, [_vm._v("Group mặc đẹp sống chất")])])])]), _vm._v(" "), _c("div", {
+    staticClass: "footer-menu__item"
+  }, [_c("h4", {
+    staticClass: "footer-menu__title"
+  }, [_vm._v("Tài liệu - Tuyển dụng")]), _vm._v(" "), _c("ul", [_c("li", [_c("a", {
+    attrs: {
+      href: "/lp/coolmate-101?itm_source=footer"
+    }
+  }, [_vm._v("Tuyển dụng")])]), _vm._v(" "), _c("li", [_c("a", {
+    attrs: {
+      href: "http://online.gov.vn/(X(1)S(sgmttobbtsiaq3l5itoicxhw))/Home/WebDetails/53184?AspxAutoDetectCookieSupport=1",
+      target: "_blank"
+    }
+  }, [_vm._v("Đăng ký bản quyền")])])]), _vm._v(" "), _c("h4", {
+    staticClass: "footer-menu__title"
+  }, [_vm._v("Về ")]), _vm._v(" "), _c("ul", [_c("li", [_c("a", {
+    attrs: {
+      href: "/page/coolmate-story?itm_source=footer"
+    }
+  }, [_vm._v(" Câu chuyện về\r\n                                ")])]), _vm._v(" "), _c("li", [_c("a", {
+    attrs: {
+      href: "/page/san-pham-coolmate-duoc-san-xuat-nhu-the-nao?itm_source=footer"
+    }
+  }, [_vm._v("Nhà\r\n                                        máy")])]), _vm._v(" "), _c("li", [_c("a", {
+    attrs: {
+      href: "/page/coolclub-chuong-trinh-khach-hang-than-thiet-cua-coolmate?itm_source=footer"
+    }
+  }, [_vm._v("CoolClub")])]), _vm._v(" "), _c("li", [_c("a", {
+    attrs: {
+      href: "/collection/care-and-share?itm_source=footer"
+    }
+  }, [_vm._v("Care & Share")])])])]), _vm._v(" "), _c("div", {
+    staticClass: "footer-menu__item"
+  }, [_c("h4", {
+    staticClass: "footer-menu__title"
+  }, [_vm._v("Địa chỉ liên hệ")]), _vm._v(" "), _c("p", {
+    staticClass: "footer-menu__desciption"
+  }, [_c("u", [_vm._v("HUB Hà Nội:")]), _vm._v(" Tầng 3-4, Tòa nhà BMM, KM2,\r\n                                Đường Phùng Hưng, Phường Phúc La, Quận Hà Đông, TP Hà Nội")]), _vm._v(" "), _c("p", {
+    staticClass: "footer-menu__desciption"
+  }, [_c("u", [_vm._v("HUB Tp HCM:")]), _vm._v(" Lầu 1, Số 163 Trần Trọng Cung,\r\n                                Phường Tân Thuận Đông, Quận 7, Tp. Hồ Chí Minh")])])])]), _vm._v(" "), _c("div", {
+    staticClass: "site-footer__sidebar"
+  }, [_c("h4", {
+    staticClass: "site-footer__title"
+  }, [_vm._v("\r\n                        .... lắng nghe bạn!\r\n                    ")]), _vm._v(" "), _c("p", {
+    staticClass: "site-footer__description",
+    staticStyle: {
+      "margin-bottom": "10px"
+    }
+  }, [_vm._v("\r\n                        Chúng tôi luôn trân trọng và mong đợi nhận được mọi ý kiến đóng góp từ\r\n                        khách hàng để có thể nâng cấp trải nghiệm dịch vụ và sản phẩm tốt hơn nữa.\r\n                    ")]), _vm._v(" "), _c("a", {
+    staticClass: "site-footer__btn",
+    attrs: {
+      href: "https://form.typeform.com/to/lU2oprGc?typeform-medium=embed-snippet",
+      target: "_blank"
+    }
+  }, [_vm._v("\r\n                        Gửi Ý Kiến\r\n                    ")]), _vm._v(" "), _c("div", {
+    staticClass: "footer-info"
+  }, [_c("div", {
+    staticClass: "footer-info__icon"
+  }, [_c("img", {
+    attrs: {
+      src: "https://www.coolmate.me/images/footer/icon-hotline.svg",
+      alt: "Footer Icon Phone"
+    }
+  })]), _vm._v(" "), _c("div", {
+    staticClass: "footer-info__content"
+  }, [_c("span", {
+    staticClass: "footer-info__title"
+  }, [_vm._v("\r\n                                Hotline\r\n                            ")]), _vm._v(" "), _c("p", {
+    staticClass: "footer-info__desciption"
+  }, [_c("a", {
+    attrs: {
+      href: "tel: 1900272737"
+    }
+  }, [_vm._v("1900.272737")]), _vm._v(" "), _c("a", {
+    attrs: {
+      href: "tel: 02877772737"
+    }
+  }, [_vm._v("(028.7777.2737)")])])])]), _vm._v(" "), _c("div", {
+    staticClass: "footer-info"
+  }, [_c("div", {
+    staticClass: "footer-info__icon"
+  }, [_c("img", {
+    attrs: {
+      src: "https://www.coolmate.me/images/footer/icon-email.svg",
+      alt: "Footer Icon Email"
+    }
+  })]), _vm._v(" "), _c("div", {
+    staticClass: "footer-info__content"
+  }, [_c("span", {
+    staticClass: "footer-info__title"
+  }, [_vm._v("\r\n                                Email\r\n                            ")]), _vm._v(" "), _c("p", {
+    staticClass: "footer-info__desciption"
+  }, [_c("a", {
+    attrs: {
+      href: "/cdn-cgi/l/email-protection#f1d1b29e9e9db1929e9e9d9c908594df9c94"
+    }
+  }, [_c("span", {
+    staticClass: "__cf_email__",
+    attrs: {
+      "data-cfemail": "a2e1cdcdcee2c1cdcdcecfc3d6c78ccfc7"
+    }
+  }, [_vm._v("[email protected]")])])])])]), _vm._v(" "), _c("div", {
+    staticClass: "footer-social"
+  }, [_c("a", {
+    staticClass: "footer-social__item",
+    attrs: {
+      href: "https://www.facebook.com/coolmate.me",
+      target: "_blank"
+    }
+  }, [_c("img", {
+    attrs: {
+      src: "https://www.coolmate.me/images/footer/icon-facebook.svg",
+      alt: "Footer Icon facebook"
+    }
+  })]), _vm._v(" "), _c("a", {
+    staticClass: "footer-social__item",
+    attrs: {
+      href: "https://www.instagram.com/coolmate.me/",
+      target: "_blank"
+    }
+  }, [_c("img", {
+    attrs: {
+      src: "https://www.coolmate.me/images/footer/icon-instar.svg",
+      alt: "Footer Icon instar"
+    }
+  })]), _vm._v(" "), _c("a", {
+    staticClass: "footer-social__item",
+    attrs: {
+      href: "https://www.youtube.com/channel/UCWw8wLlodKBtEvVt1tTAsMA",
+      target: "_blank"
+    }
+  }, [_c("img", {
+    attrs: {
+      src: "https://www.coolmate.me/images/footer/icon-youtube.svg",
+      alt: "Footer Icon youtube"
+    }
+  })])])])]), _vm._v(" "), _c("div", {
+    staticClass: "site-footer__after"
+  }, [_c("div", {
+    staticClass: "copyright"
+  }, [_c("h5", {
+    staticClass: "copyright__title"
+  }, [_vm._v("\r\n                        @ CÔNG TY TNHH .....\r\n                    ")]), _vm._v(" "), _c("p", {
+    staticClass: "copyright__description"
+  }, [_vm._v("Mã số doanh nghiệp: 9999999999. Giấy chứng nhận đăng ký\r\n                        doanh nghiệp do Sở Kế hoạch và Đầu tư TP Hà Nội cấp lần đầu ngày 20/02/2019.")])])])])]);
+}];
+render._withStripped = true;
+
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/frontend/components/layouts/Header.vue?vue&type=template&id=31cefecd&scoped=true&":
+/*!*****************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/frontend/components/layouts/Header.vue?vue&type=template&id=31cefecd&scoped=true& ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function render() {
+  var _vm = this,
+    _c = _vm._self._c;
+  return _c("header", {
+    staticClass: "site-header"
+  }, [_c("div", {
+    staticClass: "header"
+  }, [_c("div", {
+    staticClass: "header__inner"
+  }, [_c("div", {
+    staticClass: "header__toggle"
+  }, [_c("div", {}, [_c("a", {
+    staticClass: "menu-toggle",
+    attrs: {
+      href: "#",
+      "rel-script": "menu-toggle"
+    },
+    on: {
+      click: function click($event) {
+        _vm.showMenuMobile = !_vm.showMenuMobile;
+      }
+    }
+  }, [_c("span"), _vm._v(" "), _c("span"), _vm._v(" "), _c("span")])])]), _vm._v(" "), _c("div", {
+    staticClass: "header__logo",
+    staticStyle: {
+      display: "flex",
+      "align-items": "center"
+    }
+  }, [_c("router-link", {
+    attrs: {
+      to: {
+        name: "home"
+      }
+    }
+  }, [_c("h3", [_vm._v("HADOVN")])])], 1), _vm._v(" "), _c("div", {
+    staticClass: "header__menu-mobile",
+    style: {
+      display: _vm.showMenuMobile ? "none" : "block",
+      visibility: _vm.showMenuMobile ? "unset" : "unset",
+      opacity: _vm.showMenuMobile ? 1 : 1
+    },
+    attrs: {
+      "rel-script": "header-menu"
+    }
+  }, [_vm._m(0)]), _vm._v(" "), _c("div", {
+    staticClass: "header__menu",
+    staticStyle: {
+      display: "block"
+    },
+    attrs: {
+      "rel-script": "header-menu"
+    }
+  }, [_c("div", {
+    staticClass: "mobile--hidden tablet--hidden"
+  }, [_c("ul", {
+    staticClass: "nav"
+  }, [_c("li", {
+    staticClass: "nav__item has-child",
+    attrs: {
+      "rel-script": "mega-menu"
+    }
+  }, [_c("a", {
+    attrs: {
+      href: "/collections?itm_source=navbar",
+      "rel-script": "mega-menu-open"
+    }
+  }, [_vm._v("\n                                    Danh mục\n                                ")]), _vm._v(" "), _c("div", {
+    staticClass: "mega-menu mega-menu--product"
+  }, [_c("a", {
+    staticClass: "mega-menu__close",
+    attrs: {
+      href: "#",
+      "rel-script": "mega-menu-close"
+    }
+  }, [_vm._v("Sản\n                                        phẩm")]), _vm._v(" "), _c("div", {
+    staticClass: "mega-menu__wrapper"
+  }, [_c("div", {
+    staticClass: "mega-menu__inner",
+    staticStyle: {
+      "max-width": "1000px"
+    }
+  }, [_c("div", {
+    staticClass: "mega-menu__item",
+    staticStyle: {
+      flex: "0 0 33%"
+    },
+    attrs: {
+      "rel-script": "mega-menu-item"
+    }
+  }, [_c("a", {
+    staticClass: "mega-menu__title",
+    attrs: {
+      href: "#",
+      "rel-script": "mega-menu-toggle"
+    }
+  }, [_vm._v("Danh mục")]), _vm._v(" "), _c("div", {
+    staticClass: "grid grid--two-columns"
+  }, [_c("div", {
+    staticClass: "grid__column",
+    staticStyle: {
+      "padding-top": "0"
+    }
+  }, _vm._l(_vm.data, function (item) {
+    return _c("ul", {
+      attrs: {
+        "rel-script": "mega-menu-active"
+      }
+    }, [_c("li", [_c("a", {
+      attrs: {
+        href: "/collection/ao-nam1?itm_source=navbar"
+      }
+    }, [_vm._v("\n                                                                    " + _vm._s(item.title) + "\n                                                                ")])])]);
+  }), 0)])])])])])]), _vm._v(" "), _vm._m(1), _vm._v(" "), _vm._m(2), _vm._v(" "), _vm._m(3), _vm._v(" "), _vm._m(4), _vm._v(" "), _vm._m(5)])])]), _vm._v(" "), _c("div", {
+    staticClass: "header__actions"
+  }, [_c("div", {
+    staticClass: "header-actions__button"
+  }, [_c("el-popover", {
+    attrs: {
+      placement: "bottom-end",
+      trigger: "hover",
+      width: "430"
+    }
+  }, [_c("mini-cart"), _vm._v(" "), _c("el-badge", {
+    staticClass: "item",
+    attrs: {
+      slot: "reference",
+      value: _vm.$store.getters.shoppingCart.cart.length
+    },
+    slot: "reference"
+  }, [_c("i", {
+    staticClass: "el-icon-sell",
+    staticStyle: {
+      "font-size": "25px"
+    }
+  })])], 1)], 1)])])])]);
+};
+var staticRenderFns = [function () {
+  var _vm = this,
+    _c = _vm._self._c;
+  return _c("div", {
+    staticClass: "mobile--visible tablet--visible",
+    staticStyle: {
+      display: "none"
+    }
+  }, [_c("div", {
+    staticClass: "header-search-mobile",
+    attrs: {
+      "rel-script": "header-search-content"
+    }
+  }, [_c("form", {
+    attrs: {
+      action: "/collections",
+      method: "GET"
+    }
+  }, [_c("div", {
+    staticClass: "header-search__wrapper"
+  }, [_c("label", {
+    staticClass: "header-search__field"
+  }, [_c("input", {
+    staticClass: "header-search__control one-whole",
+    attrs: {
+      type: "text",
+      name: "keyword",
+      "rel-script": "spotlight-search-control",
+      placeholder: "Tìm kiếm sản phẩm...",
+      autocomplete: "off"
+    }
+  })]), _vm._v(" "), _c("div", {
+    staticClass: "header-search__filter"
+  }, [_c("button", {
+    staticClass: "header-search__submit"
+  }, [_c("i", {
+    staticClass: "el-icon-search",
+    staticStyle: {
+      "font-size": "15px"
+    }
+  })])]), _vm._v(" "), _c("a", {
+    staticClass: "header-search__close",
+    attrs: {
+      href: "#",
+      "rel-script": "spotlight-search-close"
+    }
+  })])]), _vm._v(" "), _c("div", {
+    staticClass: "spotlight-search"
+  }, [_c("div", {
+    staticClass: "spotlight-search__wrapper",
+    attrs: {
+      "rel-script": "spotlight-search"
+    }
+  }, [_c("img", {
+    staticClass: "loading",
+    attrs: {
+      src: "https://www.coolmate.me/images/icons/loading.svg"
+    }
+  })])])]), _vm._v(" "), _c("div", {
+    staticClass: "nav-tab"
+  }, [_c("div", {
+    staticClass: "nav-tab__head"
+  }, [_c("a", {
+    staticClass: "nav-tab__title is-current",
+    attrs: {
+      href: "#san-pham",
+      "rel-script": "nav-tab"
+    }
+  }, [_vm._v("\n                                    Thời trang\n                                ")])]), _vm._v(" "), _c("div", {
+    staticClass: "nav-tab__content",
+    attrs: {
+      "data-nav-tab": "#san-pham"
+    }
+  }, [_c("div", {
+    staticClass: "nav-tab__label",
+    staticStyle: {
+      "flex-flow": "column",
+      "align-items": "flex-start",
+      "padding-bottom": "10px"
+    }
+  }, [_c("a", {
+    attrs: {
+      href: "/collections?itm_source=navbar"
+    }
+  }, [_c("b", [_vm._v("Tất cả sản phẩm")])])]), _vm._v(" "), _c("ul", {
+    staticClass: "nav-tab__menu"
+  }, [_c("li", {
+    staticClass: "nav__item"
+  }, [_c("a", {
+    attrs: {
+      href: "/collection/care-and-share?itm_source=navbar"
+    }
+  }, [_c("b", [_vm._v("Care & Share")])])]), _vm._v(" "), _c("li", {
+    staticClass: "nav__item nav__item--has-child",
+    attrs: {
+      "rel-script": "mobile-menu-toggle"
+    }
+  }, [_c("a", {
+    attrs: {
+      href: "#"
+    }
+  }, [_vm._v("\n                                            Áo nam\n                                        ")]), _vm._v(" "), _c("ul", {
+    staticClass: "nav-child-menu",
+    staticStyle: {
+      display: "none",
+      "margin-top": "10px"
+    }
+  }, [_c("li", [_c("a", {
+    attrs: {
+      href: "/collection/ao-nam1?itm_source=navbar"
+    }
+  }, [_c("b", [_vm._v("Áo nam")])])]), _vm._v(" "), _c("li", [_c("a", {
+    attrs: {
+      href: "/collection/ao-nam-dai-tay?itm_source=navbar"
+    }
+  }, [_vm._v("\n                                                    Áo dài tay\n                                                ")])]), _vm._v(" "), _c("li", [_c("a", {
+    attrs: {
+      href: "/collection/ao-thun-nam?itm_source=navbar"
+    }
+  }, [_vm._v("\n                                                    Áo T-shirt\n                                                ")])]), _vm._v(" "), _c("li", [_c("a", {
+    attrs: {
+      href: "/collection/ao-polo-nam?itm_source=navbar"
+    }
+  }, [_vm._v("\n                                                    Áo Polo\n                                                ")])]), _vm._v(" "), _c("li", [_c("a", {
+    attrs: {
+      href: "/collection/ao-so-mi-nam?itm_source=navbar"
+    }
+  }, [_vm._v("\n                                                    Áo Sơ Mi\n                                                ")])]), _vm._v(" "), _c("li", [_c("a", {
+    attrs: {
+      href: "/collection/ao-the-thao-nam?itm_source=navbar"
+    }
+  }, [_vm._v("\n                                                    Áo Thể thao\n                                                ")])]), _vm._v(" "), _c("li", [_c("a", {
+    attrs: {
+      href: "/collection/ao-khoac?itm_source=navbar"
+    }
+  }, [_vm._v("\n                                                    Áo khoác\n                                                ")])])])]), _vm._v(" "), _c("li", {
+    staticClass: "nav__item nav__item--has-child",
+    attrs: {
+      "rel-script": "mobile-menu-toggle"
+    }
+  }, [_c("a", {
+    attrs: {
+      href: "#"
+    }
+  }, [_vm._v("\n                                            Quần nam\n                                        ")]), _vm._v(" "), _c("ul", {
+    staticClass: "nav-child-menu",
+    staticStyle: {
+      display: "none",
+      "margin-top": "10px"
+    }
+  }, [_c("li", [_c("a", {
+    attrs: {
+      href: "/collection/quan-nam?itm_source=navbar"
+    }
+  }, [_c("b", [_vm._v("Quần nam")])])]), _vm._v(" "), _c("li", [_c("a", {
+    attrs: {
+      href: "/collection/quan-lot-nam?itm_source=navbar"
+    }
+  }, [_vm._v("\n                                                    Quần Lót Nam\n                                                ")])]), _vm._v(" "), _c("li", [_c("a", {
+    attrs: {
+      href: "/collection/quan-short-nam?itm_source=navbar"
+    }
+  }, [_vm._v("\n                                                    Quần Shorts\n                                                ")])]), _vm._v(" "), _c("li", [_c("a", {
+    attrs: {
+      href: "/collection/quan-jeans-nam?itm_source=navbar"
+    }
+  }, [_vm._v("\n                                                    Quần Jeans\n                                                ")])]), _vm._v(" "), _c("li", [_c("a", {
+    attrs: {
+      href: "/collection/quan-dai-nam?itm_source=navbar"
+    }
+  }, [_vm._v("\n                                                    Quần Dài\n                                                ")])])])]), _vm._v(" "), _c("li", {
+    staticClass: "nav__item nav__item--has-child",
+    attrs: {
+      "rel-script": "mobile-menu-toggle"
+    }
+  }, [_c("a", {
+    attrs: {
+      href: "#"
+    }
+  }, [_vm._v("\n                                            Phụ kiện\n                                        ")]), _vm._v(" "), _c("ul", {
+    staticClass: "nav-child-menu",
+    staticStyle: {
+      display: "none",
+      "margin-top": "10px"
+    }
+  }, [_c("li", [_c("a", {
+    attrs: {
+      href: "/collection/mu-luoi-trai?itm_source=navbar"
+    }
+  }, [_vm._v("\n                                                    Mũ (Nón)\n                                                ")])]), _vm._v(" "), _c("li", [_c("a", {
+    attrs: {
+      href: "/collection/tat-nam?itm_source=navbar"
+    }
+  }, [_vm._v("\n                                                    Tất (Vớ)\n                                                ")])])])]), _vm._v(" "), _c("li", {
+    staticClass: "nav__item nav__item--has-child",
+    attrs: {
+      "rel-script": "mobile-menu-toggle"
+    }
+  }, [_c("a", {
+    attrs: {
+      href: "#"
+    }
+  }, [_vm._v("\n                                            Bộ sưu tập\n                                        ")]), _vm._v(" "), _c("ul", {
+    staticClass: "nav-child-menu",
+    staticStyle: {
+      display: "none",
+      "margin-top": "10px"
+    }
+  }, [_c("li", [_c("a", {
+    attrs: {
+      href: "/collection/vu-tru-ao-thun-marvel?itm_source=navbar"
+    }
+  }, [_c("b", [_vm._v("Vũ trụ áo Marvel ")]), _vm._v(" "), _c("span", {
+    staticClass: "nav-tab__sub"
+  }, [_vm._v("Bước vào thế giới siêu anh\n                                                        hùng")])])]), _vm._v(" "), _c("li", {
+    staticClass: "nav-tab__item"
+  }, [_c("a", {
+    attrs: {
+      href: "/page/cleanvn?itm_source=navbar"
+    }
+  }, [_c("b", [_vm._v("Clean Vietnam")]), _vm._v(" "), _c("span", {
+    staticClass: "nav-tab__sub"
+  }, [_vm._v("\n                                                        Sự kết hợp giữa Coolmate & Vietmax\n                                                    ")])])]), _vm._v(" "), _c("li", {
+    staticClass: "nav-tab__item"
+  }, [_c("a", {
+    attrs: {
+      href: "/collection/coolmate-basics?itm_source=navbar"
+    }
+  }, [_c("b", [_vm._v("Coolmate Basics")]), _vm._v(" "), _c("span", {
+    staticClass: "nav-tab__sub"
+  }, [_vm._v("\n                                                        Mua sắm tiết kiệm với giá tốt\n                                                    ")])])]), _vm._v(" "), _c("li", [_c("a", {
+    attrs: {
+      href: "/collection/san-pham-moi-ben-vung?itm_source=navbar"
+    }
+  }, [_c("b", [_vm._v("Sản phẩm bền vững")]), _vm._v(" "), _c("span", {
+    staticClass: "nav-tab__sub"
+  }, [_vm._v("Sản phẩm thân thiện với môi\n                                                        trường")])])])])]), _vm._v(" "), _c("li", {
+    staticClass: "nav__item nav__item--has-child",
+    attrs: {
+      "rel-script": "mobile-menu-toggle"
+    }
+  }, [_c("a", {
+    attrs: {
+      href: "#"
+    }
+  }, [_vm._v("\n                                            Nhu cầu\n                                        ")]), _vm._v(" "), _c("ul", {
+    staticClass: "nav-child-menu",
+    staticStyle: {
+      display: "none",
+      "margin-top": "10px"
+    }
+  }, [_c("li", [_c("a", {
+    attrs: {
+      href: "/collection/bst-thu-dong1?itm_source=navbar"
+    }
+  }, [_c("b", [_vm._v("Đồ thu - đông "), _c("span", {
+    staticClass: "menu-tag menu-tag--sale"
+  }, [_vm._v("SALE")])]), _vm._v(" "), _c("span", {
+    staticClass: "nav-tab__sub"
+  }, [_vm._v("Fall-Winter Collection")])])]), _vm._v(" "), _c("li", [_c("a", {
+    attrs: {
+      href: "/collection/do-mac-trong-va-mac-nha?itm_source=navbar"
+    }
+  }, [_c("b", [_vm._v("Mặc ở nhà & Mặc trong")]), _vm._v(" "), _c("span", {
+    staticClass: "nav-tab__sub"
+  }, [_vm._v("\n                                                        Homewear & Underwear\n                                                    ")])])]), _vm._v(" "), _c("li", [_c("a", {
+    attrs: {
+      href: "/collection/do-casual?itm_source=navbar"
+    }
+  }, [_c("b", [_vm._v("Mặc hằng ngày")]), _vm._v(" "), _c("span", {
+    staticClass: "nav-tab__sub"
+  }, [_vm._v("\n                                                        Casualwear\n                                                    ")])])]), _vm._v(" "), _c("li", [_c("a", {
+    attrs: {
+      href: "/collection/coolmate-activewear?itm_source=navbar"
+    }
+  }, [_c("b", [_vm._v("Đồ thể thao")]), _vm._v(" "), _c("span", {
+    staticClass: "nav-tab__sub"
+  }, [_vm._v("\n                                                        Coolmate Active\n                                                    ")])])]), _vm._v(" "), _c("li", [_c("a", {
+    attrs: {
+      href: "/collection/phu-kien-nam?itm_source=navbar"
+    }
+  }, [_c("b", [_vm._v("Phụ kiện")]), _vm._v(" "), _c("span", {
+    staticClass: "nav-tab__sub"
+  }, [_vm._v("\n                                                        Accessories\n                                                    ")])])])])]), _vm._v(" "), _c("li", {
+    staticClass: "nav__item nav__item--has-child",
+    attrs: {
+      "rel-script": "mobile-menu-toggle"
+    }
+  }, [_c("a", {
+    attrs: {
+      href: "#"
+    }
+  }, [_vm._v("\n                                            Công nghệ\n                                        ")]), _vm._v(" "), _c("ul", {
+    staticClass: "nav-child-menu",
+    staticStyle: {
+      display: "none",
+      "margin-top": "10px"
+    }
+  }, [_c("li", [_c("a", {
+    attrs: {
+      href: "/lp/dong-san-pham-excool?itm_source=navbar"
+    }
+  }, [_c("b", [_vm._v("Excool")]), _vm._v(" "), _c("span", {
+    staticClass: "nav-tab__sub"
+  }, [_vm._v("\n                                                        Công nghệ làm mát tối đa\n                                                    ")])])]), _vm._v(" "), _c("li", [_c("a", {
+    attrs: {
+      href: "/page/cleandye#ldp-about?itm_source=navbar"
+    }
+  }, [_c("b", [_vm._v("Cleandye")]), _vm._v(" "), _c("span", {
+    staticClass: "nav-tab__sub"
+  }, [_vm._v("10%\n                                                        Nhuộm không dùng nước\n                                                    ")])])]), _vm._v(" "), _c("li", [_c("a", {
+    attrs: {
+      href: "/lp/dong-san-pham-heiq-viroblock?itm_source=navbar"
+    }
+  }, [_c("b", [_vm._v("HeiQ Viroblock")]), _vm._v(" "), _c("span", {
+    staticClass: "nav-tab__sub"
+  }, [_vm._v("\n                                                        Diệt 99.99% virus SARS-CoV2\n                                                    ")])])]), _vm._v(" "), _c("li", [_c("a", {
+    attrs: {
+      href: "/collection/san-pham-anti-smell?itm_source=navbar"
+    }
+  }, [_c("b", [_vm._v("Anti-Smell")]), _vm._v(" "), _c("span", {
+    staticClass: "nav-tab__sub"
+  }, [_vm._v("Công nghệ khử mùi từ Nhật\n                                                        Bản")])])])])])])]), _vm._v(" "), _c("div", {
+    staticClass: "nav-tab__content",
+    staticStyle: {
+      display: "none"
+    },
+    attrs: {
+      "data-nav-tab": "#bo-suu-tap"
+    }
+  }, [_c("ul", {
+    staticClass: "nav-tab__menu"
+  }, [_c("li", [_c("a", {
+    attrs: {
+      href: "/84rising?itm_source=navbar"
+    }
+  }, [_c("b", [_vm._v("Tất cả")])])]), _vm._v(" "), _c("li", [_c("a", {
+    attrs: {
+      href: "/84rising?itm_source=navbar#T-shirt"
+    }
+  }, [_c("b", [_vm._v("Áo Oversize")]), _c("br")])]), _vm._v(" "), _c("li", [_c("a", {
+    attrs: {
+      href: "/84rising?itm_source=navbar#Sweatshirt"
+    }
+  }, [_c("b", [_vm._v("Áo Nỉ")])])]), _vm._v(" "), _c("li", [_c("a", {
+    attrs: {
+      href: "/84rising?itm_source=navbar#hoodie"
+    }
+  }, [_c("b", [_vm._v("Áo Hoodie")])])]), _vm._v(" "), _c("li", [_c("a", {
+    attrs: {
+      href: "/84rising?itm_source=navbar#short-pants"
+    }
+  }, [_c("b", [_vm._v("Quần Short")])])]), _vm._v(" "), _c("li", [_c("a", {
+    attrs: {
+      href: "/84rising?itm_source=navbar#Beanie"
+    }
+  }, [_c("b", [_vm._v("Mũ len Beanie Short")])])])])]), _vm._v(" "), _c("div", {
+    staticClass: "nav-tab__content",
+    staticStyle: {
+      display: "none"
+    },
+    attrs: {
+      "data-nav-tab": "#nhu-cau"
+    }
+  }, [_c("ul", {
+    staticClass: "nav-tab__menu"
+  }, [_c("li", [_c("a", {
+    attrs: {
+      href: "/84rising?itm_source=navbar"
+    }
+  }, [_c("b", [_vm._v("Tất cả")])])]), _vm._v(" "), _c("li", [_c("a", {
+    attrs: {
+      href: "/84rising?itm_source=navbar#T-shirt"
+    }
+  }, [_c("b", [_vm._v("Áo Oversize")]), _c("br")])]), _vm._v(" "), _c("li", [_c("a", {
+    attrs: {
+      href: "/84rising?itm_source=navbar#Sweatshirt"
+    }
+  }, [_c("b", [_vm._v("Áo Nỉ")])])]), _vm._v(" "), _c("li", [_c("a", {
+    attrs: {
+      href: "/84rising?itm_source=navbar#hoodie"
+    }
+  }, [_c("b", [_vm._v("Áo Hoodie")])])]), _vm._v(" "), _c("li", [_c("a", {
+    attrs: {
+      href: "/84rising?itm_source=navbar#short-pants"
+    }
+  }, [_c("b", [_vm._v("Quần Short")])])]), _vm._v(" "), _c("li", [_c("a", {
+    attrs: {
+      href: "/84rising?itm_source=navbar#Beanie"
+    }
+  }, [_c("b", [_vm._v("Mũ len Beanie Short")])])])])]), _vm._v(" "), _c("div", {
+    staticClass: "nav-tab__content",
+    staticStyle: {
+      display: "none"
+    },
+    attrs: {
+      "data-nav-tab": "#cong-nghe"
+    }
+  }, [_c("ul", {
+    staticClass: "nav-tab__menu"
+  }, [_c("li", {
+    staticClass: "nav-tab__item"
+  }, [_c("a", {
+    attrs: {
+      href: "/lp/dong-san-pham-excool?itm_source=navbar"
+    }
+  }, [_c("b", [_vm._v("Excool")]), _vm._v(" "), _c("span", {
+    staticClass: "nav-tab__sub"
+  }, [_vm._v("\n                                                Công nghệ làm mát tối đa\n                                            ")])])]), _vm._v(" "), _c("li", {
+    staticClass: "nav-tab__item"
+  }, [_c("a", {
+    attrs: {
+      href: "/page/cleandye#ldp-about?itm_source=navbar"
+    }
+  }, [_c("b", [_vm._v("Cleandye")]), _vm._v(" "), _c("span", {
+    staticClass: "nav-tab__sub"
+  }, [_vm._v("10%\n                                                Nhuộm không dùng nước\n                                            ")])])]), _vm._v(" "), _c("li", {
+    staticClass: "nav-tab__item"
+  }, [_c("a", {
+    attrs: {
+      href: "/lp/dong-san-pham-heiq-viroblock?itm_source=navbar"
+    }
+  }, [_c("b", [_vm._v("HeiQ Viroblock")]), _vm._v(" "), _c("span", {
+    staticClass: "nav-tab__sub"
+  }, [_vm._v("\n                                                Diệt 99.99% virus SARS-CoV2\n                                            ")])])]), _vm._v(" "), _c("li", {
+    staticClass: "nav-tab__item"
+  }, [_c("a", {
+    attrs: {
+      href: "/collection/san-pham-anti-smell?itm_source=navbar"
+    }
+  }, [_c("b", [_vm._v("Anti-Smell")]), _vm._v(" "), _c("span", {
+    staticClass: "nav-tab__sub"
+  }, [_vm._v("Công nghệ khử mùi từ Nhật Bản")])])])])])]), _vm._v(" "), _c("ul", {
+    staticClass: "nav pdt--20"
+  }, [_c("li", {
+    staticClass: "nav__item"
+  }, [_c("a", {
+    attrs: {
+      href: "/lp/coolxprint-mo-hinh-dat-san-xuat-theo-yeu-cau?itm_source=ab_xprint_x"
+    }
+  }, [_vm._v("\n                                    CoolXPrint - Thiết kế theo yêu cầu\n                                ")])]), _vm._v(" "), _c("li", {
+    staticClass: "nav__item"
+  }, [_c("a", {
+    attrs: {
+      href: "/size-chart?itm_source=navbar"
+    }
+  }, [_vm._v("\n                                    Chọn Size\n                                ")])]), _vm._v(" "), _c("li", {
+    staticClass: "nav__item nav__item--has-child",
+    attrs: {
+      "rel-script": "mobile-menu-toggle"
+    }
+  }, [_c("a", {
+    attrs: {
+      href: "#"
+    }
+  }, [_vm._v("\n                                    Về Coolmate\n                                ")]), _vm._v(" "), _c("ul", {
+    staticClass: "nav-child-menu",
+    staticStyle: {
+      display: "none",
+      "margin-top": "10px"
+    }
+  }, [_c("li", [_c("a", {
+    attrs: {
+      href: "/lp/coolmate-101?itm_source=navbar"
+    }
+  }, [_vm._v("\n                                            Coolmate 101 - Gia nhập coolmate\n                                        ")])]), _vm._v(" "), _c("li", [_c("a", {
+    attrs: {
+      href: "/page/11-dich-vu-tai-coolmate-co-the-ban-chua-biet?itm_source=navbar"
+    }
+  }, [_vm._v("\n                                            Dịch vụ 100% hài lòng\n                                        ")])]), _vm._v(" "), _c("li", [_c("a", {
+    attrs: {
+      href: "/page/coolclub-chuong-trinh-khach-hang-than-thiet-cua-coolmate?itm_source=navbar"
+    }
+  }, [_vm._v("\n                                            CoolClub - Khách hàng thân thiết\n                                        ")])]), _vm._v(" "), _c("li", [_c("a", {
+    attrs: {
+      href: "/page/coolmate-story?itm_source=navbar"
+    }
+  }, [_vm._v("\n                                            Câu chuyện Coolmate\n                                        ")])])])]), _vm._v(" "), _c("li", {
+    staticClass: "nav__item",
+    attrs: {
+      "rel-script": "mega-menu"
+    }
+  }, [_c("a", {
+    attrs: {
+      href: "/blog?itm_source=navbar"
+    }
+  }, [_vm._v("\n                                    Blog\n                                ")])])])]);
+}, function () {
+  var _vm = this,
+    _c = _vm._self._c;
+  return _c("li", {
+    staticClass: "nav__item has-child",
+    attrs: {
+      "rel-script": "mega-menu"
+    }
+  }, [_c("a", {
+    attrs: {
+      href: "/84rising?itm_source=navbar"
+    }
+  }, [_vm._v("\n                                    Quần áo nam\n                                ")])]);
+}, function () {
+  var _vm = this,
+    _c = _vm._self._c;
+  return _c("li", {
+    staticClass: "nav__item has-child",
+    attrs: {
+      "rel-script": "mega-menu"
+    }
+  }, [_c("a", {
+    staticStyle: {
+      position: "relative"
+    },
+    attrs: {
+      href: "/cm24?itm_source=navbar"
+    }
+  }, [_vm._v("\n                                    Sản phẩm bán chạy\n                                    "), _c("span", {
+    staticStyle: {
+      width: "5px",
+      height: "5px",
+      "border-radius": "100vmax",
+      "background-color": "#2F5ACF",
+      position: "absolute",
+      top: "0",
+      left: "100%",
+      "margin-left": "2px"
+    }
+  })])]);
+}, function () {
+  var _vm = this,
+    _c = _vm._self._c;
+  return _c("li", {
+    staticClass: "nav__item"
+  }, [_c("a", {
+    attrs: {
+      href: "/lp/coolxprint-mo-hinh-dat-san-xuat-theo-yeu-cau?itm_source=navbar"
+    }
+  }, [_vm._v("\n                                    Giới thiệu\n                                ")])]);
+}, function () {
+  var _vm = this,
+    _c = _vm._self._c;
+  return _c("li", {
+    staticClass: "nav__item"
+  }, [_c("a", {
+    attrs: {
+      href: "/blog?itm_source=navbar"
+    }
+  }, [_vm._v("\n                                    Blog\n                                ")])]);
+}, function () {
+  var _vm = this,
+    _c = _vm._self._c;
+  return _c("li", {
+    staticClass: "nav__item has-child",
+    attrs: {
+      "rel-script": "mega-menu"
+    }
+  }, [_c("a", {
+    attrs: {
+      href: "/page/coolmate-story?itm_source=navbar",
+      "rel-script": "mega-menu-open"
+    }
+  }, [_vm._v("\n                                    Liên hệ\n                                ")]), _vm._v(" "), _c("div", {
+    staticClass: "mega-menu"
+  }, [_c("a", {
+    staticClass: "mega-menu__close",
+    attrs: {
+      href: "#",
+      "rel-script": "mega-menu-close"
+    }
+  }, [_vm._v("Về\n                                        Coolmate")]), _vm._v(" "), _c("div", {
+    staticClass: "mega-menu__wrapper"
+  }, [_c("div", {
+    staticClass: "mega-menu__inner",
+    staticStyle: {
+      "max-width": "1200px"
+    }
+  }, [_c("div", {
+    staticClass: "mega-menu__item",
+    attrs: {
+      "rel-script": "mega-menu-item"
+    }
+  }, [_c("a", {
+    staticClass: "mega-menu__titles",
+    attrs: {
+      href: "#",
+      "rel-script": "mega-menu-toggle"
+    }
+  }, [_vm._v("Coolmate")]), _vm._v(" "), _c("div", {
+    attrs: {
+      "rel-script": "mega-menu-active"
+    }
+  }, [_c("div", {
+    staticClass: "grid"
+  }, [_c("a", {
+    staticClass: "grid__column three-twelfths mobile--one-half",
+    attrs: {
+      href: "/lp/coolmate-101?itm_source=navbar"
+    }
+  }, [_c("div", {
+    staticClass: "mega-menu__thumbnail",
+    staticStyle: {
+      "border-radius": "1.5em",
+      overflow: "hidden"
+    }
+  }, [_c("img", {
+    attrs: {
+      src: "https://www.coolmate.me/images/placeholder-image.png",
+      "data-src": "https://mcdn.coolmate.me/image/August2022/mceclip0_97.jpg",
+      alt: "Coolmate 101"
+    }
+  })]), _vm._v(" "), _c("div", {
+    staticStyle: {
+      "line-height": "1.25em",
+      "margin-top": "10px"
+    }
+  }, [_c("span", {
+    staticStyle: {
+      "font-size": "13px"
+    }
+  }, [_vm._v("Coolmate 101\n                                                                ")]), _c("br"), _vm._v(" "), _c("span", {
+    staticStyle: {
+      "font-size": "11px",
+      "font-weight": "300"
+    }
+  }, [_vm._v("Tất\n                                                                    cả những gì bạn muốn biết về\n                                                                    Coolmate!"), _c("br", {
+    staticClass: "mobile--hidden"
+  }), _vm._v(" và gia\n                                                                    nhập Coolmate")])])]), _vm._v(" "), _c("a", {
+    staticClass: "grid__column three-twelfths mobile--one-half",
+    attrs: {
+      href: "/page/11-dich-vu-tai-coolmate-co-the-ban-chua-biet?itm_source=navbar"
+    }
+  }, [_c("div", {
+    staticClass: "mega-menu__thumbnail",
+    staticStyle: {
+      "border-radius": "1.5em",
+      overflow: "hidden"
+    }
+  }, [_c("img", {
+    attrs: {
+      src: "https://www.coolmate.me/images/placeholder-image.png",
+      "data-src": "https://mcdn.coolmate.me/image/August2022/mceclip1_92.jpg",
+      alt: "Dịch vụ 100% hài lòng"
+    }
+  })]), _vm._v(" "), _c("div", {
+    staticStyle: {
+      "line-height": "1.25em",
+      "margin-top": "10px"
+    }
+  }, [_c("span", {
+    staticStyle: {
+      "font-size": "13px"
+    }
+  }, [_vm._v("Dịch vụ 100% hài\n                                                                    lòng")]), _c("br"), _vm._v(" "), _c("span", {
+    staticStyle: {
+      "font-size": "11px",
+      "font-weight": "300"
+    }
+  }, [_vm._v("Bật\n                                                                    mí 11 dịch vụ Coolmate cam\n                                                                    kết với khách hàng")])])]), _vm._v(" "), _c("a", {
+    staticClass: "grid__column three-twelfths mobile--one-half",
+    attrs: {
+      href: "/page/coolclub-chuong-trinh-khach-hang-than-thiet-cua-coolmate?itm_source=navbar"
+    }
+  }, [_c("div", {
+    staticClass: "mega-menu__thumbnail",
+    staticStyle: {
+      "border-radius": "1.5em",
+      overflow: "hidden"
+    }
+  }, [_c("img", {
+    attrs: {
+      src: "https://www.coolmate.me/images/placeholder-image.png",
+      "data-src": "https://mcdn.coolmate.me/image/August2022/mceclip2_100.jpg",
+      alt: "Coolclub - Khách hàng thân thiết"
+    }
+  })]), _vm._v(" "), _c("div", {
+    staticStyle: {
+      "line-height": "1.25em",
+      "margin-top": "10px"
+    }
+  }, [_c("span", {
+    staticStyle: {
+      "font-size": "13px"
+    }
+  }, [_vm._v("Coolclub - Khách\n                                                                    hàng thân thiết")]), _c("br"), _vm._v(" "), _c("span", {
+    staticStyle: {
+      "font-size": "11px",
+      "font-weight": "300"
+    }
+  }, [_vm._v("Những\n                                                                    ưu đãi hấp dẫn dành cho\n                                                                    khách hàng thân thiết")])])]), _vm._v(" "), _c("a", {
+    staticClass: "grid__column three-twelfths mobile--one-half",
+    attrs: {
+      href: "/page/coolmate-story?itm_source=navbar"
+    }
+  }, [_c("div", {
+    staticClass: "mega-menu__thumbnail",
+    staticStyle: {
+      "border-radius": "1.5em",
+      overflow: "hidden"
+    }
+  }, [_c("img", {
+    attrs: {
+      src: "https://www.coolmate.me/images/placeholder-image.png",
+      "data-src": "https://mcdn.coolmate.me/image/August2022/mceclip3_34.jpg",
+      alt: "Câu chuyện"
+    }
+  })]), _vm._v(" "), _c("div", {
+    staticStyle: {
+      "line-height": "1.25em",
+      "margin-top": "10px"
+    }
+  }, [_c("span", {
+    staticStyle: {
+      "font-size": "13px"
+    }
+  }, [_vm._v("Câu\n                                                                    chuyện")]), _c("br"), _vm._v(" "), _c("span", {
+    staticStyle: {
+      "font-size": "11px",
+      "font-weight": "300"
+    }
+  }, [_vm._v("Về\n                                                                    Startup với mô hình Online\n                                                                    D2C")])])])])])])])])])]);
+}];
+render._withStripped = true;
+
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/frontend/components/layouts/MiniCart.vue?vue&type=template&id=347c2552&scoped=true&":
+/*!*******************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/frontend/components/layouts/MiniCart.vue?vue&type=template&id=347c2552&scoped=true& ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function render() {
+  var _vm = this,
+    _c = _vm._self._c;
+  return _c("div", {
+    staticClass: "mini-cart"
+  }, [_c("div", {
+    staticClass: "mini-cart__wrapper"
+  }, [_c("div", {
+    staticClass: "mini-cart__header"
+  }, [_c("span", [_vm._v("\n                                        " + _vm._s(_vm.$store.getters.shoppingCart.cart.length) + " sản phẩm\n                                    ")]), _vm._v(" "), _c("router-link", {
+    attrs: {
+      to: {
+        name: "shopping-cart"
+      }
+    }
+  }, [_vm._v("\n            Xem tất cả\n        ")])], 1), _vm._v(" "), _vm._l(_vm.$store.getters.shoppingCart.cart, function (item) {
+    return _c("div", {
+      staticClass: "mini-cart__item",
+      staticStyle: {
+        "margin-bottom": "5px"
+      }
+    }, [_c("div", {
+      staticClass: "mini-cart__item-thumbnail"
+    }, [_c("img", {
+      staticStyle: {
+        width: "100px",
+        height: "120px",
+        "object-fit": "cover",
+        "border-radius": "10px"
+      },
+      attrs: {
+        src: item["images_product"][0]["path"],
+        alt: "Áo Polo thể thao nam Recycle Active V2"
+      }
+    })]), _vm._v(" "), _c("div", {
+      staticClass: "mini-cart__item-content"
+    }, [_c("span", {
+      staticClass: "mini-cart__remove",
+      on: {
+        click: function click($event) {
+          return _vm.deleteItemCart(item.id);
+        }
+      }
+    }, [_vm._v("✕\n                                        ")]), _vm._v(" "), _c("div", {
+      staticClass: "mini-cart__item-title"
+    }, [_c("a", {
+      attrs: {
+        href: "/product/ao-polo-the-thao-nam-recycle-active-v2",
+        target: "_blank"
+      }
+    }, [_vm._v("\n                    " + _vm._s(item.name) + "\n                ")])]), _vm._v(" "), _c("div", {
+      staticClass: "mini-cart__item-variant-info"
+    }, [_vm._v("\n                    " + _vm._s(item.payment.color.title) + " / " + _vm._s(item.payment.size.title) + "\n                ")]), _vm._v(" "), _c("div", [_c("span", {
+      staticClass: "mini-cart__item-quantity"
+    }, [_vm._v("\n                                                " + _vm._s(_vm._f("toThousandFilter")(item.payment.price)) + "đ x" + _vm._s(item.payment.total) + "\n                                            ")])]), _vm._v(" "), _c("div", [_c("span", {
+      staticClass: "mini-cart__item-price"
+    }, [_vm._v("\n                                                " + _vm._s(_vm._f("toThousandFilter")(item.payment.price * item.payment.total)) + " đ\n                                            ")])])])]);
+  })], 2)]);
+};
+var staticRenderFns = [];
+render._withStripped = true;
+
 
 /***/ }),
 
@@ -1040,11 +1398,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_2__);
 
 
- // import { API_URL } from "./config";
+
+// import { API_URL } from "./config";
 // import AuthService from '@/common/auth.service';
 // import store from "@/store";
 
- // $(document).ajaxError(function( event, jqxhr, settings, thrownError ) {
+
+// $(document).ajaxError(function( event, jqxhr, settings, thrownError ) {
 //     switch (jqxhr.status) {
 //         case 401:
 //             ApiService.sessionExpire();
@@ -1059,11 +1419,9 @@ var ApiService = {
   },
   setHeader: function setHeader() {
     var token = AuthService.getToken();
-
     if (token) {
       vue__WEBPACK_IMPORTED_MODULE_3__["default"].axios.defaults.headers.common.Authorization = "Bearer ".concat(token);
     }
-
     jquery__WEBPACK_IMPORTED_MODULE_2___default().ajaxSetup({
       headers: {
         'X-CSRF-TOKEN': jquery__WEBPACK_IMPORTED_MODULE_2___default()('meta[name="csrf-token"]').attr('content'),
@@ -1083,7 +1441,6 @@ var ApiService = {
       if (error && error.response && error.response.status === 401) {
         ApiService.sessionExpire();
       }
-
       throw new Error("[RWV] ApiService ".concat(error));
     });
   },
@@ -1093,7 +1450,6 @@ var ApiService = {
       if (error && error.response && error.response.status === 401) {
         ApiService.sessionExpire();
       }
-
       throw new Error("[RWV] ApiService ".concat(error));
     });
   },
@@ -1102,7 +1458,6 @@ var ApiService = {
       if (error && error.response && error.response.status === 401) {
         ApiService.sessionExpire();
       }
-
       throw new Error("[RWV] ApiService ".concat(error));
     });
   },
@@ -1111,7 +1466,6 @@ var ApiService = {
       if (error && error.response && error.response.status === 401) {
         ApiService.sessionExpire();
       }
-
       throw new Error("[RWV] ApiService ".concat(error));
     });
   },
@@ -1120,7 +1474,6 @@ var ApiService = {
       if (error && error.response && error.response.status === 401) {
         ApiService.sessionExpire();
       }
-
       throw new Error("[RWV] ApiService ".concat(error));
     });
   },
@@ -1129,12 +1482,13 @@ var ApiService = {
       if (error && error.response && error.response.status === 401) {
         ApiService.sessionExpire();
       }
-
       throw new Error("[RWV] ApiService ".concat(error));
     });
   }
 };
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ApiService); // export const checkAuth = {
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ApiService);
+
+// export const checkAuth = {
 //     getUser() {
 //         $.ajax({
 //             url: '/api/admin/auth/session',
@@ -1149,8 +1503,10 @@ var ApiService = {
 //             }
 //         })
 //         return true
+
 //     }
 // }
+
 // export const RemoteSensingDataService = {
 //     fetch(params) {
 //         return ApiService.query("/api/remote-sensing-data", { params: params });
@@ -12605,6 +12961,74 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/frontend/components/Index.vue?vue&type=template&id=d6bae970&scoped=true&":
+/*!***********************************************************************************************!*\
+  !*** ./resources/js/frontend/components/Index.vue?vue&type=template&id=d6bae970&scoped=true& ***!
+  \***********************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_lib_loaders_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Index_vue_vue_type_template_id_d6bae970_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_lib_loaders_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Index_vue_vue_type_template_id_d6bae970_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_lib_loaders_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Index_vue_vue_type_template_id_d6bae970_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Index.vue?vue&type=template&id=d6bae970&scoped=true& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/frontend/components/Index.vue?vue&type=template&id=d6bae970&scoped=true&");
+
+
+/***/ }),
+
+/***/ "./resources/js/frontend/components/layouts/Footer.vue?vue&type=template&id=109c9adb&scoped=true&":
+/*!********************************************************************************************************!*\
+  !*** ./resources/js/frontend/components/layouts/Footer.vue?vue&type=template&id=109c9adb&scoped=true& ***!
+  \********************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_lib_loaders_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Footer_vue_vue_type_template_id_109c9adb_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_lib_loaders_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Footer_vue_vue_type_template_id_109c9adb_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_lib_loaders_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Footer_vue_vue_type_template_id_109c9adb_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Footer.vue?vue&type=template&id=109c9adb&scoped=true& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/frontend/components/layouts/Footer.vue?vue&type=template&id=109c9adb&scoped=true&");
+
+
+/***/ }),
+
+/***/ "./resources/js/frontend/components/layouts/Header.vue?vue&type=template&id=31cefecd&scoped=true&":
+/*!********************************************************************************************************!*\
+  !*** ./resources/js/frontend/components/layouts/Header.vue?vue&type=template&id=31cefecd&scoped=true& ***!
+  \********************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_lib_loaders_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Header_vue_vue_type_template_id_31cefecd_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_lib_loaders_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Header_vue_vue_type_template_id_31cefecd_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_lib_loaders_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Header_vue_vue_type_template_id_31cefecd_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Header.vue?vue&type=template&id=31cefecd&scoped=true& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/frontend/components/layouts/Header.vue?vue&type=template&id=31cefecd&scoped=true&");
+
+
+/***/ }),
+
+/***/ "./resources/js/frontend/components/layouts/MiniCart.vue?vue&type=template&id=347c2552&scoped=true&":
+/*!**********************************************************************************************************!*\
+  !*** ./resources/js/frontend/components/layouts/MiniCart.vue?vue&type=template&id=347c2552&scoped=true& ***!
+  \**********************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_lib_loaders_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_lib_index_js_vue_loader_options_MiniCart_vue_vue_type_template_id_347c2552_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_lib_loaders_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_lib_index_js_vue_loader_options_MiniCart_vue_vue_type_template_id_347c2552_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_lib_loaders_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_lib_index_js_vue_loader_options_MiniCart_vue_vue_type_template_id_347c2552_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./MiniCart.vue?vue&type=template&id=347c2552&scoped=true& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/frontend/components/layouts/MiniCart.vue?vue&type=template&id=347c2552&scoped=true&");
+
+
+/***/ }),
+
 /***/ "./resources/js/frontend/components/Index.vue?vue&type=style&index=0&id=d6bae970&scoped=true&lang=css&":
 /*!*************************************************************************************************************!*\
   !*** ./resources/js/frontend/components/Index.vue?vue&type=style&index=0&id=d6bae970&scoped=true&lang=css& ***!
@@ -12640,2599 +13064,6 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_style_loader_dist_cjs_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_MiniCart_vue_vue_type_style_index_0_id_347c2552_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/style-loader/dist/cjs.js!../../../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!../../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./MiniCart.vue?vue&type=style&index=0&id=347c2552&scoped=true&lang=css& */ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/frontend/components/layouts/MiniCart.vue?vue&type=style&index=0&id=347c2552&scoped=true&lang=css&");
-
-
-/***/ }),
-
-/***/ "./resources/js/frontend/components/Index.vue?vue&type=template&id=d6bae970&scoped=true&":
-/*!***********************************************************************************************!*\
-  !*** ./resources/js/frontend/components/Index.vue?vue&type=template&id=d6bae970&scoped=true& ***!
-  \***********************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Index_vue_vue_type_template_id_d6bae970_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render),
-/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Index_vue_vue_type_template_id_d6bae970_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
-/* harmony export */ });
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Index_vue_vue_type_template_id_d6bae970_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Index.vue?vue&type=template&id=d6bae970&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/frontend/components/Index.vue?vue&type=template&id=d6bae970&scoped=true&");
-
-
-/***/ }),
-
-/***/ "./resources/js/frontend/components/layouts/Footer.vue?vue&type=template&id=109c9adb&scoped=true&":
-/*!********************************************************************************************************!*\
-  !*** ./resources/js/frontend/components/layouts/Footer.vue?vue&type=template&id=109c9adb&scoped=true& ***!
-  \********************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Footer_vue_vue_type_template_id_109c9adb_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render),
-/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Footer_vue_vue_type_template_id_109c9adb_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
-/* harmony export */ });
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Footer_vue_vue_type_template_id_109c9adb_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Footer.vue?vue&type=template&id=109c9adb&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/frontend/components/layouts/Footer.vue?vue&type=template&id=109c9adb&scoped=true&");
-
-
-/***/ }),
-
-/***/ "./resources/js/frontend/components/layouts/Header.vue?vue&type=template&id=31cefecd&scoped=true&":
-/*!********************************************************************************************************!*\
-  !*** ./resources/js/frontend/components/layouts/Header.vue?vue&type=template&id=31cefecd&scoped=true& ***!
-  \********************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Header_vue_vue_type_template_id_31cefecd_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render),
-/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Header_vue_vue_type_template_id_31cefecd_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
-/* harmony export */ });
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Header_vue_vue_type_template_id_31cefecd_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Header.vue?vue&type=template&id=31cefecd&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/frontend/components/layouts/Header.vue?vue&type=template&id=31cefecd&scoped=true&");
-
-
-/***/ }),
-
-/***/ "./resources/js/frontend/components/layouts/MiniCart.vue?vue&type=template&id=347c2552&scoped=true&":
-/*!**********************************************************************************************************!*\
-  !*** ./resources/js/frontend/components/layouts/MiniCart.vue?vue&type=template&id=347c2552&scoped=true& ***!
-  \**********************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_MiniCart_vue_vue_type_template_id_347c2552_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render),
-/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_MiniCart_vue_vue_type_template_id_347c2552_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
-/* harmony export */ });
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_MiniCart_vue_vue_type_template_id_347c2552_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./MiniCart.vue?vue&type=template&id=347c2552&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/frontend/components/layouts/MiniCart.vue?vue&type=template&id=347c2552&scoped=true&");
-
-
-/***/ }),
-
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/frontend/components/Index.vue?vue&type=template&id=d6bae970&scoped=true&":
-/*!**************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/frontend/components/Index.vue?vue&type=template&id=d6bae970&scoped=true& ***!
-  \**************************************************************************************************************************************************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "render": () => (/* binding */ render),
-/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
-/* harmony export */ });
-var render = function () {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    [
-      _c("app-header"),
-      _vm._v(" "),
-      _c(
-        "main",
-        {
-          staticClass: "site-homepage",
-          staticStyle: { "padding-top": "50px" },
-        },
-        [
-          _c(
-            "transition",
-            { attrs: { name: "slide-fade" } },
-            [_c("router-view")],
-            1
-          ),
-        ],
-        1
-      ),
-      _vm._v(" "),
-      _c("app-footer"),
-    ],
-    1
-  )
-}
-var staticRenderFns = []
-render._withStripped = true
-
-
-
-/***/ }),
-
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/frontend/components/layouts/Footer.vue?vue&type=template&id=109c9adb&scoped=true&":
-/*!***********************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/frontend/components/layouts/Footer.vue?vue&type=template&id=109c9adb&scoped=true& ***!
-  \***********************************************************************************************************************************************************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "render": () => (/* binding */ render),
-/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
-/* harmony export */ });
-var render = function () {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _vm._m(0)
-}
-var staticRenderFns = [
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("footer", { staticClass: "site-footer" }, [
-      _c("div", { staticClass: "container" }, [
-        _c("div", { staticClass: "site-footer__inner" }, [
-          _c("div", { staticClass: "site-footer__menu" }, [
-            _c("div", { staticClass: "footer-menu" }, [
-              _c("div", { staticClass: "footer-menu__item" }, [
-                _c("h4", { staticClass: "footer-menu__title" }, [
-                  _vm._v("Khám phá "),
-                ]),
-                _vm._v(" "),
-                _c("ul", [
-                  _c("li", [
-                    _c("a", { attrs: { href: "/collection/ao-polo-nam" } }, [
-                      _vm._v("Áo Polo"),
-                    ]),
-                  ]),
-                  _vm._v(" "),
-                  _c("li", [
-                    _c(
-                      "a",
-                      { attrs: { href: "/collection/ao-thun-nam-gioi" } },
-                      [_vm._v("Áo T-shirt")]
-                    ),
-                  ]),
-                  _vm._v(" "),
-                  _c("li", [
-                    _c("a", { attrs: { href: "/collection/ao-so-mi-nam" } }, [
-                      _vm._v("Áo Sơ mi"),
-                    ]),
-                  ]),
-                  _vm._v(" "),
-                  _c("li", [
-                    _c("a", { attrs: { href: "/collection/quan-short-nam" } }, [
-                      _vm._v("Quần"),
-                    ]),
-                  ]),
-                  _vm._v(" "),
-                  _c("li", [
-                    _c("a", { attrs: { href: "/collection/quan-lot-nam" } }, [
-                      _vm._v("Quần Lót"),
-                    ]),
-                  ]),
-                  _vm._v(" "),
-                  _c("li", [
-                    _c("a", { attrs: { href: "/collection/tat-nam" } }, [
-                      _vm._v("Tất (Vớ)"),
-                    ]),
-                  ]),
-                  _vm._v(" "),
-                  _c("li", [
-                    _c("a", { attrs: { href: "/collection/mu-luoi-trai" } }, [
-                      _vm._v("Mũ (Nón)"),
-                    ]),
-                  ]),
-                  _vm._v(" "),
-                  _c("li", [
-                    _c("a", { attrs: { href: "/collection/phu-kien" } }, [
-                      _vm._v("Phụ Kiện Khác"),
-                    ]),
-                  ]),
-                ]),
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "footer-menu__item" }, [
-                _c("h4", { staticClass: "footer-menu__title" }, [
-                  _vm._v("Dịch vụ khách hàng"),
-                ]),
-                _vm._v(" "),
-                _c("ul", [
-                  _c("li", [
-                    _c("a", { attrs: { href: "/page/faqs" } }, [
-                      _vm._v("Hỏi đáp - FAQs"),
-                    ]),
-                  ]),
-                  _vm._v(" "),
-                  _c("li", [
-                    _c(
-                      "a",
-                      { attrs: { href: "/page/dich-vu-60-ngay-doi-tra" } },
-                      [_vm._v("Chính sách đổi trả 60 ngày")]
-                    ),
-                  ]),
-                  _vm._v(" "),
-                  _c("li", [
-                    _c("a", { attrs: { href: "/page/lien-he-voi-coolmate" } }, [
-                      _vm._v("Liên hệ"),
-                    ]),
-                  ]),
-                  _vm._v(" "),
-                  _c("li", [
-                    _c(
-                      "a",
-                      {
-                        attrs: {
-                          href: "/page/coolclub-chuong-trinh-khach-hang-than-thiet-cua-coolmate",
-                        },
-                      },
-                      [
-                        _vm._v(
-                          "Thành\r\n                                        viên Coolclub"
-                        ),
-                      ]
-                    ),
-                  ]),
-                  _vm._v(" "),
-                  _c("li", [
-                    _c(
-                      "a",
-                      {
-                        attrs: {
-                          href: "/page/11-dich-vu-tai-coolmate-co-the-ban-chua-biet",
-                        },
-                      },
-                      [
-                        _vm._v(
-                          "Khách hàng hài\r\n                                        lòng 100%"
-                        ),
-                      ]
-                    ),
-                  ]),
-                  _vm._v(" "),
-                  _c("li", [
-                    _c(
-                      "a",
-                      {
-                        attrs: {
-                          href: "/page/chuong-trinh-va-chinh-sach-khuyen-mai-tai-coolmate",
-                        },
-                      },
-                      [
-                        _vm._v(
-                          "Chính\r\n                                        sách khuyến mãi"
-                        ),
-                      ]
-                    ),
-                  ]),
-                  _vm._v(" "),
-                  _c("li", [
-                    _c(
-                      "a",
-                      { attrs: { href: "/page/dich-vu-giao-hang-coolmate" } },
-                      [_vm._v("Chính sách giao hàng")]
-                    ),
-                  ]),
-                  _vm._v(" "),
-                  _c("li", [
-                    _c(
-                      "a",
-                      {
-                        attrs: {
-                          href: "/page/chinh-sach-bao-mat-thong-tin-ca-nhan",
-                        },
-                      },
-                      [_vm._v("Chính sách bảo mật")]
-                    ),
-                  ]),
-                ]),
-                _vm._v(" "),
-                _c("h4", { staticClass: "footer-menu__title" }, [
-                  _vm._v("Kiến thức mặc đẹp"),
-                ]),
-                _vm._v(" "),
-                _c("ul", [
-                  _c("li", [
-                    _c("a", { attrs: { href: "/size-chart" } }, [
-                      _vm._v("Hướng dẫn chọn size"),
-                    ]),
-                  ]),
-                  _vm._v(" "),
-                  _c("li", [
-                    _c("a", { attrs: { href: "/blog" } }, [_vm._v("Blog")]),
-                  ]),
-                  _vm._v(" "),
-                  _c("li", [
-                    _c(
-                      "a",
-                      {
-                        attrs: {
-                          href: "https://www.facebook.com/groups/2103080403316797",
-                          target: "_blank",
-                        },
-                      },
-                      [_vm._v("Group mặc đẹp sống chất")]
-                    ),
-                  ]),
-                ]),
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "footer-menu__item" }, [
-                _c("h4", { staticClass: "footer-menu__title" }, [
-                  _vm._v("Tài liệu - Tuyển dụng"),
-                ]),
-                _vm._v(" "),
-                _c("ul", [
-                  _c("li", [
-                    _c(
-                      "a",
-                      { attrs: { href: "/lp/coolmate-101?itm_source=footer" } },
-                      [_vm._v("Tuyển dụng")]
-                    ),
-                  ]),
-                  _vm._v(" "),
-                  _c("li", [
-                    _c(
-                      "a",
-                      {
-                        attrs: {
-                          href: "http://online.gov.vn/(X(1)S(sgmttobbtsiaq3l5itoicxhw))/Home/WebDetails/53184?AspxAutoDetectCookieSupport=1",
-                          target: "_blank",
-                        },
-                      },
-                      [_vm._v("Đăng ký bản quyền")]
-                    ),
-                  ]),
-                ]),
-                _vm._v(" "),
-                _c("h4", { staticClass: "footer-menu__title" }, [
-                  _vm._v("Về "),
-                ]),
-                _vm._v(" "),
-                _c("ul", [
-                  _c("li", [
-                    _c(
-                      "a",
-                      {
-                        attrs: {
-                          href: "/page/coolmate-story?itm_source=footer",
-                        },
-                      },
-                      [
-                        _vm._v(
-                          " Câu chuyện về\r\n                                "
-                        ),
-                      ]
-                    ),
-                  ]),
-                  _vm._v(" "),
-                  _c("li", [
-                    _c(
-                      "a",
-                      {
-                        attrs: {
-                          href: "/page/san-pham-coolmate-duoc-san-xuat-nhu-the-nao?itm_source=footer",
-                        },
-                      },
-                      [
-                        _vm._v(
-                          "Nhà\r\n                                        máy"
-                        ),
-                      ]
-                    ),
-                  ]),
-                  _vm._v(" "),
-                  _c("li", [
-                    _c(
-                      "a",
-                      {
-                        attrs: {
-                          href: "/page/coolclub-chuong-trinh-khach-hang-than-thiet-cua-coolmate?itm_source=footer",
-                        },
-                      },
-                      [_vm._v("CoolClub")]
-                    ),
-                  ]),
-                  _vm._v(" "),
-                  _c("li", [
-                    _c(
-                      "a",
-                      {
-                        attrs: {
-                          href: "/collection/care-and-share?itm_source=footer",
-                        },
-                      },
-                      [_vm._v("Care & Share")]
-                    ),
-                  ]),
-                ]),
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "footer-menu__item" }, [
-                _c("h4", { staticClass: "footer-menu__title" }, [
-                  _vm._v("Địa chỉ liên hệ"),
-                ]),
-                _vm._v(" "),
-                _c("p", { staticClass: "footer-menu__desciption" }, [
-                  _c("u", [_vm._v("HUB Hà Nội:")]),
-                  _vm._v(
-                    " Tầng 3-4, Tòa nhà BMM, KM2,\r\n                                Đường Phùng Hưng, Phường Phúc La, Quận Hà Đông, TP Hà Nội"
-                  ),
-                ]),
-                _vm._v(" "),
-                _c("p", { staticClass: "footer-menu__desciption" }, [
-                  _c("u", [_vm._v("HUB Tp HCM:")]),
-                  _vm._v(
-                    " Lầu 1, Số 163 Trần Trọng Cung,\r\n                                Phường Tân Thuận Đông, Quận 7, Tp. Hồ Chí Minh"
-                  ),
-                ]),
-              ]),
-            ]),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "site-footer__sidebar" }, [
-            _c("h4", { staticClass: "site-footer__title" }, [
-              _vm._v(
-                "\r\n                        .... lắng nghe bạn!\r\n                    "
-              ),
-            ]),
-            _vm._v(" "),
-            _c(
-              "p",
-              {
-                staticClass: "site-footer__description",
-                staticStyle: { "margin-bottom": "10px" },
-              },
-              [
-                _vm._v(
-                  "\r\n                        Chúng tôi luôn trân trọng và mong đợi nhận được mọi ý kiến đóng góp từ\r\n                        khách hàng để có thể nâng cấp trải nghiệm dịch vụ và sản phẩm tốt hơn nữa.\r\n                    "
-                ),
-              ]
-            ),
-            _vm._v(" "),
-            _c(
-              "a",
-              {
-                staticClass: "site-footer__btn",
-                attrs: {
-                  href: "https://form.typeform.com/to/lU2oprGc?typeform-medium=embed-snippet",
-                  target: "_blank",
-                },
-              },
-              [
-                _vm._v(
-                  "\r\n                        Gửi Ý Kiến\r\n                    "
-                ),
-              ]
-            ),
-            _vm._v(" "),
-            _c("div", { staticClass: "footer-info" }, [
-              _c("div", { staticClass: "footer-info__icon" }, [
-                _c("img", {
-                  attrs: {
-                    src: "https://www.coolmate.me/images/footer/icon-hotline.svg",
-                    alt: "Footer Icon Phone",
-                  },
-                }),
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "footer-info__content" }, [
-                _c("span", { staticClass: "footer-info__title" }, [
-                  _vm._v(
-                    "\r\n                                Hotline\r\n                            "
-                  ),
-                ]),
-                _vm._v(" "),
-                _c("p", { staticClass: "footer-info__desciption" }, [
-                  _c("a", { attrs: { href: "tel: 1900272737" } }, [
-                    _vm._v("1900.272737"),
-                  ]),
-                  _vm._v(" "),
-                  _c("a", { attrs: { href: "tel: 02877772737" } }, [
-                    _vm._v("(028.7777.2737)"),
-                  ]),
-                ]),
-              ]),
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "footer-info" }, [
-              _c("div", { staticClass: "footer-info__icon" }, [
-                _c("img", {
-                  attrs: {
-                    src: "https://www.coolmate.me/images/footer/icon-email.svg",
-                    alt: "Footer Icon Email",
-                  },
-                }),
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "footer-info__content" }, [
-                _c("span", { staticClass: "footer-info__title" }, [
-                  _vm._v(
-                    "\r\n                                Email\r\n                            "
-                  ),
-                ]),
-                _vm._v(" "),
-                _c("p", { staticClass: "footer-info__desciption" }, [
-                  _c(
-                    "a",
-                    {
-                      attrs: {
-                        href: "/cdn-cgi/l/email-protection#f1d1b29e9e9db1929e9e9d9c908594df9c94",
-                      },
-                    },
-                    [
-                      _c(
-                        "span",
-                        {
-                          staticClass: "__cf_email__",
-                          attrs: {
-                            "data-cfemail":
-                              "a2e1cdcdcee2c1cdcdcecfc3d6c78ccfc7",
-                          },
-                        },
-                        [_vm._v("[email protected]")]
-                      ),
-                    ]
-                  ),
-                ]),
-              ]),
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "footer-social" }, [
-              _c(
-                "a",
-                {
-                  staticClass: "footer-social__item",
-                  attrs: {
-                    href: "https://www.facebook.com/coolmate.me",
-                    target: "_blank",
-                  },
-                },
-                [
-                  _c("img", {
-                    attrs: {
-                      src: "https://www.coolmate.me/images/footer/icon-facebook.svg",
-                      alt: "Footer Icon facebook",
-                    },
-                  }),
-                ]
-              ),
-              _vm._v(" "),
-              _c(
-                "a",
-                {
-                  staticClass: "footer-social__item",
-                  attrs: {
-                    href: "https://www.instagram.com/coolmate.me/",
-                    target: "_blank",
-                  },
-                },
-                [
-                  _c("img", {
-                    attrs: {
-                      src: "https://www.coolmate.me/images/footer/icon-instar.svg",
-                      alt: "Footer Icon instar",
-                    },
-                  }),
-                ]
-              ),
-              _vm._v(" "),
-              _c(
-                "a",
-                {
-                  staticClass: "footer-social__item",
-                  attrs: {
-                    href: "https://www.youtube.com/channel/UCWw8wLlodKBtEvVt1tTAsMA",
-                    target: "_blank",
-                  },
-                },
-                [
-                  _c("img", {
-                    attrs: {
-                      src: "https://www.coolmate.me/images/footer/icon-youtube.svg",
-                      alt: "Footer Icon youtube",
-                    },
-                  }),
-                ]
-              ),
-            ]),
-          ]),
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "site-footer__after" }, [
-          _c("div", { staticClass: "copyright" }, [
-            _c("h5", { staticClass: "copyright__title" }, [
-              _vm._v(
-                "\r\n                        @ CÔNG TY TNHH .....\r\n                    "
-              ),
-            ]),
-            _vm._v(" "),
-            _c("p", { staticClass: "copyright__description" }, [
-              _vm._v(
-                "Mã số doanh nghiệp: 9999999999. Giấy chứng nhận đăng ký\r\n                        doanh nghiệp do Sở Kế hoạch và Đầu tư TP Hà Nội cấp lần đầu ngày 20/02/2019."
-              ),
-            ]),
-          ]),
-        ]),
-      ]),
-    ])
-  },
-]
-render._withStripped = true
-
-
-
-/***/ }),
-
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/frontend/components/layouts/Header.vue?vue&type=template&id=31cefecd&scoped=true&":
-/*!***********************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/frontend/components/layouts/Header.vue?vue&type=template&id=31cefecd&scoped=true& ***!
-  \***********************************************************************************************************************************************************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "render": () => (/* binding */ render),
-/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
-/* harmony export */ });
-var render = function () {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c("header", { staticClass: "site-header" }, [
-    _c("div", { staticClass: "header" }, [
-      _c("div", { staticClass: "header__inner" }, [
-        _c("div", { staticClass: "header__toggle" }, [
-          _c("div", {}, [
-            _c(
-              "a",
-              {
-                staticClass: "menu-toggle",
-                attrs: { href: "#", "rel-script": "menu-toggle" },
-                on: {
-                  click: function ($event) {
-                    _vm.showMenuMobile = !_vm.showMenuMobile
-                  },
-                },
-              },
-              [_c("span"), _vm._v(" "), _c("span"), _vm._v(" "), _c("span")]
-            ),
-          ]),
-        ]),
-        _vm._v(" "),
-        _c(
-          "div",
-          {
-            staticClass: "header__logo",
-            staticStyle: { display: "flex", "align-items": "center" },
-          },
-          [
-            _c("router-link", { attrs: { to: { name: "home" } } }, [
-              _c("h3", [_vm._v("HADOVN")]),
-            ]),
-          ],
-          1
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          {
-            staticClass: "header__menu-mobile",
-            style: {
-              display: _vm.showMenuMobile ? "none" : "block",
-              visibility: _vm.showMenuMobile ? "unset" : "unset",
-              opacity: _vm.showMenuMobile ? 1 : 1,
-            },
-            attrs: { "rel-script": "header-menu" },
-          },
-          [_vm._m(0)]
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          {
-            staticClass: "header__menu",
-            staticStyle: { display: "block" },
-            attrs: { "rel-script": "header-menu" },
-          },
-          [
-            _c("div", { staticClass: "mobile--hidden tablet--hidden" }, [
-              _c("ul", { staticClass: "nav" }, [
-                _c(
-                  "li",
-                  {
-                    staticClass: "nav__item has-child",
-                    attrs: { "rel-script": "mega-menu" },
-                  },
-                  [
-                    _c(
-                      "a",
-                      {
-                        attrs: {
-                          href: "/collections?itm_source=navbar",
-                          "rel-script": "mega-menu-open",
-                        },
-                      },
-                      [
-                        _vm._v(
-                          "\n                                    Danh mục\n                                "
-                        ),
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "mega-menu mega-menu--product" }, [
-                      _c(
-                        "a",
-                        {
-                          staticClass: "mega-menu__close",
-                          attrs: { href: "#", "rel-script": "mega-menu-close" },
-                        },
-                        [
-                          _vm._v(
-                            "Sản\n                                        phẩm"
-                          ),
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "mega-menu__wrapper" }, [
-                        _c(
-                          "div",
-                          {
-                            staticClass: "mega-menu__inner",
-                            staticStyle: { "max-width": "1000px" },
-                          },
-                          [
-                            _c(
-                              "div",
-                              {
-                                staticClass: "mega-menu__item",
-                                staticStyle: { flex: "0 0 33%" },
-                                attrs: { "rel-script": "mega-menu-item" },
-                              },
-                              [
-                                _c(
-                                  "a",
-                                  {
-                                    staticClass: "mega-menu__title",
-                                    attrs: {
-                                      href: "#",
-                                      "rel-script": "mega-menu-toggle",
-                                    },
-                                  },
-                                  [_vm._v("Danh mục")]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "div",
-                                  { staticClass: "grid grid--two-columns" },
-                                  [
-                                    _c(
-                                      "div",
-                                      {
-                                        staticClass: "grid__column",
-                                        staticStyle: { "padding-top": "0" },
-                                      },
-                                      _vm._l(_vm.data, function (item) {
-                                        return _c(
-                                          "ul",
-                                          {
-                                            attrs: {
-                                              "rel-script": "mega-menu-active",
-                                            },
-                                          },
-                                          [
-                                            _c("li", [
-                                              _c(
-                                                "a",
-                                                {
-                                                  attrs: {
-                                                    href: "/collection/ao-nam1?itm_source=navbar",
-                                                  },
-                                                },
-                                                [
-                                                  _vm._v(
-                                                    "\n                                                                    " +
-                                                      _vm._s(item.title) +
-                                                      "\n                                                                "
-                                                  ),
-                                                ]
-                                              ),
-                                            ]),
-                                          ]
-                                        )
-                                      }),
-                                      0
-                                    ),
-                                  ]
-                                ),
-                              ]
-                            ),
-                          ]
-                        ),
-                      ]),
-                    ]),
-                  ]
-                ),
-                _vm._v(" "),
-                _vm._m(1),
-                _vm._v(" "),
-                _vm._m(2),
-                _vm._v(" "),
-                _vm._m(3),
-                _vm._v(" "),
-                _vm._m(4),
-                _vm._v(" "),
-                _vm._m(5),
-              ]),
-            ]),
-          ]
-        ),
-        _vm._v(" "),
-        _c("div", { staticClass: "header__actions" }, [
-          _vm._m(6),
-          _vm._v(" "),
-          _c(
-            "div",
-            { staticClass: "header-actions__button" },
-            [
-              _c(
-                "el-popover",
-                {
-                  attrs: {
-                    placement: "bottom-end",
-                    trigger: "hover",
-                    width: "430",
-                  },
-                },
-                [
-                  _c("mini-cart"),
-                  _vm._v(" "),
-                  _c(
-                    "el-badge",
-                    {
-                      staticClass: "item",
-                      attrs: {
-                        slot: "reference",
-                        value: _vm.$store.getters.shoppingCart.cart.length,
-                      },
-                      slot: "reference",
-                    },
-                    [
-                      _c("i", {
-                        staticClass: "el-icon-sell",
-                        staticStyle: { "font-size": "25px" },
-                      }),
-                    ]
-                  ),
-                ],
-                1
-              ),
-            ],
-            1
-          ),
-        ]),
-      ]),
-    ]),
-  ])
-}
-var staticRenderFns = [
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      {
-        staticClass: "mobile--visible tablet--visible",
-        staticStyle: { display: "none" },
-      },
-      [
-        _c(
-          "div",
-          {
-            staticClass: "header-search-mobile",
-            attrs: { "rel-script": "header-search-content" },
-          },
-          [
-            _c("form", { attrs: { action: "/collections", method: "GET" } }, [
-              _c("div", { staticClass: "header-search__wrapper" }, [
-                _c("label", { staticClass: "header-search__field" }, [
-                  _c("input", {
-                    staticClass: "header-search__control one-whole",
-                    attrs: {
-                      type: "text",
-                      name: "keyword",
-                      "rel-script": "spotlight-search-control",
-                      placeholder: "Tìm kiếm sản phẩm...",
-                      autocomplete: "off",
-                    },
-                  }),
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "header-search__filter" }, [
-                  _c("button", { staticClass: "header-search__submit" }, [
-                    _c("img", {
-                      attrs: {
-                        src: "https://www.coolmate.me/images/header/icon-search.svg",
-                        alt: "Icon Search",
-                      },
-                    }),
-                  ]),
-                ]),
-                _vm._v(" "),
-                _c("a", {
-                  staticClass: "header-search__close",
-                  attrs: { href: "#", "rel-script": "spotlight-search-close" },
-                }),
-              ]),
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "spotlight-search" }, [
-              _c(
-                "div",
-                {
-                  staticClass: "spotlight-search__wrapper",
-                  attrs: { "rel-script": "spotlight-search" },
-                },
-                [
-                  _c("img", {
-                    staticClass: "loading",
-                    attrs: {
-                      src: "https://www.coolmate.me/images/icons/loading.svg",
-                    },
-                  }),
-                ]
-              ),
-            ]),
-          ]
-        ),
-        _vm._v(" "),
-        _c("div", { staticClass: "nav-tab" }, [
-          _c("div", { staticClass: "nav-tab__head" }, [
-            _c(
-              "a",
-              {
-                staticClass: "nav-tab__title is-current",
-                attrs: { href: "#san-pham", "rel-script": "nav-tab" },
-              },
-              [
-                _vm._v(
-                  "\n                                    Thời trang\n                                "
-                ),
-              ]
-            ),
-          ]),
-          _vm._v(" "),
-          _c(
-            "div",
-            {
-              staticClass: "nav-tab__content",
-              attrs: { "data-nav-tab": "#san-pham" },
-            },
-            [
-              _c(
-                "div",
-                {
-                  staticClass: "nav-tab__label",
-                  staticStyle: {
-                    "flex-flow": "column",
-                    "align-items": "flex-start",
-                    "padding-bottom": "10px",
-                  },
-                },
-                [
-                  _c(
-                    "a",
-                    { attrs: { href: "/collections?itm_source=navbar" } },
-                    [_c("b", [_vm._v("Tất cả sản phẩm")])]
-                  ),
-                ]
-              ),
-              _vm._v(" "),
-              _c("ul", { staticClass: "nav-tab__menu" }, [
-                _c("li", { staticClass: "nav__item" }, [
-                  _c(
-                    "a",
-                    {
-                      attrs: {
-                        href: "/collection/care-and-share?itm_source=navbar",
-                      },
-                    },
-                    [_c("b", [_vm._v("Care & Share")])]
-                  ),
-                ]),
-                _vm._v(" "),
-                _c(
-                  "li",
-                  {
-                    staticClass: "nav__item nav__item--has-child",
-                    attrs: { "rel-script": "mobile-menu-toggle" },
-                  },
-                  [
-                    _c("a", { attrs: { href: "#" } }, [
-                      _vm._v(
-                        "\n                                            Áo nam\n                                        "
-                      ),
-                    ]),
-                    _vm._v(" "),
-                    _c(
-                      "ul",
-                      {
-                        staticClass: "nav-child-menu",
-                        staticStyle: { display: "none", "margin-top": "10px" },
-                      },
-                      [
-                        _c("li", [
-                          _c(
-                            "a",
-                            {
-                              attrs: {
-                                href: "/collection/ao-nam1?itm_source=navbar",
-                              },
-                            },
-                            [_c("b", [_vm._v("Áo nam")])]
-                          ),
-                        ]),
-                        _vm._v(" "),
-                        _c("li", [
-                          _c(
-                            "a",
-                            {
-                              attrs: {
-                                href: "/collection/ao-nam-dai-tay?itm_source=navbar",
-                              },
-                            },
-                            [
-                              _vm._v(
-                                "\n                                                    Áo dài tay\n                                                "
-                              ),
-                            ]
-                          ),
-                        ]),
-                        _vm._v(" "),
-                        _c("li", [
-                          _c(
-                            "a",
-                            {
-                              attrs: {
-                                href: "/collection/ao-thun-nam?itm_source=navbar",
-                              },
-                            },
-                            [
-                              _vm._v(
-                                "\n                                                    Áo T-shirt\n                                                "
-                              ),
-                            ]
-                          ),
-                        ]),
-                        _vm._v(" "),
-                        _c("li", [
-                          _c(
-                            "a",
-                            {
-                              attrs: {
-                                href: "/collection/ao-polo-nam?itm_source=navbar",
-                              },
-                            },
-                            [
-                              _vm._v(
-                                "\n                                                    Áo Polo\n                                                "
-                              ),
-                            ]
-                          ),
-                        ]),
-                        _vm._v(" "),
-                        _c("li", [
-                          _c(
-                            "a",
-                            {
-                              attrs: {
-                                href: "/collection/ao-so-mi-nam?itm_source=navbar",
-                              },
-                            },
-                            [
-                              _vm._v(
-                                "\n                                                    Áo Sơ Mi\n                                                "
-                              ),
-                            ]
-                          ),
-                        ]),
-                        _vm._v(" "),
-                        _c("li", [
-                          _c(
-                            "a",
-                            {
-                              attrs: {
-                                href: "/collection/ao-the-thao-nam?itm_source=navbar",
-                              },
-                            },
-                            [
-                              _vm._v(
-                                "\n                                                    Áo Thể thao\n                                                "
-                              ),
-                            ]
-                          ),
-                        ]),
-                        _vm._v(" "),
-                        _c("li", [
-                          _c(
-                            "a",
-                            {
-                              attrs: {
-                                href: "/collection/ao-khoac?itm_source=navbar",
-                              },
-                            },
-                            [
-                              _vm._v(
-                                "\n                                                    Áo khoác\n                                                "
-                              ),
-                            ]
-                          ),
-                        ]),
-                      ]
-                    ),
-                  ]
-                ),
-                _vm._v(" "),
-                _c(
-                  "li",
-                  {
-                    staticClass: "nav__item nav__item--has-child",
-                    attrs: { "rel-script": "mobile-menu-toggle" },
-                  },
-                  [
-                    _c("a", { attrs: { href: "#" } }, [
-                      _vm._v(
-                        "\n                                            Quần nam\n                                        "
-                      ),
-                    ]),
-                    _vm._v(" "),
-                    _c(
-                      "ul",
-                      {
-                        staticClass: "nav-child-menu",
-                        staticStyle: { display: "none", "margin-top": "10px" },
-                      },
-                      [
-                        _c("li", [
-                          _c(
-                            "a",
-                            {
-                              attrs: {
-                                href: "/collection/quan-nam?itm_source=navbar",
-                              },
-                            },
-                            [_c("b", [_vm._v("Quần nam")])]
-                          ),
-                        ]),
-                        _vm._v(" "),
-                        _c("li", [
-                          _c(
-                            "a",
-                            {
-                              attrs: {
-                                href: "/collection/quan-lot-nam?itm_source=navbar",
-                              },
-                            },
-                            [
-                              _vm._v(
-                                "\n                                                    Quần Lót Nam\n                                                "
-                              ),
-                            ]
-                          ),
-                        ]),
-                        _vm._v(" "),
-                        _c("li", [
-                          _c(
-                            "a",
-                            {
-                              attrs: {
-                                href: "/collection/quan-short-nam?itm_source=navbar",
-                              },
-                            },
-                            [
-                              _vm._v(
-                                "\n                                                    Quần Shorts\n                                                "
-                              ),
-                            ]
-                          ),
-                        ]),
-                        _vm._v(" "),
-                        _c("li", [
-                          _c(
-                            "a",
-                            {
-                              attrs: {
-                                href: "/collection/quan-jeans-nam?itm_source=navbar",
-                              },
-                            },
-                            [
-                              _vm._v(
-                                "\n                                                    Quần Jeans\n                                                "
-                              ),
-                            ]
-                          ),
-                        ]),
-                        _vm._v(" "),
-                        _c("li", [
-                          _c(
-                            "a",
-                            {
-                              attrs: {
-                                href: "/collection/quan-dai-nam?itm_source=navbar",
-                              },
-                            },
-                            [
-                              _vm._v(
-                                "\n                                                    Quần Dài\n                                                "
-                              ),
-                            ]
-                          ),
-                        ]),
-                      ]
-                    ),
-                  ]
-                ),
-                _vm._v(" "),
-                _c(
-                  "li",
-                  {
-                    staticClass: "nav__item nav__item--has-child",
-                    attrs: { "rel-script": "mobile-menu-toggle" },
-                  },
-                  [
-                    _c("a", { attrs: { href: "#" } }, [
-                      _vm._v(
-                        "\n                                            Phụ kiện\n                                        "
-                      ),
-                    ]),
-                    _vm._v(" "),
-                    _c(
-                      "ul",
-                      {
-                        staticClass: "nav-child-menu",
-                        staticStyle: { display: "none", "margin-top": "10px" },
-                      },
-                      [
-                        _c("li", [
-                          _c(
-                            "a",
-                            {
-                              attrs: {
-                                href: "/collection/mu-luoi-trai?itm_source=navbar",
-                              },
-                            },
-                            [
-                              _vm._v(
-                                "\n                                                    Mũ (Nón)\n                                                "
-                              ),
-                            ]
-                          ),
-                        ]),
-                        _vm._v(" "),
-                        _c("li", [
-                          _c(
-                            "a",
-                            {
-                              attrs: {
-                                href: "/collection/tat-nam?itm_source=navbar",
-                              },
-                            },
-                            [
-                              _vm._v(
-                                "\n                                                    Tất (Vớ)\n                                                "
-                              ),
-                            ]
-                          ),
-                        ]),
-                      ]
-                    ),
-                  ]
-                ),
-                _vm._v(" "),
-                _c(
-                  "li",
-                  {
-                    staticClass: "nav__item nav__item--has-child",
-                    attrs: { "rel-script": "mobile-menu-toggle" },
-                  },
-                  [
-                    _c("a", { attrs: { href: "#" } }, [
-                      _vm._v(
-                        "\n                                            Bộ sưu tập\n                                        "
-                      ),
-                    ]),
-                    _vm._v(" "),
-                    _c(
-                      "ul",
-                      {
-                        staticClass: "nav-child-menu",
-                        staticStyle: { display: "none", "margin-top": "10px" },
-                      },
-                      [
-                        _c("li", [
-                          _c(
-                            "a",
-                            {
-                              attrs: {
-                                href: "/collection/vu-tru-ao-thun-marvel?itm_source=navbar",
-                              },
-                            },
-                            [
-                              _c("b", [_vm._v("Vũ trụ áo Marvel ")]),
-                              _vm._v(" "),
-                              _c("span", { staticClass: "nav-tab__sub" }, [
-                                _vm._v(
-                                  "Bước vào thế giới siêu anh\n                                                        hùng"
-                                ),
-                              ]),
-                            ]
-                          ),
-                        ]),
-                        _vm._v(" "),
-                        _c("li", { staticClass: "nav-tab__item" }, [
-                          _c(
-                            "a",
-                            {
-                              attrs: {
-                                href: "/page/cleanvn?itm_source=navbar",
-                              },
-                            },
-                            [
-                              _c("b", [_vm._v("Clean Vietnam")]),
-                              _vm._v(" "),
-                              _c("span", { staticClass: "nav-tab__sub" }, [
-                                _vm._v(
-                                  "\n                                                        Sự kết hợp giữa Coolmate & Vietmax\n                                                    "
-                                ),
-                              ]),
-                            ]
-                          ),
-                        ]),
-                        _vm._v(" "),
-                        _c("li", { staticClass: "nav-tab__item" }, [
-                          _c(
-                            "a",
-                            {
-                              attrs: {
-                                href: "/collection/coolmate-basics?itm_source=navbar",
-                              },
-                            },
-                            [
-                              _c("b", [_vm._v("Coolmate Basics")]),
-                              _vm._v(" "),
-                              _c("span", { staticClass: "nav-tab__sub" }, [
-                                _vm._v(
-                                  "\n                                                        Mua sắm tiết kiệm với giá tốt\n                                                    "
-                                ),
-                              ]),
-                            ]
-                          ),
-                        ]),
-                        _vm._v(" "),
-                        _c("li", [
-                          _c(
-                            "a",
-                            {
-                              attrs: {
-                                href: "/collection/san-pham-moi-ben-vung?itm_source=navbar",
-                              },
-                            },
-                            [
-                              _c("b", [_vm._v("Sản phẩm bền vững")]),
-                              _vm._v(" "),
-                              _c("span", { staticClass: "nav-tab__sub" }, [
-                                _vm._v(
-                                  "Sản phẩm thân thiện với môi\n                                                        trường"
-                                ),
-                              ]),
-                            ]
-                          ),
-                        ]),
-                      ]
-                    ),
-                  ]
-                ),
-                _vm._v(" "),
-                _c(
-                  "li",
-                  {
-                    staticClass: "nav__item nav__item--has-child",
-                    attrs: { "rel-script": "mobile-menu-toggle" },
-                  },
-                  [
-                    _c("a", { attrs: { href: "#" } }, [
-                      _vm._v(
-                        "\n                                            Nhu cầu\n                                        "
-                      ),
-                    ]),
-                    _vm._v(" "),
-                    _c(
-                      "ul",
-                      {
-                        staticClass: "nav-child-menu",
-                        staticStyle: { display: "none", "margin-top": "10px" },
-                      },
-                      [
-                        _c("li", [
-                          _c(
-                            "a",
-                            {
-                              attrs: {
-                                href: "/collection/bst-thu-dong1?itm_source=navbar",
-                              },
-                            },
-                            [
-                              _c("b", [
-                                _vm._v("Đồ thu - đông "),
-                                _c(
-                                  "span",
-                                  { staticClass: "menu-tag menu-tag--sale" },
-                                  [_vm._v("SALE")]
-                                ),
-                              ]),
-                              _vm._v(" "),
-                              _c("span", { staticClass: "nav-tab__sub" }, [
-                                _vm._v("Fall-Winter Collection"),
-                              ]),
-                            ]
-                          ),
-                        ]),
-                        _vm._v(" "),
-                        _c("li", [
-                          _c(
-                            "a",
-                            {
-                              attrs: {
-                                href: "/collection/do-mac-trong-va-mac-nha?itm_source=navbar",
-                              },
-                            },
-                            [
-                              _c("b", [_vm._v("Mặc ở nhà & Mặc trong")]),
-                              _vm._v(" "),
-                              _c("span", { staticClass: "nav-tab__sub" }, [
-                                _vm._v(
-                                  "\n                                                        Homewear & Underwear\n                                                    "
-                                ),
-                              ]),
-                            ]
-                          ),
-                        ]),
-                        _vm._v(" "),
-                        _c("li", [
-                          _c(
-                            "a",
-                            {
-                              attrs: {
-                                href: "/collection/do-casual?itm_source=navbar",
-                              },
-                            },
-                            [
-                              _c("b", [_vm._v("Mặc hằng ngày")]),
-                              _vm._v(" "),
-                              _c("span", { staticClass: "nav-tab__sub" }, [
-                                _vm._v(
-                                  "\n                                                        Casualwear\n                                                    "
-                                ),
-                              ]),
-                            ]
-                          ),
-                        ]),
-                        _vm._v(" "),
-                        _c("li", [
-                          _c(
-                            "a",
-                            {
-                              attrs: {
-                                href: "/collection/coolmate-activewear?itm_source=navbar",
-                              },
-                            },
-                            [
-                              _c("b", [_vm._v("Đồ thể thao")]),
-                              _vm._v(" "),
-                              _c("span", { staticClass: "nav-tab__sub" }, [
-                                _vm._v(
-                                  "\n                                                        Coolmate Active\n                                                    "
-                                ),
-                              ]),
-                            ]
-                          ),
-                        ]),
-                        _vm._v(" "),
-                        _c("li", [
-                          _c(
-                            "a",
-                            {
-                              attrs: {
-                                href: "/collection/phu-kien-nam?itm_source=navbar",
-                              },
-                            },
-                            [
-                              _c("b", [_vm._v("Phụ kiện")]),
-                              _vm._v(" "),
-                              _c("span", { staticClass: "nav-tab__sub" }, [
-                                _vm._v(
-                                  "\n                                                        Accessories\n                                                    "
-                                ),
-                              ]),
-                            ]
-                          ),
-                        ]),
-                      ]
-                    ),
-                  ]
-                ),
-                _vm._v(" "),
-                _c(
-                  "li",
-                  {
-                    staticClass: "nav__item nav__item--has-child",
-                    attrs: { "rel-script": "mobile-menu-toggle" },
-                  },
-                  [
-                    _c("a", { attrs: { href: "#" } }, [
-                      _vm._v(
-                        "\n                                            Công nghệ\n                                        "
-                      ),
-                    ]),
-                    _vm._v(" "),
-                    _c(
-                      "ul",
-                      {
-                        staticClass: "nav-child-menu",
-                        staticStyle: { display: "none", "margin-top": "10px" },
-                      },
-                      [
-                        _c("li", [
-                          _c(
-                            "a",
-                            {
-                              attrs: {
-                                href: "/lp/dong-san-pham-excool?itm_source=navbar",
-                              },
-                            },
-                            [
-                              _c("b", [_vm._v("Excool")]),
-                              _vm._v(" "),
-                              _c("span", { staticClass: "nav-tab__sub" }, [
-                                _vm._v(
-                                  "\n                                                        Công nghệ làm mát tối đa\n                                                    "
-                                ),
-                              ]),
-                            ]
-                          ),
-                        ]),
-                        _vm._v(" "),
-                        _c("li", [
-                          _c(
-                            "a",
-                            {
-                              attrs: {
-                                href: "/page/cleandye#ldp-about?itm_source=navbar",
-                              },
-                            },
-                            [
-                              _c("b", [_vm._v("Cleandye")]),
-                              _vm._v(" "),
-                              _c("span", { staticClass: "nav-tab__sub" }, [
-                                _vm._v(
-                                  "10%\n                                                        Nhuộm không dùng nước\n                                                    "
-                                ),
-                              ]),
-                            ]
-                          ),
-                        ]),
-                        _vm._v(" "),
-                        _c("li", [
-                          _c(
-                            "a",
-                            {
-                              attrs: {
-                                href: "/lp/dong-san-pham-heiq-viroblock?itm_source=navbar",
-                              },
-                            },
-                            [
-                              _c("b", [_vm._v("HeiQ Viroblock")]),
-                              _vm._v(" "),
-                              _c("span", { staticClass: "nav-tab__sub" }, [
-                                _vm._v(
-                                  "\n                                                        Diệt 99.99% virus SARS-CoV2\n                                                    "
-                                ),
-                              ]),
-                            ]
-                          ),
-                        ]),
-                        _vm._v(" "),
-                        _c("li", [
-                          _c(
-                            "a",
-                            {
-                              attrs: {
-                                href: "/collection/san-pham-anti-smell?itm_source=navbar",
-                              },
-                            },
-                            [
-                              _c("b", [_vm._v("Anti-Smell")]),
-                              _vm._v(" "),
-                              _c("span", { staticClass: "nav-tab__sub" }, [
-                                _vm._v(
-                                  "Công nghệ khử mùi từ Nhật\n                                                        Bản"
-                                ),
-                              ]),
-                            ]
-                          ),
-                        ]),
-                      ]
-                    ),
-                  ]
-                ),
-              ]),
-            ]
-          ),
-          _vm._v(" "),
-          _c(
-            "div",
-            {
-              staticClass: "nav-tab__content",
-              staticStyle: { display: "none" },
-              attrs: { "data-nav-tab": "#bo-suu-tap" },
-            },
-            [
-              _c("ul", { staticClass: "nav-tab__menu" }, [
-                _c("li", [
-                  _c("a", { attrs: { href: "/84rising?itm_source=navbar" } }, [
-                    _c("b", [_vm._v("Tất cả")]),
-                  ]),
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c(
-                    "a",
-                    { attrs: { href: "/84rising?itm_source=navbar#T-shirt" } },
-                    [_c("b", [_vm._v("Áo Oversize")]), _c("br")]
-                  ),
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c(
-                    "a",
-                    {
-                      attrs: { href: "/84rising?itm_source=navbar#Sweatshirt" },
-                    },
-                    [_c("b", [_vm._v("Áo Nỉ")])]
-                  ),
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c(
-                    "a",
-                    { attrs: { href: "/84rising?itm_source=navbar#hoodie" } },
-                    [_c("b", [_vm._v("Áo Hoodie")])]
-                  ),
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c(
-                    "a",
-                    {
-                      attrs: {
-                        href: "/84rising?itm_source=navbar#short-pants",
-                      },
-                    },
-                    [_c("b", [_vm._v("Quần Short")])]
-                  ),
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c(
-                    "a",
-                    { attrs: { href: "/84rising?itm_source=navbar#Beanie" } },
-                    [_c("b", [_vm._v("Mũ len Beanie Short")])]
-                  ),
-                ]),
-              ]),
-            ]
-          ),
-          _vm._v(" "),
-          _c(
-            "div",
-            {
-              staticClass: "nav-tab__content",
-              staticStyle: { display: "none" },
-              attrs: { "data-nav-tab": "#nhu-cau" },
-            },
-            [
-              _c("ul", { staticClass: "nav-tab__menu" }, [
-                _c("li", [
-                  _c("a", { attrs: { href: "/84rising?itm_source=navbar" } }, [
-                    _c("b", [_vm._v("Tất cả")]),
-                  ]),
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c(
-                    "a",
-                    { attrs: { href: "/84rising?itm_source=navbar#T-shirt" } },
-                    [_c("b", [_vm._v("Áo Oversize")]), _c("br")]
-                  ),
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c(
-                    "a",
-                    {
-                      attrs: { href: "/84rising?itm_source=navbar#Sweatshirt" },
-                    },
-                    [_c("b", [_vm._v("Áo Nỉ")])]
-                  ),
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c(
-                    "a",
-                    { attrs: { href: "/84rising?itm_source=navbar#hoodie" } },
-                    [_c("b", [_vm._v("Áo Hoodie")])]
-                  ),
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c(
-                    "a",
-                    {
-                      attrs: {
-                        href: "/84rising?itm_source=navbar#short-pants",
-                      },
-                    },
-                    [_c("b", [_vm._v("Quần Short")])]
-                  ),
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c(
-                    "a",
-                    { attrs: { href: "/84rising?itm_source=navbar#Beanie" } },
-                    [_c("b", [_vm._v("Mũ len Beanie Short")])]
-                  ),
-                ]),
-              ]),
-            ]
-          ),
-          _vm._v(" "),
-          _c(
-            "div",
-            {
-              staticClass: "nav-tab__content",
-              staticStyle: { display: "none" },
-              attrs: { "data-nav-tab": "#cong-nghe" },
-            },
-            [
-              _c("ul", { staticClass: "nav-tab__menu" }, [
-                _c("li", { staticClass: "nav-tab__item" }, [
-                  _c(
-                    "a",
-                    {
-                      attrs: {
-                        href: "/lp/dong-san-pham-excool?itm_source=navbar",
-                      },
-                    },
-                    [
-                      _c("b", [_vm._v("Excool")]),
-                      _vm._v(" "),
-                      _c("span", { staticClass: "nav-tab__sub" }, [
-                        _vm._v(
-                          "\n                                                Công nghệ làm mát tối đa\n                                            "
-                        ),
-                      ]),
-                    ]
-                  ),
-                ]),
-                _vm._v(" "),
-                _c("li", { staticClass: "nav-tab__item" }, [
-                  _c(
-                    "a",
-                    {
-                      attrs: {
-                        href: "/page/cleandye#ldp-about?itm_source=navbar",
-                      },
-                    },
-                    [
-                      _c("b", [_vm._v("Cleandye")]),
-                      _vm._v(" "),
-                      _c("span", { staticClass: "nav-tab__sub" }, [
-                        _vm._v(
-                          "10%\n                                                Nhuộm không dùng nước\n                                            "
-                        ),
-                      ]),
-                    ]
-                  ),
-                ]),
-                _vm._v(" "),
-                _c("li", { staticClass: "nav-tab__item" }, [
-                  _c(
-                    "a",
-                    {
-                      attrs: {
-                        href: "/lp/dong-san-pham-heiq-viroblock?itm_source=navbar",
-                      },
-                    },
-                    [
-                      _c("b", [_vm._v("HeiQ Viroblock")]),
-                      _vm._v(" "),
-                      _c("span", { staticClass: "nav-tab__sub" }, [
-                        _vm._v(
-                          "\n                                                Diệt 99.99% virus SARS-CoV2\n                                            "
-                        ),
-                      ]),
-                    ]
-                  ),
-                ]),
-                _vm._v(" "),
-                _c("li", { staticClass: "nav-tab__item" }, [
-                  _c(
-                    "a",
-                    {
-                      attrs: {
-                        href: "/collection/san-pham-anti-smell?itm_source=navbar",
-                      },
-                    },
-                    [
-                      _c("b", [_vm._v("Anti-Smell")]),
-                      _vm._v(" "),
-                      _c("span", { staticClass: "nav-tab__sub" }, [
-                        _vm._v("Công nghệ khử mùi từ Nhật Bản"),
-                      ]),
-                    ]
-                  ),
-                ]),
-              ]),
-            ]
-          ),
-        ]),
-        _vm._v(" "),
-        _c("ul", { staticClass: "nav pdt--20" }, [
-          _c("li", { staticClass: "nav__item" }, [
-            _c(
-              "a",
-              {
-                attrs: {
-                  href: "/lp/coolxprint-mo-hinh-dat-san-xuat-theo-yeu-cau?itm_source=ab_xprint_x",
-                },
-              },
-              [
-                _vm._v(
-                  "\n                                    CoolXPrint - Thiết kế theo yêu cầu\n                                "
-                ),
-              ]
-            ),
-          ]),
-          _vm._v(" "),
-          _c("li", { staticClass: "nav__item" }, [
-            _c("a", { attrs: { href: "/size-chart?itm_source=navbar" } }, [
-              _vm._v(
-                "\n                                    Chọn Size\n                                "
-              ),
-            ]),
-          ]),
-          _vm._v(" "),
-          _c(
-            "li",
-            {
-              staticClass: "nav__item nav__item--has-child",
-              attrs: { "rel-script": "mobile-menu-toggle" },
-            },
-            [
-              _c("a", { attrs: { href: "#" } }, [
-                _vm._v(
-                  "\n                                    Về Coolmate\n                                "
-                ),
-              ]),
-              _vm._v(" "),
-              _c(
-                "ul",
-                {
-                  staticClass: "nav-child-menu",
-                  staticStyle: { display: "none", "margin-top": "10px" },
-                },
-                [
-                  _c("li", [
-                    _c(
-                      "a",
-                      { attrs: { href: "/lp/coolmate-101?itm_source=navbar" } },
-                      [
-                        _vm._v(
-                          "\n                                            Coolmate 101 - Gia nhập coolmate\n                                        "
-                        ),
-                      ]
-                    ),
-                  ]),
-                  _vm._v(" "),
-                  _c("li", [
-                    _c(
-                      "a",
-                      {
-                        attrs: {
-                          href: "/page/11-dich-vu-tai-coolmate-co-the-ban-chua-biet?itm_source=navbar",
-                        },
-                      },
-                      [
-                        _vm._v(
-                          "\n                                            Dịch vụ 100% hài lòng\n                                        "
-                        ),
-                      ]
-                    ),
-                  ]),
-                  _vm._v(" "),
-                  _c("li", [
-                    _c(
-                      "a",
-                      {
-                        attrs: {
-                          href: "/page/coolclub-chuong-trinh-khach-hang-than-thiet-cua-coolmate?itm_source=navbar",
-                        },
-                      },
-                      [
-                        _vm._v(
-                          "\n                                            CoolClub - Khách hàng thân thiết\n                                        "
-                        ),
-                      ]
-                    ),
-                  ]),
-                  _vm._v(" "),
-                  _c("li", [
-                    _c(
-                      "a",
-                      {
-                        attrs: {
-                          href: "/page/coolmate-story?itm_source=navbar",
-                        },
-                      },
-                      [
-                        _vm._v(
-                          "\n                                            Câu chuyện Coolmate\n                                        "
-                        ),
-                      ]
-                    ),
-                  ]),
-                ]
-              ),
-            ]
-          ),
-          _vm._v(" "),
-          _c(
-            "li",
-            { staticClass: "nav__item", attrs: { "rel-script": "mega-menu" } },
-            [
-              _c("a", { attrs: { href: "/blog?itm_source=navbar" } }, [
-                _vm._v(
-                  "\n                                    Blog\n                                "
-                ),
-              ]),
-            ]
-          ),
-        ]),
-      ]
-    )
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "li",
-      {
-        staticClass: "nav__item has-child",
-        attrs: { "rel-script": "mega-menu" },
-      },
-      [
-        _c("a", { attrs: { href: "/84rising?itm_source=navbar" } }, [
-          _vm._v(
-            "\n                                    Quần áo nam\n                                "
-          ),
-        ]),
-      ]
-    )
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "li",
-      {
-        staticClass: "nav__item has-child",
-        attrs: { "rel-script": "mega-menu" },
-      },
-      [
-        _c(
-          "a",
-          {
-            staticStyle: { position: "relative" },
-            attrs: { href: "/cm24?itm_source=navbar" },
-          },
-          [
-            _vm._v(
-              "\n                                    Sản phẩm bán chạy\n                                    "
-            ),
-            _c("span", {
-              staticStyle: {
-                width: "5px",
-                height: "5px",
-                "border-radius": "100vmax",
-                "background-color": "#2F5ACF",
-                position: "absolute",
-                top: "0",
-                left: "100%",
-                "margin-left": "2px",
-              },
-            }),
-          ]
-        ),
-      ]
-    )
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("li", { staticClass: "nav__item" }, [
-      _c(
-        "a",
-        {
-          attrs: {
-            href: "/lp/coolxprint-mo-hinh-dat-san-xuat-theo-yeu-cau?itm_source=navbar",
-          },
-        },
-        [
-          _vm._v(
-            "\n                                    Giới thiệu\n                                "
-          ),
-        ]
-      ),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("li", { staticClass: "nav__item" }, [
-      _c("a", { attrs: { href: "/blog?itm_source=navbar" } }, [
-        _vm._v(
-          "\n                                    Blog\n                                "
-        ),
-      ]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "li",
-      {
-        staticClass: "nav__item has-child",
-        attrs: { "rel-script": "mega-menu" },
-      },
-      [
-        _c(
-          "a",
-          {
-            attrs: {
-              href: "/page/coolmate-story?itm_source=navbar",
-              "rel-script": "mega-menu-open",
-            },
-          },
-          [
-            _vm._v(
-              "\n                                    Liên hệ\n                                "
-            ),
-          ]
-        ),
-        _vm._v(" "),
-        _c("div", { staticClass: "mega-menu" }, [
-          _c(
-            "a",
-            {
-              staticClass: "mega-menu__close",
-              attrs: { href: "#", "rel-script": "mega-menu-close" },
-            },
-            [_vm._v("Về\n                                        Coolmate")]
-          ),
-          _vm._v(" "),
-          _c("div", { staticClass: "mega-menu__wrapper" }, [
-            _c(
-              "div",
-              {
-                staticClass: "mega-menu__inner",
-                staticStyle: { "max-width": "1200px" },
-              },
-              [
-                _c(
-                  "div",
-                  {
-                    staticClass: "mega-menu__item",
-                    attrs: { "rel-script": "mega-menu-item" },
-                  },
-                  [
-                    _c(
-                      "a",
-                      {
-                        staticClass: "mega-menu__titles",
-                        attrs: { href: "#", "rel-script": "mega-menu-toggle" },
-                      },
-                      [_vm._v("Coolmate")]
-                    ),
-                    _vm._v(" "),
-                    _c("div", { attrs: { "rel-script": "mega-menu-active" } }, [
-                      _c("div", { staticClass: "grid" }, [
-                        _c(
-                          "a",
-                          {
-                            staticClass:
-                              "grid__column three-twelfths mobile--one-half",
-                            attrs: {
-                              href: "/lp/coolmate-101?itm_source=navbar",
-                            },
-                          },
-                          [
-                            _c(
-                              "div",
-                              {
-                                staticClass: "mega-menu__thumbnail",
-                                staticStyle: {
-                                  "border-radius": "1.5em",
-                                  overflow: "hidden",
-                                },
-                              },
-                              [
-                                _c("img", {
-                                  attrs: {
-                                    src: "https://www.coolmate.me/images/placeholder-image.png",
-                                    "data-src":
-                                      "https://mcdn.coolmate.me/image/August2022/mceclip0_97.jpg",
-                                    alt: "Coolmate 101",
-                                  },
-                                }),
-                              ]
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "div",
-                              {
-                                staticStyle: {
-                                  "line-height": "1.25em",
-                                  "margin-top": "10px",
-                                },
-                              },
-                              [
-                                _c(
-                                  "span",
-                                  { staticStyle: { "font-size": "13px" } },
-                                  [
-                                    _vm._v(
-                                      "Coolmate 101\n                                                                "
-                                    ),
-                                  ]
-                                ),
-                                _c("br"),
-                                _vm._v(" "),
-                                _c(
-                                  "span",
-                                  {
-                                    staticStyle: {
-                                      "font-size": "11px",
-                                      "font-weight": "300",
-                                    },
-                                  },
-                                  [
-                                    _vm._v(
-                                      "Tất\n                                                                    cả những gì bạn muốn biết về\n                                                                    Coolmate!"
-                                    ),
-                                    _c("br", { staticClass: "mobile--hidden" }),
-                                    _vm._v(
-                                      " và gia\n                                                                    nhập Coolmate"
-                                    ),
-                                  ]
-                                ),
-                              ]
-                            ),
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "a",
-                          {
-                            staticClass:
-                              "grid__column three-twelfths mobile--one-half",
-                            attrs: {
-                              href: "/page/11-dich-vu-tai-coolmate-co-the-ban-chua-biet?itm_source=navbar",
-                            },
-                          },
-                          [
-                            _c(
-                              "div",
-                              {
-                                staticClass: "mega-menu__thumbnail",
-                                staticStyle: {
-                                  "border-radius": "1.5em",
-                                  overflow: "hidden",
-                                },
-                              },
-                              [
-                                _c("img", {
-                                  attrs: {
-                                    src: "https://www.coolmate.me/images/placeholder-image.png",
-                                    "data-src":
-                                      "https://mcdn.coolmate.me/image/August2022/mceclip1_92.jpg",
-                                    alt: "Dịch vụ 100% hài lòng",
-                                  },
-                                }),
-                              ]
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "div",
-                              {
-                                staticStyle: {
-                                  "line-height": "1.25em",
-                                  "margin-top": "10px",
-                                },
-                              },
-                              [
-                                _c(
-                                  "span",
-                                  { staticStyle: { "font-size": "13px" } },
-                                  [
-                                    _vm._v(
-                                      "Dịch vụ 100% hài\n                                                                    lòng"
-                                    ),
-                                  ]
-                                ),
-                                _c("br"),
-                                _vm._v(" "),
-                                _c(
-                                  "span",
-                                  {
-                                    staticStyle: {
-                                      "font-size": "11px",
-                                      "font-weight": "300",
-                                    },
-                                  },
-                                  [
-                                    _vm._v(
-                                      "Bật\n                                                                    mí 11 dịch vụ Coolmate cam\n                                                                    kết với khách hàng"
-                                    ),
-                                  ]
-                                ),
-                              ]
-                            ),
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "a",
-                          {
-                            staticClass:
-                              "grid__column three-twelfths mobile--one-half",
-                            attrs: {
-                              href: "/page/coolclub-chuong-trinh-khach-hang-than-thiet-cua-coolmate?itm_source=navbar",
-                            },
-                          },
-                          [
-                            _c(
-                              "div",
-                              {
-                                staticClass: "mega-menu__thumbnail",
-                                staticStyle: {
-                                  "border-radius": "1.5em",
-                                  overflow: "hidden",
-                                },
-                              },
-                              [
-                                _c("img", {
-                                  attrs: {
-                                    src: "https://www.coolmate.me/images/placeholder-image.png",
-                                    "data-src":
-                                      "https://mcdn.coolmate.me/image/August2022/mceclip2_100.jpg",
-                                    alt: "Coolclub - Khách hàng thân thiết",
-                                  },
-                                }),
-                              ]
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "div",
-                              {
-                                staticStyle: {
-                                  "line-height": "1.25em",
-                                  "margin-top": "10px",
-                                },
-                              },
-                              [
-                                _c(
-                                  "span",
-                                  { staticStyle: { "font-size": "13px" } },
-                                  [
-                                    _vm._v(
-                                      "Coolclub - Khách\n                                                                    hàng thân thiết"
-                                    ),
-                                  ]
-                                ),
-                                _c("br"),
-                                _vm._v(" "),
-                                _c(
-                                  "span",
-                                  {
-                                    staticStyle: {
-                                      "font-size": "11px",
-                                      "font-weight": "300",
-                                    },
-                                  },
-                                  [
-                                    _vm._v(
-                                      "Những\n                                                                    ưu đãi hấp dẫn dành cho\n                                                                    khách hàng thân thiết"
-                                    ),
-                                  ]
-                                ),
-                              ]
-                            ),
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "a",
-                          {
-                            staticClass:
-                              "grid__column three-twelfths mobile--one-half",
-                            attrs: {
-                              href: "/page/coolmate-story?itm_source=navbar",
-                            },
-                          },
-                          [
-                            _c(
-                              "div",
-                              {
-                                staticClass: "mega-menu__thumbnail",
-                                staticStyle: {
-                                  "border-radius": "1.5em",
-                                  overflow: "hidden",
-                                },
-                              },
-                              [
-                                _c("img", {
-                                  attrs: {
-                                    src: "https://www.coolmate.me/images/placeholder-image.png",
-                                    "data-src":
-                                      "https://mcdn.coolmate.me/image/August2022/mceclip3_34.jpg",
-                                    alt: "Câu chuyện",
-                                  },
-                                }),
-                              ]
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "div",
-                              {
-                                staticStyle: {
-                                  "line-height": "1.25em",
-                                  "margin-top": "10px",
-                                },
-                              },
-                              [
-                                _c(
-                                  "span",
-                                  { staticStyle: { "font-size": "13px" } },
-                                  [
-                                    _vm._v(
-                                      "Câu\n                                                                    chuyện"
-                                    ),
-                                  ]
-                                ),
-                                _c("br"),
-                                _vm._v(" "),
-                                _c(
-                                  "span",
-                                  {
-                                    staticStyle: {
-                                      "font-size": "11px",
-                                      "font-weight": "300",
-                                    },
-                                  },
-                                  [
-                                    _vm._v(
-                                      "Về\n                                                                    Startup với mô hình Online\n                                                                    D2C"
-                                    ),
-                                  ]
-                                ),
-                              ]
-                            ),
-                          ]
-                        ),
-                      ]),
-                    ]),
-                  ]
-                ),
-              ]
-            ),
-          ]),
-        ]),
-      ]
-    )
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "header-actions__button mobile--hidden" }, [
-      _c("a", { attrs: { href: "#", "rel-script": "header-search" } }, [
-        _c("img", {
-          attrs: {
-            src: "https://www.coolmate.me/images/header/icon-search.svg",
-            alt: "Icon Search",
-          },
-        }),
-      ]),
-    ])
-  },
-]
-render._withStripped = true
-
-
-
-/***/ }),
-
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/frontend/components/layouts/MiniCart.vue?vue&type=template&id=347c2552&scoped=true&":
-/*!*************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/frontend/components/layouts/MiniCart.vue?vue&type=template&id=347c2552&scoped=true& ***!
-  \*************************************************************************************************************************************************************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "render": () => (/* binding */ render),
-/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
-/* harmony export */ });
-var render = function () {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "mini-cart" }, [
-    _c(
-      "div",
-      { staticClass: "mini-cart__wrapper" },
-      [
-        _c(
-          "div",
-          { staticClass: "mini-cart__header" },
-          [
-            _c("span", [
-              _vm._v(
-                "\n                                        " +
-                  _vm._s(_vm.$store.getters.shoppingCart.cart.length) +
-                  " sản phẩm\n                                    "
-              ),
-            ]),
-            _vm._v(" "),
-            _c("router-link", { attrs: { to: { name: "shopping-cart" } } }, [
-              _vm._v("\n            Xem tất cả\n        "),
-            ]),
-          ],
-          1
-        ),
-        _vm._v(" "),
-        _vm._l(_vm.$store.getters.shoppingCart.cart, function (item) {
-          return _c(
-            "div",
-            {
-              staticClass: "mini-cart__item",
-              staticStyle: { "margin-bottom": "5px" },
-            },
-            [
-              _c("div", { staticClass: "mini-cart__item-thumbnail" }, [
-                _c("img", {
-                  staticStyle: { width: "100px" },
-                  attrs: {
-                    src: item["images_product"][0]["path"],
-                    alt: "Áo Polo thể thao nam Recycle Active V2",
-                  },
-                }),
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "mini-cart__item-content" }, [
-                _c(
-                  "span",
-                  {
-                    staticClass: "mini-cart__remove",
-                    on: {
-                      click: function ($event) {
-                        return _vm.deleteItemCart(item.id)
-                      },
-                    },
-                  },
-                  [_vm._v("✕\n                                        ")]
-                ),
-                _vm._v(" "),
-                _c("div", { staticClass: "mini-cart__item-title" }, [
-                  _c(
-                    "a",
-                    {
-                      attrs: {
-                        href: "/product/ao-polo-the-thao-nam-recycle-active-v2",
-                        target: "_blank",
-                      },
-                    },
-                    [
-                      _vm._v(
-                        "\n                    " +
-                          _vm._s(item.name) +
-                          "\n                "
-                      ),
-                    ]
-                  ),
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "mini-cart__item-variant-info" }, [
-                  _vm._v(
-                    "\n                    " +
-                      _vm._s(item.payment.color.title) +
-                      " / " +
-                      _vm._s(item.payment.size.title) +
-                      "\n                "
-                  ),
-                ]),
-                _vm._v(" "),
-                _c("div", [
-                  _c("span", { staticClass: "mini-cart__item-price" }, [
-                    _vm._v(
-                      "\n                                                " +
-                        _vm._s(
-                          _vm._f("toThousandFilter")(
-                            item.payment.price * item.payment.total
-                          )
-                        ) +
-                        " đ\n                                            "
-                    ),
-                  ]),
-                ]),
-                _vm._v(" "),
-                _c("div", [
-                  _c("span", { staticClass: "mini-cart__item-quantity" }, [
-                    _vm._v(
-                      "\n                                                x" +
-                        _vm._s(item.payment.total) +
-                        "\n                                            "
-                    ),
-                  ]),
-                ]),
-              ]),
-            ]
-          )
-        }),
-      ],
-      2
-    ),
-  ])
-}
-var staticRenderFns = []
-render._withStripped = true
-
 
 
 /***/ })

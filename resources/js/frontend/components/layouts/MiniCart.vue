@@ -8,7 +8,7 @@
             </router-link></div> <!---->
             <div  v-for="item in $store.getters.shoppingCart.cart" style="margin-bottom: 5px" class="mini-cart__item">
                 <div class="mini-cart__item-thumbnail">
-                    <img style="width: 100px"
+                    <img style="width: 100px; height: 120px; object-fit: cover; border-radius: 10px"
                          :src="item['images_product'][0]['path']"
                          alt="Áo Polo thể thao nam Recycle Active V2">
                 </div>
@@ -24,7 +24,7 @@
                         {{item.payment.color.title}} / {{item.payment.size.title}}
                     </div>
                     <div ><span class="mini-cart__item-quantity">
-                                                    {{item.payment.price}} x{{item.payment.total}}
+                                                    {{item.payment.price| toThousandFilter}}đ x{{item.payment.total}}
                                                 </span>
                     </div>
                     <div ><span  class="mini-cart__item-price">

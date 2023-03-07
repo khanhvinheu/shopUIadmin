@@ -1,4 +1,4 @@
-<template>         
+<template>
     <header class="site-header">
         <div class="header">
             <div class="header__inner">
@@ -49,7 +49,7 @@
                                 <a href="#san-pham" class="nav-tab__title is-current" rel-script="nav-tab">
                                     Thời trang
                                 </a>
-                             
+
                             </div>
                             <div class="nav-tab__content" data-nav-tab="#san-pham">
                                 <div class="nav-tab__label"
@@ -428,7 +428,7 @@
                                 </a>
                             </li>
                         </ul>
-                    </div>              
+                    </div>
                 </div>
                 <div class="header__menu" rel-script="header-menu" style="display: block">
                     <div class="mobile--hidden tablet--hidden">
@@ -829,14 +829,14 @@
                             </li>
                         </ul>
                     </div>
-              
+
                 </div>
                 <div class="header__actions">
-                    <div class="header-actions__button mobile--hidden">
-                        <a href="#" rel-script="header-search">
-                            <img src="https://www.coolmate.me/images/header/icon-search.svg" alt="Icon Search">
-                        </a>
-                    </div>
+<!--                    <div class="header-actions__button mobile&#45;&#45;hidden">-->
+<!--                        <a href="#" rel-script="header-search">-->
+<!--                            <img src="https://www.coolmate.me/images/header/icon-search.svg" alt="Icon Search">-->
+<!--                        </a>-->
+<!--                    </div>-->
                     <!-- <header-user-icon></header-user-icon> -->
                     <div class="header-actions__button">
                         <a href="https://www.coolmate.me/cart">
@@ -931,7 +931,7 @@
                 </div> -->
             </div>
         </div>
-    </header>   
+    </header>
 </template>
 <script>
     export default {
@@ -942,7 +942,7 @@
            }
         },
         methods: {
-         
+
         }
     }
 </script>

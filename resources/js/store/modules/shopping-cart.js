@@ -34,6 +34,26 @@ const mutations = {
         }
 
     },
+    pushItem(state, product){
+        // //find the product in the cart list
+        let cartProduct = state.cart.find((productel) => productel.id === product.id);
+        if (cartProduct) {
+            let findIndexOption = state.cart.findIndex((productel) => (productel.id === product.id && productel['payment']['id']==product['payment']['id']))
+            if(findIndexOption !=-1){
+                state.cart[findIndexOption]['payment']['total']+=1
+            }
+        }
+    },
+    removeItem(state, product){
+        let cartProduct = state.cart.find((productel) => productel.id === product.id);
+        if (cartProduct) {
+            let findIndexOption = state.cart.findIndex((productel) => (productel.id === product.id && productel['payment']['id']==product['payment']['id']))
+            if(findIndexOption !=-1){
+                state.cart[findIndexOption]['payment']['total']-=1
+            }
+        }
+    },
+
     removeFromCart: (state, productId) => {
         // //find the product in the products list
         // let product = state.products.find((product) => product.id === productId);
@@ -75,6 +95,15 @@ const actions = {
             commit("showToast", "added to cart");
         // });
     },
+    pushItem: ({ commit }, productId) => {
+            commit("pushItem", productId);
+    },
+    removeItem: ({ commit }, productId) => {
+            commit("removeItem", productId);
+    },
+
+
+
     removeFromCart: ({ commit }, productId) => {
         // myApi.products("remove", productId).then((productId) => {
             commit("removeFromCart", productId);
