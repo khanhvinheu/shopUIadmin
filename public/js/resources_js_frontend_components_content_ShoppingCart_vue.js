@@ -73,7 +73,7 @@ var render = function render() {
     _c = _vm._self._c;
   return _c("div", {
     staticClass: "site-content"
-  }, [_c("div", {
+  }, [_vm.$store.getters.shoppingCart.cart.length ? _c("div", {
     staticClass: "container"
   }, [_c("div", {
     staticClass: "grid"
@@ -249,7 +249,13 @@ var render = function render() {
     staticClass: "pricing-info__sub"
   }, [_c("span", [_vm._v(_vm._s(_vm._f("toThousandFilter")(_vm.tempTotalPrice)) + "đ")])])]), _vm._v(" "), _vm._m(2), _vm._v(" "), _vm._m(3), _vm._v(" "), _c("el-divider"), _vm._v(" "), _c("div", {
     staticClass: "pricing-info__item pricing-info__total"
-  }, [_c("p", [_vm._v("Tổng")]), _vm._v(" "), _c("p", [_c("span", [_vm._v(_vm._s(_vm._f("toThousandFilter")(_vm.TotalPrice)) + "đ")])])])], 1)], 1)])])]);
+  }, [_c("p", [_vm._v("Tổng")]), _vm._v(" "), _c("p", [_c("span", [_vm._v(_vm._s(_vm._f("toThousandFilter")(_vm.TotalPrice)) + "đ")])])])], 1)], 1)])]) : _c("div", {
+    staticClass: "container d-flex justify--center align--center"
+  }, [_c("span", {
+    staticStyle: {
+      "font-size": "20px"
+    }
+  }, [_vm._v(" Chưa có sản phẩm trong giỏ hàng ...")])])]);
 };
 var staticRenderFns = [function () {
   var _vm = this,

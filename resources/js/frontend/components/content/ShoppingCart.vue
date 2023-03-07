@@ -1,6 +1,6 @@
 <template>
     <div class="site-content">
-        <div class="container">
+        <div class="container" v-if="$store.getters.shoppingCart.cart.length">
             <div class="grid">
                 <div class="grid__column seven-twelfths mobile--one-whole cart-left-section">
                     <div class="cart-section">
@@ -194,6 +194,9 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="container d-flex justify--center align--center" v-else>
+           <span style="font-size: 20px"> Chưa có sản phẩm trong giỏ hàng ...</span>
         </div>
     </div>
 </template>

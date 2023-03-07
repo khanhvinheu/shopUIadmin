@@ -1319,17 +1319,17 @@ var render = function render() {
     _c = _vm._self._c;
   return _c("div", {
     staticClass: "mini-cart"
-  }, [_c("div", {
+  }, [_vm.$store.getters.shoppingCart.cart.length ? _c("div", {
     staticClass: "mini-cart__wrapper"
   }, [_c("div", {
     staticClass: "mini-cart__header"
-  }, [_c("span", [_vm._v("\n                                        " + _vm._s(_vm.$store.getters.shoppingCart.cart.length) + " sản phẩm\n                                    ")]), _vm._v(" "), _c("router-link", {
+  }, [_c("span", [_vm._v(_vm._s(_vm.$store.getters.shoppingCart.cart.length) + " sản phẩm ")]), _vm._v(" "), _c("router-link", {
     attrs: {
       to: {
         name: "shopping-cart"
       }
     }
-  }, [_vm._v("\n            Xem tất cả\n        ")])], 1), _vm._v(" "), _vm._l(_vm.$store.getters.shoppingCart.cart, function (item) {
+  }, [_vm._v("Xem tất cả")])], 1), _vm._v(" "), _vm._l(_vm.$store.getters.shoppingCart.cart, function (item) {
     return _c("div", {
       staticClass: "mini-cart__item",
       staticStyle: {
@@ -1371,7 +1371,7 @@ var render = function render() {
     }, [_vm._v("\n                                                " + _vm._s(_vm._f("toThousandFilter")(item.payment.price)) + "đ x" + _vm._s(item.payment.total) + "\n                                            ")])]), _vm._v(" "), _c("div", [_c("span", {
       staticClass: "mini-cart__item-price"
     }, [_vm._v("\n                                                " + _vm._s(_vm._f("toThousandFilter")(item.payment.price * item.payment.total)) + " đ\n                                            ")])])])]);
-  })], 2)]);
+  })], 2) : _c("div", [_vm._v("\n        Chưa có sản phẩm nào trong giỏ hàng ...\n    ")])]);
 };
 var staticRenderFns = [];
 render._withStripped = true;

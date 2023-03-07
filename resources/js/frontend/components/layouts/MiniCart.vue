@@ -1,11 +1,9 @@
 <template>
     <div class="mini-cart">
-        <div  class="mini-cart__wrapper">
-            <div  class="mini-cart__header"><span >
-                                            {{$store.getters.shoppingCart.cart.length}} sản phẩm
-                                        </span> <router-link :to="{name:'shopping-cart'}">
-                Xem tất cả
-            </router-link></div> <!---->
+        <div class="mini-cart__wrapper" v-if="$store.getters.shoppingCart.cart.length">
+            <div class="mini-cart__header">
+                <span>{{$store.getters.shoppingCart.cart.length}} sản phẩm </span>
+                <router-link :to="{name:'shopping-cart'}">Xem tất cả</router-link></div>
             <div  v-for="item in $store.getters.shoppingCart.cart" style="margin-bottom: 5px" class="mini-cart__item">
                 <div class="mini-cart__item-thumbnail">
                     <img style="width: 100px; height: 120px; object-fit: cover; border-radius: 10px"
@@ -34,6 +32,9 @@
 
             </div>
 
+        </div>
+        <div v-else>
+            Chưa có sản phẩm nào trong giỏ hàng ...
         </div>
     </div>
 </template>
