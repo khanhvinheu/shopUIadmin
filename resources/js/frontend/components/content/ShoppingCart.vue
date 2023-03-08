@@ -28,47 +28,47 @@
                                     </div>
                                 </div>
                             </div>
-<!--                            <div class="grid">-->
-<!--                                <div class="grid__column four-twelfths mobile&#45;&#45;one-whole">-->
-<!--                                    <div dir="auto" class="v-select vue-select vs&#45;&#45;single vs&#45;&#45;searchable"-->
-<!--                                         name="nhanh_city">-->
-<!--                                        <el-select style="width: 100%" placeholder="Chọn Tỉnh/ Thành Phố">-->
-<!--                                            <el-option-->
-<!--                                                v-for="item in 10"-->
-<!--                                                :key="item"-->
-<!--                                                :label="item"-->
-<!--                                                :value="item">-->
-<!--                                            </el-option>-->
-<!--                                        </el-select>-->
-<!--                                    </div>-->
-<!--                                </div>-->
-<!--                                <div class="grid__column four-twelfths mobile&#45;&#45;one-whole">-->
-<!--                                    <div dir="auto" class="v-select vue-select vs&#45;&#45;single vs&#45;&#45;searchable"-->
-<!--                                         name="nhanh_district">-->
-<!--                                        <el-select style="width: 100%" placeholder="Chọn Quận / Huyện">-->
-<!--                                            <el-option-->
-<!--                                                v-for="item in 10"-->
-<!--                                                :key="item"-->
-<!--                                                :label="item"-->
-<!--                                                :value="item">-->
-<!--                                            </el-option>-->
-<!--                                        </el-select>-->
-<!--                                    </div>-->
-<!--                                </div>-->
-<!--                                <div class="grid__column four-twelfths mobile&#45;&#45;one-whole">-->
-<!--                                    <div dir="auto" class="v-select vue-select vs&#45;&#45;single vs&#45;&#45;searchable"-->
-<!--                                         name="nhanh_ward" id="nhanh_ward">-->
-<!--                                        <el-select style="width: 100%;"  placeholder="Chọn Phường/ Xã">-->
-<!--                                            <el-option-->
-<!--                                                v-for="item in 10"-->
-<!--                                                :key="item"-->
-<!--                                                :label="item"-->
-<!--                                                :value="item">-->
-<!--                                            </el-option>-->
-<!--                                        </el-select>-->
-<!--                                    </div>-->
-<!--                                </div>-->
-<!--                            </div>-->
+                            <div class="grid">
+                                <div class="grid__column four-twelfths mobile--one-whole">
+                                    <div dir="auto" class="v-select vue-select vs--single vs--searchable"
+                                         name="nhanh_city">
+                                        <el-select style="width: 100%" filterable  v-model="form.Province" @change="getDistrict($event)" placeholder="Chọn Tỉnh/ Thành Phố">
+                                            <el-option
+                                                v-for="item in dataProvince"
+                                                :key="item.ProvinceCode"
+                                                :label="item.ProvinceName"
+                                                :value="item.ProvinceCode">
+                                            </el-option>
+                                        </el-select>
+                                    </div>
+                                </div>
+                                <div class="grid__column four-twelfths mobile--one-whole">
+                                    <div dir="auto" class="v-select vue-select vs--single vs--searchable"
+                                         name="nhanh_district">
+                                        <el-select style="width: 100%" filterable  v-model="form.District" @change="getCommune($event)" placeholder="Chọn Quận / Huyện">
+                                            <el-option
+                                                v-for="item in dataDistrict"
+                                                :key="item.ProvinceCode"
+                                                :label="item.ProvinceName"
+                                                :value="item.ProvinceCode">
+                                            </el-option>
+                                        </el-select>
+                                    </div>
+                                </div>
+                                <div class="grid__column four-twelfths mobile--one-whole">
+                                    <div dir="auto" class="v-select vue-select vs--single vs--searchable"
+                                         name="nhanh_ward" id="nhanh_ward">
+                                        <el-select style="width: 100%;" filterable  v-model="form.Commune"  placeholder="Chọn Phường/ Xã">
+                                            <el-option
+                                                v-for="item in dataCommune"
+                                                :key="item.ProvinceCode"
+                                                :label="item.ProvinceName"
+                                                :value="item.ProvinceCode">
+                                            </el-option>
+                                        </el-select>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="grid">
                                 <div class="grid__column">
                                     <el-input placeholder="Ghi chú thêm (Ví dụ: Giao hàng giờ hành chính)"></el-input>
@@ -203,12 +203,29 @@
 
 <script>
 import {mapState, mapGetters} from 'vuex'
+import ApiService from "../../../backend/common/api.service";
 export default {
     name: "ShoppingCart",
     data(){
         return{
-            num:1
+            num:1,
+            dataProvince:[],
+            dataDistrict:[],
+            dataCommune:[],
+            form:{
+                Province:'',
+                District:'',
+                Commune:''
+            }
         }
+    },
+    mounted() {
+        this.getProvince()
+    },
+    watch:{
+        // dataProvince(e){
+        //     this.getDistrict(e)
+        // }
     },
     methods:{
         addItem(item){
@@ -219,6 +236,27 @@ export default {
         },
         deleteItemCart(item){
             this.$store.dispatch("shoppingCart/deleteFromCart", item);
+        },
+        getProvince(){
+            ApiService.query('/api/admin/get-full-province?type=province').then(({data})=>{
+                if(data['success']){
+                    this.dataProvince = data['data']
+                }
+            })
+        },
+        getDistrict(provinceCode){
+            ApiService.query('/api/admin/get-full-province?type=district&ProvinceCode='+provinceCode).then(({data})=>{
+                if(data['success']){
+                    this.dataDistrict = data['data']
+                }
+            })
+        },
+        getCommune(provinceCode){
+            ApiService.query('/api/admin/get-full-province?type=commune&ProvinceCode='+provinceCode).then(({data})=>{
+                if(data['success']){
+                    this.dataCommune = data['data']
+                }
+            })
         }
     },
     computed: {
