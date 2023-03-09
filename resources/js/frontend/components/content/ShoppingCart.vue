@@ -1,6 +1,6 @@
 <template>
     <div class="site-content">
-        <div class="container" v-if="$store.getters.shoppingCart.cart.length">
+        <div class="container" v-if="!$store.getters.shoppingCart.cart.length">
             <div class="grid">
                 <div class="grid__column seven-twelfths mobile--one-whole cart-left-section">
                     <div class="cart-section">
@@ -9,109 +9,129 @@
                                 Thông tin vận chuyển
                             </div>
                         </div>
-                        <div id="customer-info-block" customerinfo="[object Object]">
-                            <div class="grid">
-                                <div class="grid__column six-twelfths">
-                                    <el-input placeholder="Họ và tên"></el-input>
-                                </div>
-                                <div class="grid__column six-twelfths">
-                                    <el-input placeholder="Số điện thoại"></el-input>
-                                </div>
-                            </div>
-                            <div class="grid">
-                                <div class="grid__column">
-                                    <el-input placeholder="Email"></el-input>
-                                </div>
-                                <div class="grid__column">
-                                    <div class="address-block">
-                                        <el-input placeholder="Địa chỉ (ví dụ: 103 Vạn Phúc, phường Vạn Phúc)"></el-input>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="grid">
-                                <div class="grid__column four-twelfths mobile--one-whole">
-                                    <div dir="auto" class="v-select vue-select vs--single vs--searchable"
-                                         name="nhanh_city">
-                                        <el-select style="width: 100%" filterable  v-model="form.Province" @change="getDistrict($event)" placeholder="Chọn Tỉnh/ Thành Phố">
-                                            <el-option
-                                                v-for="item in dataProvince"
-                                                :key="item.ProvinceCode"
-                                                :label="item.ProvinceName"
-                                                :value="item.ProvinceCode">
-                                            </el-option>
-                                        </el-select>
-                                    </div>
-                                </div>
-                                <div class="grid__column four-twelfths mobile--one-whole">
-                                    <div dir="auto" class="v-select vue-select vs--single vs--searchable"
-                                         name="nhanh_district">
-                                        <el-select style="width: 100%" filterable  v-model="form.District" @change="getCommune($event)" placeholder="Chọn Quận / Huyện">
-                                            <el-option
-                                                v-for="item in dataDistrict"
-                                                :key="item.ProvinceCode"
-                                                :label="item.ProvinceName"
-                                                :value="item.ProvinceCode">
-                                            </el-option>
-                                        </el-select>
-                                    </div>
-                                </div>
-                                <div class="grid__column four-twelfths mobile--one-whole">
-                                    <div dir="auto" class="v-select vue-select vs--single vs--searchable"
-                                         name="nhanh_ward" id="nhanh_ward">
-                                        <el-select style="width: 100%;" filterable  v-model="form.Commune"  placeholder="Chọn Phường/ Xã">
-                                            <el-option
-                                                v-for="item in dataCommune"
-                                                :key="item.ProvinceCode"
-                                                :label="item.ProvinceName"
-                                                :value="item.ProvinceCode">
-                                            </el-option>
-                                        </el-select>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="grid">
-                                <div class="grid__column">
-                                    <el-input placeholder="Ghi chú thêm (Ví dụ: Giao hàng giờ hành chính)"></el-input>
-                                </div>
-                            </div>
+                        <div id="customer-info-block">
+                            <el-form :model="form" ref="ruleForm" inline-message class="demo-ruleForm">
+                                <el-row :gutter="5">
+                                    <el-form-item required>
+                                        <el-col :span="12">
+                                            <el-form-item :rules="required" prop="Name">
+                                                    <el-input v-model="form.Name" placeholder="Họ và tên"></el-input>
+                                            </el-form-item>
+                                        </el-col>
+                                        <el-col :span="12">
+                                            <el-form-item :rules="required" prop="PhoneNumber">
+                                                    <el-input v-model="form.PhoneNumber" placeholder="Số điện thoại"></el-input>
+                                            </el-form-item>
+                                        </el-col>
+                                    </el-form-item>
+                                </el-row>
+                                <el-row :gutter="5">
+                                    <el-col :span="24">
+                                        <el-form-item :rules="required" prop="Email">
+                                            <el-input v-model="form.Email" placeholder="Email"></el-input>
+                                        </el-form-item>
+                                    </el-col>
+                                </el-row>
+                                <el-row :gutter="5">
+                                    <el-col :span="24">
+                                        <el-form-item :rules="required" prop="LocationText">
+                                            <el-input v-model="form.LocationText" placeholder="Địa chỉ (ví dụ: 103 Vạn Phúc, phường Vạn Phúc)"></el-input>
+                                        </el-form-item>
+                                    </el-col>
+                                </el-row>
+                                <el-row :gutter="5">
+                                    <el-form-item required>
+                                        <el-col :span="8">
+                                            <el-form-item :rules="required" prop="Province">
+                                                <el-select :disabled="!dataProvince" style="width: 100%" filterable  v-model="form.Province" @change="getDistrict($event)" placeholder="Chọn Tỉnh/ Thành Phố">
+                                                    <el-option
+                                                        v-for="item in dataProvince"
+                                                        :key="item.ProvinceCode"
+                                                        :label="item.ProvinceName"
+                                                        :value="item.ProvinceCode">
+                                                    </el-option>
+                                                </el-select>
+                                            </el-form-item>
+                                        </el-col>
+                                        <el-col :span="8">
+                                            <el-form-item :rules="required" prop="District">
+                                                <el-select :disabled="!dataDistrict" style="width: 100%" filterable  v-model="form.District" @change="getCommune($event)" placeholder="Chọn Quận / Huyện">
+                                                    <el-option
+                                                        v-for="item in dataDistrict"
+                                                        :key="item.ProvinceCode"
+                                                        :label="item.ProvinceName"
+                                                        :value="item.ProvinceCode">
+                                                    </el-option>
+                                                </el-select>
+                                            </el-form-item>
+                                        </el-col>
+                                        <el-col :span="8">
+                                            <el-form-item :rules="required" prop="Commune">
+                                                <el-select :disabled="!dataCommune" style="width: 100%;" filterable  v-model="form.Commune"  placeholder="Chọn Phường/ Xã">
+                                                    <el-option
+                                                        v-for="item in dataCommune"
+                                                        :key="item.ProvinceCode"
+                                                        :label="item.ProvinceName"
+                                                        :value="item.ProvinceCode">
+                                                    </el-option>
+                                                </el-select>
+                                            </el-form-item>
+                                        </el-col>
+                                    </el-form-item>
+                                </el-row>
+                                <el-row :gutter="5">
+                                    <el-col :span="24">
+                                        <el-form-item :rules="required" prop="Note">
+                                            <el-input v-model="form.Note" placeholder="Ghi chú thêm (Ví dụ: Giao hàng giờ hành chính)"></el-input>
+                                        </el-form-item>
+                                    </el-col>
+                                </el-row>
+                                <div class="cart-section">
+                                    <div class="title"> Hình thức thanh toán</div>
+                                    <div>
+                                        <el-form-item :rules="required" prop="PaymentMethods">
+                                            <label for="payment-COD" class="payment-method__item"
+                                                   v-bind:class="{'active':form.PaymentMethods==1}">
+                                                 <el-radio style="display: flex; align-items: center" v-model="form.PaymentMethods" label="1">
+                                                     <div style="display: flex; align-items: center;">
+                                                         <span class="payment-method__item-icon-wrapper">
+                                                            <img src="/img/COD.svg" alt="COD <br>Thanh toán khi nhận hàng">
+                                                        </span>
+                                                         <span
+                                                             class="payment-method__item-name">COD <br>Thanh toán khi nhận hàng</span>
+                                                     </div>
+                                                 </el-radio>
 
+                                            </label>
+                                            <label for="payment-momo" class="payment-method__item"
+                                                   v-bind:class="{'active':form.PaymentMethods==2}">
+                                                 <el-radio style="display: flex; align-items: center" v-model="form.PaymentMethods" label="2">
+                                                     <div style="display: flex; align-items: center;">
+                                                        <span class="payment-method__item-icon-wrapper">
+                                                            <img src="https://www.coolmate.me/images/momo-icon.png"
+                                                                 alt="Thanh Toán MoMo">
+                                                        </span>
+                                                        <span class="payment-method__item-name">Thanh Toán MoMo</span>
+                                                     </div>
+                                                 </el-radio>
+                                            </label>
+                                        </el-form-item>
+
+                                    </div>
+
+                                    <p class="cart-return-text">
+                                        Nếu bạn không hài lòng với sản phẩm của chúng tôi? Bạn hoàn toàn có thể trả lại
+                                        sản phẩm.
+                                        Tìm hiểu thêm <a href="#" target="_blank"><b>tại đây</b></a>.
+                                    </p>
+                                </div>
+                            </el-form>
                         </div>
-
                     </div>
-                    <div class="cart-section">
-                        <div class="title"> Hình thức thanh toán</div>
-                        <div>
-                            <form>
-                                <label for="payment-COD" class="payment-method__item active">
-                                    <span class="payment-method__item-custom-checkbox custom-radio">
-                                        <input type="radio" id="payment-COD" name="payment-method" autocomplete="off" value="COD">
-                                        <span class="checkmark"> </span>
-                                    </span>
-                                    <span class="payment-method__item-icon-wrapper">
-                                        <img src="/img/COD.svg" alt="COD <br>Thanh toán khi nhận hàng">
-                                    </span>
-                                    <span class="payment-method__item-name">COD <br>Thanh toán khi nhận hàng</span>
-                                </label>
-                                <label for="payment-momo" class="payment-method__item">
-                                    <span class="payment-method__item-custom-checkbox custom-radio"><input type="radio" id="payment-momo" name="payment-method" autocomplete="off" value="momo">
-                                        <span class="checkmark"></span>
-                                    </span>
-                                    <span class="payment-method__item-icon-wrapper">
-                                        <img src="https://www.coolmate.me/images/momo-icon.png" alt="Thanh Toán MoMo">
-                                    </span>
-                                    <span class="payment-method__item-name">Thanh Toán MoMo</span>
-                                </label>
-                            </form>
-                        </div>
 
-                        <p class="cart-return-text">
-                            Nếu bạn không hài lòng với sản phẩm của chúng tôi? Bạn hoàn toàn có thể trả lại sản phẩm.
-                            Tìm hiểu thêm <a href="#" target="_blank"><b>tại đây</b></a>.
-                        </p>
-                    </div>
                     <input type="hidden" id="gclid_field" name="gclid_field" value="">
                     <div class="cart-section">
-                        <button class="checkout-btn">
+                        <button class="checkout-btn" @click="submitForm('ruleForm')">
                             Thanh toán <span>{{TotalPrice |toThousandFilter }}</span> <span>(COD)</span></button>
                     </div>
                 </div>
@@ -215,19 +235,35 @@ export default {
             form:{
                 Province:'',
                 District:'',
-                Commune:''
-            }
+                Commune:'',
+                Name:'',
+                Email:'',
+                PhoneNumber:'',
+                LocationText:'',
+                Note:'',
+                PaymentMethods:''
+            },
+            required:{ required: true, message: 'Vui lòng không bỏ trống', trigger: ['blur','change'] },
+
+
         }
     },
     mounted() {
         this.getProvince()
     },
     watch:{
-        // dataProvince(e){
-        //     this.getDistrict(e)
-        // }
     },
     methods:{
+        submitForm(ruleForm){
+            this.$refs[ruleForm].validate((valid) => {
+                if (valid) {
+                    alert('submit!');
+                } else {
+                    console.log('error submit!!');
+                    return false;
+                }
+            });
+        },
         addItem(item){
             this.$store.dispatch("shoppingCart/pushItem", item);
         },
@@ -237,14 +273,16 @@ export default {
         deleteItemCart(item){
             this.$store.dispatch("shoppingCart/deleteFromCart", item);
         },
-        getProvince(){
-            ApiService.query('/api/admin/get-full-province?type=province').then(({data})=>{
-                if(data['success']){
+        getProvince() {
+            ApiService.query('/api/admin/get-full-province?type=province').then(({data}) => {
+                if (data['success']) {
                     this.dataProvince = data['data']
                 }
             })
         },
         getDistrict(provinceCode){
+            this.form.District = ''
+            this.form.Commune = ''
             ApiService.query('/api/admin/get-full-province?type=district&ProvinceCode='+provinceCode).then(({data})=>{
                 if(data['success']){
                     this.dataDistrict = data['data']
@@ -252,6 +290,7 @@ export default {
             })
         },
         getCommune(provinceCode){
+            this.form.Commune = ''
             ApiService.query('/api/admin/get-full-province?type=commune&ProvinceCode='+provinceCode).then(({data})=>{
                 if(data['success']){
                     this.dataCommune = data['data']

@@ -32,19 +32,36 @@ function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input ==
       form: {
         Province: '',
         District: '',
-        Commune: ''
+        Commune: '',
+        Name: '',
+        Email: '',
+        PhoneNumber: '',
+        LocationText: '',
+        Note: '',
+        PaymentMethods: ''
+      },
+      required: {
+        required: true,
+        message: 'Vui lòng không bỏ trống',
+        trigger: ['blur', 'change']
       }
     };
   },
   mounted: function mounted() {
     this.getProvince();
   },
-  watch: {
-    // dataProvince(e){
-    //     this.getDistrict(e)
-    // }
-  },
+  watch: {},
   methods: {
+    submitForm: function submitForm(ruleForm) {
+      this.$refs[ruleForm].validate(function (valid) {
+        if (valid) {
+          alert('submit!');
+        } else {
+          console.log('error submit!!');
+          return false;
+        }
+      });
+    },
     addItem: function addItem(item) {
       this.$store.dispatch("shoppingCart/pushItem", item);
     },
@@ -65,6 +82,8 @@ function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input ==
     },
     getDistrict: function getDistrict(provinceCode) {
       var _this2 = this;
+      this.form.District = '';
+      this.form.Commune = '';
       _backend_common_api_service__WEBPACK_IMPORTED_MODULE_0__["default"].query('/api/admin/get-full-province?type=district&ProvinceCode=' + provinceCode).then(function (_ref2) {
         var data = _ref2.data;
         if (data['success']) {
@@ -74,6 +93,7 @@ function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input ==
     },
     getCommune: function getCommune(provinceCode) {
       var _this3 = this;
+      this.form.Commune = '';
       _backend_common_api_service__WEBPACK_IMPORTED_MODULE_0__["default"].query('/api/admin/get-full-province?type=commune&ProvinceCode=' + provinceCode).then(function (_ref3) {
         var data = _ref3.data;
         if (data['success']) {
@@ -129,54 +149,134 @@ var render = function render() {
     staticClass: "cart-section"
   }, [_vm._m(0), _vm._v(" "), _c("div", {
     attrs: {
-      id: "customer-info-block",
-      customerinfo: "[object Object]"
+      id: "customer-info-block"
     }
-  }, [_c("div", {
-    staticClass: "grid"
-  }, [_c("div", {
-    staticClass: "grid__column six-twelfths"
+  }, [_c("el-form", {
+    ref: "ruleForm",
+    staticClass: "demo-ruleForm",
+    attrs: {
+      model: _vm.form,
+      "inline-message": ""
+    }
+  }, [_c("el-row", {
+    attrs: {
+      gutter: 5
+    }
+  }, [_c("el-form-item", {
+    attrs: {
+      required: ""
+    }
+  }, [_c("el-col", {
+    attrs: {
+      span: 12
+    }
+  }, [_c("el-form-item", {
+    attrs: {
+      rules: _vm.required,
+      prop: "Name"
+    }
   }, [_c("el-input", {
     attrs: {
       placeholder: "Họ và tên"
+    },
+    model: {
+      value: _vm.form.Name,
+      callback: function callback($$v) {
+        _vm.$set(_vm.form, "Name", $$v);
+      },
+      expression: "form.Name"
     }
-  })], 1), _vm._v(" "), _c("div", {
-    staticClass: "grid__column six-twelfths"
+  })], 1)], 1), _vm._v(" "), _c("el-col", {
+    attrs: {
+      span: 12
+    }
+  }, [_c("el-form-item", {
+    attrs: {
+      rules: _vm.required,
+      prop: "PhoneNumber"
+    }
   }, [_c("el-input", {
     attrs: {
       placeholder: "Số điện thoại"
+    },
+    model: {
+      value: _vm.form.PhoneNumber,
+      callback: function callback($$v) {
+        _vm.$set(_vm.form, "PhoneNumber", $$v);
+      },
+      expression: "form.PhoneNumber"
     }
-  })], 1)]), _vm._v(" "), _c("div", {
-    staticClass: "grid"
-  }, [_c("div", {
-    staticClass: "grid__column"
+  })], 1)], 1)], 1)], 1), _vm._v(" "), _c("el-row", {
+    attrs: {
+      gutter: 5
+    }
+  }, [_c("el-col", {
+    attrs: {
+      span: 24
+    }
+  }, [_c("el-form-item", {
+    attrs: {
+      rules: _vm.required,
+      prop: "Email"
+    }
   }, [_c("el-input", {
     attrs: {
       placeholder: "Email"
+    },
+    model: {
+      value: _vm.form.Email,
+      callback: function callback($$v) {
+        _vm.$set(_vm.form, "Email", $$v);
+      },
+      expression: "form.Email"
     }
-  })], 1), _vm._v(" "), _c("div", {
-    staticClass: "grid__column"
-  }, [_c("div", {
-    staticClass: "address-block"
+  })], 1)], 1)], 1), _vm._v(" "), _c("el-row", {
+    attrs: {
+      gutter: 5
+    }
+  }, [_c("el-col", {
+    attrs: {
+      span: 24
+    }
+  }, [_c("el-form-item", {
+    attrs: {
+      rules: _vm.required,
+      prop: "LocationText"
+    }
   }, [_c("el-input", {
     attrs: {
       placeholder: "Địa chỉ (ví dụ: 103 Vạn Phúc, phường Vạn Phúc)"
+    },
+    model: {
+      value: _vm.form.LocationText,
+      callback: function callback($$v) {
+        _vm.$set(_vm.form, "LocationText", $$v);
+      },
+      expression: "form.LocationText"
     }
-  })], 1)])]), _vm._v(" "), _c("div", {
-    staticClass: "grid"
-  }, [_c("div", {
-    staticClass: "grid__column four-twelfths mobile--one-whole"
-  }, [_c("div", {
-    staticClass: "v-select vue-select vs--single vs--searchable",
+  })], 1)], 1)], 1), _vm._v(" "), _c("el-row", {
     attrs: {
-      dir: "auto",
-      name: "nhanh_city"
+      gutter: 5
+    }
+  }, [_c("el-form-item", {
+    attrs: {
+      required: ""
+    }
+  }, [_c("el-col", {
+    attrs: {
+      span: 8
+    }
+  }, [_c("el-form-item", {
+    attrs: {
+      rules: _vm.required,
+      prop: "Province"
     }
   }, [_c("el-select", {
     staticStyle: {
       width: "100%"
     },
     attrs: {
+      disabled: !_vm.dataProvince,
       filterable: "",
       placeholder: "Chọn Tỉnh/ Thành Phố"
     },
@@ -200,19 +300,21 @@ var render = function render() {
         value: item.ProvinceCode
       }
     });
-  }), 1)], 1)]), _vm._v(" "), _c("div", {
-    staticClass: "grid__column four-twelfths mobile--one-whole"
-  }, [_c("div", {
-    staticClass: "v-select vue-select vs--single vs--searchable",
+  }), 1)], 1)], 1), _vm._v(" "), _c("el-col", {
     attrs: {
-      dir: "auto",
-      name: "nhanh_district"
+      span: 8
+    }
+  }, [_c("el-form-item", {
+    attrs: {
+      rules: _vm.required,
+      prop: "District"
     }
   }, [_c("el-select", {
     staticStyle: {
       width: "100%"
     },
     attrs: {
+      disabled: !_vm.dataDistrict,
       filterable: "",
       placeholder: "Chọn Quận / Huyện"
     },
@@ -236,20 +338,21 @@ var render = function render() {
         value: item.ProvinceCode
       }
     });
-  }), 1)], 1)]), _vm._v(" "), _c("div", {
-    staticClass: "grid__column four-twelfths mobile--one-whole"
-  }, [_c("div", {
-    staticClass: "v-select vue-select vs--single vs--searchable",
+  }), 1)], 1)], 1), _vm._v(" "), _c("el-col", {
     attrs: {
-      dir: "auto",
-      name: "nhanh_ward",
-      id: "nhanh_ward"
+      span: 8
+    }
+  }, [_c("el-form-item", {
+    attrs: {
+      rules: _vm.required,
+      prop: "Commune"
     }
   }, [_c("el-select", {
     staticStyle: {
       width: "100%"
     },
     attrs: {
+      disabled: !_vm.dataCommune,
       filterable: "",
       placeholder: "Chọn Phường/ Xã"
     },
@@ -268,15 +371,121 @@ var render = function render() {
         value: item.ProvinceCode
       }
     });
-  }), 1)], 1)])]), _vm._v(" "), _c("div", {
-    staticClass: "grid"
-  }, [_c("div", {
-    staticClass: "grid__column"
+  }), 1)], 1)], 1)], 1)], 1), _vm._v(" "), _c("el-row", {
+    attrs: {
+      gutter: 5
+    }
+  }, [_c("el-col", {
+    attrs: {
+      span: 24
+    }
+  }, [_c("el-form-item", {
+    attrs: {
+      rules: _vm.required,
+      prop: "Note"
+    }
   }, [_c("el-input", {
     attrs: {
       placeholder: "Ghi chú thêm (Ví dụ: Giao hàng giờ hành chính)"
+    },
+    model: {
+      value: _vm.form.Note,
+      callback: function callback($$v) {
+        _vm.$set(_vm.form, "Note", $$v);
+      },
+      expression: "form.Note"
     }
-  })], 1)])])]), _vm._v(" "), _vm._m(1), _vm._v(" "), _c("input", {
+  })], 1)], 1)], 1), _vm._v(" "), _c("div", {
+    staticClass: "cart-section"
+  }, [_c("div", {
+    staticClass: "title"
+  }, [_vm._v(" Hình thức thanh toán")]), _vm._v(" "), _c("div", [_c("el-form-item", {
+    attrs: {
+      rules: _vm.required,
+      prop: "PaymentMethods"
+    }
+  }, [_c("label", {
+    staticClass: "payment-method__item",
+    "class": {
+      active: _vm.form.PaymentMethods == 1
+    },
+    attrs: {
+      "for": "payment-COD"
+    }
+  }, [_c("el-radio", {
+    staticStyle: {
+      display: "flex",
+      "align-items": "center"
+    },
+    attrs: {
+      label: "1"
+    },
+    model: {
+      value: _vm.form.PaymentMethods,
+      callback: function callback($$v) {
+        _vm.$set(_vm.form, "PaymentMethods", $$v);
+      },
+      expression: "form.PaymentMethods"
+    }
+  }, [_c("div", {
+    staticStyle: {
+      display: "flex",
+      "align-items": "center"
+    }
+  }, [_c("span", {
+    staticClass: "payment-method__item-icon-wrapper"
+  }, [_c("img", {
+    attrs: {
+      src: "/img/COD.svg",
+      alt: "COD <br>Thanh toán khi nhận hàng"
+    }
+  })]), _vm._v(" "), _c("span", {
+    staticClass: "payment-method__item-name"
+  }, [_vm._v("COD "), _c("br"), _vm._v("Thanh toán khi nhận hàng")])])])], 1), _vm._v(" "), _c("label", {
+    staticClass: "payment-method__item",
+    "class": {
+      active: _vm.form.PaymentMethods == 2
+    },
+    attrs: {
+      "for": "payment-momo"
+    }
+  }, [_c("el-radio", {
+    staticStyle: {
+      display: "flex",
+      "align-items": "center"
+    },
+    attrs: {
+      label: "2"
+    },
+    model: {
+      value: _vm.form.PaymentMethods,
+      callback: function callback($$v) {
+        _vm.$set(_vm.form, "PaymentMethods", $$v);
+      },
+      expression: "form.PaymentMethods"
+    }
+  }, [_c("div", {
+    staticStyle: {
+      display: "flex",
+      "align-items": "center"
+    }
+  }, [_c("span", {
+    staticClass: "payment-method__item-icon-wrapper"
+  }, [_c("img", {
+    attrs: {
+      src: "https://www.coolmate.me/images/momo-icon.png",
+      alt: "Thanh Toán MoMo"
+    }
+  })]), _vm._v(" "), _c("span", {
+    staticClass: "payment-method__item-name"
+  }, [_vm._v("Thanh Toán MoMo")])])])], 1)])], 1), _vm._v(" "), _c("p", {
+    staticClass: "cart-return-text"
+  }, [_vm._v("\n                                    Nếu bạn không hài lòng với sản phẩm của chúng tôi? Bạn hoàn toàn có thể trả lại\n                                    sản phẩm.\n                                    Tìm hiểu thêm "), _c("a", {
+    attrs: {
+      href: "#",
+      target: "_blank"
+    }
+  }, [_c("b", [_vm._v("tại đây")])]), _vm._v(".\n                                ")])])], 1)], 1)]), _vm._v(" "), _c("input", {
     attrs: {
       type: "hidden",
       id: "gclid_field",
@@ -286,7 +495,12 @@ var render = function render() {
   }), _vm._v(" "), _c("div", {
     staticClass: "cart-section"
   }, [_c("button", {
-    staticClass: "checkout-btn"
+    staticClass: "checkout-btn",
+    on: {
+      click: function click($event) {
+        return _vm.submitForm("ruleForm");
+      }
+    }
   }, [_vm._v("\n                        Thanh toán "), _c("span", [_vm._v(_vm._s(_vm._f("toThousandFilter")(_vm.TotalPrice)))]), _vm._v(" "), _c("span", [_vm._v("(COD)")])])])]), _vm._v(" "), _c("div", {
     staticClass: "grid__column five-twelfths mobile--one-whole"
   }, [_c("div", {
@@ -399,7 +613,7 @@ var render = function render() {
     staticClass: "pricing-info__item"
   }, [_c("p", [_vm._v("Tạm tính")]), _vm._v(" "), _c("p", {
     staticClass: "pricing-info__sub"
-  }, [_c("span", [_vm._v(_vm._s(_vm._f("toThousandFilter")(_vm.tempTotalPrice)) + "đ")])])]), _vm._v(" "), _vm._m(2), _vm._v(" "), _vm._m(3), _vm._v(" "), _c("el-divider"), _vm._v(" "), _c("div", {
+  }, [_c("span", [_vm._v(_vm._s(_vm._f("toThousandFilter")(_vm.tempTotalPrice)) + "đ")])])]), _vm._v(" "), _vm._m(1), _vm._v(" "), _vm._m(2), _vm._v(" "), _c("el-divider"), _vm._v(" "), _c("div", {
     staticClass: "pricing-info__item pricing-info__total"
   }, [_c("p", [_vm._v("Tổng")]), _vm._v(" "), _c("p", [_c("span", [_vm._v(_vm._s(_vm._f("toThousandFilter")(_vm.TotalPrice)) + "đ")])])])], 1)], 1)])]) : _c("div", {
     staticClass: "container d-flex justify--center align--center"
@@ -417,73 +631,6 @@ var staticRenderFns = [function () {
   }, [_c("div", {
     staticClass: "title"
   }, [_vm._v("\n                            Thông tin vận chuyển\n                        ")])]);
-}, function () {
-  var _vm = this,
-    _c = _vm._self._c;
-  return _c("div", {
-    staticClass: "cart-section"
-  }, [_c("div", {
-    staticClass: "title"
-  }, [_vm._v(" Hình thức thanh toán")]), _vm._v(" "), _c("div", [_c("form", [_c("label", {
-    staticClass: "payment-method__item active",
-    attrs: {
-      "for": "payment-COD"
-    }
-  }, [_c("span", {
-    staticClass: "payment-method__item-custom-checkbox custom-radio"
-  }, [_c("input", {
-    attrs: {
-      type: "radio",
-      id: "payment-COD",
-      name: "payment-method",
-      autocomplete: "off",
-      value: "COD"
-    }
-  }), _vm._v(" "), _c("span", {
-    staticClass: "checkmark"
-  })]), _vm._v(" "), _c("span", {
-    staticClass: "payment-method__item-icon-wrapper"
-  }, [_c("img", {
-    attrs: {
-      src: "/img/COD.svg",
-      alt: "COD <br>Thanh toán khi nhận hàng"
-    }
-  })]), _vm._v(" "), _c("span", {
-    staticClass: "payment-method__item-name"
-  }, [_vm._v("COD "), _c("br"), _vm._v("Thanh toán khi nhận hàng")])]), _vm._v(" "), _c("label", {
-    staticClass: "payment-method__item",
-    attrs: {
-      "for": "payment-momo"
-    }
-  }, [_c("span", {
-    staticClass: "payment-method__item-custom-checkbox custom-radio"
-  }, [_c("input", {
-    attrs: {
-      type: "radio",
-      id: "payment-momo",
-      name: "payment-method",
-      autocomplete: "off",
-      value: "momo"
-    }
-  }), _vm._v(" "), _c("span", {
-    staticClass: "checkmark"
-  })]), _vm._v(" "), _c("span", {
-    staticClass: "payment-method__item-icon-wrapper"
-  }, [_c("img", {
-    attrs: {
-      src: "https://www.coolmate.me/images/momo-icon.png",
-      alt: "Thanh Toán MoMo"
-    }
-  })]), _vm._v(" "), _c("span", {
-    staticClass: "payment-method__item-name"
-  }, [_vm._v("Thanh Toán MoMo")])])])]), _vm._v(" "), _c("p", {
-    staticClass: "cart-return-text"
-  }, [_vm._v("\n                        Nếu bạn không hài lòng với sản phẩm của chúng tôi? Bạn hoàn toàn có thể trả lại sản phẩm.\n                        Tìm hiểu thêm "), _c("a", {
-    attrs: {
-      href: "#",
-      target: "_blank"
-    }
-  }, [_c("b", [_vm._v("tại đây")])]), _vm._v(".\n                    ")])]);
 }, function () {
   var _vm = this,
     _c = _vm._self._c;
