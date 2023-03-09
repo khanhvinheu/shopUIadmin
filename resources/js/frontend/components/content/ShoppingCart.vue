@@ -1,6 +1,6 @@
 <template>
     <div class="site-content">
-        <div class="container" v-if="!$store.getters.shoppingCart.cart.length">
+        <div class="container" v-if="$store.getters.shoppingCart.cart.length">
             <div class="grid">
                 <div class="grid__column seven-twelfths mobile--one-whole cart-left-section">
                     <div class="cart-section">

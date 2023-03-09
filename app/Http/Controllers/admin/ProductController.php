@@ -41,7 +41,6 @@ class ProductController extends Controller
             $product = $query->toArray();
             return $this->jsonTable($product);
         } catch (\Exception $e) {
-            dd($e);
             return $this->jsonError($e);
         }
     }

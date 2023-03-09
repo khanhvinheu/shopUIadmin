@@ -17,7 +17,7 @@ export function pluralize(time, label) {
  * Format date year-month-day
  * @param {Date} date
  */
-export function formatDate(date) {
+export function formatDate_v2(date) {
   const d = new Date(date);
   let month = '' + (d.getMonth() + 1);
   let day = '' + d.getDate();

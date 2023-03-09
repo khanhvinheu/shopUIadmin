@@ -14,9 +14,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   beforeCreate: function beforeCreate() {
     var _this$$route = this.$route,
-      params = _this$$route.params,
-      query = _this$$route.query;
+        params = _this$$route.params,
+        query = _this$$route.query;
     var path = params.path;
+
     if (path == undefined) {
       this.$router.replace({
         path: '/index'

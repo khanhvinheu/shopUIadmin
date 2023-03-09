@@ -117,6 +117,26 @@
               </li>
             </ul>
           </li>
+            <li class="nav-item menu-open">
+            <a href="#" class="nav-link">
+              <!-- <i class="nav-icon far fa-envelope"></i> -->
+              <p>
+                Đơn hàng
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item ">
+                <a @click="$router.push({name:'Order'})" :class="{ 'active': $route.name=='Order' }" class="nav-link">
+                  <i class="el-icon-film"></i>
+                    <el-badge :value="100" class="item">
+                        <p>Quản lý đơn hàng</p>
+                    </el-badge>
+
+                </a>
+              </li>
+            </ul>
+          </li>
         </ul>
       </nav>
       <!-- /.sidebar-menu -->
