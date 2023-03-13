@@ -21,7 +21,7 @@
                                 <el-input
                                     style="width: 500px"
                                     v-model="textSearch"
-                                    placeholder="Nhập kí tự cần tìm kiếm danh mục"
+                                    placeholder="Nhập kí tự cần tìm kiếm"
                                     @keyup.enter.native="getList()"
                                 >
                                     <template v-slot:append>
@@ -46,7 +46,7 @@
 
                                 <el-table-column
                                     prop="title"
-                                    label="COLOR"
+                                    label="SIZE"
                                     sortable
                                 >
                                 </el-table-column>

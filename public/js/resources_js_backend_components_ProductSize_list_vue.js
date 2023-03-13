@@ -831,10 +831,10 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
   },
   mounted: function mounted() {
     if (this.resID) {
-      this.title = 'Cập nhật màu sản phẩm';
+      this.title = 'Cập nhật size sản phẩm';
       this.getDetail(this.resID);
     } else {
-      this.title = 'Thêm mới màu sản phẩm';
+      this.title = 'Thêm mới size sản phẩm';
       this.$refs.form.resetFields();
     }
   },
@@ -1214,7 +1214,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".el-table .warning-row {\n  background: oldlace;\n}\n.el-table .success-row {\n  background: #f0f9eb;\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".el-table .warning-row {\n  background: oldlace;\n}\n.el-table .success-row {\n  background: #f0f9eb;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -1464,7 +1464,7 @@ var render = function () {
             {
               attrs: {
                 rules: _vm.requiredForm,
-                label: "Màu sản phẩm",
+                label: "Size sản phẩm",
                 prop: "title",
               },
             },
@@ -1564,9 +1564,7 @@ var render = function () {
                     [
                       _c("el-input", {
                         staticStyle: { width: "500px" },
-                        attrs: {
-                          placeholder: "Nhập kí tự cần tìm kiếm danh mục",
-                        },
+                        attrs: { placeholder: "Nhập kí tự cần tìm kiếm" },
                         nativeOn: {
                           keyup: function ($event) {
                             if (
@@ -1663,7 +1661,7 @@ var render = function () {
                     },
                     [
                       _c("el-table-column", {
-                        attrs: { prop: "title", label: "COLOR", sortable: "" },
+                        attrs: { prop: "title", label: "SIZE", sortable: "" },
                       }),
                       _vm._v(" "),
                       _c("el-table-column", {

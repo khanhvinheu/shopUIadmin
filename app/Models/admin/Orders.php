@@ -9,7 +9,7 @@ class Orders extends Model
 {
     use HasFactory;
     use HasFactory;
-//    protected $fillable = ['id','name','id_category','detail','description','discount','trade_mark','status'];
+    protected $fillable = ['order_code','payment_methods','payment_status','pack_status','check_status','note','id_member'];
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\belongsTo

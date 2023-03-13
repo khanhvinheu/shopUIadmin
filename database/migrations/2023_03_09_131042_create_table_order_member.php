@@ -18,11 +18,11 @@ class CreateTableOrderMember extends Migration
             $table->string('name');
             $table->string('phone_number');
             $table->string('email');
-            $table->string('location_text');
+            $table->string('location_text')->nullable();
             $table->string('province');
             $table->string('district');
             $table->string('commune');
-            $table->string('note');
+            $table->string('note')->nullable();
             $table->timestamps();
         });
     }

@@ -43,7 +43,7 @@
                                     <el-form-item required>
                                         <el-col :span="8">
                                             <el-form-item :rules="required" prop="Province">
-                                                <el-select :disabled="!dataProvince" style="width: 100%" filterable  v-model="form.Province" @change="getDistrict($event)" placeholder="Chọn Tỉnh/ Thành Phố">
+                                                <el-select no-data-text="Chưa có dữ liệu" :disabled="!dataProvince" style="width: 100%" filterable  v-model="form.Province" @change="getDistrict($event)" placeholder="Chọn Tỉnh/ Thành Phố">
                                                     <el-option
                                                         v-for="item in dataProvince"
                                                         :key="item.ProvinceCode"
@@ -55,7 +55,7 @@
                                         </el-col>
                                         <el-col :span="8">
                                             <el-form-item :rules="required" prop="District">
-                                                <el-select :disabled="!dataDistrict" style="width: 100%" filterable  v-model="form.District" @change="getCommune($event)" placeholder="Chọn Quận / Huyện">
+                                                <el-select no-data-text="Chưa có dữ liệu" :disabled="!dataDistrict" style="width: 100%" filterable  v-model="form.District" @change="getCommune($event)" placeholder="Chọn Quận / Huyện">
                                                     <el-option
                                                         v-for="item in dataDistrict"
                                                         :key="item.ProvinceCode"
@@ -67,7 +67,7 @@
                                         </el-col>
                                         <el-col :span="8">
                                             <el-form-item :rules="required" prop="Commune">
-                                                <el-select :disabled="!dataCommune" style="width: 100%;" filterable  v-model="form.Commune"  placeholder="Chọn Phường/ Xã">
+                                                <el-select no-data-text="Chưa có dữ liệu" :disabled="!dataCommune" style="width: 100%;" filterable  v-model="form.Commune"  placeholder="Chọn Phường/ Xã">
                                                     <el-option
                                                         v-for="item in dataCommune"
                                                         :key="item.ProvinceCode"
@@ -81,7 +81,7 @@
                                 </el-row>
                                 <el-row :gutter="5">
                                     <el-col :span="24">
-                                        <el-form-item :rules="required" prop="Note">
+                                        <el-form-item prop="Note">
                                             <el-input v-model="form.Note" placeholder="Ghi chú thêm (Ví dụ: Giao hàng giờ hành chính)"></el-input>
                                         </el-form-item>
                                     </el-col>
@@ -90,7 +90,7 @@
                                     <div class="title"> Hình thức thanh toán</div>
                                     <div>
                                         <el-form-item :rules="required" prop="PaymentMethods">
-                                            <label for="payment-COD" class="payment-method__item"
+                                            <label class="payment-method__item"
                                                    v-bind:class="{'active':form.PaymentMethods==1}">
                                                  <el-radio style="display: flex; align-items: center" v-model="form.PaymentMethods" label="1">
                                                      <div style="display: flex; align-items: center;">
@@ -103,18 +103,33 @@
                                                  </el-radio>
 
                                             </label>
-                                            <label for="payment-momo" class="payment-method__item"
+                                            <label class="payment-method__item"
                                                    v-bind:class="{'active':form.PaymentMethods==2}">
                                                  <el-radio style="display: flex; align-items: center" v-model="form.PaymentMethods" label="2">
                                                      <div style="display: flex; align-items: center;">
                                                         <span class="payment-method__item-icon-wrapper">
-                                                            <img src="https://www.coolmate.me/images/momo-icon.png"
-                                                                 alt="Thanh Toán MoMo">
+                                                           <i style="font-size: 40px; color: #239a1a" class="el-icon-bank-card"/>
                                                         </span>
-                                                        <span class="payment-method__item-name">Thanh Toán MoMo</span>
+                                                        <span class="payment-method__item-name">Chuyển khoản trước</span>
                                                      </div>
                                                  </el-radio>
                                             </label>
+<!--                                            <div class="payment-bank">-->
+<!--                                                <el-row>-->
+<!--                                                    <el-col>-->
+<!--                                                        <span class="payment-method__item-name">Quý khách vui lòng chuyển khoản vào một trong các số tài khoản: </span>-->
+<!--                                                    </el-col>-->
+<!--                                                    <el-col>-->
+<!--                                                        <span>1. BIDV: 900000909090909</span>-->
+<!--                                                    </el-col>-->
+<!--                                                    <el-col>-->
+<!--                                                        <span>2. ViettinBank: 900000909090909</span>-->
+<!--                                                    </el-col>-->
+<!--                                                    <el-col>-->
+<!--                                                        <span>Với nội dung: Thanh </span>-->
+<!--                                                    </el-col>-->
+<!--                                                </el-row>-->
+<!--                                            </div>-->
                                         </el-form-item>
 
                                     </div>
@@ -132,7 +147,10 @@
                     <input type="hidden" id="gclid_field" name="gclid_field" value="">
                     <div class="cart-section">
                         <button class="checkout-btn" @click="submitForm('ruleForm')">
-                            Thanh toán <span>{{TotalPrice |toThousandFilter }}</span> <span>(COD)</span></button>
+                            Thanh toán <span>{{TotalPrice |toThousandFilter }} đ</span>
+                                <span v-show="form.PaymentMethods==1">(COD)</span>
+                                <span v-show="form.PaymentMethods==2">(Banking)</span>
+                        </button>
                     </div>
                 </div>
                 <div class="grid__column five-twelfths mobile--one-whole">
@@ -166,12 +184,12 @@
                                                 <div style="display: flex">
                                                     <div style="padding-right: 5px; padding-bottom: 5px"
                                                          class="v-select vue-select cart-item__select vs--single vs--unsearchable">
-                                                           {{item.payment.price| toThousandFilter}} x{{item.payment.total}}
+                                                           {{item.payment.price| toThousandFilter}}đ x{{item.payment.total}}
                                                     </div>
                                                 </div>
                                                 <div class="cart-item__actions-bottom">
                                                     <div class="quantity-box" style="display: flex">
-                                                        <el-input :value="item.payment.total">
+                                                        <el-input :value="item.payment.total" style="width: 200px; text-align: center">
                                                             <template v-slot:append>
                                                                 <el-button :disabled="item.payment.total>=10" @click="addItem(item)">+</el-button>
                                                             </template>
@@ -244,7 +262,8 @@ export default {
                 PaymentMethods:''
             },
             required:{ required: true, message: 'Vui lòng không bỏ trống', trigger: ['blur','change'] },
-
+            formData:new FormData(),
+            loading:false
 
         }
     },
@@ -254,12 +273,44 @@ export default {
     watch:{
     },
     methods:{
+        appendToFormData(){
+            let _this = this
+            Object.keys(this.form).forEach(key => {
+                _this.formData.set(key, this.form[key])
+            });
+            _this.formData.set('dataCart', JSON.stringify(this.$store.getters.shoppingCart.cart))
+        },
         submitForm(ruleForm){
+            let _this = this
             this.$refs[ruleForm].validate((valid) => {
                 if (valid) {
-                    alert('submit!');
+                    _this.appendToFormData()
+                    _this.loading=true
+                    ApiService.post('/api/admin/orders/create',_this.formData).then(({data})=>{
+                        if(data['success']){
+                            _this.$notify({
+                                title: 'Success',
+                                message: data['mess'],
+                                type: 'success'
+                            });
+                            _this.$store.dispatch("shoppingCart/removeAllCart");
+                            if(_this.form.PaymentMethods==1){
+                                _this.$router.push({name:'order-success', params:{order_code:data['order_code']}})
+                            }else {
+                                _this.$router.push({name:'payment-order', params:{order_code:data['order_code']}})
+                            }
+
+                        }else{
+                            _this.$notify({
+                                title: 'Error',
+                                message: data['mess'],
+                                type: 'error'
+                            });
+                        }
+                        this.loading=false
+                    })
                 } else {
-                    console.log('error submit!!');
+                    this.loading=false
                     return false;
                 }
             });
@@ -282,7 +333,9 @@ export default {
         },
         getDistrict(provinceCode){
             this.form.District = ''
+            this.dataDistrict=[]
             this.form.Commune = ''
+            this.dataCommune=[]
             ApiService.query('/api/admin/get-full-province?type=district&ProvinceCode='+provinceCode).then(({data})=>{
                 if(data['success']){
                     this.dataDistrict = data['data']
@@ -327,6 +380,10 @@ export default {
 </script>
 
 <style scoped>
+    .payment-bank{
+        padding: 10px;
+        border: 1px solid rgb(0,0,0,0.1);
+    }
 .cart-item {
     position: relative;
     display: flex;

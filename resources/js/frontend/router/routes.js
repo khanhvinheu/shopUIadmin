@@ -31,6 +31,22 @@ const routes = [
                     title:'Giỏ hàng'
                 }
             },
+            {
+                path: 'order-success/:order_code?',
+                component: ()=> import('../components/content/OrderSuccess'),
+                name:'order-success',
+                meta:{
+                    title:'Mua hàng thành công'
+                }
+            },
+            {
+                path: 'payment-order/:order_code?',
+                component: ()=> import('../components/content/PaymentOrder'),
+                name:'payment-order',
+                meta:{
+                    title:'Thông tin thanh toán'
+                }
+            },
         ]
     },
     {

@@ -79,8 +79,11 @@ Route::prefix('admin')->namespace('admin')->group(function () {
     Route::post('products/delete/{id}','ProductController@destroy');
     Route::post('products/update/{id}','ProductController@update');
     // Route::apiResource('products', 'ProductController');
+    //Province
+    Route::get('get-full-province','ProvinceController@getFullProvince');
     // Order
     Route::get('orders','OrderController@index');
+    Route::post('orders/create','OrderController@create');
 
 
 });

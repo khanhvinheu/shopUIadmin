@@ -24,7 +24,7 @@ class CreateTableOptionsProduct extends Migration
 //            $table->string('color');
 //            $table->string('size');
             $table->integer('price');
-            $table->string('total');
+            $table->integer('total');
             $table->string('note')->nullable();
             $table->timestamps();
         });

@@ -295,6 +295,7 @@ export default {
             return data.title.indexOf(value) !== -1;
         },
         resetForm(formName) {
+            this.images=[]
             this.$refs[formName].resetFields();
         },
         getList() {

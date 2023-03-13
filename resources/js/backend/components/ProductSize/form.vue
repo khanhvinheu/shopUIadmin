@@ -5,7 +5,7 @@
            <el-divider></el-divider>
        </div>
         <el-form :model="form"  ref="form" label-width="120px" class="demo-ruleForm">
-            <el-form-item :rules="requiredForm" label="Màu sản phẩm" prop="title">
+            <el-form-item :rules="requiredForm" label="Size sản phẩm" prop="title">
                 <el-input v-model="form.title"></el-input>
             </el-form-item>
         </el-form>
@@ -32,10 +32,10 @@
         },
         mounted() {
             if(this.resID){
-                this.title='Cập nhật màu sản phẩm'
+                this.title='Cập nhật size sản phẩm'
                 this.getDetail(this.resID)
             }else {
-                this.title='Thêm mới màu sản phẩm'
+                this.title='Thêm mới size sản phẩm'
                 this.$refs.form.resetFields()
             }
         },

@@ -242,6 +242,24 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -267,7 +285,9 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         required: true,
         message: 'Vui lòng không bỏ trống',
         trigger: ['blur', 'change']
-      }
+      },
+      formData: new FormData(),
+      loading: false
     };
   },
   mounted: function mounted() {
@@ -275,12 +295,66 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
   },
   watch: {},
   methods: {
+    appendToFormData: function appendToFormData() {
+      var _this2 = this;
+
+      var _this = this;
+
+      Object.keys(this.form).forEach(function (key) {
+        _this.formData.set(key, _this2.form[key]);
+      });
+
+      _this.formData.set('dataCart', JSON.stringify(this.$store.getters.shoppingCart.cart));
+    },
     submitForm: function submitForm(ruleForm) {
+      var _this3 = this;
+
+      var _this = this;
+
       this.$refs[ruleForm].validate(function (valid) {
         if (valid) {
-          alert('submit!');
+          _this.appendToFormData();
+
+          _this.loading = true;
+          _backend_common_api_service__WEBPACK_IMPORTED_MODULE_0__["default"].post('/api/admin/orders/create', _this.formData).then(function (_ref) {
+            var data = _ref.data;
+
+            if (data['success']) {
+              _this.$notify({
+                title: 'Success',
+                message: data['mess'],
+                type: 'success'
+              });
+
+              _this.$store.dispatch("shoppingCart/removeAllCart");
+
+              if (_this.form.PaymentMethods == 1) {
+                _this.$router.push({
+                  name: 'order-success',
+                  params: {
+                    order_code: data['order_code']
+                  }
+                });
+              } else {
+                _this.$router.push({
+                  name: 'payment-order',
+                  params: {
+                    order_code: data['order_code']
+                  }
+                });
+              }
+            } else {
+              _this.$notify({
+                title: 'Error',
+                message: data['mess'],
+                type: 'error'
+              });
+            }
+
+            _this3.loading = false;
+          });
         } else {
-          console.log('error submit!!');
+          _this3.loading = false;
           return false;
         }
       });
@@ -295,38 +369,40 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       this.$store.dispatch("shoppingCart/deleteFromCart", item);
     },
     getProvince: function getProvince() {
-      var _this = this;
+      var _this4 = this;
 
-      _backend_common_api_service__WEBPACK_IMPORTED_MODULE_0__["default"].query('/api/admin/get-full-province?type=province').then(function (_ref) {
-        var data = _ref.data;
+      _backend_common_api_service__WEBPACK_IMPORTED_MODULE_0__["default"].query('/api/admin/get-full-province?type=province').then(function (_ref2) {
+        var data = _ref2.data;
 
         if (data['success']) {
-          _this.dataProvince = data['data'];
+          _this4.dataProvince = data['data'];
         }
       });
     },
     getDistrict: function getDistrict(provinceCode) {
-      var _this2 = this;
+      var _this5 = this;
 
       this.form.District = '';
+      this.dataDistrict = [];
       this.form.Commune = '';
-      _backend_common_api_service__WEBPACK_IMPORTED_MODULE_0__["default"].query('/api/admin/get-full-province?type=district&ProvinceCode=' + provinceCode).then(function (_ref2) {
-        var data = _ref2.data;
+      this.dataCommune = [];
+      _backend_common_api_service__WEBPACK_IMPORTED_MODULE_0__["default"].query('/api/admin/get-full-province?type=district&ProvinceCode=' + provinceCode).then(function (_ref3) {
+        var data = _ref3.data;
 
         if (data['success']) {
-          _this2.dataDistrict = data['data'];
+          _this5.dataDistrict = data['data'];
         }
       });
     },
     getCommune: function getCommune(provinceCode) {
-      var _this3 = this;
+      var _this6 = this;
 
       this.form.Commune = '';
-      _backend_common_api_service__WEBPACK_IMPORTED_MODULE_0__["default"].query('/api/admin/get-full-province?type=commune&ProvinceCode=' + provinceCode).then(function (_ref3) {
-        var data = _ref3.data;
+      _backend_common_api_service__WEBPACK_IMPORTED_MODULE_0__["default"].query('/api/admin/get-full-province?type=commune&ProvinceCode=' + provinceCode).then(function (_ref4) {
+        var data = _ref4.data;
 
         if (data['success']) {
-          _this3.dataCommune = data['data'];
+          _this6.dataCommune = data['data'];
         }
       });
     }
@@ -533,7 +609,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".cart-item[data-v-7a4e1978] {\n  position: relative;\n  display: flex;\n  flex-flow: row wrap;\n  padding: 0;\n}\n.cart-item__remove[data-v-7a4e1978] {\n  cursor: pointer;\n  position: absolute;\n  top: 0;\n  right: 0;\n  transition: all .2s;\n  z-index: 3;\n}\n.cart-item__title[data-v-7a4e1978] {\n  font-weight: 700;\n  font-size: .9rem;\n  max-width: 85%;\n  display: block;\n}\n.pricing-info__item[data-v-7a4e1978] {\n  display: flex;\n  justify-content: space-between;\n}\n.cart-item__thumbnail[data-v-7a4e1978] {\n  border-radius: 20px;\n}\n.cart-item__thumbnail-block[data-v-7a4e1978] {\n  position: relative;\n  width: 126px;\n}\n.payment-method__item[data-v-7a4e1978] {\n  display: flex;\n  align-items: center;\n  border: 1px solid #D9D9D9;\n  border-radius: 16px;\n  padding: 15px 20px;\n  cursor: pointer;\n  transition: .2s all;\n  opacity: .6;\n}\n.payment-method__item-icon-wrapper img[data-v-7a4e1978] {\n  min-width: 35px;\n  max-height: 35px;\n  max-width: 55px;\n}\n.payment-method__item.active[data-v-7a4e1978],\n.payment-method__item[data-v-7a4e1978]:not(.disabled):hover {\n  border: 1px solid #2f5acf;\n  opacity: 1;\n}\n.checkout-btn[data-v-7a4e1978] {\n  border-radius: 16px;\n  height: 55px;\n  width: 100%;\n  padding: 15px 20px;\n  background-color: #000;\n  color: #fff;\n  text-align: center;\n  border: none;\n  cursor: pointer;\n  transition: all .2s;\n}\n.payment-method__item[data-v-7a4e1978]:not(:last-child) {\n  margin-bottom: 1rem;\n}\n.cart-item__block[data-v-7a4e1978] {\n  display: flex;\n  height: 100%;\n  flex-flow: row;\n  flex-wrap: wrap;\n}\n.cart-item__select .vs__dropdown-toggle[data-v-7a4e1978] {\n  display: inline-flex !important;\n  padding: 3px 6px !important;\n  height: 30px !important;\n  border-radius: 8px !important;\n  border: 1px solid #000 !important;\n  margin-bottom: 5px !important;\n}\n.cart-item__actions[data-v-7a4e1978] {\n  width: 100%;\n  margin-top: auto;\n  display: flex;\n  flex-flow: column;\n  flex-wrap: wrap;\n}\n.cart-item__variant[data-v-7a4e1978] {\n  font-size: .8rem;\n}\n.cart-item__info[data-v-7a4e1978] {\n  width: 100%;\n}\n.cart-item__actions-bottom[data-v-7a4e1978] {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  text-align: right;\n}\n.cart__column-right[data-v-7a4e1978] {\n  margin-left: 1.5rem;\n  flex: 3;\n}\n.cart-left-section[data-v-7a4e1978] {\n  border-right: 1px solid #d9d9d9;\n}\n.payment-method__item-icon-wrapper[data-v-7a4e1978] {\n  margin: 0 1.5rem;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".payment-bank[data-v-7a4e1978]{\n  padding: 10px;\n  border: 1px solid rgb(0,0,0,0.1);\n}\n.cart-item[data-v-7a4e1978] {\n  position: relative;\n  display: flex;\n  flex-flow: row wrap;\n  padding: 0;\n}\n.cart-item__remove[data-v-7a4e1978] {\n  cursor: pointer;\n  position: absolute;\n  top: 0;\n  right: 0;\n  transition: all .2s;\n  z-index: 3;\n}\n.cart-item__title[data-v-7a4e1978] {\n  font-weight: 700;\n  font-size: .9rem;\n  max-width: 85%;\n  display: block;\n}\n.pricing-info__item[data-v-7a4e1978] {\n  display: flex;\n  justify-content: space-between;\n}\n.cart-item__thumbnail[data-v-7a4e1978] {\n  border-radius: 20px;\n}\n.cart-item__thumbnail-block[data-v-7a4e1978] {\n  position: relative;\n  width: 126px;\n}\n.payment-method__item[data-v-7a4e1978] {\n  display: flex;\n  align-items: center;\n  border: 1px solid #D9D9D9;\n  border-radius: 16px;\n  padding: 15px 20px;\n  cursor: pointer;\n  transition: .2s all;\n  opacity: .6;\n}\n.payment-method__item-icon-wrapper img[data-v-7a4e1978] {\n  min-width: 35px;\n  max-height: 35px;\n  max-width: 55px;\n}\n.payment-method__item.active[data-v-7a4e1978],\n.payment-method__item[data-v-7a4e1978]:not(.disabled):hover {\n  border: 1px solid #2f5acf;\n  opacity: 1;\n}\n.checkout-btn[data-v-7a4e1978] {\n  border-radius: 16px;\n  height: 55px;\n  width: 100%;\n  padding: 15px 20px;\n  background-color: #000;\n  color: #fff;\n  text-align: center;\n  border: none;\n  cursor: pointer;\n  transition: all .2s;\n}\n.payment-method__item[data-v-7a4e1978]:not(:last-child) {\n  margin-bottom: 1rem;\n}\n.cart-item__block[data-v-7a4e1978] {\n  display: flex;\n  height: 100%;\n  flex-flow: row;\n  flex-wrap: wrap;\n}\n.cart-item__select .vs__dropdown-toggle[data-v-7a4e1978] {\n  display: inline-flex !important;\n  padding: 3px 6px !important;\n  height: 30px !important;\n  border-radius: 8px !important;\n  border: 1px solid #000 !important;\n  margin-bottom: 5px !important;\n}\n.cart-item__actions[data-v-7a4e1978] {\n  width: 100%;\n  margin-top: auto;\n  display: flex;\n  flex-flow: column;\n  flex-wrap: wrap;\n}\n.cart-item__variant[data-v-7a4e1978] {\n  font-size: .8rem;\n}\n.cart-item__info[data-v-7a4e1978] {\n  width: 100%;\n}\n.cart-item__actions-bottom[data-v-7a4e1978] {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  text-align: right;\n}\n.cart__column-right[data-v-7a4e1978] {\n  margin-left: 1.5rem;\n  flex: 3;\n}\n.cart-left-section[data-v-7a4e1978] {\n  border-right: 1px solid #d9d9d9;\n}\n.payment-method__item-icon-wrapper[data-v-7a4e1978] {\n  margin: 0 1.5rem;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -11890,6 +11966,8 @@ var render = function () {
                                             {
                                               staticStyle: { width: "100%" },
                                               attrs: {
+                                                "no-data-text":
+                                                  "Chưa có dữ liệu",
                                                 disabled: !_vm.dataProvince,
                                                 filterable: "",
                                                 placeholder:
@@ -11951,6 +12029,8 @@ var render = function () {
                                             {
                                               staticStyle: { width: "100%" },
                                               attrs: {
+                                                "no-data-text":
+                                                  "Chưa có dữ liệu",
                                                 disabled: !_vm.dataDistrict,
                                                 filterable: "",
                                                 placeholder:
@@ -12012,6 +12092,8 @@ var render = function () {
                                             {
                                               staticStyle: { width: "100%" },
                                               attrs: {
+                                                "no-data-text":
+                                                  "Chưa có dữ liệu",
                                                 disabled: !_vm.dataCommune,
                                                 filterable: "",
                                                 placeholder: "Chọn Phường/ Xã",
@@ -12065,12 +12147,7 @@ var render = function () {
                                 [
                                   _c(
                                     "el-form-item",
-                                    {
-                                      attrs: {
-                                        rules: _vm.required,
-                                        prop: "Note",
-                                      },
-                                    },
+                                    { attrs: { prop: "Note" } },
                                     [
                                       _c("el-input", {
                                         attrs: {
@@ -12119,7 +12196,6 @@ var render = function () {
                                         class: {
                                           active: _vm.form.PaymentMethods == 1,
                                         },
-                                        attrs: { for: "payment-COD" },
                                       },
                                       [
                                         _c(
@@ -12197,7 +12273,6 @@ var render = function () {
                                         class: {
                                           active: _vm.form.PaymentMethods == 2,
                                         },
-                                        attrs: { for: "payment-momo" },
                                       },
                                       [
                                         _c(
@@ -12237,10 +12312,12 @@ var render = function () {
                                                       "payment-method__item-icon-wrapper",
                                                   },
                                                   [
-                                                    _c("img", {
-                                                      attrs: {
-                                                        src: "https://www.coolmate.me/images/momo-icon.png",
-                                                        alt: "Thanh Toán MoMo",
+                                                    _c("i", {
+                                                      staticClass:
+                                                        "el-icon-bank-card",
+                                                      staticStyle: {
+                                                        "font-size": "40px",
+                                                        color: "#239a1a",
                                                       },
                                                     }),
                                                   ]
@@ -12252,7 +12329,7 @@ var render = function () {
                                                     staticClass:
                                                       "payment-method__item-name",
                                                   },
-                                                  [_vm._v("Thanh Toán MoMo")]
+                                                  [_vm._v("Chuyển khoản trước")]
                                                 ),
                                               ]
                                             ),
@@ -12269,14 +12346,14 @@ var render = function () {
                             _vm._v(" "),
                             _c("p", { staticClass: "cart-return-text" }, [
                               _vm._v(
-                                "\n                                    Nếu bạn không hài lòng với sản phẩm của chúng tôi? Bạn hoàn toàn có thể trả lại\n                                    sản phẩm.\n                                    Tìm hiểu thêm "
+                                "\n                                        Nếu bạn không hài lòng với sản phẩm của chúng tôi? Bạn hoàn toàn có thể trả lại\n                                        sản phẩm.\n                                        Tìm hiểu thêm "
                               ),
                               _c(
                                 "a",
                                 { attrs: { href: "#", target: "_blank" } },
                                 [_c("b", [_vm._v("tại đây")])]
                               ),
-                              _vm._v(".\n                                "),
+                              _vm._v(".\n                                    "),
                             ]),
                           ]),
                         ],
@@ -12308,14 +12385,43 @@ var render = function () {
                       },
                     },
                     [
-                      _vm._v("\n                        Thanh toán "),
+                      _vm._v("\n                            Thanh toán "),
                       _c("span", [
                         _vm._v(
-                          _vm._s(_vm._f("toThousandFilter")(_vm.TotalPrice))
+                          _vm._s(_vm._f("toThousandFilter")(_vm.TotalPrice)) +
+                            " đ"
                         ),
                       ]),
                       _vm._v(" "),
-                      _c("span", [_vm._v("(COD)")]),
+                      _c(
+                        "span",
+                        {
+                          directives: [
+                            {
+                              name: "show",
+                              rawName: "v-show",
+                              value: _vm.form.PaymentMethods == 1,
+                              expression: "form.PaymentMethods==1",
+                            },
+                          ],
+                        },
+                        [_vm._v("(COD)")]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "span",
+                        {
+                          directives: [
+                            {
+                              name: "show",
+                              rawName: "v-show",
+                              value: _vm.form.PaymentMethods == 2,
+                              expression: "form.PaymentMethods==2",
+                            },
+                          ],
+                        },
+                        [_vm._v("(Banking)")]
+                      ),
                     ]
                   ),
                 ]),
@@ -12329,7 +12435,7 @@ var render = function () {
                 _c("div", { staticClass: "cart-section" }, [
                   _c("div", { staticClass: "title" }, [
                     _vm._v(
-                      "\n                        Giỏ hàng\n                    "
+                      "\n                            Giỏ hàng\n                        "
                     ),
                   ]),
                   _vm._v(" "),
@@ -12412,9 +12518,9 @@ var render = function () {
                                             },
                                             [
                                               _vm._v(
-                                                "\n                                            " +
+                                                "\n                                                " +
                                                   _vm._s(item.name) +
-                                                  "\n                                        "
+                                                  "\n                                            "
                                               ),
                                             ]
                                           ),
@@ -12426,7 +12532,7 @@ var render = function () {
                                             },
                                             [
                                               _vm._v(
-                                                "\n                                               " +
+                                                "\n                                                   " +
                                                   _vm._s(
                                                     item.payment.color.title
                                                   ) +
@@ -12434,7 +12540,7 @@ var render = function () {
                                                   _vm._s(
                                                     item.payment.size.title
                                                   ) +
-                                                  "\n                                            "
+                                                  "\n                                                "
                                               ),
                                             ]
                                           ),
@@ -12463,17 +12569,17 @@ var render = function () {
                                                 },
                                                 [
                                                   _vm._v(
-                                                    "\n                                                       " +
+                                                    "\n                                                           " +
                                                       _vm._s(
                                                         _vm._f(
                                                           "toThousandFilter"
                                                         )(item.payment.price)
                                                       ) +
-                                                      " x" +
+                                                      "đ x" +
                                                       _vm._s(
                                                         item.payment.total
                                                       ) +
-                                                      "\n                                                "
+                                                      "\n                                                    "
                                                   ),
                                                 ]
                                               ),
@@ -12497,6 +12603,10 @@ var render = function () {
                                                 },
                                                 [
                                                   _c("el-input", {
+                                                    staticStyle: {
+                                                      width: "200px",
+                                                      "text-align": "center",
+                                                    },
                                                     attrs: {
                                                       value: item.payment.total,
                                                     },
@@ -12582,7 +12692,7 @@ var render = function () {
                                                 [
                                                   _c("span", [
                                                     _vm._v(
-                                                      "\n                                                        " +
+                                                      "\n                                                            " +
                                                         _vm._s(
                                                           _vm._f(
                                                             "toThousandFilter"
@@ -12591,7 +12701,7 @@ var render = function () {
                                                               item.payment.total
                                                           )
                                                         ) +
-                                                        "đ\n                                                 "
+                                                        "đ\n                                                     "
                                                     ),
                                                   ]),
                                                 ]
@@ -12683,7 +12793,7 @@ var staticRenderFns = [
     return _c("div", { staticClass: "title-with-actions" }, [
       _c("div", { staticClass: "title" }, [
         _vm._v(
-          "\n                            Thông tin vận chuyển\n                        "
+          "\n                                Thông tin vận chuyển\n                            "
         ),
       ]),
     ])

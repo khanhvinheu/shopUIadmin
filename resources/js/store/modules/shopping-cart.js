@@ -54,6 +54,10 @@ const mutations = {
         }
     },
 
+    removeAllCart:(state) => {
+        state.cart=[]
+    },
+
     removeFromCart: (state, productId) => {
         // //find the product in the products list
         // let product = state.products.find((product) => product.id === productId);
@@ -100,6 +104,10 @@ const actions = {
     },
     removeItem: ({ commit }, productId) => {
             commit("removeItem", productId);
+    },
+
+    removeAllCart: ({ commit }, productId) => {
+        commit("removeAllCart");
     },
 
 

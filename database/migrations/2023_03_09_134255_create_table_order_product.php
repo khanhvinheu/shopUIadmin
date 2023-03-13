@@ -18,11 +18,11 @@ class CreateTableOrderProduct extends Migration
             $table->bigInteger('product_id')->unsigned()->nullable();
             $table->foreign('product_id')->references('id')->on('Products');
             $table->string('product_name');
-            $table->string('product_color');
-            $table->string('product_size');
-            $table->string('quantity');
-            $table->string('price');
-            $table->string('price_total');
+            $table->integer('product_color');
+            $table->integer('product_size');
+            $table->integer('quantity');
+            $table->integer('price');
+            $table->integer('price_total');
             $table->bigInteger('id_order')->unsigned()->nullable();
             $table->foreign('id_order')->references('id')->on('Orders')->onDelete('cascade');
             $table->timestamps();
