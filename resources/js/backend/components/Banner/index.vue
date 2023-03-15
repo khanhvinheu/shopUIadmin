@@ -19,7 +19,7 @@
                         <div class="col-md-12">
                             <el-carousel indicator-position="outside" height="350px">
                                 <el-carousel-item v-for="(item,i) in slideData" :key="i"
-                                                  v-bind:style="{'background-image': 'url(/'+item.path+')'}"
+                                                  v-bind:style="{'background-image': 'url('+item.path+')'}"
                                                   style="background-repeat: repeat; background-position: center; background-size: cover;">
                                     <div style="width: 100%;">
 

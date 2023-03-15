@@ -301,7 +301,10 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       var _this = this;
 
       Object.keys(this.form).forEach(function (key) {
-        _this.formData.set(key, _this2.form[key]);
+        _this.formData.set(key, _this2.form[key]); // if(key=='Province'||key=='District'||key=='Commune'){
+        //     _this.formData.set(key, this.form[key]['ProvinceName'])
+        // }
+
       });
 
       _this.formData.set('dataCart', JSON.stringify(this.$store.getters.shoppingCart.cart));
@@ -379,14 +382,15 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         }
       });
     },
-    getDistrict: function getDistrict(provinceCode) {
+    getDistrict: function getDistrict(item) {
       var _this5 = this;
 
+      this.form.Province = item.ProvinceName;
       this.form.District = '';
       this.dataDistrict = [];
       this.form.Commune = '';
       this.dataCommune = [];
-      _backend_common_api_service__WEBPACK_IMPORTED_MODULE_0__["default"].query('/api/admin/get-full-province?type=district&ProvinceCode=' + provinceCode).then(function (_ref3) {
+      _backend_common_api_service__WEBPACK_IMPORTED_MODULE_0__["default"].query('/api/admin/get-full-province?type=district&ProvinceCode=' + item.ProvinceCode).then(function (_ref3) {
         var data = _ref3.data;
 
         if (data['success']) {
@@ -394,11 +398,12 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         }
       });
     },
-    getCommune: function getCommune(provinceCode) {
+    getCommune: function getCommune(item) {
       var _this6 = this;
 
+      this.form.District = item.ProvinceName;
       this.form.Commune = '';
-      _backend_common_api_service__WEBPACK_IMPORTED_MODULE_0__["default"].query('/api/admin/get-full-province?type=commune&ProvinceCode=' + provinceCode).then(function (_ref4) {
+      _backend_common_api_service__WEBPACK_IMPORTED_MODULE_0__["default"].query('/api/admin/get-full-province?type=commune&ProvinceCode=' + item.ProvinceCode).then(function (_ref4) {
         var data = _ref4.data;
 
         if (data['success']) {
@@ -11997,7 +12002,7 @@ var render = function () {
                                                   key: item.ProvinceCode,
                                                   attrs: {
                                                     label: item.ProvinceName,
-                                                    value: item.ProvinceCode,
+                                                    value: item,
                                                   },
                                                 })
                                               }
@@ -12060,7 +12065,7 @@ var render = function () {
                                                   key: item.ProvinceCode,
                                                   attrs: {
                                                     label: item.ProvinceName,
-                                                    value: item.ProvinceCode,
+                                                    value: item,
                                                   },
                                                 })
                                               }
@@ -12117,7 +12122,7 @@ var render = function () {
                                                   key: item.ProvinceCode,
                                                   attrs: {
                                                     label: item.ProvinceName,
-                                                    value: item.ProvinceCode,
+                                                    value: item.ProvinceName,
                                                   },
                                                 })
                                               }

@@ -1,5 +1,6 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
+import appSetting from '../../config/appSetting'
 Vue.use(VueRouter);
 const routes = [
     {
@@ -64,7 +65,7 @@ const router = new VueRouter({
     linkActiveClass: 'active',
     routes,
 });
-// console.log(process.env.APP_NAME)
+
 const DEFAULT_TITLE ='HaDoVN';
 router.afterEach((to) => {
     document.title =(DEFAULT_TITLE + ' - ' + to.meta.title )|| DEFAULT_TITLE + ' - '+(to.name);
@@ -73,7 +74,7 @@ router.afterEach((to) => {
     var link = document.querySelector("link[rel*='icon']") || document.createElement('link');
     link.type = 'image/x-icon';
     link.rel = 'shortcut icon';
-    link.href = './assets/img/AdminLTELogo.png';
+    link.href = './img/6.png';
     document.getElementsByTagName('head')[0].appendChild(link);
 })();
 export default router;

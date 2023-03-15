@@ -1232,7 +1232,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".header-actions__menu[data-v-31cefecd] {\n  position: absolute;\n  top: 100%;\n  right: 0;\n  padding-top: 5px;\n  opacity: 0;\n  pointer-events: none;\n  visibility: hidden;\n  transition: all .3s;\n}\n.header-actions__inner[data-v-31cefecd] {\n  background-color: #fff;\n  border-radius: 16px;\n  box-shadow: 0 0 10px 0 rgb(0 0 0 / 7%);\n  border: 1px solid #d9d9d9;\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".header-actions__menu[data-v-31cefecd] {\n  position: absolute;\n  top: 100%;\n  right: 0;\n  padding-top: 5px;\n  opacity: 0;\n  pointer-events: none;\n  visibility: hidden;\n  transition: all .3s;\n}\n.header-actions__inner[data-v-31cefecd] {\n  background-color: #fff;\n  border-radius: 16px;\n  box-shadow: 0 0 10px 0 rgb(0 0 0 / 7%);\n  border: 1px solid #d9d9d9;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -12780,497 +12780,498 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("footer", { staticClass: "site-footer" }, [
+    _c("div", { staticClass: "container" }, [
+      _c("div", { staticClass: "site-footer__inner" }, [
+        _vm._m(0),
+        _vm._v(" "),
+        _c("div", { staticClass: "site-footer__sidebar" }, [
+          _c("h4", { staticClass: "site-footer__title" }, [
+            _vm._v(
+              "\n                       " +
+                _vm._s(_vm.$appSetting.NAME) +
+                " .... lắng nghe bạn!\n                    "
+            ),
+          ]),
+          _vm._v(" "),
+          _c(
+            "p",
+            {
+              staticClass: "site-footer__description",
+              staticStyle: { "margin-bottom": "10px" },
+            },
+            [
+              _vm._v(
+                "\n                        Chúng tôi luôn trân trọng và mong đợi nhận được mọi ý kiến đóng góp từ\n                        khách hàng để có thể nâng cấp trải nghiệm dịch vụ và sản phẩm tốt hơn nữa.\n                    "
+              ),
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "a",
+            {
+              staticClass: "site-footer__btn",
+              attrs: {
+                href: "https://form.typeform.com/to/lU2oprGc?typeform-medium=embed-snippet",
+                target: "_blank",
+              },
+            },
+            [
+              _vm._v(
+                "\n                        Gửi Ý Kiến\n                    "
+              ),
+            ]
+          ),
+          _vm._v(" "),
+          _vm._m(1),
+          _vm._v(" "),
+          _vm._m(2),
+          _vm._v(" "),
+          _vm._m(3),
+        ]),
+      ]),
+      _vm._v(" "),
+      _vm._m(4),
+    ]),
+  ])
 }
 var staticRenderFns = [
   function () {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("footer", { staticClass: "site-footer" }, [
-      _c("div", { staticClass: "container" }, [
-        _c("div", { staticClass: "site-footer__inner" }, [
-          _c("div", { staticClass: "site-footer__menu" }, [
-            _c("div", { staticClass: "footer-menu" }, [
-              _c("div", { staticClass: "footer-menu__item" }, [
-                _c("h4", { staticClass: "footer-menu__title" }, [
-                  _vm._v("Khám phá "),
-                ]),
-                _vm._v(" "),
-                _c("ul", [
-                  _c("li", [
-                    _c("a", { attrs: { href: "/collection/ao-polo-nam" } }, [
-                      _vm._v("Áo Polo"),
-                    ]),
-                  ]),
-                  _vm._v(" "),
-                  _c("li", [
-                    _c(
-                      "a",
-                      { attrs: { href: "/collection/ao-thun-nam-gioi" } },
-                      [_vm._v("Áo T-shirt")]
-                    ),
-                  ]),
-                  _vm._v(" "),
-                  _c("li", [
-                    _c("a", { attrs: { href: "/collection/ao-so-mi-nam" } }, [
-                      _vm._v("Áo Sơ mi"),
-                    ]),
-                  ]),
-                  _vm._v(" "),
-                  _c("li", [
-                    _c("a", { attrs: { href: "/collection/quan-short-nam" } }, [
-                      _vm._v("Quần"),
-                    ]),
-                  ]),
-                  _vm._v(" "),
-                  _c("li", [
-                    _c("a", { attrs: { href: "/collection/quan-lot-nam" } }, [
-                      _vm._v("Quần Lót"),
-                    ]),
-                  ]),
-                  _vm._v(" "),
-                  _c("li", [
-                    _c("a", { attrs: { href: "/collection/tat-nam" } }, [
-                      _vm._v("Tất (Vớ)"),
-                    ]),
-                  ]),
-                  _vm._v(" "),
-                  _c("li", [
-                    _c("a", { attrs: { href: "/collection/mu-luoi-trai" } }, [
-                      _vm._v("Mũ (Nón)"),
-                    ]),
-                  ]),
-                  _vm._v(" "),
-                  _c("li", [
-                    _c("a", { attrs: { href: "/collection/phu-kien" } }, [
-                      _vm._v("Phụ Kiện Khác"),
-                    ]),
-                  ]),
-                ]),
+    return _c("div", { staticClass: "site-footer__menu" }, [
+      _c("div", { staticClass: "footer-menu" }, [
+        _c("div", { staticClass: "footer-menu__item" }, [
+          _c("h4", { staticClass: "footer-menu__title" }, [
+            _vm._v("Khám phá "),
+          ]),
+          _vm._v(" "),
+          _c("ul", [
+            _c("li", [
+              _c("a", { attrs: { href: "/collection/ao-polo-nam" } }, [
+                _vm._v("Áo Polo"),
               ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "footer-menu__item" }, [
-                _c("h4", { staticClass: "footer-menu__title" }, [
-                  _vm._v("Dịch vụ khách hàng"),
-                ]),
-                _vm._v(" "),
-                _c("ul", [
-                  _c("li", [
-                    _c("a", { attrs: { href: "/page/faqs" } }, [
-                      _vm._v("Hỏi đáp - FAQs"),
-                    ]),
-                  ]),
-                  _vm._v(" "),
-                  _c("li", [
-                    _c(
-                      "a",
-                      { attrs: { href: "/page/dich-vu-60-ngay-doi-tra" } },
-                      [_vm._v("Chính sách đổi trả 60 ngày")]
-                    ),
-                  ]),
-                  _vm._v(" "),
-                  _c("li", [
-                    _c("a", { attrs: { href: "/page/lien-he-voi-coolmate" } }, [
-                      _vm._v("Liên hệ"),
-                    ]),
-                  ]),
-                  _vm._v(" "),
-                  _c("li", [
-                    _c(
-                      "a",
-                      {
-                        attrs: {
-                          href: "/page/coolclub-chuong-trinh-khach-hang-than-thiet-cua-coolmate",
-                        },
-                      },
-                      [
-                        _vm._v(
-                          "Thành\r\n                                        viên Coolclub"
-                        ),
-                      ]
-                    ),
-                  ]),
-                  _vm._v(" "),
-                  _c("li", [
-                    _c(
-                      "a",
-                      {
-                        attrs: {
-                          href: "/page/11-dich-vu-tai-coolmate-co-the-ban-chua-biet",
-                        },
-                      },
-                      [
-                        _vm._v(
-                          "Khách hàng hài\r\n                                        lòng 100%"
-                        ),
-                      ]
-                    ),
-                  ]),
-                  _vm._v(" "),
-                  _c("li", [
-                    _c(
-                      "a",
-                      {
-                        attrs: {
-                          href: "/page/chuong-trinh-va-chinh-sach-khuyen-mai-tai-coolmate",
-                        },
-                      },
-                      [
-                        _vm._v(
-                          "Chính\r\n                                        sách khuyến mãi"
-                        ),
-                      ]
-                    ),
-                  ]),
-                  _vm._v(" "),
-                  _c("li", [
-                    _c(
-                      "a",
-                      { attrs: { href: "/page/dich-vu-giao-hang-coolmate" } },
-                      [_vm._v("Chính sách giao hàng")]
-                    ),
-                  ]),
-                  _vm._v(" "),
-                  _c("li", [
-                    _c(
-                      "a",
-                      {
-                        attrs: {
-                          href: "/page/chinh-sach-bao-mat-thong-tin-ca-nhan",
-                        },
-                      },
-                      [_vm._v("Chính sách bảo mật")]
-                    ),
-                  ]),
-                ]),
-                _vm._v(" "),
-                _c("h4", { staticClass: "footer-menu__title" }, [
-                  _vm._v("Kiến thức mặc đẹp"),
-                ]),
-                _vm._v(" "),
-                _c("ul", [
-                  _c("li", [
-                    _c("a", { attrs: { href: "/size-chart" } }, [
-                      _vm._v("Hướng dẫn chọn size"),
-                    ]),
-                  ]),
-                  _vm._v(" "),
-                  _c("li", [
-                    _c("a", { attrs: { href: "/blog" } }, [_vm._v("Blog")]),
-                  ]),
-                  _vm._v(" "),
-                  _c("li", [
-                    _c(
-                      "a",
-                      {
-                        attrs: {
-                          href: "https://www.facebook.com/groups/2103080403316797",
-                          target: "_blank",
-                        },
-                      },
-                      [_vm._v("Group mặc đẹp sống chất")]
-                    ),
-                  ]),
-                ]),
+            ]),
+            _vm._v(" "),
+            _c("li", [
+              _c("a", { attrs: { href: "/collection/ao-thun-nam-gioi" } }, [
+                _vm._v("Áo T-shirt"),
               ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "footer-menu__item" }, [
-                _c("h4", { staticClass: "footer-menu__title" }, [
-                  _vm._v("Tài liệu - Tuyển dụng"),
-                ]),
-                _vm._v(" "),
-                _c("ul", [
-                  _c("li", [
-                    _c(
-                      "a",
-                      { attrs: { href: "/lp/coolmate-101?itm_source=footer" } },
-                      [_vm._v("Tuyển dụng")]
-                    ),
-                  ]),
-                  _vm._v(" "),
-                  _c("li", [
-                    _c(
-                      "a",
-                      {
-                        attrs: {
-                          href: "http://online.gov.vn/(X(1)S(sgmttobbtsiaq3l5itoicxhw))/Home/WebDetails/53184?AspxAutoDetectCookieSupport=1",
-                          target: "_blank",
-                        },
-                      },
-                      [_vm._v("Đăng ký bản quyền")]
-                    ),
-                  ]),
-                ]),
-                _vm._v(" "),
-                _c("h4", { staticClass: "footer-menu__title" }, [
-                  _vm._v("Về "),
-                ]),
-                _vm._v(" "),
-                _c("ul", [
-                  _c("li", [
-                    _c(
-                      "a",
-                      {
-                        attrs: {
-                          href: "/page/coolmate-story?itm_source=footer",
-                        },
-                      },
-                      [
-                        _vm._v(
-                          " Câu chuyện về\r\n                                "
-                        ),
-                      ]
-                    ),
-                  ]),
-                  _vm._v(" "),
-                  _c("li", [
-                    _c(
-                      "a",
-                      {
-                        attrs: {
-                          href: "/page/san-pham-coolmate-duoc-san-xuat-nhu-the-nao?itm_source=footer",
-                        },
-                      },
-                      [
-                        _vm._v(
-                          "Nhà\r\n                                        máy"
-                        ),
-                      ]
-                    ),
-                  ]),
-                  _vm._v(" "),
-                  _c("li", [
-                    _c(
-                      "a",
-                      {
-                        attrs: {
-                          href: "/page/coolclub-chuong-trinh-khach-hang-than-thiet-cua-coolmate?itm_source=footer",
-                        },
-                      },
-                      [_vm._v("CoolClub")]
-                    ),
-                  ]),
-                  _vm._v(" "),
-                  _c("li", [
-                    _c(
-                      "a",
-                      {
-                        attrs: {
-                          href: "/collection/care-and-share?itm_source=footer",
-                        },
-                      },
-                      [_vm._v("Care & Share")]
-                    ),
-                  ]),
-                ]),
+            ]),
+            _vm._v(" "),
+            _c("li", [
+              _c("a", { attrs: { href: "/collection/ao-so-mi-nam" } }, [
+                _vm._v("Áo Sơ mi"),
               ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "footer-menu__item" }, [
-                _c("h4", { staticClass: "footer-menu__title" }, [
-                  _vm._v("Địa chỉ liên hệ"),
-                ]),
-                _vm._v(" "),
-                _c("p", { staticClass: "footer-menu__desciption" }, [
-                  _c("u", [_vm._v("HUB Hà Nội:")]),
-                  _vm._v(
-                    " Tầng 3-4, Tòa nhà BMM, KM2,\r\n                                Đường Phùng Hưng, Phường Phúc La, Quận Hà Đông, TP Hà Nội"
-                  ),
-                ]),
-                _vm._v(" "),
-                _c("p", { staticClass: "footer-menu__desciption" }, [
-                  _c("u", [_vm._v("HUB Tp HCM:")]),
-                  _vm._v(
-                    " Lầu 1, Số 163 Trần Trọng Cung,\r\n                                Phường Tân Thuận Đông, Quận 7, Tp. Hồ Chí Minh"
-                  ),
-                ]),
+            ]),
+            _vm._v(" "),
+            _c("li", [
+              _c("a", { attrs: { href: "/collection/quan-short-nam" } }, [
+                _vm._v("Quần"),
+              ]),
+            ]),
+            _vm._v(" "),
+            _c("li", [
+              _c("a", { attrs: { href: "/collection/quan-lot-nam" } }, [
+                _vm._v("Quần Lót"),
+              ]),
+            ]),
+            _vm._v(" "),
+            _c("li", [
+              _c("a", { attrs: { href: "/collection/tat-nam" } }, [
+                _vm._v("Tất (Vớ)"),
+              ]),
+            ]),
+            _vm._v(" "),
+            _c("li", [
+              _c("a", { attrs: { href: "/collection/mu-luoi-trai" } }, [
+                _vm._v("Mũ (Nón)"),
+              ]),
+            ]),
+            _vm._v(" "),
+            _c("li", [
+              _c("a", { attrs: { href: "/collection/phu-kien" } }, [
+                _vm._v("Phụ Kiện Khác"),
               ]),
             ]),
           ]),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "footer-menu__item" }, [
+          _c("h4", { staticClass: "footer-menu__title" }, [
+            _vm._v("Dịch vụ khách hàng"),
+          ]),
           _vm._v(" "),
-          _c("div", { staticClass: "site-footer__sidebar" }, [
-            _c("h4", { staticClass: "site-footer__title" }, [
-              _vm._v(
-                "\r\n                        .... lắng nghe bạn!\r\n                    "
-              ),
+          _c("ul", [
+            _c("li", [
+              _c("a", { attrs: { href: "/page/faqs" } }, [
+                _vm._v("Hỏi đáp - FAQs"),
+              ]),
             ]),
             _vm._v(" "),
-            _c(
-              "p",
-              {
-                staticClass: "site-footer__description",
-                staticStyle: { "margin-bottom": "10px" },
-              },
-              [
-                _vm._v(
-                  "\r\n                        Chúng tôi luôn trân trọng và mong đợi nhận được mọi ý kiến đóng góp từ\r\n                        khách hàng để có thể nâng cấp trải nghiệm dịch vụ và sản phẩm tốt hơn nữa.\r\n                    "
-                ),
-              ]
-            ),
-            _vm._v(" "),
-            _c(
-              "a",
-              {
-                staticClass: "site-footer__btn",
-                attrs: {
-                  href: "https://form.typeform.com/to/lU2oprGc?typeform-medium=embed-snippet",
-                  target: "_blank",
-                },
-              },
-              [
-                _vm._v(
-                  "\r\n                        Gửi Ý Kiến\r\n                    "
-                ),
-              ]
-            ),
-            _vm._v(" "),
-            _c("div", { staticClass: "footer-info" }, [
-              _c("div", { staticClass: "footer-info__icon" }, [
-                _c("img", {
-                  attrs: {
-                    src: "https://www.coolmate.me/images/footer/icon-hotline.svg",
-                    alt: "Footer Icon Phone",
-                  },
-                }),
+            _c("li", [
+              _c("a", { attrs: { href: "/page/dich-vu-60-ngay-doi-tra" } }, [
+                _vm._v("Chính sách đổi trả 60 ngày"),
               ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "footer-info__content" }, [
-                _c("span", { staticClass: "footer-info__title" }, [
+            ]),
+            _vm._v(" "),
+            _c("li", [
+              _c("a", { attrs: { href: "/page/lien-he-voi-coolmate" } }, [
+                _vm._v("Liên hệ"),
+              ]),
+            ]),
+            _vm._v(" "),
+            _c("li", [
+              _c(
+                "a",
+                {
+                  attrs: {
+                    href: "/page/coolclub-chuong-trinh-khach-hang-than-thiet-cua-coolmate",
+                  },
+                },
+                [
                   _vm._v(
-                    "\r\n                                Hotline\r\n                            "
+                    "Thành\n                                        viên Coolclub"
                   ),
-                ]),
-                _vm._v(" "),
-                _c("p", { staticClass: "footer-info__desciption" }, [
-                  _c("a", { attrs: { href: "tel: 1900272737" } }, [
-                    _vm._v("1900.272737"),
-                  ]),
-                  _vm._v(" "),
-                  _c("a", { attrs: { href: "tel: 02877772737" } }, [
-                    _vm._v("(028.7777.2737)"),
-                  ]),
-                ]),
-              ]),
+                ]
+              ),
             ]),
             _vm._v(" "),
-            _c("div", { staticClass: "footer-info" }, [
-              _c("div", { staticClass: "footer-info__icon" }, [
-                _c("img", {
+            _c("li", [
+              _c(
+                "a",
+                {
                   attrs: {
-                    src: "https://www.coolmate.me/images/footer/icon-email.svg",
-                    alt: "Footer Icon Email",
+                    href: "/page/11-dich-vu-tai-coolmate-co-the-ban-chua-biet",
                   },
-                }),
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "footer-info__content" }, [
-                _c("span", { staticClass: "footer-info__title" }, [
+                },
+                [
                   _vm._v(
-                    "\r\n                                Email\r\n                            "
+                    "Khách hàng hài\n                                        lòng 100%"
                   ),
-                ]),
-                _vm._v(" "),
-                _c("p", { staticClass: "footer-info__desciption" }, [
-                  _c(
-                    "a",
-                    {
-                      attrs: {
-                        href: "/cdn-cgi/l/email-protection#f1d1b29e9e9db1929e9e9d9c908594df9c94",
-                      },
-                    },
-                    [
-                      _c(
-                        "span",
-                        {
-                          staticClass: "__cf_email__",
-                          attrs: {
-                            "data-cfemail":
-                              "a2e1cdcdcee2c1cdcdcecfc3d6c78ccfc7",
-                          },
-                        },
-                        [_vm._v("[email protected]")]
-                      ),
-                    ]
+                ]
+              ),
+            ]),
+            _vm._v(" "),
+            _c("li", [
+              _c(
+                "a",
+                {
+                  attrs: {
+                    href: "/page/chuong-trinh-va-chinh-sach-khuyen-mai-tai-coolmate",
+                  },
+                },
+                [
+                  _vm._v(
+                    "Chính\n                                        sách khuyến mãi"
                   ),
-                ]),
+                ]
+              ),
+            ]),
+            _vm._v(" "),
+            _c("li", [
+              _c("a", { attrs: { href: "/page/dich-vu-giao-hang-coolmate" } }, [
+                _vm._v("Chính sách giao hàng"),
               ]),
             ]),
             _vm._v(" "),
-            _c("div", { staticClass: "footer-social" }, [
+            _c("li", [
               _c(
                 "a",
                 {
-                  staticClass: "footer-social__item",
-                  attrs: {
-                    href: "https://www.facebook.com/coolmate.me",
-                    target: "_blank",
-                  },
+                  attrs: { href: "/page/chinh-sach-bao-mat-thong-tin-ca-nhan" },
                 },
-                [
-                  _c("img", {
-                    attrs: {
-                      src: "https://www.coolmate.me/images/footer/icon-facebook.svg",
-                      alt: "Footer Icon facebook",
-                    },
-                  }),
-                ]
+                [_vm._v("Chính sách bảo mật")]
               ),
-              _vm._v(" "),
+            ]),
+          ]),
+          _vm._v(" "),
+          _c("h4", { staticClass: "footer-menu__title" }, [
+            _vm._v("Kiến thức mặc đẹp"),
+          ]),
+          _vm._v(" "),
+          _c("ul", [
+            _c("li", [
+              _c("a", { attrs: { href: "/size-chart" } }, [
+                _vm._v("Hướng dẫn chọn size"),
+              ]),
+            ]),
+            _vm._v(" "),
+            _c("li", [_c("a", { attrs: { href: "/blog" } }, [_vm._v("Blog")])]),
+            _vm._v(" "),
+            _c("li", [
               _c(
                 "a",
                 {
-                  staticClass: "footer-social__item",
                   attrs: {
-                    href: "https://www.instagram.com/coolmate.me/",
+                    href: "https://www.facebook.com/groups/2103080403316797",
                     target: "_blank",
                   },
                 },
-                [
-                  _c("img", {
-                    attrs: {
-                      src: "https://www.coolmate.me/images/footer/icon-instar.svg",
-                      alt: "Footer Icon instar",
-                    },
-                  }),
-                ]
-              ),
-              _vm._v(" "),
-              _c(
-                "a",
-                {
-                  staticClass: "footer-social__item",
-                  attrs: {
-                    href: "https://www.youtube.com/channel/UCWw8wLlodKBtEvVt1tTAsMA",
-                    target: "_blank",
-                  },
-                },
-                [
-                  _c("img", {
-                    attrs: {
-                      src: "https://www.coolmate.me/images/footer/icon-youtube.svg",
-                      alt: "Footer Icon youtube",
-                    },
-                  }),
-                ]
+                [_vm._v("Group mặc đẹp sống chất")]
               ),
             ]),
           ]),
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "site-footer__after" }, [
-          _c("div", { staticClass: "copyright" }, [
-            _c("h5", { staticClass: "copyright__title" }, [
-              _vm._v(
-                "\r\n                        @ CÔNG TY TNHH .....\r\n                    "
+        _c("div", { staticClass: "footer-menu__item" }, [
+          _c("h4", { staticClass: "footer-menu__title" }, [
+            _vm._v("Tài liệu - Tuyển dụng"),
+          ]),
+          _vm._v(" "),
+          _c("ul", [
+            _c("li", [
+              _c(
+                "a",
+                { attrs: { href: "/lp/coolmate-101?itm_source=footer" } },
+                [_vm._v("Tuyển dụng")]
               ),
             ]),
             _vm._v(" "),
-            _c("p", { staticClass: "copyright__description" }, [
-              _vm._v(
-                "Mã số doanh nghiệp: 9999999999. Giấy chứng nhận đăng ký\r\n                        doanh nghiệp do Sở Kế hoạch và Đầu tư TP Hà Nội cấp lần đầu ngày 20/02/2019."
+            _c("li", [
+              _c(
+                "a",
+                {
+                  attrs: {
+                    href: "http://online.gov.vn/(X(1)S(sgmttobbtsiaq3l5itoicxhw))/Home/WebDetails/53184?AspxAutoDetectCookieSupport=1",
+                    target: "_blank",
+                  },
+                },
+                [_vm._v("Đăng ký bản quyền")]
               ),
             ]),
           ]),
+          _vm._v(" "),
+          _c("h4", { staticClass: "footer-menu__title" }, [_vm._v("Về ")]),
+          _vm._v(" "),
+          _c("ul", [
+            _c("li", [
+              _c(
+                "a",
+                { attrs: { href: "/page/coolmate-story?itm_source=footer" } },
+                [_vm._v(" Câu chuyện về\n                                ")]
+              ),
+            ]),
+            _vm._v(" "),
+            _c("li", [
+              _c(
+                "a",
+                {
+                  attrs: {
+                    href: "/page/san-pham-coolmate-duoc-san-xuat-nhu-the-nao?itm_source=footer",
+                  },
+                },
+                [_vm._v("Nhà\n                                        máy")]
+              ),
+            ]),
+            _vm._v(" "),
+            _c("li", [
+              _c(
+                "a",
+                {
+                  attrs: {
+                    href: "/page/coolclub-chuong-trinh-khach-hang-than-thiet-cua-coolmate?itm_source=footer",
+                  },
+                },
+                [_vm._v("CoolClub")]
+              ),
+            ]),
+            _vm._v(" "),
+            _c("li", [
+              _c(
+                "a",
+                {
+                  attrs: {
+                    href: "/collection/care-and-share?itm_source=footer",
+                  },
+                },
+                [_vm._v("Care & Share")]
+              ),
+            ]),
+          ]),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "footer-menu__item" }, [
+          _c("h4", { staticClass: "footer-menu__title" }, [
+            _vm._v("Địa chỉ liên hệ"),
+          ]),
+          _vm._v(" "),
+          _c("p", { staticClass: "footer-menu__desciption" }, [
+            _c("u", [_vm._v("HUB Hà Nội:")]),
+            _vm._v(
+              " Tầng 3-4, Tòa nhà BMM, KM2,\n                                Đường Phùng Hưng, Phường Phúc La, Quận Hà Đông, TP Hà Nội"
+            ),
+          ]),
+          _vm._v(" "),
+          _c("p", { staticClass: "footer-menu__desciption" }, [
+            _c("u", [_vm._v("HUB Tp HCM:")]),
+            _vm._v(
+              " Lầu 1, Số 163 Trần Trọng Cung,\n                                Phường Tân Thuận Đông, Quận 7, Tp. Hồ Chí Minh"
+            ),
+          ]),
+        ]),
+      ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "footer-info" }, [
+      _c("div", { staticClass: "footer-info__icon" }, [
+        _c("img", {
+          attrs: {
+            src: "https://www.coolmate.me/images/footer/icon-hotline.svg",
+            alt: "Footer Icon Phone",
+          },
+        }),
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "footer-info__content" }, [
+        _c("span", { staticClass: "footer-info__title" }, [
+          _vm._v(
+            "\n                                Hotline\n                            "
+          ),
+        ]),
+        _vm._v(" "),
+        _c("p", { staticClass: "footer-info__desciption" }, [
+          _c("a", { attrs: { href: "tel: 1900272737" } }, [
+            _vm._v("1900.272737"),
+          ]),
+          _vm._v(" "),
+          _c("a", { attrs: { href: "tel: 02877772737" } }, [
+            _vm._v("(028.7777.2737)"),
+          ]),
+        ]),
+      ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "footer-info" }, [
+      _c("div", { staticClass: "footer-info__icon" }, [
+        _c("img", {
+          attrs: {
+            src: "https://www.coolmate.me/images/footer/icon-email.svg",
+            alt: "Footer Icon Email",
+          },
+        }),
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "footer-info__content" }, [
+        _c("span", { staticClass: "footer-info__title" }, [
+          _vm._v(
+            "\n                                Email\n                            "
+          ),
+        ]),
+        _vm._v(" "),
+        _c("p", { staticClass: "footer-info__desciption" }, [
+          _c(
+            "a",
+            {
+              attrs: {
+                href: "/cdn-cgi/l/email-protection#f1d1b29e9e9db1929e9e9d9c908594df9c94",
+              },
+            },
+            [
+              _c(
+                "span",
+                {
+                  staticClass: "__cf_email__",
+                  attrs: {
+                    "data-cfemail": "a2e1cdcdcee2c1cdcdcecfc3d6c78ccfc7",
+                  },
+                },
+                [_vm._v("[email protected]")]
+              ),
+            ]
+          ),
+        ]),
+      ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "footer-social" }, [
+      _c(
+        "a",
+        {
+          staticClass: "footer-social__item",
+          attrs: {
+            href: "https://www.facebook.com/coolmate.me",
+            target: "_blank",
+          },
+        },
+        [
+          _c("img", {
+            attrs: {
+              src: "https://www.coolmate.me/images/footer/icon-facebook.svg",
+              alt: "Footer Icon facebook",
+            },
+          }),
+        ]
+      ),
+      _vm._v(" "),
+      _c(
+        "a",
+        {
+          staticClass: "footer-social__item",
+          attrs: {
+            href: "https://www.instagram.com/coolmate.me/",
+            target: "_blank",
+          },
+        },
+        [
+          _c("img", {
+            attrs: {
+              src: "https://www.coolmate.me/images/footer/icon-instar.svg",
+              alt: "Footer Icon instar",
+            },
+          }),
+        ]
+      ),
+      _vm._v(" "),
+      _c(
+        "a",
+        {
+          staticClass: "footer-social__item",
+          attrs: {
+            href: "https://www.youtube.com/channel/UCWw8wLlodKBtEvVt1tTAsMA",
+            target: "_blank",
+          },
+        },
+        [
+          _c("img", {
+            attrs: {
+              src: "https://www.coolmate.me/images/footer/icon-youtube.svg",
+              alt: "Footer Icon youtube",
+            },
+          }),
+        ]
+      ),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "site-footer__after" }, [
+      _c("div", { staticClass: "copyright" }, [
+        _c("h5", { staticClass: "copyright__title" }, [
+          _vm._v(
+            "\n                        @ CÔNG TY TNHH .....\n                    "
+          ),
+        ]),
+        _vm._v(" "),
+        _c("p", { staticClass: "copyright__description" }, [
+          _vm._v(
+            "Mã số doanh nghiệp: 9999999999. Giấy chứng nhận đăng ký\n                        doanh nghiệp do Sở Kế hoạch và Đầu tư TP Hà Nội cấp lần đầu ngày 20/02/2019."
+          ),
         ]),
       ]),
     ])
@@ -13327,7 +13328,10 @@ var render = function () {
           },
           [
             _c("router-link", { attrs: { to: { name: "home" } } }, [
-              _c("h3", [_vm._v("HADOVN")]),
+              _c("img", {
+                staticStyle: { height: "50px" },
+                attrs: { src: _vm.$appSetting.LOGO_APP, alt: "Logo HaDoVN" },
+              }),
             ]),
           ],
           1

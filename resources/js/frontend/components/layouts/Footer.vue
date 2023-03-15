@@ -74,7 +74,7 @@
                 </div>
                 <div class="site-footer__sidebar">
                     <h4 class="site-footer__title">
-                        .... lắng nghe bạn!
+                       {{$appSetting.NAME}} .... lắng nghe bạn!
                     </h4>
                     <p class="site-footer__description" style="margin-bottom: 10px">
                         Chúng tôi luôn trân trọng và mong đợi nhận được mọi ý kiến đóng góp từ

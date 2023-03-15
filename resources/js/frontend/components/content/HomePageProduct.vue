@@ -5,8 +5,16 @@
                 <div class="home__page-product" @click="$router.push({name:'product-detail', params:{id:item.id}})">
                     <div class="product__item" v-on:mouseover="hoverIndex =i"
                          v-on:mouseleave="hoverIndex =-1">
-                        <el-image class="product--image" fit="cover"
-                                  :src="(item.images_product[(i == hoverIndex ? (item.images_product[1]?1:0) : 0)].path)"></el-image>
+                        <transition name="slide-fade">
+<!--                            <el-image v-if="hoverIndex==i && item.images_product.length>1" class="product&#45;&#45;image" fit="cover"-->
+<!--                                      :src="(item.images_product[1].path)">-->
+<!--                            </el-image>-->
+                            <el-image class="product--image" fit="cover"
+                                      :src="(item.images_product[0].path)">
+                            </el-image>
+                        </transition>
+
+
                         <div class="product-list__size">
                             <div
                                 v-for="itemSize in item['options_product'].filter((a, i) => item['options_product'].findIndex((s) => a.id_size === s.id_size) === i)"

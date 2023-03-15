@@ -13,8 +13,8 @@
                 </div>
                 <div class="header__logo" style="display: flex; align-items: center;">
                     <router-link :to="{name:'home'}">
-                         <h3 >HADOVN</h3>
-<!--                        <img src="/img/logo.png" style="height: 50px;" alt="Logo Coolmate">-->
+<!--                         <h3 >HADOVN</h3>-->
+                        <img :src="$appSetting.LOGO_APP" style="height: 50px;" alt="Logo HaDoVN">
                     </router-link>
                 </div>
                 <div class="header__menu-mobile" rel-script="header-menu" v-bind:style="{'display':showMenuMobile?'none':'block', 'visibility':showMenuMobile?'unset':'unset','opacity':showMenuMobile?1:1}">

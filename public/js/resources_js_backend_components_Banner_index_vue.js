@@ -505,9 +505,7 @@ var render = function () {
                           "background-position": "center",
                           "background-size": "cover",
                         },
-                        style: {
-                          "background-image": "url(/" + item.path + ")",
-                        },
+                        style: { "background-image": "url(" + item.path + ")" },
                       },
                       [_c("div", { staticStyle: { width: "100%" } })]
                     )

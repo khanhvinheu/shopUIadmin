@@ -5,7 +5,7 @@ import '../../css/app.css'
 import router from './router/routes';
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
-
+import appSetting from '../config/appSetting'
 import axios from 'axios'
 import VueAxios from 'vue-axios'
 import store from '../store';
@@ -19,7 +19,7 @@ Vue.filter('formatDate', function(value) {
     return moment(String(value)).format('MM/DD/YYYY hh:mm')
   }
 })
-
+Vue.prototype.$appSetting = appSetting
 // register global utility filters.
 import * as filters from '../filters';
 Object.keys(filters).forEach(key => {

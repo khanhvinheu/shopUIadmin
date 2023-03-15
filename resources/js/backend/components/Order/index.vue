@@ -76,6 +76,12 @@
                                                {{props.row.member.location_text + '-'+ props.row.member.commune+ '-'+ props.row.member.district+ '-'+ props.row.member.province }}
                                             </span>
                                             </div>
+                                             <div v-show="props.row.note">
+                                                <span class="title-detail-order">Ghi chú:</span>
+                                                <span>
+                                               {{props.row.note?props.row.note:'______'}}
+                                                </span>
+                                            </div>
                                         </div>
                                         <div style="padding-left: 15px">
                                             <el-divider ></el-divider>
@@ -117,6 +123,15 @@
                                                     <td>x{{item.quantity}}</td>
                                                     <td>{{ item.price_total | toThousandFilter }} đ</td>
                                                 </tr>
+                                                <tr>
+                                                    <td colspan="6">
+                                                        <span style="font-weight: bold">Thành tiền</span>
+                                                    </td>
+                                                    <td>
+                                                        <span style="font-weight: bold">{{props.row.detail.map(e=>e.price*e.quantity).reduce((a, b) => a + b, 0) | toThousandFilter}} đ</span>
+                                                    </td>
+
+                                                </tr>
                                             </table>
                                         </div>
 
@@ -143,12 +158,33 @@
                             </el-table-column>
                             <el-table-column
                                 prop="member.location_text"
-                                label="ĐỊA CHỈ"
+                                label="LOẠI THANH TOÁN"
                                 sortable
-                                width="500px"
                             >
                                 <template slot-scope="scope">
-                                    {{scope.row.member.location_text + '-'+ scope.row.member.commune+ '-'+ scope.row.member.district+ '-'+ scope.row.member.province }}
+                                   <el-tag  effect="dark" :type="scope.row.payment_methods==2?'success':''"> {{scope.row.payment_methods==1?'COD':'Chuyển khoản trước' }}</el-tag>
+                                </template>
+                            </el-table-column>
+                            <el-table-column
+                                prop="member.location_text"
+                                label="TRẠNG THÁI THANH TOÁN"
+                                sortable
+
+                            >
+                                <template slot-scope="scope">
+                                    <el-tag  effect="dark" :type="scope.row.payment_methods==2?'success':''"> {{scope.row.payment_methods==1?'COD':'Chuyển khoản trước' }}</el-tag>
+
+                                </template>
+                            </el-table-column>
+                            <el-table-column
+                                prop="member.location_text"
+                                label="TRẠNG THÁI ĐƠN HÀNG"
+                                sortable
+
+                            >
+                                <template slot-scope="scope">
+                                    <el-tag  effect="dark" :type="scope.row.payment_methods==2?'success':''"> {{scope.row.payment_methods==1?'COD':'Chuyển khoản trước' }}</el-tag>
+
                                 </template>
                             </el-table-column>
 

@@ -214,6 +214,42 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "product_list",
   data: function data() {
@@ -704,6 +740,39 @@ var render = function () {
                                         ),
                                       ]),
                                     ]),
+                                    _vm._v(" "),
+                                    _c(
+                                      "div",
+                                      {
+                                        directives: [
+                                          {
+                                            name: "show",
+                                            rawName: "v-show",
+                                            value: props.row.note,
+                                            expression: "props.row.note",
+                                          },
+                                        ],
+                                      },
+                                      [
+                                        _c(
+                                          "span",
+                                          { staticClass: "title-detail-order" },
+                                          [_vm._v("Ghi chú:")]
+                                        ),
+                                        _vm._v(" "),
+                                        _c("span", [
+                                          _vm._v(
+                                            "\n                                           " +
+                                              _vm._s(
+                                                props.row.note
+                                                  ? props.row.note
+                                                  : "______"
+                                              ) +
+                                              "\n                                            "
+                                          ),
+                                        ]),
+                                      ]
+                                    ),
                                   ],
                                   1
                                 ),
@@ -894,6 +963,56 @@ var render = function () {
                                             ])
                                           }
                                         ),
+                                        _vm._v(" "),
+                                        _c("tr", [
+                                          _c(
+                                            "td",
+                                            { attrs: { colspan: "6" } },
+                                            [
+                                              _c(
+                                                "span",
+                                                {
+                                                  staticStyle: {
+                                                    "font-weight": "bold",
+                                                  },
+                                                },
+                                                [_vm._v("Thành tiền")]
+                                              ),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c("td", [
+                                            _c(
+                                              "span",
+                                              {
+                                                staticStyle: {
+                                                  "font-weight": "bold",
+                                                },
+                                              },
+                                              [
+                                                _vm._v(
+                                                  _vm._s(
+                                                    _vm._f("toThousandFilter")(
+                                                      props.row.detail
+                                                        .map(function (e) {
+                                                          return (
+                                                            e.price * e.quantity
+                                                          )
+                                                        })
+                                                        .reduce(function (
+                                                          a,
+                                                          b
+                                                        ) {
+                                                          return a + b
+                                                        },
+                                                        0)
+                                                    )
+                                                  ) + " đ"
+                                                ),
+                                              ]
+                                            ),
+                                          ]),
+                                        ]),
                                       ],
                                       2
                                     ),
@@ -934,27 +1053,113 @@ var render = function () {
                   _c("el-table-column", {
                     attrs: {
                       prop: "member.location_text",
-                      label: "ĐỊA CHỈ",
+                      label: "LOẠI THANH TOÁN",
                       sortable: "",
-                      width: "500px",
                     },
                     scopedSlots: _vm._u([
                       {
                         key: "default",
                         fn: function (scope) {
                           return [
-                            _vm._v(
-                              "\n                                " +
-                                _vm._s(
-                                  scope.row.member.location_text +
-                                    "-" +
-                                    scope.row.member.commune +
-                                    "-" +
-                                    scope.row.member.district +
-                                    "-" +
-                                    scope.row.member.province
-                                ) +
-                                "\n                            "
+                            _c(
+                              "el-tag",
+                              {
+                                attrs: {
+                                  effect: "dark",
+                                  type:
+                                    scope.row.payment_methods == 2
+                                      ? "success"
+                                      : "",
+                                },
+                              },
+                              [
+                                _vm._v(
+                                  " " +
+                                    _vm._s(
+                                      scope.row.payment_methods == 1
+                                        ? "COD"
+                                        : "Chuyển khoản trước"
+                                    )
+                                ),
+                              ]
+                            ),
+                          ]
+                        },
+                      },
+                    ]),
+                  }),
+                  _vm._v(" "),
+                  _c("el-table-column", {
+                    attrs: {
+                      prop: "member.location_text",
+                      label: "TRẠNG THÁI THANH TOÁN",
+                      sortable: "",
+                    },
+                    scopedSlots: _vm._u([
+                      {
+                        key: "default",
+                        fn: function (scope) {
+                          return [
+                            _c(
+                              "el-tag",
+                              {
+                                attrs: {
+                                  effect: "dark",
+                                  type:
+                                    scope.row.payment_methods == 2
+                                      ? "success"
+                                      : "",
+                                },
+                              },
+                              [
+                                _vm._v(
+                                  " " +
+                                    _vm._s(
+                                      scope.row.payment_methods == 1
+                                        ? "COD"
+                                        : "Chuyển khoản trước"
+                                    )
+                                ),
+                              ]
+                            ),
+                          ]
+                        },
+                      },
+                    ]),
+                  }),
+                  _vm._v(" "),
+                  _c("el-table-column", {
+                    attrs: {
+                      prop: "member.location_text",
+                      label: "TRẠNG THÁI ĐƠN HÀNG",
+                      sortable: "",
+                    },
+                    scopedSlots: _vm._u([
+                      {
+                        key: "default",
+                        fn: function (scope) {
+                          return [
+                            _c(
+                              "el-tag",
+                              {
+                                attrs: {
+                                  effect: "dark",
+                                  type:
+                                    scope.row.payment_methods == 2
+                                      ? "success"
+                                      : "",
+                                },
+                              },
+                              [
+                                _vm._v(
+                                  " " +
+                                    _vm._s(
+                                      scope.row.payment_methods == 1
+                                        ? "COD"
+                                        : "Chuyển khoản trước"
+                                    )
+                                ),
+                              ]
                             ),
                           ]
                         },

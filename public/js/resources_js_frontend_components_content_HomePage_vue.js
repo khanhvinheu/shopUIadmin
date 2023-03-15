@@ -414,6 +414,14 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
  //   optional style for arrows & dots
 
  //   optional style for arrows & dots
@@ -746,7 +754,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".product-color__item {\n  height: 25px;\n  width: 50px;\n  border-radius: 20px;\n  border: 1px solid rgb(255, 255, 255, 0.5);\n}\n.home__page-product img {\n  height: 100%;\n  width: 100%;\n  /*object-fit: cover;*/\n}\n.slick-prev:before, .slick-next:before {\n  color: black;\n  font-size: 30px;\n}\n.home__page-product:hover .product-list__size {\n  visibility: visible;\n  pointer-events: visible;\n  transform: translateZ(0);\n  opacity: 1;\n  /*height: 60px;*/\n  padding-top: 10px;\n  background-color: rgb(0, 0, 0, 0.3);\n}\n.product-list__size {\n  width: 100%;\n  padding: 5px;\n  position: absolute;\n  z-index: 9;\n  bottom: 0;\n  display: flex;\n  visibility: hidden;\n  transform: translate3d(0, 20px, 0);\n  transition: all .3s;\n  opacity: 0;\n}\n.product-size__item {\n  width: 40px;\n  height: 30px;\n  background-color: #fff;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  flex-direction: row;\n  border-radius: 5px;\n  margin-right: 5px;\n}\n.home__page-product {\n  height: 700px;\n  position: relative;\n  z-index: 1;\n}\n@media screen and (max-width: 700px) {\n.home__page-product {\n    height: 350px;\n}\n.content__product {\n    padding: 0 !important;\n}\n.slick-prev {\n    left: 13px !important;\n    z-index: 99999999999999999 !important;\n}\n.slick-next {\n    right: 13px !important;\n    z-index: 99999999999999999 !important;\n}\n}\n.product__item {\n  width: 100%;\n  height: calc(100% - 60px);\n  background-color: beige;\n  /*background-image: url('https://media.coolmate.me/cdn-cgi/image/width=672,height=990,quality=85,format=auto/uploads/January2023/jogger-casual-xam-nhat2_60.jpg');*/\n  background-size: cover;\n  background-position: center;\n  border-radius: 10px;\n  transition: all linear;\n  position: relative;\n}\n\n/*.product__item:hover{*/\n\n/*    background-image: url('https://media.coolmate.me/cdn-cgi/image/width=672,height=990,quality=85,format=auto/uploads/September2022/jogger-casual-xam-nhat1_79.jpg') ;*/\n\n/*}*/\n.home__page-product {\n  padding: 10px;\n}\n.product__list-color {\n  margin-top: 10px;\n  height: 20px;\n  width: 100%;\n  display: flex;\n}\n.color__item {\n  height: 20px;\n  width: 35px;\n  background-color: black;\n  border: 1px solid rgb(0, 0, 0, 0.2);\n  border-radius: 8px;\n  margin-right: 5px;\n}\n.product-size__item:hover {\n  background-color: #000;\n  color: #fff;\n}\n.content__product {\n  padding: 50px;\n}\n#colorItem {\n  background-color: #2F5ACF;\n}\n.product--image{\n  width: 100%;\n  height: 100%;\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".product-color__item {\n  height: 25px;\n  width: 50px;\n  border-radius: 20px;\n  border: 1px solid rgb(255, 255, 255, 0.5);\n}\n.home__page-product img {\n  height: 100%;\n  width: 100%;\n  /*object-fit: cover;*/\n}\n.slick-prev:before, .slick-next:before {\n  color: black;\n  font-size: 30px;\n}\n.home__page-product:hover .product-list__size {\n  visibility: visible;\n  pointer-events: visible;\n  transform: translateZ(0);\n  opacity: 1;\n  /*height: 60px;*/\n  padding-top: 10px;\n  background-color: rgb(0, 0, 0, 0.3);\n}\n.product-list__size {\n  width: 100%;\n  padding: 5px;\n  position: absolute;\n  z-index: 9;\n  bottom: 0;\n  display: flex;\n  visibility: hidden;\n  transform: translate3d(0, 20px, 0);\n  transition: all .3s;\n  opacity: 0;\n}\n.product-size__item {\n  width: 40px;\n  height: 30px;\n  background-color: #fff;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  flex-direction: row;\n  border-radius: 5px;\n  margin-right: 5px;\n}\n.home__page-product {\n  height: 700px;\n  position: relative;\n  z-index: 1;\n}\n@media screen and (max-width: 700px) {\n.home__page-product {\n    height: 350px;\n}\n.content__product {\n    padding: 0 !important;\n}\n.slick-prev {\n    left: 13px !important;\n    z-index: 99999999999999999 !important;\n}\n.slick-next {\n    right: 13px !important;\n    z-index: 99999999999999999 !important;\n}\n}\n.product__item {\n  width: 100%;\n  height: calc(100% - 60px);\n  background-color: beige;\n  /*background-image: url('https://media.coolmate.me/cdn-cgi/image/width=672,height=990,quality=85,format=auto/uploads/January2023/jogger-casual-xam-nhat2_60.jpg');*/\n  background-size: cover;\n  background-position: center;\n  border-radius: 10px;\n  transition: all linear;\n  position: relative;\n}\n\n/*.product__item:hover{*/\n\n/*    background-image: url('https://media.coolmate.me/cdn-cgi/image/width=672,height=990,quality=85,format=auto/uploads/September2022/jogger-casual-xam-nhat1_79.jpg') ;*/\n\n/*}*/\n.home__page-product {\n  padding: 10px;\n}\n.product__list-color {\n  margin-top: 10px;\n  height: 20px;\n  width: 100%;\n  display: flex;\n}\n.color__item {\n  height: 20px;\n  width: 35px;\n  background-color: black;\n  border: 1px solid rgb(0, 0, 0, 0.2);\n  border-radius: 8px;\n  margin-right: 5px;\n}\n.product-size__item:hover {\n  background-color: #000;\n  color: #fff;\n}\n.content__product {\n  padding: 50px;\n}\n#colorItem {\n  background-color: #2F5ACF;\n}\n.product--image{\n  width: 100%;\n  height: 100%;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -12930,19 +12938,20 @@ var render = function () {
                         },
                       },
                       [
-                        _c("el-image", {
-                          staticClass: "product--image",
-                          attrs: {
-                            fit: "cover",
-                            src: item.images_product[
-                              i == _vm.hoverIndex
-                                ? item.images_product[1]
-                                  ? 1
-                                  : 0
-                                : 0
-                            ].path,
-                          },
-                        }),
+                        _c(
+                          "transition",
+                          { attrs: { name: "slide-fade" } },
+                          [
+                            _c("el-image", {
+                              staticClass: "product--image",
+                              attrs: {
+                                fit: "cover",
+                                src: item.images_product[0].path,
+                              },
+                            }),
+                          ],
+                          1
+                        ),
                         _vm._v(" "),
                         _c(
                           "div",
@@ -12961,9 +12970,9 @@ var render = function () {
                                 { staticClass: "product-size__item" },
                                 [
                                   _vm._v(
-                                    "\n                            " +
+                                    "\n                                " +
                                       _vm._s(itemSize["size"]["title"]) +
-                                      "\n                        "
+                                      "\n                            "
                                   ),
                                 ]
                               )
@@ -13011,9 +13020,9 @@ var render = function () {
                       _c("h3", { staticClass: "product-grid__title" }, [
                         _c("a", [
                           _vm._v(
-                            "\n                            " +
+                            "\n                                " +
                               _vm._s(item.name) +
-                              "\n                        "
+                              "\n                            "
                           ),
                         ]),
                       ]),

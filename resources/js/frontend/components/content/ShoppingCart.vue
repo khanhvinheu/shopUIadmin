@@ -48,7 +48,7 @@
                                                         v-for="item in dataProvince"
                                                         :key="item.ProvinceCode"
                                                         :label="item.ProvinceName"
-                                                        :value="item.ProvinceCode">
+                                                        :value="item">
                                                     </el-option>
                                                 </el-select>
                                             </el-form-item>
@@ -60,7 +60,7 @@
                                                         v-for="item in dataDistrict"
                                                         :key="item.ProvinceCode"
                                                         :label="item.ProvinceName"
-                                                        :value="item.ProvinceCode">
+                                                        :value="item">
                                                     </el-option>
                                                 </el-select>
                                             </el-form-item>
@@ -72,7 +72,7 @@
                                                         v-for="item in dataCommune"
                                                         :key="item.ProvinceCode"
                                                         :label="item.ProvinceName"
-                                                        :value="item.ProvinceCode">
+                                                        :value="item.ProvinceName">
                                                     </el-option>
                                                 </el-select>
                                             </el-form-item>
@@ -277,6 +277,9 @@ export default {
             let _this = this
             Object.keys(this.form).forEach(key => {
                 _this.formData.set(key, this.form[key])
+                // if(key=='Province'||key=='District'||key=='Commune'){
+                //     _this.formData.set(key, this.form[key]['ProvinceName'])
+                // }
             });
             _this.formData.set('dataCart', JSON.stringify(this.$store.getters.shoppingCart.cart))
         },
@@ -331,20 +334,22 @@ export default {
                 }
             })
         },
-        getDistrict(provinceCode){
+        getDistrict(item){
+            this.form.Province = item.ProvinceName
             this.form.District = ''
             this.dataDistrict=[]
             this.form.Commune = ''
             this.dataCommune=[]
-            ApiService.query('/api/admin/get-full-province?type=district&ProvinceCode='+provinceCode).then(({data})=>{
+            ApiService.query('/api/admin/get-full-province?type=district&ProvinceCode='+item.ProvinceCode).then(({data})=>{
                 if(data['success']){
                     this.dataDistrict = data['data']
                 }
             })
         },
-        getCommune(provinceCode){
+        getCommune(item){
+            this.form.District = item.ProvinceName
             this.form.Commune = ''
-            ApiService.query('/api/admin/get-full-province?type=commune&ProvinceCode='+provinceCode).then(({data})=>{
+            ApiService.query('/api/admin/get-full-province?type=commune&ProvinceCode='+item.ProvinceCode).then(({data})=>{
                 if(data['success']){
                     this.dataCommune = data['data']
                 }
