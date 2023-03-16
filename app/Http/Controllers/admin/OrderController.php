@@ -22,8 +22,9 @@ class OrderController extends Controller
     public function index(Request $request)
     {
         //
-        try {
-
+//        try {
+            $filter=[];
+            $request->input('pack_status')&& array_push($filter,['pack_status','=',$request->input('pack_status')]);
             $limit = $request->get('limit', 25);
             $ascending = (int) $request->get('ascending', 0);
             $orderBy = $request->get('orderBy', '');
@@ -31,9 +32,11 @@ class OrderController extends Controller
             $betweenDate = $request->get('updated_at', []);
             $queryService = new QueryService(new Orders());
             $queryService->select = [];
+            $queryService->filter = $filter;
             $queryService->columnSearch = 'order_code';
             $queryService->withRelationship = ['member','Detail','Detail.image'];
             $queryService->search = $search;
+            $request->input('phone_number') && $queryService->searchRelationship = $request->input('phone_number');
             $queryService->betweenDate = $betweenDate;
             $queryService->limit = $limit;
             $queryService->ascending = $ascending;
@@ -42,9 +45,9 @@ class OrderController extends Controller
             $query = $query->paginate($limit);
             $product = $query->toArray();
             return $this->jsonTable($product);
-        } catch (\Exception $e) {
-            return $this->jsonError($e);
-        }
+//        } catch (\Exception $e) {
+//            return $this->jsonError($e);
+//        }
     }
 
     /**
@@ -178,6 +181,17 @@ class OrderController extends Controller
     public function update(Request $request, $id)
     {
         //
+        try{
+            $formData = $request->post();
+            $res = Orders::find($id)->update($formData);
+            if($res){
+                return response()->json(['success'=>true, 'mess'=>'Cập nhật dữ liệu thành công']);
+            }else{
+                return response()->json(['success'=>false, 'mess'=>'Cập nhật thất bại!']);
+            }
+        }catch(\Exception $e){
+            return response()->json(['success'=>false, 'mess'=>$e]);
+        }
     }
 
     /**
@@ -189,5 +203,15 @@ class OrderController extends Controller
     public function destroy($id)
     {
         //
+        try{
+            $res = Orders::find($id)->delete();
+            if($res){
+                return response()->json(['success'=>true, 'mess'=>'Xóa dữ liệu thành công!']);
+            }else{
+                return response()->json(['success'=>false, 'mess'=>'Xóa dữ liệu thất bại!']);
+            }
+        }catch(\Exception $e){
+            return response()->json(['success'=>false, 'mess'=>$e]);
+        }
     }
 }

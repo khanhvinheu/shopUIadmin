@@ -16,7 +16,10 @@
 <!--        <a href="#" class="nav-link">Contact</a>-->
 <!--      </li>-->
     </ul>
-    <Breadcrumb class="mobile--hidden"/>
+      <div class="breadcrumb-mobile--hidden">
+          <Breadcrumb />
+      </div>
+
     <!-- Right navbar links -->
     <ul class="navbar-nav ml-auto">
       <!-- Navbar Search -->
@@ -174,5 +177,9 @@ export default {
 </script>
 
 <style>
-
+ @media only screen and (max-width: 1200px) {
+     .breadcrumb-mobile--hidden{
+        display: none;
+     }
+ }
 </style>

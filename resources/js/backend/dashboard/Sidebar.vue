@@ -129,9 +129,9 @@
               <li class="nav-item ">
                 <a @click="$router.push({name:'Order'})" :class="{ 'active': $route.name=='Order' }" class="nav-link">
                   <i class="el-icon-film"></i>
-                    <el-badge :value="100" class="item">
+<!--                    <el-badge :value="100" class="item">-->
                         <p>Quản lý đơn hàng</p>
-                    </el-badge>
+<!--                    </el-badge>-->
 
                 </a>
               </li>

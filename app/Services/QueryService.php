@@ -22,6 +22,10 @@ class QueryService extends BaseService
      */
     public array $select = [];
 
+    public array $filter = [];
+
+    public string $searchRelationship = '';
+
     /**
      * Column to search using whereLike
      * @var array
@@ -89,10 +93,19 @@ class QueryService extends BaseService
         $query = $this->_model::query();
         $this->ascending = $this->ascending === 'ascending' ? self::ASC : self::DESC;
         $query->when($this->select, fn($q) => $q->select($this->select));
+        $query->when($this->filter, fn($q) => $q->where($this->filter));
         // $query->when($this->search, fn($q) => $q->whereLike($this->columnSearch, $this->search));
         $query->when($this->search, fn($q) => $q->where($this->columnSearch,'LIKE','%'.$this->search.'%'));
         foreach (Arr::wrap($this->withRelationship) as $relationship) {
-            $query = $query->with($relationship);
+            //search phone number in member
+            if($relationship=='member'){
+                $query = $query->with($relationship)->whereHas('member', function ($query){
+                    $query->where('phone_number', 'like', '%'.$this->searchRelationship.'%');
+                });
+            }else{
+                $query = $query->with($relationship);
+            }
+
         }
         $query->when(isset($this->betweenDate[0]) && isset($this->betweenDate[1]), function ($q) {
             $startDate = Carbon::parse($this->betweenDate[0])->startOfDay();

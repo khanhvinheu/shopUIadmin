@@ -84,6 +84,8 @@ Route::prefix('admin')->namespace('admin')->group(function () {
     // Order
     Route::get('orders','OrderController@index');
     Route::post('orders/create','OrderController@create');
+    Route::post('orders/delete/{id}','OrderController@destroy');
+    Route::post('orders/update/{id}','OrderController@update');
 
 
 });

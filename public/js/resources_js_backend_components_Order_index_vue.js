@@ -250,26 +250,88 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "product_list",
   data: function data() {
     return {
+      activeName: 'all',
       loadingTable: false,
       tableData: [],
+      status_pack: '',
       slideData: [],
       textSearch: '',
+      numberPhoneSearch: '',
       currentPage: 1,
       options: {
         Total: 10,
         Page: 1,
         PageLimit: 10
-      }
+      },
+      listPackStatus: [{
+        value: 1,
+        title: 'Đơn tạo mới',
+        type: ''
+      }, {
+        value: 2,
+        title: 'Đơn đã đóng gói',
+        type: 'info'
+      }, {
+        value: 3,
+        title: 'Đơn đã vận chuyển đi',
+        type: 'warning'
+      }, {
+        value: 4,
+        title: 'Đơn đã hoàn tất',
+        type: 'success'
+      }, {
+        value: 5,
+        title: 'Đơn hủy',
+        type: 'danger'
+      }]
     };
   },
   mounted: function mounted() {
     this.getList();
   },
   methods: {
+    handleClick: function handleClick() {
+      console.log(this.activeName);
+      this.getList();
+    },
     handleSizeChange: function handleSizeChange(val) {
       this.options.PageLimit = val;
       this.getList();
@@ -278,7 +340,32 @@ __webpack_require__.r(__webpack_exports__);
       this.options.Page = val;
       this.getList();
     },
-    updateStatus: function updateStatus(id, hidden) {},
+    updateStatus: function updateStatus(id, status, key) {
+      var _this = this;
+
+      var formData = new FormData();
+      console.log(status);
+      formData.append(key, status);
+      axios({
+        method: 'post',
+        url: '/api/admin/orders/update/' + id,
+        data: formData
+      }).then(function (response) {
+        if (response.data['success']) {
+          _this.$notify({
+            title: 'Success',
+            message: response.data['mess'],
+            type: 'success'
+          });
+        } else {
+          _this.$notify({
+            title: 'Error',
+            message: response.data['mess'],
+            type: 'error'
+          });
+        }
+      });
+    },
     deleteBanner: function deleteBanner(id) {
       var _this = this;
 
@@ -311,6 +398,8 @@ __webpack_require__.r(__webpack_exports__);
       this.options.Page && (param.page = this.options.Page);
       this.options.PageLimit && (param.limit = this.options.PageLimit);
       this.textSearch && (param.search = this.textSearch);
+      this.numberPhoneSearch && (param.phone_number = this.numberPhoneSearch);
+      this.activeName != 'all' && (param.pack_status = this.activeName);
       axios({
         method: 'get',
         url: '/api/admin/orders',
@@ -340,6 +429,30 @@ __webpack_require__.r(__webpack_exports__);
       }
 
       return '';
+    },
+    deleteOrder: function deleteOrder(id) {
+      var _this = this;
+
+      axios({
+        method: 'post',
+        url: '/api/admin/orders/delete/' + id
+      }).then(function (response) {
+        if (response.data['success']) {
+          _this.$notify({
+            title: 'Success',
+            message: response.data['mess'],
+            type: 'success'
+          });
+
+          _this.getList();
+        } else {
+          _this.$notify({
+            title: 'Error',
+            message: response.data['mess'],
+            type: 'error'
+          });
+        }
+      });
     }
   }
 });
@@ -507,6 +620,33 @@ var render = function () {
             { staticClass: "col-md-12" },
             [
               _c(
+                "el-tabs",
+                {
+                  on: { "tab-click": _vm.handleClick },
+                  model: {
+                    value: _vm.activeName,
+                    callback: function ($$v) {
+                      _vm.activeName = $$v
+                    },
+                    expression: "activeName",
+                  },
+                },
+                [
+                  _c("el-tab-pane", {
+                    attrs: { label: "Tất cả", name: "all" },
+                  }),
+                  _vm._v(" "),
+                  _vm._l(_vm.listPackStatus, function (item) {
+                    return _c("el-tab-pane", {
+                      key: item.value,
+                      attrs: { label: item.title, name: item.value.toString() },
+                    })
+                  }),
+                ],
+                2
+              ),
+              _vm._v(" "),
+              _c(
                 "div",
                 {
                   staticClass: "row",
@@ -514,12 +654,41 @@ var render = function () {
                     display: "flex",
                     "flex-wrap": "nowrap",
                     padding: "8px",
-                    "justify-content": "space-between",
+                    "justify-content": "start",
                   },
                 },
                 [
                   _c("el-input", {
                     staticStyle: { width: "500px" },
+                    attrs: { placeholder: "Nhập số điện thoại ..." },
+                    nativeOn: {
+                      keyup: function ($event) {
+                        if (
+                          !$event.type.indexOf("key") &&
+                          _vm._k(
+                            $event.keyCode,
+                            "enter",
+                            13,
+                            $event.key,
+                            "Enter"
+                          )
+                        ) {
+                          return null
+                        }
+                        return _vm.getList()
+                      },
+                    },
+                    model: {
+                      value: _vm.numberPhoneSearch,
+                      callback: function ($$v) {
+                        _vm.numberPhoneSearch = $$v
+                      },
+                      expression: "numberPhoneSearch",
+                    },
+                  }),
+                  _vm._v(" "),
+                  _c("el-input", {
+                    staticStyle: { width: "500px", "margin-left": "10px" },
                     attrs: { placeholder: "Nhập mã đơn hàng ..." },
                     nativeOn: {
                       keyup: function ($event) {
@@ -556,7 +725,7 @@ var render = function () {
                               [
                                 _c("i", { staticClass: "el-icon-search" }),
                                 _vm._v(
-                                  " Tìm\n                                    kiếm\n                                "
+                                  " Tìm\n                                        kiếm\n                                    "
                                 ),
                               ]
                             ),
@@ -573,23 +742,6 @@ var render = function () {
                       expression: "textSearch",
                     },
                   }),
-                  _vm._v(" "),
-                  _c(
-                    "el-button",
-                    {
-                      staticClass: "ml-2",
-                      attrs: { type: "primary" },
-                      on: {
-                        click: function ($event) {
-                          return _vm.$router.push({ name: "ProductCreate" })
-                        },
-                      },
-                    },
-                    [
-                      _c("i", { staticClass: "el-icon-plus" }),
-                      _vm._v(" Thêm mới\n                        "),
-                    ]
-                  ),
                 ],
                 1
               ),
@@ -633,24 +785,122 @@ var render = function () {
                                 },
                               },
                               [
-                                _c("div", [
-                                  _c(
-                                    "span",
-                                    { staticClass: "title-detail-order" },
-                                    [
-                                      _c("i", {
-                                        staticClass: "el-icon-finished",
-                                      }),
-                                      _vm._v(
-                                        "\n                                            MÃ ĐƠN HÀNG:"
+                                _c(
+                                  "div",
+                                  {
+                                    staticStyle: {
+                                      display: "flex",
+                                      "justify-content": "space-between",
+                                    },
+                                  },
+                                  [
+                                    _c("div", [
+                                      _c(
+                                        "span",
+                                        { staticClass: "title-detail-order" },
+                                        [
+                                          _c("i", {
+                                            staticClass: "el-icon-finished",
+                                          }),
+                                          _vm._v(
+                                            "\n                                                MÃ ĐƠN HÀNG:"
+                                          ),
+                                        ]
                                       ),
-                                    ]
-                                  ),
-                                  _vm._v(" "),
-                                  _c("a", { attrs: { href: "#" } }, [
-                                    _vm._v(_vm._s(props.row.order_code)),
-                                  ]),
-                                ]),
+                                      _vm._v(" "),
+                                      _c("a", { attrs: { href: "#" } }, [
+                                        _vm._v(_vm._s(props.row.order_code)),
+                                      ]),
+                                    ]),
+                                    _vm._v(" "),
+                                    _c(
+                                      "div",
+                                      [
+                                        _c(
+                                          "el-button",
+                                          {
+                                            directives: [
+                                              {
+                                                name: "show",
+                                                rawName: "v-show",
+                                                value:
+                                                  props.row.payment_methods ==
+                                                    2 &&
+                                                  props.row.payment_status == 1,
+                                                expression:
+                                                  "props.row.payment_methods==2 && props.row.payment_status==1",
+                                              },
+                                            ],
+                                            attrs: { type: "success" },
+                                            on: {
+                                              click: function ($event) {
+                                                _vm.updateStatus(
+                                                  props.row.id,
+                                                  2,
+                                                  "payment_status"
+                                                )
+                                                props.row.payment_status = 2
+                                              },
+                                            },
+                                          },
+                                          [
+                                            _c("i", {
+                                              staticClass: "el-icon-money",
+                                            }),
+                                            _vm._v(
+                                              "\n                                                    Xác nhận thanh toán"
+                                            ),
+                                          ]
+                                        ),
+                                        _vm._v(" "),
+                                        _c(
+                                          "el-select",
+                                          {
+                                            attrs: {
+                                              placeholder:
+                                                "Trạng thái đơn hàng",
+                                            },
+                                            on: {
+                                              change: function ($event) {
+                                                return _vm.updateStatus(
+                                                  props.row.id,
+                                                  props.row.pack_status,
+                                                  "pack_status"
+                                                )
+                                              },
+                                            },
+                                            model: {
+                                              value: props.row.pack_status,
+                                              callback: function ($$v) {
+                                                _vm.$set(
+                                                  props.row,
+                                                  "pack_status",
+                                                  $$v
+                                                )
+                                              },
+                                              expression:
+                                                "props.row.pack_status",
+                                            },
+                                          },
+                                          _vm._l(
+                                            _vm.listPackStatus,
+                                            function (item) {
+                                              return _c("el-option", {
+                                                key: item.value,
+                                                attrs: {
+                                                  label: item.title,
+                                                  value: item.value,
+                                                },
+                                              })
+                                            }
+                                          ),
+                                          1
+                                        ),
+                                      ],
+                                      1
+                                    ),
+                                  ]
+                                ),
                                 _vm._v(" "),
                                 _c("div", [
                                   _c(
@@ -726,7 +976,7 @@ var render = function () {
                                       _vm._v(" "),
                                       _c("span", [
                                         _vm._v(
-                                          "\n                                           " +
+                                          "\n                                               " +
                                             _vm._s(
                                               props.row.member.location_text +
                                                 "-" +
@@ -736,7 +986,7 @@ var render = function () {
                                                 "-" +
                                                 props.row.member.province
                                             ) +
-                                            "\n                                        "
+                                            "\n                                            "
                                         ),
                                       ]),
                                     ]),
@@ -762,13 +1012,13 @@ var render = function () {
                                         _vm._v(" "),
                                         _c("span", [
                                           _vm._v(
-                                            "\n                                           " +
+                                            "\n                                               " +
                                               _vm._s(
                                                 props.row.note
                                                   ? props.row.note
                                                   : "______"
                                               ) +
-                                              "\n                                            "
+                                              "\n                                                "
                                           ),
                                         ]),
                                       ]
@@ -793,7 +1043,7 @@ var render = function () {
                                         staticClass: "el-icon-finished",
                                       }),
                                       _vm._v(
-                                        "\n                                            DANH SÁCH CÁC SẢN PHẨM ĐƯỢC MUA:"
+                                        "\n                                                DANH SÁCH CÁC SẢN PHẨM ĐƯỢC MUA:"
                                       ),
                                     ]
                                   ),
@@ -1103,10 +1353,17 @@ var render = function () {
                             _c(
                               "el-tag",
                               {
+                                directives: [
+                                  {
+                                    name: "show",
+                                    rawName: "v-show",
+                                    value: scope.row.payment_methods == 2,
+                                    expression: "scope.row.payment_methods==2",
+                                  },
+                                ],
                                 attrs: {
-                                  effect: "dark",
                                   type:
-                                    scope.row.payment_methods == 2
+                                    scope.row.payment_status == 2
                                       ? "success"
                                       : "",
                                 },
@@ -1115,9 +1372,9 @@ var render = function () {
                                 _vm._v(
                                   " " +
                                     _vm._s(
-                                      scope.row.payment_methods == 1
-                                        ? "COD"
-                                        : "Chuyển khoản trước"
+                                      scope.row.payment_status == 1
+                                        ? "Chưa thanh toán"
+                                        : "Đã thanh toán"
                                     )
                                 ),
                               ]
@@ -1143,20 +1400,18 @@ var render = function () {
                               "el-tag",
                               {
                                 attrs: {
-                                  effect: "dark",
-                                  type:
-                                    scope.row.payment_methods == 2
-                                      ? "success"
-                                      : "",
+                                  type: _vm.listPackStatus.find(function (e) {
+                                    return e.value == scope.row.pack_status
+                                  }).type,
                                 },
                               },
                               [
                                 _vm._v(
                                   " " +
                                     _vm._s(
-                                      scope.row.payment_methods == 1
-                                        ? "COD"
-                                        : "Chuyển khoản trước"
+                                      _vm.listPackStatus.find(function (e) {
+                                        return e.value == scope.row.pack_status
+                                      }).title
                                     )
                                 ),
                               ]
@@ -1185,7 +1440,7 @@ var render = function () {
                                 },
                                 on: {
                                   confirm: function () {
-                                    return _vm.deleteBanner(scope.row.id)
+                                    return _vm.deleteOrder(scope.row.id)
                                   },
                                 },
                               },

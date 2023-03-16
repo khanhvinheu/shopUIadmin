@@ -16,9 +16,23 @@
             <div class="card-body">
                 <div class="row">
                     <div class="col-md-12">
-                        <div class="row" style="display: flex; flex-wrap: nowrap; padding: 8px; justify-content: space-between">
+                        <el-tabs v-model="activeName" @tab-click="handleClick">
+                            <el-tab-pane label="Tất cả" name="all">
+                            </el-tab-pane>
+                            <el-tab-pane v-for="item in listPackStatus" :key="item.value" :label="item.title" :name="item.value.toString()">
+                            </el-tab-pane>
+
+                        </el-tabs>
+                        <div class="row" style="display: flex; flex-wrap: nowrap; padding: 8px; justify-content: start">
                             <el-input
                                 style="width: 500px"
+                                v-model="numberPhoneSearch"
+                                placeholder="Nhập số điện thoại ..."
+                                @keyup.enter.native="getList()"
+                            >
+                            </el-input>
+                            <el-input
+                                style="width: 500px; margin-left: 10px"
                                 v-model="textSearch"
                                 placeholder="Nhập mã đơn hàng ..."
                                 @keyup.enter.native="getList()"
@@ -30,9 +44,10 @@
 
                                 </template>
                             </el-input>
-                            <el-button @click="$router.push({name:'ProductCreate'})" class="ml-2" type="primary"><i
-                                class="el-icon-plus"></i> Thêm mới
-                            </el-button>
+
+<!--                            <el-button @click="$router.push({name:'ProductCreate'})" class="ml-2" type="primary"><i-->
+<!--                                class="el-icon-plus"></i> Thêm mới-->
+<!--                            </el-button>-->
                         </div>
                         <el-table
                             empty-text="Chưa có dữ liệu !"
@@ -45,11 +60,31 @@
                             <el-table-column type="expand">
                                 <template slot-scope="props">
                                     <div class="elevation-1" style="margin:10px; margin-left:50px; padding: 10px">
-                                        <div>
-                                            <span class="title-detail-order">
+                                        <div style="display: flex; justify-content: space-between">
+                                            <div>
+                                                <span class="title-detail-order">
                                                 <i class="el-icon-finished"/>
                                                 MÃ ĐƠN HÀNG:</span>
-                                            <a href="#">{{ props.row.order_code}}</a>
+                                                <a href="#">{{ props.row.order_code}}</a>
+                                            </div>
+                                            <div>
+                                                <el-button @click="updateStatus(props.row.id,2,'payment_status');props.row.payment_status=2"
+                                                           v-show="props.row.payment_methods==2 && props.row.payment_status==1" type="success">
+                                                    <i class="el-icon-money"></i>
+                                                    Xác nhận thanh toán</el-button>
+                                                <el-select @change="updateStatus(props.row.id,props.row.pack_status,'pack_status')" v-model="props.row.pack_status" placeholder="Trạng thái đơn hàng">
+                                                    <el-option
+                                                        v-for="item in listPackStatus"
+                                                        :key="item.value"
+                                                        :label="item.title"
+                                                        :value="item.value">
+                                                    </el-option>
+                                                </el-select>
+                                                <!--                                                <el-button type="primary">-->
+                                                <!--                                                    <i class="el-icon-document-checked"></i>-->
+                                                <!--                                                    Lưu lại</el-button>-->
+                                            </div>
+
                                         </div>
                                         <div>
                                             <span style="margin-left: 15px" class="title-detail-order">Được tạo lúc:</span>
@@ -76,7 +111,7 @@
                                                {{props.row.member.location_text + '-'+ props.row.member.commune+ '-'+ props.row.member.district+ '-'+ props.row.member.province }}
                                             </span>
                                             </div>
-                                             <div v-show="props.row.note">
+                                            <div v-show="props.row.note">
                                                 <span class="title-detail-order">Ghi chú:</span>
                                                 <span>
                                                {{props.row.note?props.row.note:'______'}}
@@ -162,18 +197,16 @@
                                 sortable
                             >
                                 <template slot-scope="scope">
-                                   <el-tag  effect="dark" :type="scope.row.payment_methods==2?'success':''"> {{scope.row.payment_methods==1?'COD':'Chuyển khoản trước' }}</el-tag>
+                                    <el-tag  effect="dark" :type="scope.row.payment_methods==2?'success':''"> {{scope.row.payment_methods==1?'COD':'Chuyển khoản trước' }}</el-tag>
                                 </template>
                             </el-table-column>
                             <el-table-column
                                 prop="member.location_text"
                                 label="TRẠNG THÁI THANH TOÁN"
                                 sortable
-
                             >
                                 <template slot-scope="scope">
-                                    <el-tag  effect="dark" :type="scope.row.payment_methods==2?'success':''"> {{scope.row.payment_methods==1?'COD':'Chuyển khoản trước' }}</el-tag>
-
+                                    <el-tag v-show="scope.row.payment_methods==2"  :type="scope.row.payment_status==2?'success':''"> {{scope.row.payment_status==1?'Chưa thanh toán':'Đã thanh toán' }}</el-tag>
                                 </template>
                             </el-table-column>
                             <el-table-column
@@ -183,7 +216,7 @@
 
                             >
                                 <template slot-scope="scope">
-                                    <el-tag  effect="dark" :type="scope.row.payment_methods==2?'success':''"> {{scope.row.payment_methods==1?'COD':'Chuyển khoản trước' }}</el-tag>
+                                    <el-tag  :type="listPackStatus.find(e=>e.value==scope.row.pack_status).type"> {{listPackStatus.find(e=>e.value==scope.row.pack_status).title }}</el-tag>
 
                                 </template>
                             </el-table-column>
@@ -199,7 +232,7 @@
                                         confirm-button-text='Xóa'
                                         cancel-button-text='Không'
                                         :title="'Bạn có chắc chắn muốn xóa hình ảnh này ?'"
-                                        @confirm="()=>deleteBanner(scope.row.id)"
+                                        @confirm="()=>deleteOrder(scope.row.id)"
                                     >
                                         <el-button slot="reference" type="danger"
                                                    size="mini"><i class="el-icon-delete"></i>
@@ -212,18 +245,19 @@
                             </template>
 
                         </el-table>
-                    </div>
-                    <div class="block" style="margin-left: 0px;margin-right: 8px;padding: 10px;width: 100%">
-                        <el-pagination
-                            @size-change="handleSizeChange"
-                            @current-change="handleCurrentChange"
-                            :current-page.sync="currentPage"
-                            :page-sizes="[10, 20, 50, 100]"
-                            :page-size="options.PageLimit"
-                            layout="total, sizes, prev, pager, next, jumper"
-                            :total="options.Total">
-                        </el-pagination>
-                    </div>
+
+                        </div>
+                        <div class="block" style="margin-left: 0px;margin-right: 8px;padding: 10px;width: 100%">
+                            <el-pagination
+                                @size-change="handleSizeChange"
+                                @current-change="handleCurrentChange"
+                                :current-page.sync="currentPage"
+                                :page-sizes="[10, 20, 50, 100]"
+                                :page-size="options.PageLimit"
+                                layout="total, sizes, prev, pager, next, jumper"
+                                :total="options.Total">
+                            </el-pagination>
+                        </div>
                     <!-- /.col -->
 
                 </div>
@@ -242,22 +276,36 @@ export default {
     name: "product_list",
     data() {
         return {
+            activeName:'all',
             loadingTable:false,
             tableData: [],
+            status_pack:'',
             slideData: [],
             textSearch: '',
+            numberPhoneSearch: '',
             currentPage: 1,
             options:{
                 Total:10,
                 Page:1,
                 PageLimit:10
-            }
+            },
+            listPackStatus:[
+                {value:1, title:'Đơn tạo mới',type:''},
+                {value:2, title:'Đơn đã đóng gói',type:'info'},
+                {value:3, title:'Đơn đã vận chuyển đi',type:'warning'},
+                {value:4, title:'Đơn đã hoàn tất',type:'success'},
+                {value:5, title:'Đơn hủy',type:'danger'},
+            ],
         }
     },
     mounted() {
         this.getList()
     },
     methods: {
+        handleClick(){
+            console.log(this.activeName)
+            this.getList()
+        },
         handleSizeChange(val) {
             this.options.PageLimit = val
             this.getList()
@@ -266,7 +314,35 @@ export default {
             this.options.Page = val
             this.getList()
         },
-        updateStatus(id, hidden) {
+        updateStatus(id, status, key) {
+            let _this = this
+            var formData = new FormData()
+            console.log(status)
+            formData.append(key, status)
+            axios({
+                method: 'post',
+                url: '/api/admin/orders/update/' + id,
+                data: formData
+            })
+                .then(function (response) {
+                    if (response.data['success']) {
+                        _this.$notify({
+                            title: 'Success',
+                            message: response.data['mess'],
+                            type: 'success'
+                        });
+
+                    } else {
+                        _this.$notify({
+                            title: 'Error',
+                            message: response.data['mess'],
+                            type: 'error'
+                        });
+                    }
+
+                });
+
+
 
         },
         deleteBanner(id) {
@@ -299,6 +375,8 @@ export default {
             this.options.Page &&(param.page = this.options.Page)
             this.options.PageLimit &&(param.limit = this.options.PageLimit)
             this.textSearch && (param.search = this.textSearch)
+            this.numberPhoneSearch && (param.phone_number = this.numberPhoneSearch)
+            this.activeName!='all' && (param.pack_status=this.activeName)
             axios({
                 method: 'get',
                 url: '/api/admin/orders',
@@ -322,6 +400,29 @@ export default {
                 return 'success-row';
             }
             return '';
+        },
+        deleteOrder(id){
+            let _this = this
+            axios({
+                method: 'post',
+                url: '/api/admin/orders/delete/' + id,
+            })
+            .then(function (response) {
+                if (response.data['success']) {
+                    _this.$notify({
+                        title: 'Success',
+                        message: response.data['mess'],
+                        type: 'success'
+                    });
+                    _this.getList()
+                } else {
+                    _this.$notify({
+                        title: 'Error',
+                        message: response.data['mess'],
+                        type: 'error'
+                    });
+                }
+            });
         }
     }
 }
