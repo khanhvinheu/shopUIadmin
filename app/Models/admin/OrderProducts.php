@@ -14,4 +14,13 @@ class OrderProducts extends Model
     {
         return $this->belongsTo(ImagesProduct::class,'product_id','id_product');
     }
+    public function color(): \Illuminate\Database\Eloquent\Relations\belongsTo
+    {
+        return $this->belongsTo(ProductColor::class,'product_color','id');
+    }
+
+    public function size(): \Illuminate\Database\Eloquent\Relations\belongsTo
+    {
+        return $this->belongsTo(ProductSize::class,'product_size','id');
+    }
 }

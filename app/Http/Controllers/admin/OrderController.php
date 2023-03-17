@@ -34,7 +34,7 @@ class OrderController extends Controller
             $queryService->select = [];
             $queryService->filter = $filter;
             $queryService->columnSearch = 'order_code';
-            $queryService->withRelationship = ['member','Detail','Detail.image'];
+            $queryService->withRelationship = ['member','Detail','Detail.image','Detail.color','Detail.size'];
             $queryService->search = $search;
             $request->input('phone_number') && $queryService->searchRelationship = $request->input('phone_number');
             $queryService->betweenDate = $betweenDate;

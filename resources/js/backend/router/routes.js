@@ -95,6 +95,13 @@ export const constantRouterMap = [
                 component: () => import('../components/Order/index'),
                 name:'Order',
                 meta:{title:'OrderList'}
+            },
+            //Setting
+            {
+                path: 'settings',
+                component: () => import('../components/Setting/index'),
+                name:'Setting',
+                meta:{title:'Settings'}
             }
 
         ]

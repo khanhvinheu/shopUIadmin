@@ -152,8 +152,8 @@
                                                             fit="contain">
                                                         </el-image>
                                                     </td>
-                                                    <td>{{ item.product_size}}</td>
-                                                    <td>{{ item.product_color}}</td>
+                                                    <td>{{ item.size.title}}</td>
+                                                    <td>{{ item.color.title}}</td>
                                                     <td>{{ item.price | toThousandFilter }} đ</td>
                                                     <td>x{{item.quantity}}</td>
                                                     <td>{{ item.price_total | toThousandFilter }} đ</td>

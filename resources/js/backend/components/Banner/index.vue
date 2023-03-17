@@ -222,7 +222,6 @@
             updateStatus(id, hidden) {
                 let _this = this
                 var formData = new FormData()
-                console.log(hidden, hidden == "0" ? "1" : "0")
                 formData.append('hidden', hidden == "0" ? "1" : "0")
                 axios({
                     method: 'post',

@@ -87,6 +87,8 @@ Route::prefix('admin')->namespace('admin')->group(function () {
     Route::post('orders/delete/{id}','OrderController@destroy');
     Route::post('orders/update/{id}','OrderController@update');
 
-
+    //Setting
+    Route::post('setting/updateSetting','SettingController@UpdateSetting');
+    Route::get('setting/fetchSetting','SettingController@fetchSetting');
 });
 

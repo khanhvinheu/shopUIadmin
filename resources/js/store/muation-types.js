@@ -24,3 +24,6 @@ export const SET_ROUTERS = 'setRouters';
 // errorLog.js
 export const ADD_ERROR_LOG = 'addErrorLog';
 export const ADD_WARN_LOG = 'addWarnLog';
+
+//setting
+export const SETTING_APP ='settingApp'

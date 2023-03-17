@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import appSetting from '../../config/appSetting'
+import appSetting from '/config/appSetting'
 Vue.use(VueRouter);
 const routes = [
     {

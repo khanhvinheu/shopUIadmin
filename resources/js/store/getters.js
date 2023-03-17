@@ -11,7 +11,8 @@ const getters = {
   routers: state => state.permission.routers,
   visitedViews: state => state.tagsView.visitedViews,
   cachedViews: state => state.tagsView.cachedViews,
-  shoppingCart: state=> state.shoppingCart
+  shoppingCart: state=> state.shoppingCart,
+  settingApp: state=> state.settingApp
 };
 
 export default getters;
