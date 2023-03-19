@@ -32,14 +32,7 @@ var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
   return _c("div", {
-    staticClass: "container",
-    staticStyle: {
-      display: "flex",
-      "align-items": "center",
-      "flex-direction": "column",
-      position: "relative",
-      "padding-bottom": "50px"
-    }
+    staticClass: "container"
   }, [_c("div", {
     staticStyle: {
       display: "flex",
@@ -71,7 +64,6 @@ var render = function render() {
     }
   }, [_vm._v("Quí khách vui lòng chuyển khoản đến một trong các tài khoản theo hướng dẫn")]), _vm._v(" "), _c("div", {
     staticStyle: {
-      width: "500px",
       border: "1px dotted rgb(0,0,0,0.1)",
       "text-align": "left",
       padding: "10px",

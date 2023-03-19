@@ -90,5 +90,12 @@ Route::prefix('admin')->namespace('admin')->group(function () {
     //Setting
     Route::post('setting/updateSetting','SettingController@UpdateSetting');
     Route::get('setting/fetchSetting','SettingController@fetchSetting');
+    //Blog
+    // Banner
+    Route::get('blogs','BlogController@index');
+    Route::get('blogs/detail/{id}','BlogController@show');
+    Route::post('blogs/delete/{id}','BlogController@destroy');
+    Route::post('blogs/create','BlogController@store');
+    Route::post('blogs/update/{id}','BlogController@update');
 });
 

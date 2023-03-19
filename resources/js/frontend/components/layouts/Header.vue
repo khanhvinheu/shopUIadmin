@@ -13,7 +13,6 @@
                 </div>
                 <div class="header__logo" style="display: flex; align-items: center;">
                     <router-link :to="{name:'home'}">
-<!--                         <h3 >HADOVN</h3>-->
                         <img :src="$appSetting.LOGO_APP" style="height: 50px;" alt="Logo HaDoVN">
                     </router-link>
                 </div>
@@ -29,8 +28,6 @@
                                     </label>
                                     <div class="header-search__filter">
                                         <button class="header-search__submit">
-<!--                                            <img src="https://www.coolmate.me/images/header/icon-search.svg"-->
-<!--                                                alt="Icon Search">-->
                                             <i class="el-icon-search" style="font-size: 15px"></i>
                                         </button>
                                     </div>
@@ -48,7 +45,7 @@
                         <div class="nav-tab">
                             <div class="nav-tab__head">
                                 <a href="#san-pham" class="nav-tab__title is-current" rel-script="nav-tab">
-                                    Thời trang
+                                    Danh mục
                                 </a>
 
                             </div>
@@ -60,375 +57,15 @@
                                     </a>
                                 </div>
                                 <ul class="nav-tab__menu">
-                                    <li class="nav__item">
-                                        <a href="/collection/care-and-share?itm_source=navbar">
-                                            <b>Care & Share</b>
-                                        </a>
-                                    </li>
-                                    <li class="nav__item nav__item--has-child" rel-script="mobile-menu-toggle">
+                                    <li class="nav__item nav__item--has-child" rel-script="mobile-menu-toggle" v-for="item in data">
                                         <a href="#">
-                                            Áo nam
-                                        </a>
-                                        <ul class="nav-child-menu" style="display: none;margin-top: 10px">
-                                            <li>
-                                                <a href="/collection/ao-nam1?itm_source=navbar">
-                                                    <b>Áo nam</b>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/collection/ao-nam-dai-tay?itm_source=navbar">
-                                                    Áo dài tay
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/collection/ao-thun-nam?itm_source=navbar">
-                                                    Áo T-shirt
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/collection/ao-polo-nam?itm_source=navbar">
-                                                    Áo Polo
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/collection/ao-so-mi-nam?itm_source=navbar">
-                                                    Áo Sơ Mi
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/collection/ao-the-thao-nam?itm_source=navbar">
-                                                    Áo Thể thao
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/collection/ao-khoac?itm_source=navbar">
-                                                    Áo khoác
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="nav__item nav__item--has-child" rel-script="mobile-menu-toggle">
-                                        <a href="#">
-                                            Quần nam
-                                        </a>
-                                        <ul class="nav-child-menu" style="display: none;margin-top: 10px">
-                                            <li>
-                                                <a href="/collection/quan-nam?itm_source=navbar">
-                                                    <b>Quần nam</b>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/collection/quan-lot-nam?itm_source=navbar">
-                                                    Quần Lót Nam
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/collection/quan-short-nam?itm_source=navbar">
-                                                    Quần Shorts
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/collection/quan-jeans-nam?itm_source=navbar">
-                                                    Quần Jeans
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/collection/quan-dai-nam?itm_source=navbar">
-                                                    Quần Dài
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="nav__item nav__item--has-child" rel-script="mobile-menu-toggle">
-                                        <a href="#">
-                                            Phụ kiện
-                                        </a>
-                                        <ul class="nav-child-menu" style="display: none;margin-top: 10px">
-                                            <li>
-                                                <a href="/collection/mu-luoi-trai?itm_source=navbar">
-                                                    Mũ (Nón)
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/collection/tat-nam?itm_source=navbar">
-                                                    Tất (Vớ)
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="nav__item nav__item--has-child" rel-script="mobile-menu-toggle">
-                                        <a href="#">
-                                            Bộ sưu tập
-                                        </a>
-                                        <ul class="nav-child-menu" style="display: none;margin-top: 10px">
-                                            <li>
-                                                <a href="/collection/vu-tru-ao-thun-marvel?itm_source=navbar">
-                                                    <b>Vũ trụ áo Marvel </b>
-                                                    <span class="nav-tab__sub">Bước vào thế giới siêu anh
-                                                        hùng</span>
-                                                </a>
-                                            </li>
-                                            <li class="nav-tab__item">
-                                                <a href="/page/cleanvn?itm_source=navbar">
-                                                    <b>Clean Vietnam</b>
-                                                    <span class="nav-tab__sub">
-                                                        Sự kết hợp giữa Coolmate & Vietmax
-                                                    </span>
-                                                </a>
-                                            </li>
-                                            <li class="nav-tab__item">
-                                                <a href="/collection/coolmate-basics?itm_source=navbar">
-                                                    <b>Coolmate Basics</b>
-                                                    <span class="nav-tab__sub">
-                                                        Mua sắm tiết kiệm với giá tốt
-                                                    </span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/collection/san-pham-moi-ben-vung?itm_source=navbar">
-                                                    <b>Sản phẩm bền vững</b>
-                                                    <span class="nav-tab__sub">Sản phẩm thân thiện với môi
-                                                        trường</span>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="nav__item nav__item--has-child" rel-script="mobile-menu-toggle">
-                                        <a href="#">
-                                            Nhu cầu
-                                        </a>
-                                        <ul class="nav-child-menu" style="display: none;margin-top: 10px">
-                                            <li>
-                                                <a href="/collection/bst-thu-dong1?itm_source=navbar">
-                                                    <b>Đồ thu - đông <span
-                                                            class="menu-tag menu-tag--sale">SALE</span></b>
-                                                    <span class="nav-tab__sub">Fall-Winter Collection</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/collection/do-mac-trong-va-mac-nha?itm_source=navbar">
-                                                    <b>Mặc ở nhà & Mặc trong</b>
-                                                    <span class="nav-tab__sub">
-                                                        Homewear & Underwear
-                                                    </span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/collection/do-casual?itm_source=navbar">
-                                                    <b>Mặc hằng ngày</b>
-                                                    <span class="nav-tab__sub">
-                                                        Casualwear
-                                                    </span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/collection/coolmate-activewear?itm_source=navbar">
-                                                    <b>Đồ thể thao</b>
-                                                    <span class="nav-tab__sub">
-                                                        Coolmate Active
-                                                    </span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/collection/phu-kien-nam?itm_source=navbar">
-                                                    <b>Phụ kiện</b>
-                                                    <span class="nav-tab__sub">
-                                                        Accessories
-                                                    </span>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="nav__item nav__item--has-child" rel-script="mobile-menu-toggle">
-                                        <a href="#">
-                                            Công nghệ
-                                        </a>
-                                        <ul class="nav-child-menu" style="display: none;margin-top: 10px">
-                                            <li>
-                                                <a href="/lp/dong-san-pham-excool?itm_source=navbar">
-                                                    <b>Excool</b>
-                                                    <span class="nav-tab__sub">
-                                                        Công nghệ làm mát tối đa
-                                                    </span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/page/cleandye#ldp-about?itm_source=navbar">
-                                                    <b>Cleandye</b>
-                                                    <span class="nav-tab__sub">10%
-                                                        Nhuộm không dùng nước
-                                                    </span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/lp/dong-san-pham-heiq-viroblock?itm_source=navbar">
-                                                    <b>HeiQ Viroblock</b>
-                                                    <span class="nav-tab__sub">
-                                                        Diệt 99.99% virus SARS-CoV2
-                                                    </span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/collection/san-pham-anti-smell?itm_source=navbar">
-                                                    <b>Anti-Smell</b>
-                                                    <span class="nav-tab__sub">Công nghệ khử mùi từ Nhật
-                                                        Bản</span>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="nav-tab__content" data-nav-tab="#bo-suu-tap" style="display: none">
-                                <ul class="nav-tab__menu">
-                                    <li>
-                                        <a href="/84rising?itm_source=navbar">
-                                            <b>Tất cả</b>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="/84rising?itm_source=navbar#T-shirt">
-                                            <b>Áo Oversize</b><br>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="/84rising?itm_source=navbar#Sweatshirt">
-                                            <b>Áo Nỉ</b>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="/84rising?itm_source=navbar#hoodie">
-                                            <b>Áo Hoodie</b>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="/84rising?itm_source=navbar#short-pants">
-                                            <b>Quần Short</b>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="/84rising?itm_source=navbar#Beanie">
-                                            <b>Mũ len Beanie Short</b>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="nav-tab__content" data-nav-tab="#nhu-cau" style="display: none">
-                                <ul class="nav-tab__menu">
-                                    <li>
-                                        <a href="/84rising?itm_source=navbar">
-                                            <b>Tất cả</b>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="/84rising?itm_source=navbar#T-shirt">
-                                            <b>Áo Oversize</b><br>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="/84rising?itm_source=navbar#Sweatshirt">
-                                            <b>Áo Nỉ</b>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="/84rising?itm_source=navbar#hoodie">
-                                            <b>Áo Hoodie</b>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="/84rising?itm_source=navbar#short-pants">
-                                            <b>Quần Short</b>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="/84rising?itm_source=navbar#Beanie">
-                                            <b>Mũ len Beanie Short</b>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="nav-tab__content" data-nav-tab="#cong-nghe" style="display: none">
-                                <ul class="nav-tab__menu">
-                                    <li class="nav-tab__item">
-                                        <a href="/lp/dong-san-pham-excool?itm_source=navbar">
-                                            <b>Excool</b>
-                                            <span class="nav-tab__sub">
-                                                Công nghệ làm mát tối đa
-                                            </span>
-                                        </a>
-                                    </li>
-                                    <li class="nav-tab__item">
-                                        <a href="/page/cleandye#ldp-about?itm_source=navbar">
-                                            <b>Cleandye</b>
-                                            <span class="nav-tab__sub">10%
-                                                Nhuộm không dùng nước
-                                            </span>
-                                        </a>
-                                    </li>
-                                    <li class="nav-tab__item">
-                                        <a href="/lp/dong-san-pham-heiq-viroblock?itm_source=navbar">
-                                            <b>HeiQ Viroblock</b>
-                                            <span class="nav-tab__sub">
-                                                Diệt 99.99% virus SARS-CoV2
-                                            </span>
-                                        </a>
-                                    </li>
-                                    <li class="nav-tab__item">
-                                        <a href="/collection/san-pham-anti-smell?itm_source=navbar">
-                                            <b>Anti-Smell</b>
-                                            <span class="nav-tab__sub">Công nghệ khử mùi từ Nhật Bản</span>
+                                            {{item.title}}
                                         </a>
                                     </li>
                                 </ul>
                             </div>
                         </div>
-                        <ul class="nav pdt--20">
-                            <li class="nav__item">
-                                <a
-                                    href="/lp/coolxprint-mo-hinh-dat-san-xuat-theo-yeu-cau?itm_source=ab_xprint_x">
-                                    CoolXPrint - Thiết kế theo yêu cầu
-                                </a>
-                            </li>
-                            <li class="nav__item">
-                                <a href="/size-chart?itm_source=navbar">
-                                    Chọn Size
-                                </a>
-                            </li>
-                            <li class="nav__item nav__item--has-child" rel-script="mobile-menu-toggle">
-                                <a href="#">
-                                    Về Coolmate
-                                </a>
-                                <ul class="nav-child-menu" style="display: none;margin-top: 10px">
-                                    <li>
-                                        <a href="/lp/coolmate-101?itm_source=navbar">
-                                            Coolmate 101 - Gia nhập coolmate
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a
-                                            href="/page/11-dich-vu-tai-coolmate-co-the-ban-chua-biet?itm_source=navbar">
-                                            Dịch vụ 100% hài lòng
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a
-                                            href="/page/coolclub-chuong-trinh-khach-hang-than-thiet-cua-coolmate?itm_source=navbar">
-                                            CoolClub - Khách hàng thân thiết
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="/page/coolmate-story?itm_source=navbar">
-                                            Câu chuyện Coolmate
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="nav__item" rel-script="mega-menu">
-                                <a href="/blog?itm_source=navbar">
-                                    Blog
-                                </a>
-                            </li>
-                        </ul>
+
                     </div>
                 </div>
                 <div class="header__menu" rel-script="header-menu" style="display: block">
@@ -618,13 +255,6 @@
 
                 </div>
                 <div class="header__actions">
-<!--                    <div class="header-actions__button mobile&#45;&#45;hidden">-->
-<!--                        <a href="#" rel-script="header-search">-->
-<!--                            <img src="https://www.coolmate.me/images/header/icon-search.svg" alt="Icon Search">-->
-<!--                        </a>-->
-<!--                    </div>-->
-                    <!-- <header-user-icon></header-user-icon> -->
-
                     <div class="header-actions__button">
                         <el-popover
                             placement="bottom-end"
@@ -632,7 +262,6 @@
                             width="430"
                           >
                             <mini-cart/>
-
                             <el-badge slot="reference" :value="$store.getters.shoppingCart.cart.length" class="item">
                                 <i class="el-icon-sell" style="font-size: 25px"></i>
                             </el-badge>
@@ -640,28 +269,6 @@
 
                     </div>
                 </div>
-                <!-- <div class="header-search mobile--hidden" rel-script="header-search-content">
-                    <form action="https://www.coolmate.me/spotlight" method="GET">
-                        <div class="header-search__wrapper">
-                            <label class="header-search__field">
-                                <input type="text" name="keyword" rel-script="spotlight-search-control"
-                                    placeholder="Tìm kiếm sản phẩm..." class="header-search__control one-whole"
-                                    autocomplete="off">
-                            </label>
-                            <div class="header-search__filter">
-                                <button class="header-search__submit">
-                                    <img src="https://www.coolmate.me/images/header/icon-search.svg"
-                                        alt="Icon Search">
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-                    <div class="spotlight-search">
-                        <div class="spotlight-search__wrapper" rel-script="spotlight-search">
-                            <img src="https://www.coolmate.me/images/icons/loading.svg" class="loading">
-                        </div>
-                    </div>
-                </div> -->
             </div>
         </div>
     </header>

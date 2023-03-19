@@ -42,7 +42,24 @@
                     <p>Thống kê</p>
                 </router-link>
             </li>
+            <li class="nav-item menu-open">
+                <a href="#" class="nav-link">
+                    <!-- <i class="nav-icon fas fa-tachometer-alt"></i> -->
+                    <p>
+                        Blog
+                        <i class="right fas fa-angle-left"></i>
+                    </p>
+                </a>
 
+                <ul class="nav nav-treeview">
+                    <li class="nav-item">
+                        <router-link :to="({name:'BlogList'})" v-bind:class="{ 'active': $route.name=='BlogList' }" class="nav-link">
+                            <i class="el-icon-menu"></i>
+                            <p>Quản lý Blog</p>
+                        </router-link>
+                    </li>
+                </ul>
+            </li>
           <li class="nav-item menu-open">
             <a href="#" class="nav-link">
               <!-- <i class="nav-icon fas fa-tachometer-alt"></i> -->

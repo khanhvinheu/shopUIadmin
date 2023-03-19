@@ -1,7 +1,14 @@
 <template>
     <div>
         <div v-if="$store.getters.settingApp.setting.DEBUG_APP">
-            Hệ thống đang bảo trì, Vui lòng quay lại sau
+            <div class="container"
+                 style="display: flex; align-items: center; flex-direction: column; height: 100vh; justify-content: center">
+                <div style=" display: flex; flex-direction: column; text-align:center;justify-content: center; align-items: center">
+                    <img width="400" src="/img/maintain.gif">
+                    <span style="font-weight: bold; font-size: 20px; color: #239a1a;">  Hệ thống đang được bảo trì
+                        <br/> Vui lòng quay lại sau</span>
+                </div>
+            </div>
         </div>
         <div v-else>
             <app-header></app-header>

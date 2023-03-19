@@ -21,26 +21,15 @@
                         <div class="footer-menu__item">
                             <h4 class="footer-menu__title">Dịch vụ khách hàng</h4>
                             <ul>
-                                <li><a href="/page/faqs">Hỏi đáp - FAQs</a></li>
-                                <li><a href="/page/dich-vu-60-ngay-doi-tra">Chính sách đổi trả 60 ngày</a></li>
-                                <li><a href="/page/lien-he-voi-coolmate">Liên hệ</a></li>
-                                <li><a href="/page/coolclub-chuong-trinh-khach-hang-than-thiet-cua-coolmate">Thành
-                                        viên Coolclub</a></li>
-                                <li><a href="/page/11-dich-vu-tai-coolmate-co-the-ban-chua-biet">Khách hàng hài
-                                        lòng 100%</a></li>
-                                <li><a href="/page/chuong-trinh-va-chinh-sach-khuyen-mai-tai-coolmate">Chính
-                                        sách khuyến mãi</a></li>
-                                <li><a href="/page/dich-vu-giao-hang-coolmate">Chính sách giao hàng</a></li>
-                                <li><a href="/page/chinh-sach-bao-mat-thong-tin-ca-nhan">Chính sách bảo mật</a>
-                                </li>
+                                <li v-for="(item,i) in dataDVKH" :key="i"><a :href="item.path">{{item.title}}</a></li>
                             </ul>
-                            <h4 class="footer-menu__title">Kiến thức mặc đẹp</h4>
-                            <ul>
-                                <li><a href="/size-chart">Hướng dẫn chọn size</a></li>
-                                <li><a href="/blog">Blog</a></li>
-                                <li><a href="https://www.facebook.com/groups/2103080403316797"
-                                        target="_blank">Group mặc đẹp sống chất</a></li>
-                            </ul>
+<!--                            <h4 class="footer-menu__title">Kiến thức mặc đẹp</h4>-->
+<!--                            <ul>-->
+<!--                                <li><a href="/size-chart">Hướng dẫn chọn size</a></li>-->
+<!--                                <li><a href="/blog">Blog</a></li>-->
+<!--                                <li><a href="https://www.facebook.com/groups/2103080403316797"-->
+<!--                                        target="_blank">Group mặc đẹp sống chất</a></li>-->
+<!--                            </ul>-->
                         </div>
                         <div class="footer-menu__item">
                             <h4 class="footer-menu__title">Tài liệu - Tuyển dụng</h4>
@@ -49,26 +38,16 @@
                                 <li><a href="http://online.gov.vn/(X(1)S(sgmttobbtsiaq3l5itoicxhw))/Home/WebDetails/53184?AspxAutoDetectCookieSupport=1"
                                         target="_blank">Đăng ký bản quyền</a></li>
                             </ul>
-                            <h4 class="footer-menu__title">Về </h4>
+                            <h4 class="footer-menu__title">Về HaDoVn</h4>
                             <ul>
-                                <li><a href="/page/coolmate-story?itm_source=footer"> Câu chuyện về
-                                </a>
-                                </li>
-                                <li><a
-                                        href="/page/san-pham-coolmate-duoc-san-xuat-nhu-the-nao?itm_source=footer">Nhà
-                                        máy</a></li>
-                                <li><a
-                                        href="/page/coolclub-chuong-trinh-khach-hang-than-thiet-cua-coolmate?itm_source=footer">CoolClub</a>
-                                </li>
-                                <li><a href="/collection/care-and-share?itm_source=footer">Care & Share</a></li>
+                                <li><a href="/page/coolmate-story?itm_source=footer"> Câu chuyện về HaDoVn</a></li>
+                                <li><a href="/page/san-pham-coolmate-duoc-san-xuat-nhu-the-nao?itm_source=footer">Nhà máy</a></li>
                             </ul>
                         </div>
                         <div class="footer-menu__item">
                             <h4 class="footer-menu__title">Địa chỉ liên hệ</h4>
-                            <p class="footer-menu__desciption"><u>HUB Hà Nội:</u> Tầng 3-4, Tòa nhà BMM, KM2,
-                                Đường Phùng Hưng, Phường Phúc La, Quận Hà Đông, TP Hà Nội</p>
-                            <p class="footer-menu__desciption"><u>HUB Tp HCM:</u> Lầu 1, Số 163 Trần Trọng Cung,
-                                Phường Tân Thuận Đông, Quận 7, Tp. Hồ Chí Minh</p>
+                            <p class="footer-menu__desciption" v-html="diaChi"></p>
+
                         </div>
                     </div>
                 </div>
@@ -80,10 +59,13 @@
                         Chúng tôi luôn trân trọng và mong đợi nhận được mọi ý kiến đóng góp từ
                         khách hàng để có thể nâng cấp trải nghiệm dịch vụ và sản phẩm tốt hơn nữa.
                     </p>
-                    <a href="https://form.typeform.com/to/lU2oprGc?typeform-medium=embed-snippet"
-                        class="site-footer__btn" target="_blank">
-                        Gửi Ý Kiến
-                    </a>
+<!--                    <a href="https://form.typeform.com/to/lU2oprGc?typeform-medium=embed-snippet"-->
+<!--                        class="site-footer__btn" target="_blank">-->
+<!--                        Gửi Ý Kiến-->
+<!--                    </a>  -->
+                        <a class="site-footer__btn">
+                             Gửi Ý Kiến
+                        </a>
                     <div class="footer-info">
                         <div class="footer-info__icon">
                             <img src="https://www.coolmate.me/images/footer/icon-hotline.svg"
@@ -94,43 +76,42 @@
                                 Hotline
                             </span>
                             <p class="footer-info__desciption">
-                                <a href="tel: 1900272737">1900.272737</a> <a
-                                    href="tel: 02877772737">(028.7777.2737)</a>
+                                <a href="tel: 0397957575">(039.7957.575)</a>
                             </p>
                         </div>
                     </div>
-                    <div class="footer-info">
-                        <div class="footer-info__icon">
-                            <img src="https://www.coolmate.me/images/footer/icon-email.svg"
-                                alt="Footer Icon Email">
-                        </div>
-                        <div class="footer-info__content">
-                            <span class="footer-info__title">
-                                Email
-                            </span>
-                            <p class="footer-info__desciption">
-                                <a href="/cdn-cgi/l/email-protection#f1d1b29e9e9db1929e9e9d9c908594df9c94">
-                                    <span class="__cf_email__"
-                                        data-cfemail="a2e1cdcdcee2c1cdcdcecfc3d6c78ccfc7">[email&#160;protected]</span>
-                                </a>
-                            </p>
-                        </div>
-                    </div>
+<!--                    <div class="footer-info">-->
+<!--                        <div class="footer-info__icon">-->
+<!--                            <img src="https://www.coolmate.me/images/footer/icon-email.svg"-->
+<!--                                alt="Footer Icon Email">-->
+<!--                        </div>-->
+<!--                        <div class="footer-info__content">-->
+<!--                            <span class="footer-info__title">-->
+<!--                                Email-->
+<!--                            </span>-->
+<!--                            <p class="footer-info__desciption">-->
+<!--                                <a href="/cdn-cgi/l/email-protection#f1d1b29e9e9db1929e9e9d9c908594df9c94">-->
+<!--                                    <span class="__cf_email__"-->
+<!--                                        data-cfemail="a2e1cdcdcee2c1cdcdcecfc3d6c78ccfc7">[email&#160;protected]</span>-->
+<!--                                </a>-->
+<!--                            </p>-->
+<!--                        </div>-->
+<!--                    </div>-->
                     <div class="footer-social">
-                        <a href="https://www.facebook.com/coolmate.me" class="footer-social__item"
+                        <a href="https://www.facebook.com/DBStorethoitrangcaocap13" class="footer-social__item"
                             target="_blank">
-                            <img src="https://www.coolmate.me/images/footer/icon-facebook.svg"
+                            <img src="/img/facebook.svg"
                                 alt="Footer Icon facebook">
                         </a>
-                        <a href="https://www.instagram.com/coolmate.me/" class="footer-social__item"
+                        <a href="https://shopee.vn/havado.menswear" class="footer-social__item"
                             target="_blank">
-                            <img src="https://www.coolmate.me/images/footer/icon-instar.svg"
-                                alt="Footer Icon instar">
+                            <img src="/img/shopee.svg"
+                                alt="Footer Icon shoppe">
                         </a>
-                        <a href="https://www.youtube.com/channel/UCWw8wLlodKBtEvVt1tTAsMA"
+                        <a href="https://www.tiktok.com/@havado.shop"
                             class="footer-social__item" target="_blank">
-                            <img src="https://www.coolmate.me/images/footer/icon-youtube.svg"
-                                alt="Footer Icon youtube">
+                            <img src="/img/tiktok.svg"
+                                alt="Footer Icon tiktok">
                         </a>
                     </div>
                 </div>
@@ -138,10 +119,10 @@
             <div class="site-footer__after">
                 <div class="copyright">
                     <h5 class="copyright__title">
-                        @ CÔNG TY TNHH .....
+                        COPYRIGHT © BY HADOVN.COM
                     </h5>
-                    <p class="copyright__description">Mã số doanh nghiệp: 9999999999. Giấy chứng nhận đăng ký
-                        doanh nghiệp do Sở Kế hoạch và Đầu tư TP Hà Nội cấp lần đầu ngày 20/02/2019.</p>
+<!--                    <p class="copyright__description">Mã số doanh nghiệp: 9999999999. Giấy chứng nhận đăng ký-->
+<!--                        doanh nghiệp do Sở Kế hoạch và Đầu tư TP Hà Nội cấp lần đầu ngày 20/02/2019.</p>-->
                 </div>
 <!--                <div class="site-footer__logo" style="display: flex;">-->
 <!--                    <a href="https://tinnhiemmang.vn/danh-ba-tin-nhiem/coolmateme-1646213826"-->
@@ -175,7 +156,17 @@
         name: 'AppFooter',
         data() {
             return {
-
+                dataDVKH:[
+                    {path:'',title:'Hỏi đáp - FAQs'},
+                    {path:'',title:'Chính sách đổi trả 60 ngày'},
+                    {path:'',title:'Liên hệ'},
+                    {path:'',title:'Thành viên Coolclub'},
+                    {path:'',title:'Khách hàng hài lòng 100%'},
+                    {path:'',title:'Chính sách khuyến mãi'},
+                    {path:'',title:'Chính sách giao hàng'},
+                    {path:'',title:'Chính sách bảo mật'},
+                ],
+                diaChi:`<u>Thủ Đức :</u> Số 36, Đường số 4, Linh Chiểu, Thủ ĐỨc`
             };
         },
         methods: {

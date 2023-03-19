@@ -19,5 +19,6 @@
 ::-webkit-scrollbar-thumb:hover {
     background: grey;
 }
+
 @font-face{font-family:Pangea;font-style:normal;font-weight:400;src:url('/fonts/Pangea-Regular.otf');font-display:swap}
 @font-face{font-family:Pangea;font-style:normal;font-weight:500;src:url('/fonts/Pangea-SemiBold.otf');font-display:swap}

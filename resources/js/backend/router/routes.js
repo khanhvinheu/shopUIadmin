@@ -27,18 +27,6 @@ export const constantRouterMap = [
                 name:'form',
                 meta:{title:'Categorys'}
             },
-            {
-                path:'index1',
-                component: () => import('../../frontend/components/content/ContentOne'),
-                name:'index1',
-                meta:{title:'Categorys'}
-            },
-            {
-                path:'index2',
-                component: () => import('../../frontend/components/content/ContentTwo'),
-                name:'index2',
-                meta:{title:'Categorys'}
-            },
             // Banner
             {
                 path: 'banner-list',
@@ -102,7 +90,25 @@ export const constantRouterMap = [
                 component: () => import('../components/Setting/index'),
                 name:'Setting',
                 meta:{title:'Settings'}
-            }
+            },
+            //Blogs
+            {
+                path: 'blog-list',
+                component: () => import('../components/Blog/index'),
+                name:'BlogList',
+                meta:{title:'BlogList'}
+            },
+            {
+                path: 'blog/create',
+                component: () => import('../components/Blog/form'),
+                name:'BlogCreate',
+
+            },
+            {
+                path: 'blog/update/:id?',
+                component: () => import('../components/Blog/form'),
+                name:'BlogUpdate'
+            },
 
         ]
     },

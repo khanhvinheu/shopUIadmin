@@ -862,6 +862,24 @@ var render = function render() {
     staticClass: "nav nav-treeview"
   }, [_c("li", {
     staticClass: "nav-item"
+  }, [_c("router-link", {
+    staticClass: "nav-link",
+    "class": {
+      active: _vm.$route.name == "BlogList"
+    },
+    attrs: {
+      to: {
+        name: "BlogList"
+      }
+    }
+  }, [_c("i", {
+    staticClass: "el-icon-menu"
+  }), _vm._v(" "), _c("p", [_vm._v("Quản lý Blog")])])], 1)])]), _vm._v(" "), _c("li", {
+    staticClass: "nav-item menu-open"
+  }, [_vm._m(3), _vm._v(" "), _c("ul", {
+    staticClass: "nav nav-treeview"
+  }, [_c("li", {
+    staticClass: "nav-item"
   }, [_c("a", {
     staticClass: "nav-link",
     "class": {
@@ -878,7 +896,7 @@ var render = function render() {
     staticClass: "el-icon-menu"
   }), _vm._v(" "), _c("p", [_vm._v("Quản lý danh mục")])])])])]), _vm._v(" "), _c("li", {
     staticClass: "nav-item menu-open"
-  }, [_vm._m(3), _vm._v(" "), _c("ul", {
+  }, [_vm._m(4), _vm._v(" "), _c("ul", {
     staticClass: "nav nav-treeview"
   }, [_c("li", {
     staticClass: "nav-item"
@@ -942,7 +960,7 @@ var render = function render() {
     staticClass: "el-icon-set-up"
   }), _vm._v(" "), _c("p", [_vm._v("Quản lý size sản phẩm")])])], 1)])]), _vm._v(" "), _c("li", {
     staticClass: "nav-item menu-open"
-  }, [_vm._m(4), _vm._v(" "), _c("ul", {
+  }, [_vm._m(5), _vm._v(" "), _c("ul", {
     staticClass: "nav nav-treeview"
   }, [_c("li", {
     staticClass: "nav-item"
@@ -962,7 +980,7 @@ var render = function render() {
     staticClass: "el-icon-film"
   }), _vm._v(" "), _c("p", [_vm._v("Quản lý banner")])])])])]), _vm._v(" "), _c("li", {
     staticClass: "nav-item menu-open"
-  }, [_vm._m(5), _vm._v(" "), _c("ul", {
+  }, [_vm._m(6), _vm._v(" "), _c("ul", {
     staticClass: "nav nav-treeview"
   }, [_c("li", {
     staticClass: "nav-item"
@@ -982,7 +1000,7 @@ var render = function render() {
     staticClass: "el-icon-film"
   }), _vm._v(" "), _c("p", [_vm._v("Quản lý đơn hàng")])])])])]), _vm._v(" "), _c("li", {
     staticClass: "nav-item menu-open"
-  }, [_vm._m(6), _vm._v(" "), _c("ul", {
+  }, [_vm._m(7), _vm._v(" "), _c("ul", {
     staticClass: "nav nav-treeview"
   }, [_c("li", {
     staticClass: "nav-item"
@@ -1031,6 +1049,17 @@ var staticRenderFns = [function () {
       alt: "User Image"
     }
   })]);
+}, function () {
+  var _vm = this,
+    _c = _vm._self._c;
+  return _c("a", {
+    staticClass: "nav-link",
+    attrs: {
+      href: "#"
+    }
+  }, [_c("p", [_vm._v("\n                        Blog\n                        "), _c("i", {
+    staticClass: "right fas fa-angle-left"
+  })])]);
 }, function () {
   var _vm = this,
     _c = _vm._self._c;

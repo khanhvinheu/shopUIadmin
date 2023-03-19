@@ -32,13 +32,14 @@ var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
   return _c("div", {
-    staticClass: "container",
+    staticClass: "container"
+  }, [_c("div", {
     staticStyle: {
       display: "flex",
-      "align-items": "center",
       "flex-direction": "column",
-      position: "relative",
-      "padding-bottom": "50px"
+      "text-align": "center",
+      "justify-content": "center",
+      "align-items": "center"
     }
   }, [_c("img", {
     attrs: {
@@ -47,11 +48,10 @@ var render = function render() {
     }
   }), _vm._v(" "), _c("div", {
     staticStyle: {
-      position: "absolute",
-      bottom: "0",
       display: "flex",
       "flex-direction": "column",
-      "text-align": "center"
+      "text-align": "center",
+      "margin-bottom": "20px"
     }
   }, [_c("span", {
     staticStyle: {
@@ -82,7 +82,7 @@ var render = function render() {
     }
   }, [_c("i", {
     staticClass: "el-icon-shopping-cart-2"
-  }), _vm._v("\n            Tiếp tục mua sắm")])], 1)]);
+  }), _vm._v("\n                Tiếp tục mua sắm")])], 1)])]);
 };
 var staticRenderFns = [];
 render._withStripped = true;
