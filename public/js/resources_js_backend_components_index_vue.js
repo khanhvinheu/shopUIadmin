@@ -820,11 +820,24 @@ var render = function render() {
     _c = _vm._self._c;
   return _c("aside", {
     staticClass: "main-sidebar sidebar-dark-primary elevation-4"
-  }, [_vm._m(0), _vm._v(" "), _c("div", {
+  }, [_c("a", {
+    staticClass: "brand-link"
+  }, [_c("img", {
+    staticClass: "brand-image img-circle elevation-3",
+    staticStyle: {
+      opacity: ".8"
+    },
+    attrs: {
+      src: _vm.$appSetting.LOGO_APP,
+      alt: "AdminLTE Logo"
+    }
+  }), _vm._v(" "), _c("span", {
+    staticClass: "brand-text font-weight-light"
+  }, [_vm._v("HADOVN")])]), _vm._v(" "), _c("div", {
     staticClass: "sidebar"
   }, [_c("div", {
     staticClass: "user-panel mt-3 pb-3 mb-3 d-flex"
-  }, [_vm._m(1), _vm._v(" "), _c("div", {
+  }, [_vm._m(0), _vm._v(" "), _c("div", {
     staticClass: "info"
   }, [_c("a", {
     staticClass: "d-block",
@@ -858,7 +871,7 @@ var render = function render() {
     staticClass: "el-icon-menu"
   }), _vm._v(" "), _c("p", [_vm._v("Thống kê")])])], 1), _vm._v(" "), _c("li", {
     staticClass: "nav-item menu-open"
-  }, [_vm._m(2), _vm._v(" "), _c("ul", {
+  }, [_vm._m(1), _vm._v(" "), _c("ul", {
     staticClass: "nav nav-treeview"
   }, [_c("li", {
     staticClass: "nav-item"
@@ -876,7 +889,7 @@ var render = function render() {
     staticClass: "el-icon-menu"
   }), _vm._v(" "), _c("p", [_vm._v("Quản lý Blog")])])], 1)])]), _vm._v(" "), _c("li", {
     staticClass: "nav-item menu-open"
-  }, [_vm._m(3), _vm._v(" "), _c("ul", {
+  }, [_vm._m(2), _vm._v(" "), _c("ul", {
     staticClass: "nav nav-treeview"
   }, [_c("li", {
     staticClass: "nav-item"
@@ -896,7 +909,7 @@ var render = function render() {
     staticClass: "el-icon-menu"
   }), _vm._v(" "), _c("p", [_vm._v("Quản lý danh mục")])])])])]), _vm._v(" "), _c("li", {
     staticClass: "nav-item menu-open"
-  }, [_vm._m(4), _vm._v(" "), _c("ul", {
+  }, [_vm._m(3), _vm._v(" "), _c("ul", {
     staticClass: "nav nav-treeview"
   }, [_c("li", {
     staticClass: "nav-item"
@@ -960,7 +973,7 @@ var render = function render() {
     staticClass: "el-icon-set-up"
   }), _vm._v(" "), _c("p", [_vm._v("Quản lý size sản phẩm")])])], 1)])]), _vm._v(" "), _c("li", {
     staticClass: "nav-item menu-open"
-  }, [_vm._m(5), _vm._v(" "), _c("ul", {
+  }, [_vm._m(4), _vm._v(" "), _c("ul", {
     staticClass: "nav nav-treeview"
   }, [_c("li", {
     staticClass: "nav-item"
@@ -980,7 +993,7 @@ var render = function render() {
     staticClass: "el-icon-film"
   }), _vm._v(" "), _c("p", [_vm._v("Quản lý banner")])])])])]), _vm._v(" "), _c("li", {
     staticClass: "nav-item menu-open"
-  }, [_vm._m(6), _vm._v(" "), _c("ul", {
+  }, [_vm._m(5), _vm._v(" "), _c("ul", {
     staticClass: "nav nav-treeview"
   }, [_c("li", {
     staticClass: "nav-item"
@@ -1000,7 +1013,7 @@ var render = function render() {
     staticClass: "el-icon-film"
   }), _vm._v(" "), _c("p", [_vm._v("Quản lý đơn hàng")])])])])]), _vm._v(" "), _c("li", {
     staticClass: "nav-item menu-open"
-  }, [_vm._m(7), _vm._v(" "), _c("ul", {
+  }, [_vm._m(6), _vm._v(" "), _c("ul", {
     staticClass: "nav nav-treeview"
   }, [_c("li", {
     staticClass: "nav-item"
@@ -1021,23 +1034,6 @@ var render = function render() {
   }), _vm._v(" "), _c("p", [_vm._v("Setting App")])])])])])])])])]);
 };
 var staticRenderFns = [function () {
-  var _vm = this,
-    _c = _vm._self._c;
-  return _c("a", {
-    staticClass: "brand-link"
-  }, [_c("img", {
-    staticClass: "brand-image img-circle elevation-3",
-    staticStyle: {
-      opacity: ".8"
-    },
-    attrs: {
-      src: "/assets/img/AdminLTELogo.png",
-      alt: "AdminLTE Logo"
-    }
-  }), _vm._v(" "), _c("span", {
-    staticClass: "brand-text font-weight-light"
-  }, [_vm._v("HADOVN")])]);
-}, function () {
   var _vm = this,
     _c = _vm._self._c;
   return _c("div", {

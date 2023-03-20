@@ -2,15 +2,21 @@
     <header class="site-header">
         <div class="header">
             <div class="header__inner">
-                <div class="header__toggle">
-                    <div class="">
-                        <a href="#" rel-script="menu-toggle" @click="showMenuMobile=!showMenuMobile" class="menu-toggle">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </a>
+                    <div class="header__toggle">
+                        <div class="menu-toggle" style="display: flex; align-items: center;">
+                            <transition name="slide-fade">
+                                <i v-if="showMenuMobile" style="font-size: 29px" class="el-icon-s-unfold" @click="showMenuMobile=!showMenuMobile"></i>
+                                <i v-else style="font-size: 29px" class="el-icon-close" @click="showMenuMobile=!showMenuMobile"></i>
+
+                            </transition>
+
+<!--                            <a href="#" rel-script="menu-toggle" @click="showMenuMobile=!showMenuMobile" class="menu-toggle">-->
+<!--                                <span></span>-->
+<!--                                <span></span>-->
+<!--                                <span></span>-->
+<!--                            </a>-->
+                        </div>
                     </div>
-                </div>
                 <div class="header__logo" style="display: flex; align-items: center;">
                     <router-link :to="{name:'home'}">
                         <img :src="$appSetting.LOGO_APP" style="height: 50px;" alt="Logo HaDoVN">
@@ -300,7 +306,7 @@
 
     }
 </script>
-<style scoped>
+<style>
 .header-actions__menu {
     position: absolute;
     top: 100%;
@@ -316,5 +322,18 @@
     border-radius: 16px;
     box-shadow: 0 0 10px 0 rgb(0 0 0 / 7%);
     border: 1px solid #d9d9d9;
+}
+.slide-fade-enter-active {
+    transition: all 0.3s ease-out;
+}
+
+.slide-fade-leave-active {
+    transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
+}
+
+.slide-fade-enter-from,
+.slide-fade-leave-to {
+    transform: translateX(20px);
+    opacity: 0;
 }
 </style>

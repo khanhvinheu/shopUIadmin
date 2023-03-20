@@ -50,10 +50,10 @@
                                 <el-form-item label="Nội dung bài viết" prop="description">
                                     <div class="form-group">
                                         <!-- <label class="label__form">Tên danh mục</label> -->
-                                        <el-input show-word-limit maxlength="500" type="textarea"
+                                        <Editor show-word-limit maxlength="500" type="textarea"
                                                   :autosize="{ minRows: 4, maxRows: 4 }"
                                                   validate-event placeholder="Nhập nội dung bài viết"
-                                                  v-model="formData.description"></el-input>
+                                                  v-model="formData.description"></Editor>
                                     </div>
                                 </el-form-item>
 
@@ -88,11 +88,12 @@
 </template>
 
 <script>
+    import Editor from '../Tinymce/index.vue'
     import VueUploadMultipleImage from 'vue-upload-multiple-image'
 
     export default {
         components: {
-            VueUploadMultipleImage,
+            VueUploadMultipleImage,Editor
         },
         data() {
             return {

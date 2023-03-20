@@ -50,8 +50,8 @@ import locale from 'element-ui/lib/locale'
 import store from '../store';
 import './middleware';
 import '../utils/logging';
-
-
+import appConfig from '/config/appConfig'
+Vue.prototype.$appSetting = appConfig
 // configure language
 locale.use(lang)
 Vue.use(VueAxios, axios);

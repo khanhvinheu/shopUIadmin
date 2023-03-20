@@ -64,8 +64,8 @@
                 </el-form-item>
                 <el-form-item label-width="180px" label="Mô tả sản phẩm" prop="description">
                     <div class="form-group">
-                        <el-input show-word-limit maxlength="500" type="textarea" :autosize="{ minRows: 4, maxRows: 4 }"
-                            v-model="form.description"></el-input>
+                        <Editor show-word-limit maxlength="500" type="textarea" :autosize="{ minRows: 4, maxRows: 4 }"
+                            v-model="form.description"></Editor>
                     </div>
                 </el-form-item>
             </div>
@@ -191,12 +191,12 @@
     </div>
 </template>
 <script>
-
+import Editor from '../Tinymce/index.vue'
 import ApiService from '../../common/api.service';
 import treeDataCategory from './treeDataCategory.vue'
 import { Money } from 'v-money';
 export default {
-    components:{treeDataCategory,Money},
+    components:{treeDataCategory,Money,Editor},
     data() {
         return {
             loadingForm:false,

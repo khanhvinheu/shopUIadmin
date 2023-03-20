@@ -10,9 +10,9 @@ class UploadController extends Controller
 {
     public function upload(Request $request){
         $file= $request->file('file');
-        $fileName ='product_'.explode('.',$file->getClientOriginalName())[0].time().'.'.$file->extension();
-        if($file->move(public_path('uploads/product'), $fileName)){
-            return '/uploads/product/'.$fileName;
+        $fileName ='file'.explode('.',$file->getClientOriginalName())[0].time().'.'.$file->extension();
+        if($file->move(public_path('uploads/filemanager'), $fileName)){
+            return response()->json(['success'=>true,'path'=>'/uploads/filemanager/'.$fileName]);
         }
     }
     public function removeFile(Request $request){
