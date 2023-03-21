@@ -12,7 +12,7 @@
         </div>
         <div v-else>
             <app-header></app-header>
-            <main class="site-homepage" style="padding-top: 50px;">
+            <main class="site-homepage" style="padding-top: 50px">
                 <transition name="slide-fade">
                     <router-view></router-view>
                 </transition>

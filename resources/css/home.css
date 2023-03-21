@@ -3104,7 +3104,9 @@ del {
     width: 100%;
     height: auto;
     z-index: 10;
-    transition: all .3s
+    transition: all .3s;
+    background-color: #fff;
+
 }
 
 .site-header:hover .topbar {
